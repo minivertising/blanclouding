@@ -49,12 +49,6 @@
 	<div class="section" id="section1">
 	    
 	</div>
-	<div class="section" id="section2">
-	
-	</div>
-	<div class="section" id="section3">
-	
-	</div>
 </div>
 
 </body>
