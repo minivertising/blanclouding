@@ -5,8 +5,9 @@
 	include_once "include/global.php"; 			//변수정보
 	include_once "include/function.php"; 		//함수정보
 	include_once "include/dbi.php"; 			//DB 연결정보
-	include_once "include/page.class.php";
-	include_once "include/class.image.php";
+	include_once "include/analytics.php";		// 로그분석
+	//include_once "include/page.class.php";
+	//include_once "include/class.image.php";
 
 	mysqli_query ($my_db,"set names utf8");
 
