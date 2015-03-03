@@ -13,7 +13,6 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../lib/fullpage/jquery.fullPage.css" />
     <script src="../js/jquery-1.11.2.min.js"></script>
-    <script src="vendors/jquery.easings.min.js"></script>
     <script type="text/javascript" src="../lib/fullpage/jquery.fullPage.min.js"></script>
     <script type='text/javascript' src="../js/main.js"></script>
     <script type='text/javascript' src="../js/analytics.js"></script>
