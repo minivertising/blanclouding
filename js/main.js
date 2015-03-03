@@ -105,6 +105,8 @@ function chk_input()
 				alert("참여해주셔서 감사합니다./r/n당첨시 3월 19일에 모바일쿠폰을 보내드립니다./r/n미당첨시 따로 메시지를 보내드리지 않습니다.");
 			else
 				alert("이벤트 참여자 수가 많아 참여가 지연되고 있습니다./r/n다시 응모해 주시기 바랍니다.");
+		$("#input_div").hide();
+
 		}
 	});
 
@@ -112,15 +114,23 @@ function chk_input()
 
 function open_event()
 {
-	alert('11');
+	$("#input_div").show();
 }
 
 function sns_share(media)
 {
 	if (media == "facebook")
 	{
-		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.ohuimall.co.kr/?media=fb&goods_idx='),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/PC/index.php'),'sharer','toolbar=0,status=0,width=600,height=325');
 	}else{
-		alert("22");
+		var newWindow = window.open('https://twitter.com/intent/tweet?text=어릴 적 당신이 지녔던 그 마음을 팝니다&url='+ encodeURIComponent('http://www.thefaceshopclouding.co.kr/PC/index.php'),'sharer','toolbar=0,status=0,width=600,height=325');
 	}
 }
+
+function close_input()
+{
+	$("#input_div").hide();
+}
+
+
+ 
