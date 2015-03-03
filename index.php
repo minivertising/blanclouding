@@ -2,10 +2,10 @@
 	include_once "config.php";
 
 	//unset($media);
-	//$media		= $_REQUEST['media'];
-	//$goods_idx	= $_REQUEST['goods_idx'];
+	$media		= $_REQUEST['media'];
+	$goods_idx	= $_REQUEST['goods_idx'];
 
-	//$_SESSION['ss_media'] = $media;
+	$_SESSION['ss_media'] = $media;
 
 	BC_InsertTrackingInfo($media, $gubun);
 	if($check_mobile)
