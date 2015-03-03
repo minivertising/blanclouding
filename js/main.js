@@ -119,7 +119,7 @@ function sns_share(media)
 {
 	if (media == "facebook")
 	{
-		alert("11");
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.ohuimall.co.kr/?media=fb&goods_idx='),'sharer','toolbar=0,status=0,width=600,height=325');
 	}else{
 		alert("22");
 	}
