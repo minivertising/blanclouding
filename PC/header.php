@@ -16,6 +16,7 @@
     <script type="text/javascript" src="../lib/fullpage/jquery.fullPage.min.js"></script>
     <script type='text/javascript' src="../js/main.js"></script>
     <script type='text/javascript' src="../js/analytics.js"></script>
+    <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
 	<style>
 	html,body { height: 100%; margin: 0; padding: 0; }
  

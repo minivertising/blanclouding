@@ -131,3 +131,6 @@ function close_input()
 {
 	$("#input_div").hide();
 }
+
+
+ 
