@@ -117,6 +117,21 @@ function open_event()
 	$("#input_div").show();
 }
 
+function open_gift()
+{
+	$("#gift_div").show();
+}
+
+function close_input()
+{
+	$("#input_div").hide();
+}
+
+function close_gift()
+{
+	$("#gift_div").hide();
+}
+
 function sns_share(media)
 {
 	if (media == "facebook")
@@ -127,10 +142,6 @@ function sns_share(media)
 	}
 }
 
-function close_input()
-{
-	$("#input_div").hide();
-}
 
 
  
