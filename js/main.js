@@ -109,3 +109,18 @@ function chk_input()
 	});
 
 }
+
+function open_event()
+{
+	alert('11');
+}
+
+function sns_share(media)
+{
+	if (media == "facebook")
+	{
+		alert("11");
+	}else{
+		alert("22");
+	}
+}

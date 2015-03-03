@@ -1,15 +1,6 @@
 <?
 	include_once "./header.php";
 ?>
-<!doctype html>
-<html lang="en">
-  <head>
-  <meta charset="UTF-8">
-    <title>Document</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type='text/javascript' src="../js/main.js"></script>
-  </head>
-  <body>
     이름 : <input type="text" name="mb_name" id="mb_name"><br />
     전화번호 : <input type="text" name="mb_phone1" id="mb_phone1">-<input type="text" name="mb_phone2" id="mb_phone2">-<input type="text" name="mb_phone3" id="mb_phone3"><br />
     <a href="#">자세히보기</a><br />

@@ -1,5 +1,8 @@
 <?
-	include_once "../config.php";
+	include_once "../include/global.php"; 			//변수정보
+	include_once "../include/function.php"; 		//함수정보
+	include_once "../include/dbi.php"; 			//DB 연결정보
+	mysqli_query ($my_db,"set names utf8");
 
 	$addr2_idx = $_REQUEST['addr2_idx'];
 ?>
