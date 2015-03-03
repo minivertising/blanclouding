@@ -1,6 +1,24 @@
 <?
 	include_once "./header.php";
 ?>
+	<script>
+	function show_map(){
+		var si	= $("#addr1 option:selected").text();
+		var gun	= $("#addr2 option:selected").text();
+
+		$.ajax({
+			type:"POST",
+			data:{
+				"si"     : si,
+				"gun"    : gun
+			},
+			url: "./map_ajax.php",
+			success: function(response){
+				$("#map_area").html(response);
+			}
+		});
+	}
+	  </script>
     이름 : <input type="text" name="mb_name" id="mb_name"><br />
     전화번호 : <input type="text" name="mb_phone1" id="mb_phone1">-<input type="text" name="mb_phone2" id="mb_phone2">-<input type="text" name="mb_phone3" id="mb_phone3"><br />
     <a href="#">자세히보기</a><br />
@@ -25,8 +43,15 @@
     </select>
     <select name="shop" id="shop">
       <option value="">선택하세요</option>
-    </select><br />
+    </select>
+	<input type="button" value="찾기" onclick="show_map()">
+	<br />
 	<input type="checkbox" name="privacy_agree" id="privacy_agree"><label for="privacy_agree">개인정보활용, 개인정보취급위탁동의, 광고성 정보 전송 동의</label><br />
 	<a href="#" onclick="chk_input()">신청완료</a>
+	<div id="map_area" style="width:100%;height:30%">
+	</div>
   </body>
+  <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
+
 </html>
+  
