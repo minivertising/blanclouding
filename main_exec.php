@@ -21,6 +21,16 @@ switch ($_REQUEST['exec'])
 
 		echo $flag;
 	break;
+
+	case "select_address" :
+		$shop_idx	= $_REQUEST['shop_idx'];
+
+		$query 		= "SELECT * FROM ".$_gl['shop_info_table']." WHERE idx='".$shop_idx."'";
+		$result 	= mysqli_query($my_db, $query);
+		$info		= mysqli_fetch_array($result);
+
+		echo $info['shop_addr'];
+	break;
 }
 
 ?>

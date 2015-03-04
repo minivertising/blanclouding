@@ -51,7 +51,7 @@
         클라우딩 제품 구매시 5,000원 할인 쿠폰 증정<br />
         <a href="#" onclick="close_gift()">확인</a>
       </div>
-      <div id="map_div" style="position:absolute;background:black;width:600px;height:500px;top:20%;left:30%;display:none">
+      <div id="map_div" style="position:absolute;background:black;width:1000px;height:500px;top:20%;left:30%;display:none">
         <a href="#" onclick="close_map()">닫기</a>
         <div id="map_area" style="width:100%;height:90%;margin-top:5%"></div>
       </div>
@@ -109,18 +109,5 @@
 				controllable_player.seekTo(0);
 				controllable_player.playVideo(); 
 			});
-
-			/*
-			player = new YT.Player('ytplayer', {});
-
-			$("#video_control").click(function(){
-				if(player){
-					player.playVideo();
-				}
-			});
-			$("#pause").click(function(){
-				 player.pauseVideo();
-			}); 
-			*/
 		});
 	</script>

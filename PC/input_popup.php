@@ -19,7 +19,7 @@
 		});
 	}
 	  </script>
-    이름 : <input type="text" name="mb_name" id="mb_name"><br />
+    이름 : <input type="text" name="mb_name" id="mb_name" onkeyup="only_kor(this)"><br />
     전화번호 : <input type="text" name="mb_phone1" id="mb_phone1">-<input type="text" name="mb_phone2" id="mb_phone2">-<input type="text" name="mb_phone3" id="mb_phone3"><br />
     <a href="#">자세히보기</a><br />
     받으실매장
