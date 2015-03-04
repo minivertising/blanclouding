@@ -4,7 +4,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=uft-8">
     <meta property="og:title" content="더페이스샵-블랑클라우닝">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://goo.gl/6RUiAK">
