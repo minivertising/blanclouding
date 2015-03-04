@@ -1,16 +1,36 @@
-<?
-	include_once "../PC/header.php";
-?>
-	<script>
-	function show_map(){
-		var si	= $("#addr1 option:selected").text();
-		var gun	= $("#addr2 option:selected").text();
+<?php
+	include_once "../config.php";
+	$userid = $_REQUEST['userid'];
 
+	//남은 시간 구하기
+	$startdate = date("Y-m-d h:i:s", time());
+	$enddate = "2015-03-06 18:00:00";
+
+	$timediffer=strtotime($enddate)-strtotime($startdate);
+	$hour=floor((($timediffer)-($day*60*60*24))/(60*60));
+	$minute=floor(($timediffer-($day*60*60*24)-($hour*60*60))/(60));
+
+	//echo $hour."시간".$minute."분 남았습니다.";
+
+	//내가 선택한 지점찾기 쿼리
+	$query = "SELECT s.shop_name, s.shop_addr FROM member_info m, shop_info s where m.shop_idx = s.idx and m.idx = '".$userid."'";
+	$result = mysqli_query($my_db, $query);
+	$user_info	= @mysqli_fetch_array($result);
+
+print_r($user_info['shop_addr']);
+
+?>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script>
+	function show_map(){
 		$.ajax({
 			type:"POST",
 			data:{
-				"si"     : si,
-				"gun"    : gun
+				"jido"   : "<?=$user_info['shop_addr']?>"
 			},
 			url: "./map_ajax.php",
 			success: function(response){
@@ -18,50 +38,13 @@
 			}
 		});
 	}
-	  </script>
-    이름 : <input type="text" name="mb_name" id="mb_name" onkeyup="CheckHangul(this)"><br />
-    전화번호 :
-	<select name="mb_phone1" id="mb_phone1">
-		<option value="">전화번호</option>
-	    <option value="010">010</option>
-	    <option value="011">011</option>
-	    <option value="016">016</option>
-	    <option value="017">017</option>
-	    <option value="018">018</option>
-	    <option value="019">019</option>
-	</select>
-	-<input type="text" name="mb_phone2" id="mb_phone2" onkeyup="only_num(this)" maxlength="4">-<input type="text" name="mb_phone3" id="mb_phone3" onkeyup="only_num(this)" maxlength="4"><br />
-    <a href="#">자세히보기</a><br />
-    받으실매장
-    <select name="addr1" id="addr1" onchange="addr_change(this.value)">
-      <option value="">선택하세요</option>
-<?
-	// 주소 쿼리
-	$query 		= "SELECT * FROM ".$_gl['addr_info_table']." WHERE addr_level='1'";
-	$result 	= mysqli_query($my_db, $query);
-
-	while($addr1_data = @mysqli_fetch_array($result))
-	{
-?>
-      <option value="<?=$addr1_data['addr_sido']?>"><?=$addr1_data['addr_sido']?></option>
-<?
-	}
-?>
-    </select>
-    <select name="addr2" id="addr2" onchange="shop_change(this.value)">
-      <option value="">선택하세요</option>
-    </select>
-    <select name="shop" id="shop">
-      <option value="">선택하세요</option>
-    </select>
-	<input type="button" value="찾기" onclick="show_map()">
-	<br />
-	<input type="checkbox" name="privacy_agree" id="privacy_agree"><label for="privacy_agree">개인정보활용, 개인정보취급위탁동의, 광고성 정보 전송 동의</label><br />
-	<a href="#" onclick="chk_input()">신청완료</a>
-	<div id="map_area" style="width:100%;height:30%">
+    </script>
+  <body>
+    남은 시간 : <?=$hour.":".$minute?>
+	<input type="button" value="지도" onclick="show_map()">
+	<div id="map_area" style="width:50%; heigh:50%">
 	</div>
-  </body>
-  <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
-
+</body>
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
 </html>
-  
+
