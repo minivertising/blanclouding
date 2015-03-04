@@ -2,7 +2,7 @@
 	include_once "../config.php";
 ?>
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=uft-8">
     <meta property="og:title" content="더페이스샵-블랑클라우닝">
