@@ -1,6 +1,6 @@
 <?php
 	include_once "../config.php";
-	$userid = $_REQUEST["userid"];
+	$userid = $_REQUEST['userid'];
 ?>
 
 <html>
@@ -27,13 +27,15 @@
 	//내가 선택한 지점찾기 쿼리
 	$query = "SELECT s.shop_name,s.shop_addr FROM member_info m, shop_info s where m.shop_idx = s.idx and m.idx = '".$userid."'";
 	$result = mysqli_query($my_db, $query);
-print_r($_gl);
-	//$user_info	= @mysqli_fetch_arry($result);
+	$user_info	= @mysqli_fetch_array($result);
 
-//print_r($user_info);
+print_r($user_info);
+
+	
 ?>
 
 
 </body>
-
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
 </html>
+
