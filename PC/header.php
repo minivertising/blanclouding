@@ -9,7 +9,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://goo.gl/6RUiAK">
     <!-- <meta property="og:image" content="http://www.ohuimall.co.kr/images/can_img_1.jpg" /> -->
-    <meta property="og:description" content="1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물%0D%0A 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물">
+    <meta property="og:description" content="1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물\n 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../lib/fullpage/jquery.fullPage.css" />
     <script src="../js/jquery-1.11.2.min.js"></script>
