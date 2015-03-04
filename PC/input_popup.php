@@ -19,8 +19,18 @@
 		});
 	}
 	  </script>
-    이름 : <input type="text" name="mb_name" id="mb_name" onkeyup="only_kor(this)"><br />
-    전화번호 : <input type="text" name="mb_phone1" id="mb_phone1">-<input type="text" name="mb_phone2" id="mb_phone2">-<input type="text" name="mb_phone3" id="mb_phone3"><br />
+    이름 : <input type="text" name="mb_name" id="mb_name" onkeyup="CheckHangul(this)"><br />
+    전화번호 :
+	<select name="mb_phone1" id="mb_phone1">
+		<option value="">전화번호</option>
+	    <option value="010">010</option>
+	    <option value="011">011</option>
+	    <option value="016">016</option>
+	    <option value="017">017</option>
+	    <option value="018">018</option>
+	    <option value="019">019</option>
+	</select>
+	-<input type="text" name="mb_phone2" id="mb_phone2" onkeyup="only_num1(this)" maxlength="4">-<input type="text" name="mb_phone3" id="mb_phone3" onkeyup="only_num1(this)" maxlength="4"><br />
     <a href="#">자세히보기</a><br />
     받으실매장
     <select name="addr1" id="addr1" onchange="addr_change(this.value)">

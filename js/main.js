@@ -88,7 +88,6 @@ function chk_input()
 		return false;
 	}
 
-
 	$.ajax({
 		type:"POST",
 		data:{
@@ -110,6 +109,83 @@ function chk_input()
 		}
 	});
 
+}
+
+function CheckHangul(name) {
+    strarr = new Array(name.value.length);
+    schar = new Array('/','.','>','<',',','?','}','{',' ','\\','|','(',')','+','!','@','#','$','%','^','&','*');
+    for (i=0; i<name.value.length; i++)    {
+        for (j=0; j<schar.length; j++)        {
+            if (schar[j] ==name.value.charAt(i))
+            {
+                alert("이름은 한글입력만 가능합니다.");
+                document.registform.mem_name.focus();
+                return false;
+            }
+            else
+                continue;
+        }
+        strarr[i] = name.value.charAt(i)
+        if ((strarr[i] >=0) && (strarr[i] <=9))
+        {
+            alert("이름에 숫자가 있습니다. 이름은 한글입력만 가능합니다.");
+            document.registform.mem_name.focus();
+            return false;
+        }
+        else if ((strarr[i] >='a') && (strarr[i] <='z'))
+        {
+            alert("이름에 알파벳이 있습니다. 이름은 한글입력만 가능합니다.");
+            document.registform.mem_name.focus();           
+            return false;
+        }
+        else if ((strarr[i] >='A') && (strarr[i] <='Z'))
+        {
+            alert("이름에 알파벳이 있습니다. 이름은 한글입력만 가능합니다.");
+            document.registform.mem_name.focus();    
+            return false;
+        }
+        else if ((escape(strarr[i]) > '%60') && (escape(strarr[i]) <'%80') )
+        {
+            alert("이름에 특수문자가 있습니다. 이름은 한글입력만 가능합니다.");
+            document.registform.mem_name.focus();
+            return false;
+        }
+        else
+        {
+            continue;
+        }
+    }
+    return true;
+}
+
+function only_num1(obj)
+{
+	var inText = obj.value;
+	var eText = inText.length;
+	var outText = "";
+	var flag = true;
+	var ret;
+	for(var i = 0; i < inText.length; i++)
+	{
+		ret = inText.charCodeAt(i);
+		if((ret < 48) || (ret > 57))
+		{
+			flag = false;
+		}
+		else
+		{
+			outText += inText.charAt(i);
+		}
+	}
+ 
+	if(flag == false)
+	{
+		alert("숫자만 입력하세요");
+		obj.value = outText;
+		obj.focus();
+		return false;
+	} 
+	return true;
 }
 
 function open_event()
