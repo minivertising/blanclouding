@@ -14,6 +14,7 @@
         <a href="#secondPage">BlanClouding이란?</a>
         <a href="#3" id="video_control">영상보기</a>
       </div>
+      <!-------------------------- 이벤트 응모 DIV -------------------------->
       <div id="input_div" style="position:absolute;background:red;height:200px;top:20%;left:30%;display:none">
         이름 : <input type="text" name="mb_name" id="mb_name"><br />
         전화번호 : <input type="text" name="mb_phone1" id="mb_phone1">-<input type="text" name="mb_phone2" id="mb_phone2">-<input type="text" name="mb_phone3" id="mb_phone3"><br />
@@ -46,15 +47,20 @@
         <a href="#" onclick="chk_input()">신청완료</a>
         <a href="#" onclick="close_input()">닫기</a>
       </div>
+      <!-------------------------- 이벤트 응모 DIV -------------------------->
+      <!-------------------------- 선물 확인 DIV -------------------------->
       <div id="gift_div" style="position:absolute;background:green;height:200px;top:20%;left:30%;display:none">
         추첨을 통해 1만분께 BLANCLOUDING선물 (10ml)과<br />
         클라우딩 제품 구매시 5,000원 할인 쿠폰 증정<br />
         <a href="#" onclick="close_gift()">확인</a>
       </div>
-      <div id="map_div" style="position:absolute;background:black;width:600px;height:500px;top:20%;left:30%;display:none">
+      <!-------------------------- 선물 확인 DIV -------------------------->
+      <!-------------------------- 지도 DIV -------------------------->
+      <div id="map_div" style="position:absolute;background:black;width:1000px;height:500px;top:20%;left:30%;display:none">
         <a href="#" onclick="close_map()">닫기</a>
         <div id="map_area" style="width:100%;height:90%;margin-top:5%"></div>
       </div>
+      <!-------------------------- 지도 DIV -------------------------->
     </div>
     <div class="section" id="section1" id="footer">
       <div id="footer">
@@ -94,33 +100,10 @@
 				scrollingSpeed: 1000
 			});
 
-			$('#showExamples').click(function(e){
-				e.stopPropagation();
-				e.preventDefault();
-				$('#examplesList').toggle();
-			});
-
-			$('html').click(function(){
-				$('#examplesList').hide();
-			});
-
 
 			$("#video_control").click(function(){
 				controllable_player.seekTo(0);
 				controllable_player.playVideo(); 
 			});
-
-			/*
-			player = new YT.Player('ytplayer', {});
-
-			$("#video_control").click(function(){
-				if(player){
-					player.playVideo();
-				}
-			});
-			$("#pause").click(function(){
-				 player.pauseVideo();
-			}); 
-			*/
 		});
 	</script>

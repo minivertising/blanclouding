@@ -218,29 +218,69 @@ function sns_share(media)
 	{
 		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/PC/index.php'),'sharer','toolbar=0,status=0,width=600,height=325');
 	}else{
-		var newWindow = window.open('https://twitter.com/intent/tweet?text=어릴 적 당신이 지녔던 그 마음을 팝니다&url='+ encodeURIComponent('http://www.thefaceshopclouding.co.kr/PC/index.php'),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물") + '&url='+ encodeURIComponent('http://goo.gl/jTps76'),'sharer','toolbar=0,status=0,width=600,height=325');
 	}
 }
 
 function show_map()
 {
-	var si	= $("#addr1 option:selected").text();
-	var gun	= $("#addr2 option:selected").text();
-
-	$.ajax({
-		type:"POST",
-		data:{
-			"si"     : si,
-			"gun"    : gun
-		},
-		url: "./map_ajax.php",
-		success: function(response){
-			$("#map_div").show();
-			alert(response);
-			$("#map_area").html(response);
-		}
-	});
-
+	var si				= $("#addr1 option:selected").text();
+	var gun			= $("#addr2 option:selected").text();
+	var shop_idx	= $("#shop").val();
+	if (shop_idx)
+	{
+		$.ajax({
+			type:"POST",
+			data:{
+				"exec"           : "select_address",
+				"shop_idx"     : shop_idx
+			},
+			url: "../main_exec.php",
+			success: function(response){
+				alert(response);
+				$.ajax({
+					type:"POST",
+					data:{
+						"flag"    : "addr",
+						"addr"     : response
+					},
+					url: "./map_ajax.php",
+					success: function(response){
+						$("#map_div").show();
+						$("#map_area").html(response);
+					}
+				});
+			}
+		});
+	}else{
+		$.ajax({
+			type:"POST",
+			data:{
+				"flag"    : "sigungu",
+				"si"       : si,
+				"gun"    : gun
+			},
+			url: "./map_ajax.php",
+			success: function(response){
+				$("#map_div").show();
+				$("#map_area").html(response);
+			}
+		});
+	}
 }
 
- 
+function only_kor(obj)
+{
+	var inText = obj.value;
+	if (inText != ""){
+		var pattern = /^[가-힣]+$/; 
+		if (pattern.test(inText)){
+			return true;
+		}else{
+			alert("한글만 입력하세요");
+			obj.value="";
+			obj.focus();
+			return false;
+		}	
+	}
+}
