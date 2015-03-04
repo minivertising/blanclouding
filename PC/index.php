@@ -39,17 +39,22 @@
         </select>
         <select name="shop" id="shop">
           <option value="">선택하세요</option>
-        </select><br />
+        </select>
+        <a href="#" onclick="show_map()">가까운 매장 찾기</a>
+        <br />
         <input type="checkbox" name="privacy_agree" id="privacy_agree"><label for="privacy_agree">개인정보활용, 개인정보취급위탁동의, 광고성 정보 전송 동의</label><br />
         <a href="#" onclick="chk_input()">신청완료</a>
         <a href="#" onclick="close_input()">닫기</a>
       </div>
       <div id="gift_div" style="position:absolute;background:green;height:200px;top:20%;left:30%;display:none">
         추첨을 통해 1만분께 BLANCLOUDING선물 (10ml)과<br />
-		클라우딩 제품 구매시 5,000원 할인 쿠폰 증정<br />
+        클라우딩 제품 구매시 5,000원 할인 쿠폰 증정<br />
         <a href="#" onclick="close_gift()">확인</a>
       </div>
-
+      <div id="map_div" style="position:absolute;background:black;width:600px;height:500px;top:20%;left:30%;display:none">
+        <a href="#" onclick="close_map()">닫기</a>
+        <div id="map_area" style="width:100%;height:90%;margin-top:5%"></div>
+      </div>
     </div>
     <div class="section" id="section1" id="footer">
       <div id="footer">
@@ -60,6 +65,7 @@
     </div>
 </body>
 </html>
+  <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
 	<script type="text/javascript">
     // 유튜브 반복 재생
     var controllable_player,start, 

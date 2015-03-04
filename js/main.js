@@ -132,6 +132,11 @@ function close_gift()
 	$("#gift_div").hide();
 }
 
+function close_map()
+{
+	$("#map_div").hide();
+}
+
 function sns_share(media)
 {
 	if (media == "facebook")
@@ -142,6 +147,25 @@ function sns_share(media)
 	}
 }
 
+function show_map()
+{
+	var si	= $("#addr1 option:selected").text();
+	var gun	= $("#addr2 option:selected").text();
 
+	$.ajax({
+		type:"POST",
+		data:{
+			"si"     : si,
+			"gun"    : gun
+		},
+		url: "./map_ajax.php",
+		success: function(response){
+			$("#map_div").show();
+			alert(response);
+			$("#map_area").html(response);
+		}
+	});
+
+}
 
  
