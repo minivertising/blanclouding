@@ -1,21 +1,30 @@
 <?
 	include_once "./header.php";
 ?>
-
+<ul id="myMenu" style="position:absolute;z-index:100000">
+    <li data-menuanchor="firstPage" class="active"><a href="#" onclick="open_event()">이벤트 참여</a></li>
+    <li data-menuanchor="secondPage"><a href="#" onclick="open_gift()">선물 안내</a></li>
+    <li data-menuanchor="thirdPage"><a href="#secondPage">BlanClouding이란?</a></li>
+    <li data-menuanchor="fourthPage"><a href="#" id="video_control">영상보기</a></li>
+</ul>
   <div id="fullpage">
     <div class="section active" id="section0">
-	<iframe width="1280" height="720" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer">
+	<iframe width="1280" height="720" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" style="padding-left:20%">
 	</iframe>
-	  <div id="footer">
         <a href="#" onclick="sns_share('facebook')">페이스북 공유</a>
         <a href="#" onclick="sns_share('twitter')">트위터 공유</a>
-        <a href="#" onclick="open_event()">이벤트 참여</a>
-        <a href="#" onclick="open_gift()">선물 안내</a>
-        <a href="#secondPage">BlanClouding이란?</a>
-        <a href="#3" id="video_control">영상보기</a>
+
+    </div>
+    <div class="section" id="section1">
+      <div id="footer">
+        <a href="#">선물 안내</a>
+        <a href="#firstPage">이벤트보기</a>
+        <a href="#">영상보기</a>
       </div>
+    </div>
+
       <!-------------------------- 이벤트 응모 DIV -------------------------->
-      <div id="input_div" style="position:absolute;background:red;height:200px;top:20%;left:30%;display:none">
+      <div id="input_div" style="position:absolute;background:white;border: 1px solid black;height:200px;top:20%;left:30%;display:none">
         이름 : <input type="text" name="mb_name" id="mb_name"><br />
         전화번호 : <input type="text" name="mb_phone1" id="mb_phone1">-<input type="text" name="mb_phone2" id="mb_phone2">-<input type="text" name="mb_phone3" id="mb_phone3"><br />
         <a href="#">자세히보기</a><br />
@@ -61,14 +70,7 @@
         <div id="map_area" style="width:100%;height:90%;margin-top:5%"></div>
       </div>
       <!-------------------------- 지도 DIV -------------------------->
-    </div>
-    <div class="section" id="section1" id="footer">
-      <div id="footer">
-        <a href="#">선물 안내</a>
-        <a href="#firstPage">이벤트보기</a>
-        <a href="#">영상보기</a>
-      </div>
-    </div>
+
 </body>
 </html>
   <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
@@ -95,7 +97,13 @@
 			$('#fullpage').fullpage({
 				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
 				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-				menu: '#menu',
+			    navigation: {
+			    	'position': 'right',
+			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
+			   	},
+				menu: '#myMenu',
+				loopBottom: true,
+				verticalCentered: true,
 				css3: true,
 				scrollingSpeed: 1000
 			});

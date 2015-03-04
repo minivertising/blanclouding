@@ -225,7 +225,9 @@ function sns_share(media)
 function show_map()
 {
 	var si				= $("#addr1 option:selected").text();
+	var si_val		= $("#addr1").val();
 	var gun			= $("#addr2 option:selected").text();
+	var gun_val		= $("#addr2").val();
 	var shop_idx	= $("#shop").val();
 	if (shop_idx)
 	{
@@ -253,19 +255,25 @@ function show_map()
 			}
 		});
 	}else{
-		$.ajax({
-			type:"POST",
-			data:{
-				"flag"    : "sigungu",
-				"si"       : si,
-				"gun"    : gun
-			},
-			url: "./map_ajax.php",
-			success: function(response){
-				$("#map_div").show();
-				$("#map_area").html(response);
-			}
-		});
+		if (gun_val)
+		{
+			$.ajax({
+				type:"POST",
+				data:{
+					"flag"    : "sigungu",
+					"si"       : si,
+					"gun"    : gun
+				},
+				url: "./map_ajax.php",
+				success: function(response){
+					$("#map_div").show();
+					$("#map_area").html(response);
+				}
+			});
+		}else{
+			alert("지역이나 매장을 선택하셔야만 지도를 보실 수 있습니다.");
+		}
+
 	}
 }
 
