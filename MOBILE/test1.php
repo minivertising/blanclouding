@@ -1,5 +1,5 @@
 <?
-	include_once "./header.php";
+	include_once "../PC/header.php";
 ?>
 	<script>
 	function show_map(){

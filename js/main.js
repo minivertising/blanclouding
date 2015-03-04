@@ -93,9 +93,9 @@ function chk_input()
 		data:{
 			"exec"				: "insert_event",
 			"mb_name"			: mb_name,
-			"mb_phone1"		: mb_phone1,
-			"mb_phone2"		: mb_phone2,
-			"mb_phone3"		: mb_phone3,
+			"mb_phone1"		    : mb_phone1,
+			"mb_phone2"		    : mb_phone2,
+			"mb_phone3"		    : mb_phone3,
 			"shop"				: shop
 		},
 		url: "../main_exec.php",
@@ -113,7 +113,7 @@ function chk_input()
 
 function CheckHangul(name) {
     strarr = new Array(name.value.length);
-    schar = new Array('/','.','>','<',',','?','}','{',' ','\\','|','(',')','+','!','@','#','$','%','^','&','*');
+    schar = new Array('/','.','>','<',',','?','}','{',' ','\\','|','(',')','+','!','@','#','$','%','^','&','*','~','-');
     for (i=0; i<name.value.length; i++)    {
         for (j=0; j<schar.length; j++)        {
             if (schar[j] ==name.value.charAt(i))
@@ -158,10 +158,9 @@ function CheckHangul(name) {
     return true;
 }
 
-function only_num1(obj)
+function only_num(obj)
 {
 	var inText = obj.value;
-	var eText = inText.length;
 	var outText = "";
 	var flag = true;
 	var ret;
