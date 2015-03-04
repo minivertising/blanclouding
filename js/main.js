@@ -38,53 +38,53 @@ function chk_input()
 
 	if (mb_name == "")
 	{
-		alert('이름을 입력해 주세요.');
+		alert('개인정보 입력을 안 하셨습니다');
 		$("#mb_name").focus();
 		return false;
 	}
 
 	if (mb_phone1 == "")
 	{
-		alert('전화번호를 입력해 주세요.');
+		alert('개인정보 입력을 안 하셨습니다');
 		$("#mb_phone1").focus();
 		return false;
 	}
 
 	if (mb_phone2 == "")
 	{
-		alert('전화번호를 입력해 주세요.');
+		alert('개인정보 입력을 안 하셨습니다');
 		$("#mb_phone2").focus();
 		return false;
 	}
 
 	if (mb_phone3 == "")
 	{
-		alert('전화번호를 입력해 주세요.');
+		alert('개인정보 입력을 안 하셨습니다');
 		$("#mb_phone3").focus();
 		return false;
 	}
 
 	if (addr1 == "")
 	{
-		alert('지역을 선택해 주세요.');
+		alert('매장 선택을 안 하셨습니다');
 		return false;
 	}
 
 	if (addr2 == "")
 	{
-		alert('지역을 선택해 주세요.');
+		alert('매장 선택을 안 하셨습니다');
 		return false;
 	}
 
 	if (shop == "")
 	{
-		alert('매장을 선택해 주세요.');
+		alert('매장 선택을 안 하셨습니다');
 		return false;
 	}
 
 	if ($('#privacy_agree').is(":checked") == false)
 	{
-		alert("개인정보활용 동의에 체크해 주세요.");
+		alert("개인정보 활용 동의를 안 하셨습니다");
 		return false;
 	}
 
@@ -179,7 +179,7 @@ function only_num(obj)
  
 	if(flag == false)
 	{
-		alert("숫자만 입력하세요");
+		alert("전화번호란에 숫자입력만 가능합니다.");
 		obj.value = outText;
 		obj.focus();
 		return false;
@@ -190,6 +190,11 @@ function only_num(obj)
 function open_event()
 {
 	$("#input_div").show();
+}
+
+function open_look()
+{
+	$("#look_div").show();
 }
 
 function open_gift()
@@ -210,6 +215,11 @@ function close_gift()
 function close_map()
 {
 	$("#map_div").hide();
+}
+
+function close_look()
+{
+	$("#look_div").hide();
 }
 
 function sns_share(media)
