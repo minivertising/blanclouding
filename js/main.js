@@ -190,6 +190,7 @@ function only_num(obj)
 function open_event()
 {
 	$("#input_div").show();
+	$("#gift_div").hide();
 }
 
 function open_look()
@@ -200,6 +201,7 @@ function open_look()
 function open_gift()
 {
 	$("#gift_div").show();
+	$("#input_div").hide();
 }
 
 function close_input()
