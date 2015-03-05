@@ -12,6 +12,7 @@
     <meta property="og:description" content="1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../lib/fullpage/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <script src="../js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../lib/fullpage/jquery.fullPage.min.js"></script>
     <script type='text/javascript' src="../js/main.js"></script>
