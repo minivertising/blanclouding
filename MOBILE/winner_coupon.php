@@ -10,8 +10,6 @@
 	$hour=floor((($timediffer)-($day*60*60*24))/(60*60));
 	$minute=floor(($timediffer-($day*60*60*24)-($hour*60*60))/(60));
 
-	//echo $hour."시간".$minute."분 남았습니다.";
-
 	//내가 선택한 지점찾기 쿼리
 	$query = "SELECT s.shop_name, s.shop_addr FROM member_info m, shop_info s where m.shop_idx = s.idx and m.idx = '".$userid."'";
 	$result = mysqli_query($my_db, $query);
