@@ -11,7 +11,7 @@
 	position:absolute;
 	background:white;
 	border: 1px solid black;
-	height:200px;
+	height:250px;
 	top:20%;
 	left:30%;
 	display:none;
@@ -20,8 +20,42 @@
 .pop_input .header .btn_close{
 	padding:0;
 	text-align:right;
-
 }
+
+.pop_input .content .member_info_block ul li{
+	display:block;
+	padding:5px 0;
+}
+
+.pop_input .inner .content .member_info_block ul li .label{
+	float:left;
+	width:100px;
+}
+
+.pop_input .inner .content .member_info_block ul li .input{
+	float:left;
+	width:540px;
+}
+
+.pop_input .content .check_block ul li{
+	display:block;
+	padding:5px 0;
+}
+
+.pop_input .inner .content .check_block ul li .label{
+	float:left;
+	width:100px;
+}
+
+.pop_input .inner .content .check_block ul li .input{
+	float:left;
+	width:510px;
+}
+
+.pop_input .content .btn_block{
+	text-align:center;
+}
+
 
 .pop_gift{
 	position:absolute;

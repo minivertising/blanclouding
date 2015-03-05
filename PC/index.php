@@ -39,16 +39,24 @@
                 </li>
                 <li class="clearfix">
                   <div class="label">전화번호</div>
-                  <div class="input"><input type="text" name="mb_phone1" id="mb_phone1"> - <input type="text" name="mb_phone2" id="mb_phone2"> - <input type="text" name="mb_phone3" id="mb_phone3"></div>
+                  <div class="input">
+                    <select name="mb_phone1" id="mb_phone1">
+                      <option value="010">010</option>
+                      <option value="011">011</option>
+                      <option value="016">016</option>
+                      <option value="017">017</option>
+                      <option value="018">018</option>
+                      <option value="019">019</option>
+                    </select> - 
+                    <input type="text" name="mb_phone2" id="mb_phone2" onkeyup="only_num(this)" maxlength="4"> - 
+                    <input type="text" name="mb_phone3" id="mb_phone3" onkeyup="only_num(this)" maxlength="4">
+                  </div>
                 </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <a href="#" onclick="open_look()">자세히보기</a><br />
-        받으실매장
-        <select name="addr1" id="addr1" onchange="addr_change(this.value)">
-          <option value="">선택하세요</option>
+                <li>
+                  <div class="label">받으실매장</div>
+                  <div class="input">
+                    <select name="addr1" id="addr1" onchange="addr_change(this.value)">
+                      <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
 	$query 		= "SELECT * FROM ".$_gl['addr_info_table']." WHERE addr_level='1'";
@@ -57,21 +65,35 @@
 	while($addr1_data = @mysqli_fetch_array($result))
 	{
 ?>
-          <option value="<?=$addr1_data['addr_sido']?>"><?=$addr1_data['addr_sido']?></option>
+                      <option value="<?=$addr1_data['addr_sido']?>"><?=$addr1_data['addr_sido']?></option>
 <?
 	}
 ?>
-        </select>
-        <select name="addr2" id="addr2" onchange="shop_change(this.value)">
-          <option value="">선택하세요</option>
-        </select>
-        <select name="shop" id="shop">
-          <option value="">선택하세요</option>
-        </select>
-        <a href="#" onclick="show_map()">가까운 매장 찾기</a>
-        <br />
-        <input type="checkbox" name="privacy_agree" id="privacy_agree"><label for="privacy_agree">개인정보활용, 개인정보취급위탁동의, 광고성 정보 전송 동의</label><br />
-        <a href="#" onclick="chk_input()">신청완료</a>
+                    </select>
+                    <select name="addr2" id="addr2" onchange="shop_change(this.value)">
+                      <option value="">선택하세요</option>
+                    </select>
+                    <select name="shop" id="shop">
+                      <option value="">선택하세요</option>
+                    </select>
+                    <a href="#" onclick="show_map()">가까운 매장 찾기</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="check_block">
+              <ul>
+                <li class="clearfix">
+                  <div class="input"><input type="checkbox" name="privacy_agree" id="privacy_agree"><label for="privacy_agree">개인정보활용, 개인정보취급위탁동의, 광고성 정보 전송 동의</label></div>
+                  <div class="label"><a href="#" onclick="open_look()">자세히보기</a></div>
+                </li>
+              </ul>
+            </div>
+            <div class="btn_block">
+              <a href="#" onclick="chk_input()">신청완료</a>
+            </div>
+          </div>
+        </div>
       </div>
 <!-------------------------- 이벤트 응모 DIV -------------------------->
 <!-------------------------- 선물 확인 DIV -------------------------->
