@@ -2,10 +2,10 @@
 	include_once "./header.php";
 ?>
 <ul id="myMenu" style="position:absolute;z-index:100000">
-    <li data-menuanchor="firstPage" class="active"><a href="#" onclick="open_event()">이벤트 참여</a></li>
-    <li data-menuanchor="secondPage"><a href="#" onclick="open_gift()">선물 안내</a></li>
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage" onclick="open_event()">이벤트 참여</a></li>
+    <li data-menuanchor="secondPage"><a href="#firstPage" onclick="open_gift()">선물 안내</a></li>
     <li data-menuanchor="thirdPage"><a href="#secondPage">BlanClouding이란?</a></li>
-    <li data-menuanchor="fourthPage"><a href="#" id="video_control">영상보기</a></li>
+    <li data-menuanchor="fourthPage"><a href="#firstPage" id="video_control">영상보기</a></li>
 </ul>
   <div id="fullpage">
     <div class="section active" id="section0">
@@ -16,11 +16,7 @@
 
     </div>
     <div class="section" id="section1">
-      <div id="footer">
-        <a href="#">선물 안내</a>
-        <a href="#firstPage">이벤트보기</a>
-        <a href="#">영상보기</a>
-      </div>
+      
     </div>
 
       <!-------------------------- 이벤트 응모 DIV -------------------------->

@@ -34,16 +34,25 @@ print_r($user_info['shop_addr']);
 			},
 			url: "./map_ajax.php",
 			success: function(response){
+				$("#map_div").show();
 				$("#map_area").html(response);
 			}
 		});
 	}
+	
+	function close_map()
+	{
+		$("#map_div").hide();
+	}
+
     </script>
   <body>
     남은 시간 : <?=$hour.":".$minute?>
 	<input type="button" value="지도" onclick="show_map()">
-	<div id="map_area" style="width:50%; heigh:50%">
-	</div>
+	 <div id="map_div" style="position:absolute;background:black;width:1000px;height:500px;top:20%;left:30%;display:none">
+        <a href="#" onclick="close_map()">닫기</a>
+        <div id="map_area" style="width:100%;height:90%;margin-top:5%"></div>
+      </div>
 </body>
 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
 </html>
