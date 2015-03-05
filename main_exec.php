@@ -31,6 +31,10 @@ switch ($_REQUEST['exec'])
 
 		echo $info['shop_addr'];
 	break;
+
+	case "create_surl" :
+		print_r($_REQUEST);
+	break;
 }
 
 ?>
