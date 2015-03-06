@@ -110,9 +110,9 @@
   </div>
 <!-------------------------- 선물 확인 DIV -------------------------->
 <!-------------------------- 지도 DIV -------------------------->
-  <div id="map_div" class="pop_main_map">
+  <div id="map_div" class="pop_main_map zoom-anim-dialog mfp-hide">
     <div class="header">
-      <div class="btn_close"><a href="#" onclick="close_map()">닫기</a></div>
+      <div class="btn_close"><a href="#input_div" class="first-popup-link" onclick="close_map()">닫기</a></div>
     </div>
     <div class="contents">
       <div id="map_area" class="map_area"></div>
@@ -121,9 +121,9 @@
   </div>
 <!-------------------------- 지도 DIV -------------------------->
 <!-------------------------- 약관 DIV ----------------------->
-  <div id="look_div" class="pop_agree">
+  <div id="look_div" class="pop_agree zoom-anim-dialog mfp-hide">
     <div class="header">
-      <div class="btn_close"><a href="#" onclick="javascript:close_look()">닫기</a></div>
+      <div class="btn_close"><a href="#input_div" class="first-popup-link" onclick="javascript:close_look()">닫기</a></div>
     </div>
 <?
 	include_once "./privacy_agree.php";
