@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>KakaoLink Demo(Web Button) - Kakao Javascript SDK</title>
+    <title>더페이스샵 블랑클라우딩 링크</title>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   </head>
   <body>
     <h3>카카오톡 링크는 카카오톡 앱이 설치되어 있는 모바일 기기에서만 전송 가능합니다.</h3>
     <a id="kakao-link-btn" href="javascript:;">
-      <img src="http://dn.api1.kage.kakao.co.kr/14/dn/btqa9B90G1b/GESkkYjKCwJdYOkLvIBKZ0/o.jpg" />
-    </a>
+	<a href="www.thefaceshopclouding.co.kr">더페이스샵 블랑클라우딩 확인하러가기</a>
+	</a>
 
     <script>
     // 사용할 앱의 Javascript 키를 설정해 주세요.
@@ -20,8 +20,13 @@
     Kakao.Link.createTalkLinkButton({
       container: '#kakao-link-btn',
       label: 'TheFaceShop의 BlanClouding 보러가기',
+      image: {
+        src: 'http://dn.api1.kage.kakao.co.kr/14/dn/btqaWmFftyx/tBbQPH764Maw2R6IBhXd6K/o.jpg',
+        width: '300',
+        height: '200'
+      },
       webButton: {
-        text: 'TheFaceShop BlanClouding',
+        text: '카카오 디벨로퍼스',
         url: 'thefaceshopclouding.co.kr' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
       }
     });
