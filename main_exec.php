@@ -11,7 +11,7 @@ switch ($_REQUEST['exec'])
 		$shop			= $_REQUEST['shop'];
 		$mb_phone = $mb_phone1."-".$mb_phone2."-".$mb_phone3;
 
-		$query 		= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr, mb_phone, shop_idx, mb_regdate) values('".$_SERVER['REMOTE_ADDR']."','".$mb_phone."','".$shop."','".date("Y-m-d H:i:s")."')";
+		$query 		= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr, mb_phone, shop_idx, mb_regdate, mb_gubun) values('".$_SERVER['REMOTE_ADDR']."','".$mb_phone."','".$shop."','".date("Y-m-d H:i:s")."','".$gubun."')";
 		$result 	= mysqli_query($my_db, $query);
 
 		if ($result)

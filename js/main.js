@@ -190,6 +190,7 @@ function only_num(obj)
 function open_event()
 {
 	$("#input_div").show();
+	$("#gift_div").hide();
 }
 
 function open_look()
@@ -200,6 +201,7 @@ function open_look()
 function open_gift()
 {
 	$("#gift_div").show();
+	$("#input_div").hide();
 }
 
 function close_input()
@@ -301,4 +303,11 @@ function only_kor(obj)
 			return false;
 		}	
 	}
+}
+
+function auto_play()
+{
+	$("#cover_image").hide();
+	controllable_player.seekTo(0);
+	controllable_player.playVideo(); 
 }
