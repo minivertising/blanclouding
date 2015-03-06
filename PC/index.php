@@ -11,7 +11,9 @@
 <div id="fullpage">
 <!-------------------------- 메인 1st DIV -------------------------->
   <div class="section active" id="section0">
-    <iframe width="1280" height="720" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer"></iframe>
+    <div class="movie_block">
+      <iframe width="960" height="540" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer" allowfullscreen></iframe>
+    </div>
     <div class="cover_image" id="cover_image"><img src="./images/Desert_test.jpg"></div>
     <a href="#" onclick="sns_share('facebook')">페이스북 공유</a>
     <a href="#" onclick="sns_share('twitter')">트위터 공유</a>
@@ -152,14 +154,18 @@
     	}
     }, 1000)
 
+	$(window).resize(function(){
+		var width = $(window).width();
+		//var height = $(window).height();
+
+		var youtube_height = (width / 16) * 9;
+		$("#ytplayer").height(youtube_height);
+	});
+
 	$(document).ready(function() {
 		$('#fullpage').fullpage({
 			sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
 			anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-			navigation: {
-				'position': 'right',
-				'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
-			},
 			menu: '#myMenu',
 			loopBottom: true,
 			verticalCentered: true,
@@ -182,7 +188,6 @@
 			checkboxClass: 'icheckbox_flat-red',
 			increaseArea: '0%'
 		});
-
 
 		$('.popup-with-zoom-anim').magnificPopup({
 			type: 'inline',
