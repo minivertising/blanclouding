@@ -1,3 +1,20 @@
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '376515979199685',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
 function addr_change(addr1)
 {
 	$.ajax({
@@ -220,7 +237,8 @@ function close_input()
 
 function close_gift()
 {
-	$("#gift_div").hide();
+	//$("#gift_div").hide();
+	$.magnificPopup.close();
 }
 
 function close_map()
@@ -237,7 +255,37 @@ function sns_share(media)
 {
 	if (media == "facebook")
 	{
-		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/PC/index.php'),'sharer','toolbar=0,status=0,width=600,height=325');
+		//var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/PC/index.php'),'sharer','toolbar=0,status=0,width=600,height=325');
+	  var media = "fb";
+	  FB.ui(
+	  {
+		method: 'feed',
+		name: "더페이스샵 - 블랑클라우닝'",
+		link: 'http://www.thefaceshopclouding.co.kr/?media=fb',
+		//picture: imgurl,
+		//picture: "http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg",
+		caption: 'www.thefaceshopclouding.co.kr',
+		//description: job + " - " + job_explain
+		description: "1. 서장훈, 촉촉하게 수지랑!\n서장훈 구름탄 기분이랄까~\n촉촉한 선물 \n2. 서장훈 더페이스샵 CF모델? \n'아니아니 그게 아니고' 공개! \n구름선물"
+	  },
+		function(response) {
+		  if (response && response.post_id) {
+			alert('111');
+			/*$.ajax({
+			  type   : "POST",
+			  async  : false,
+			  url    : "../main_exec.php",
+			  data:{
+				"exec" : "insert_share_info",
+				"media" : media,
+				"gubun" : gubun
+			  }
+			});*/
+		  }
+		}
+	  );
+
+	
 	}else{
 		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물") + '&url='+ encodeURIComponent('http://goo.gl/jTps76'),'sharer','toolbar=0,status=0,width=600,height=325');
 	}

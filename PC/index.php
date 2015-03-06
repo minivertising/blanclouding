@@ -3,7 +3,7 @@
 ?>
 <ul id="myMenu" style="position:absolute;z-index:100000">
     <li data-menuanchor="firstPage" class="active"><a href="#firstPage" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()">이벤트 참여</a></li>
-    <li data-menuanchor="secondPage"><a href="#firstPage" onclick="open_gift()">선물 안내</a></li>
+    <li data-menuanchor="secondPage"><a href="#firstPage" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()">선물 안내</a></li>
     <li data-menuanchor="thirdPage"><a href="#secondPage">BlanClouding이란?</a></li>
     <li data-menuanchor="fourthPage"><a href="#firstPage" id="video_control">영상보기</a></li>
 </ul>
@@ -94,7 +94,7 @@
   </div>
 <!-------------------------- 이벤트 응모 DIV -------------------------->
 <!-------------------------- 선물 확인 DIV -------------------------->
-  <div id="gift_div" class="pop_gift">
+  <div id="gift_div" class="pop_gift zoom-anim-dialog mfp-hide">
     <div class="header">
       <div class="btn_close"><a href="#" onclick="close_gift()">닫기</a></div>
     </div>
