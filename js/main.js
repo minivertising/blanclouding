@@ -207,7 +207,15 @@ function open_gift()
 function close_input()
 {
 	//$("#input_div").hide();
-	magnificPopup.close();
+	$("#mb_name").val("");
+	$("#mb_phone1").val("010");
+	$("#mb_phone2").val("");
+	$("#mb_phone3").val("");
+	$("#addr1").val("");
+	$("#addr2").val("");
+	$("#shop").val("");
+	$('input').iCheck('uncheck');
+	$.magnificPopup.close();
 }
 
 function close_gift()

@@ -82,7 +82,7 @@
         <ul>
           <li class="clearfix">
             <div class="input"><input type="checkbox" name="privacy_agree" id="privacy_agree"><label for="privacy_agree">개인정보활용, 개인정보취급위탁동의, 광고성 정보 전송 동의</label></div>
-            <div class="label"><a href="#" onclick="open_look()">자세히보기</a></div>
+            <div class="label"><a href="#look_div" class="popup-with-zoom-anim" onclick="open_look()">자세히보기</a></div>
           </li>
         </ul>
       </div>
