@@ -25,7 +25,7 @@
 <!-------------------------- 이벤트 응모 DIV -------------------------->
   <div id="input_div" class="pop_input zoom-anim-dialog mfp-hide">
     <div class="header">
-      <div class="btn_close"><a href="#" onclick="javascript:close_input()" style="cursor:pointer">닫기</a></div>
+      <div class="btn_close"><a href="#" onclick="javascript:close_input()">닫기</a></div>
     </div>
     <div class="contents">
       <div class="member_info_block">
@@ -123,7 +123,7 @@
 <!-------------------------- 약관 DIV ----------------------->
   <div id="look_div" class="pop_agree">
     <div class="header">
-      <div class="btn_close"><a href="#" onclick="close_look()">닫기</a></div>
+      <div class="btn_close"><a href="#" onclick="javascript:close_look()">닫기</a></div>
     </div>
 <?
 	include_once "./privacy_agree.php";
