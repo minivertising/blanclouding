@@ -206,7 +206,8 @@ function open_gift()
 
 function close_input()
 {
-	$("#input_div").hide();
+	//$("#input_div").hide();
+	magnificPopup.close();
 }
 
 function close_gift()
