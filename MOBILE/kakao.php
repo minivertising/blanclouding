@@ -8,9 +8,7 @@
   </head>
   <body>
     <h3>카카오톡 링크는 카카오톡 앱이 설치되어 있는 모바일 기기에서만 전송 가능합니다.</h3>
-    <a id="kakao-link-btn" href="javascript:;">
-	<a href="www.thefaceshopclouding.co.kr">더페이스샵 블랑클라우딩 확인하러가기</a>
-	</a>
+    <a id="kakao-link-btn" href="javascript:;">더페이스샵 블랑클라우딩 확인하러가기</a>
 
     <script>
     // 사용할 앱의 Javascript 키를 설정해 주세요.
