@@ -2,7 +2,7 @@
 	include_once "./header.php";
 ?>
 <ul id="myMenu" style="position:absolute;z-index:100000">
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage" onclick="open_event()">이벤트 참여</a></li>
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()">이벤트 참여</a></li>
     <li data-menuanchor="secondPage"><a href="#firstPage" onclick="open_gift()">선물 안내</a></li>
     <li data-menuanchor="thirdPage"><a href="#secondPage">BlanClouding이란?</a></li>
     <li data-menuanchor="fourthPage"><a href="#firstPage" id="video_control">영상보기</a></li>
@@ -23,7 +23,7 @@
 <!-------------------------- 메인 2nd DIV -------------------------->
 
 <!-------------------------- 이벤트 응모 DIV -------------------------->
-  <div id="input_div" class="pop_input">
+  <div id="input_div" class="pop_input zoom-anim-dialog mfp-hide">
     <div class="header">
       <div class="btn_close"><a href="#" onclick="close_input()" style="cursor:pointer">닫기</a></div>
     </div>
@@ -152,37 +152,70 @@
     	}
     }, 1000)
 
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-			    navigation: {
-			    	'position': 'right',
-			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
-			   	},
-				menu: '#myMenu',
-				loopBottom: true,
-				verticalCentered: true,
-				css3: true,
-				scrollingSpeed: 1000
-			});
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+			anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+			navigation: {
+				'position': 'right',
+				'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
+			},
+			menu: '#myMenu',
+			loopBottom: true,
+			verticalCentered: true,
+			css3: true,
+			scrollingSpeed: 1000
+		});
 
 
-			$("#video_control").click(function(){
-				controllable_player.seekTo(0);
-				controllable_player.playVideo(); 
-			});
+		$("#video_control").click(function(){
+			controllable_player.seekTo(0);
+			controllable_player.playVideo(); 
+		});
 
-			setTimeout("auto_play();",2000);
+		setTimeout("auto_play();",2000);
 
-			// 체크박스 스타일 설정
-			$('.pop_input input').on('ifChecked ifUnchecked', function(event){
-				//alert(this.id);
-			}).iCheck({
-				checkboxClass: 'icheckbox_flat-red',
-				increaseArea: '0%'
-			});
+		// 체크박스 스타일 설정
+		$('.pop_input input').on('ifChecked ifUnchecked', function(event){
+			//alert(this.id);
+		}).iCheck({
+			checkboxClass: 'icheckbox_flat-red',
+			increaseArea: '0%'
+		});
+
+
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+			fixedContentPos: true,
+			fixedBgPos: true,
+			overflowY: 'hidden',
+			closeBtnInside: true,
+			//preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in',
+			showCloseBtn : false,
+			callbacks: {
+				close: function() {
+					/*$("#mb_name").val("");
+					$("#mb_phone").val("");
+					$('input').iCheck('uncheck');
+					$("#postcode1").val("");
+					$("#postcode2").val("");
+					$("#addr1").val("");
+					$("#addr2").val("");
+					$("#post_div").hide();*/
+				}
+			}
 
 		});
+
+		$('.first-popup-link').magnificPopup({
+			closeBtnInside:true
+		});
+
+		var magnificPopup = $.magnificPopup.instance;
+
+	});
 
 	</script>
