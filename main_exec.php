@@ -35,6 +35,21 @@ switch ($_REQUEST['exec'])
 	case "create_surl" :
 		print_r($_REQUEST);
 	break;
+
+	case "update_winner" :
+		$userid = $_REQUEST['userid'];
+		$query = "UPDATE ".$_gl['member_info_table']." SET mb_use='Y' where idx='".$userid."'";
+		$result = mysqli_query($my_db, $query);
+
+		if ($result)
+			$flag = "Y";
+		else
+			$flag = "N";
+		echo $flag;
+	break;
+
+
+
 }
 
 ?>
