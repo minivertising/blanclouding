@@ -14,7 +14,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Ohui mall - Admin</title>
+    <title>TheFaceShop BlanClouding</title>
 	<!-- jQuery Version 1.11.0 -->
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
@@ -82,10 +82,10 @@ if (isset($_SESSION['ss_mb_name']) == false)
                 </ul>
               </li>
               <li>
-                <a href="buyer_list.php"><i class="fa fa-fw fa-table"></i> 이벤트 참여자 목록</a>
+                <a href="entry_list.php"><i class="fa fa-fw fa-table"></i> 더페이스샵 이벤트 참여자 목록</a>
               </li>
               <li>
-                <a href="winner_list.php"><i class="fa fa-fw fa-table"></i> 이벤트 당첨자 목록</a>
+                <a href="shop_list.php"><i class="fa fa-fw fa-table"></i> 매장 정보</a>
               </li>
               <li>
                 <a href="goods_info.php"><i class="fa fa-fw fa-edit"></i> 상품별 당첨 정보</a>

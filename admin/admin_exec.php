@@ -14,8 +14,8 @@
 			if ($member_info)
 			{
 				// 회원아이디 세션 생성
-				$_SESSION['ss_mb_name'] = $member_info['buyer_name'];
-				echo "<script>location.href='./daily_influx_count.php';</script>";
+				$_SESSION['ss_mb_name'] = $member_info['mb_ipaddr'];
+				echo "<script>location.href='./entry_list.php';</script>";
 			}else{
 				echo "<script>alert('로그인에 실패하였습니다.');</script>";
 				echo "<script>history.back();</script>";

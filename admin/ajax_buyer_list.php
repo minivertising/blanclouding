@@ -12,7 +12,7 @@ if(!$pg) $pg = 1;
 $page_size = 20;
 $block_size = 10;
 ?>
-      <table id="buyer_list" class="table table-hover">
+      <table id="entry_list" class="table table-hover">
           <thead>
             <tr>
               <th>No</th>
