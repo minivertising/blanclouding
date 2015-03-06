@@ -36,7 +36,7 @@
 		min-height: 100%; 
 		position: relative;
 		background: #0202F7 url('images/gr.jpg') 0 70px repeat-x;
-		}
+	}
 	#footer {
 		position: absolute;
 		bottom: 0;

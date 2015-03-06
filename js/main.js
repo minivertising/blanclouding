@@ -294,7 +294,7 @@ function sns_share(media)
 
 function show_map()
 {
-	var si				= $("#addr1 option:selected").text();
+	var si			= $("#addr1 option:selected").text();
 	var si_val		= $("#addr1").val();
 	var gun			= $("#addr2 option:selected").text();
 	var gun_val		= $("#addr2").val();
@@ -316,7 +316,7 @@ function show_map()
 						"flag"    : "addr",
 						"addr"     : response
 					},
-					url: "./map_ajax.php",
+					url: "../map_ajax.php",
 					success: function(response){
 						$("#map_div").show();
 						$("#map_area").html(response);
