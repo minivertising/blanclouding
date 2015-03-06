@@ -88,6 +88,7 @@
       </div>
       <div class="btn_block">
         <a href="#" onclick="chk_input()">신청완료</a>
+        <a href="#" onclick="close_input()">닫기</a>
       </div>
     </div>
   </div>
@@ -129,7 +130,6 @@
 ?>
   </div>
 <!-------------------------- 약관 DIV ----------------------->
-
 </body>
 </html>
   <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
