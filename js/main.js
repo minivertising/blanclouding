@@ -266,7 +266,7 @@ function sns_share(media)
 		//picture: "http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg",
 		caption: 'www.thefaceshopclouding.co.kr',
 		//description: job + " - " + job_explain
-		description: "1. 서장훈, 촉촉하게 수지랑!\n서장훈 구름탄 기분이랄까~\n촉촉한 선물 \n2. 서장훈 더페이스샵 CF모델? \n'아니아니 그게 아니고' 공개! \n구름선물"
+		description: "1. 서장훈, 촉촉하게 수지랑!<br />서장훈 구름탄 기분이랄까~<br />촉촉한 선물 <br />2. 서장훈 더페이스샵 CF모델? <br />'아니아니 그게 아니고' 공개! <br />구름선물"
 	  },
 		function(response) {
 		  if (response && response.post_id) {
