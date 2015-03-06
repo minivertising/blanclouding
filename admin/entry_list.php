@@ -97,6 +97,7 @@
                 <th>전화번호</th>
                 <th>매장명</th>
                 <th>등록일</th>
+				<th>구분</th>
               </tr>
             </thead>
             <tbody>
@@ -138,6 +139,7 @@
                 <td><?php echo $buyer_info[$key]['mb_phone']?></td>
                 <td><?php echo $shop_name['shop_name']?></td>
                 <td><?php echo $buyer_info[$key]['mb_regdate']?></td>
+				<td><?php echo $buyer_info[$key]['mb_gubun']?></td>
               </tr>
 <?php 
 	}
