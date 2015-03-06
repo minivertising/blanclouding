@@ -13,12 +13,17 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../lib/fullpage/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
+    <link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/jquery.easing.min.js"></script>
     <script type="text/javascript" src="../lib/fullpage/jquery.fullPage.min.js"></script>
     <script type='text/javascript' src="../js/main.js"></script>
     <script type='text/javascript' src="../js/analytics.js"></script>
+    <script type='text/javascript' src='../lib/iCheck/icheck.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
-	<style>
+    <script type="text/javascript" src="../lib/Magnific-Popup/jquery.magnific-popup.js"></script>
+    <style>
 	html,body { height: 100%; margin: 0; padding: 0; }
  
 	#container {

@@ -206,7 +206,16 @@ function open_gift()
 
 function close_input()
 {
-	$("#input_div").hide();
+	//$("#input_div").hide();
+	$("#mb_name").val("");
+	$("#mb_phone1").val("010");
+	$("#mb_phone2").val("");
+	$("#mb_phone3").val("");
+	$("#addr1").val("");
+	$("#addr2").val("");
+	$("#shop").val("");
+	$('input').iCheck('uncheck');
+	$.magnificPopup.close();
 }
 
 function close_gift()
@@ -236,7 +245,7 @@ function sns_share(media)
 
 function show_map()
 {
-	var si				= $("#addr1 option:selected").text();
+	var si			= $("#addr1 option:selected").text();
 	var si_val		= $("#addr1").val();
 	var gun			= $("#addr2 option:selected").text();
 	var gun_val		= $("#addr2").val();
@@ -258,7 +267,7 @@ function show_map()
 						"flag"    : "addr",
 						"addr"     : response
 					},
-					url: "./map_ajax.php",
+					url: "../map_ajax.php",
 					success: function(response){
 						$("#map_div").show();
 						$("#map_area").html(response);
@@ -303,4 +312,11 @@ function only_kor(obj)
 			return false;
 		}	
 	}
+}
+
+function auto_play()
+{
+	$("#cover_image").hide();
+	controllable_player.seekTo(0);
+	controllable_player.playVideo(); 
 }
