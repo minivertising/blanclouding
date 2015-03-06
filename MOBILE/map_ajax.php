@@ -1,3 +1,12 @@
+<?
+	$flag	= $_REQUEST['flag'];
+	if ($flag == "sigungu")
+		$map_addr	= $_REQUEST["si"]." ".$_REQUEST["gun"];
+	else
+		$map_addr	= $_REQUEST["addr"];
+?>
+
+
 <div id="map" style="width:100%;height:100%;"></div>
 
 
@@ -20,7 +29,7 @@ var map = new daum.maps.Map(mapContainer, mapOption);
 var ps = new daum.maps.services.Places(); 
 
 // 키워드로 장소를 검색합니다
-ps.keywordSearch('<?= $_REQUEST["jido"] ?> 더페이스샵', placesSearchCB); 
+ps.keywordSearch('<?= $map_addr ?> 더페이스샵', placesSearchCB); 
 
 // 키워드 검색 완료 시 호출되는 콜백함수 입니다
 function placesSearchCB (status, data, pagination) {
