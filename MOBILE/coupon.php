@@ -1,5 +1,7 @@
 <?
 	include_once "../config.php";
+	$userid = $_REQUEST['userid'];
+
 ?>
 <html>
 

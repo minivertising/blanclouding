@@ -1,20 +1,3 @@
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '376515979199685',
-      xfbml      : true,
-      version    : 'v2.2'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
 function addr_change(addr1)
 {
 	$.ajax({
@@ -397,7 +380,6 @@ function auto_play()
 	controllable_player.playVideo(); 
 }
 
-
 // 메뉴 이동
 function goPosition(to){
 	scrollReady = false;
@@ -419,4 +401,21 @@ function goevent(flag){
 	}
 }
 
-
+function button_event(userid){
+	if (confirm("정말 사용하시겠습니까?") == true){    //확인
+		$.ajax({
+			type:"POST",
+			data:{
+				"exec"				: "update_winner",
+				"userid"		    : userid
+			},
+			url: "../main_exec.php",
+			success: function(response){
+				if (response == "Y")
+					alert("참여해주셔서 감사합니다. 블랑클라우딩 많이 사랑해주세요~");
+				else
+					alert("이벤트 참여자 수가 많아 참여가 지연되고 있습니다./r/n다시 응모해 주시기 바랍니다.");
+			}
+		});
+	}
+}
