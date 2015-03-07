@@ -1,19 +1,18 @@
-/* 네비게이션*/
-.navi{
-	position:absolute;
-	z-index:100000;
-}
+	html,body { margin: 0; padding: 0; word-wrap: break-word; word-break: break-all;}
 
-/* 유튜브 영상*/
+/* 메인 첫번째 DIV */
 .ytplayer{
-	padding-left:20%;
+	overflow:hidden;
 }
-
-/*메인 커버 이미지*/
-.cover_image{
-	position:absolute;
-	top:10%;
-	left:25%;
+.cover_area{
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100%;
+	background : url("../images/movCover.png") repeat;
+	overflow : hidden;
+	z-index : 10;
 }
 
 /* 이벤트 응모 팝업*/

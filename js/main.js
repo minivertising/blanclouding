@@ -369,3 +369,27 @@ function auto_play()
 	controllable_player.seekTo(0);
 	controllable_player.playVideo(); 
 }
+
+
+// 메뉴 이동
+function goPosition(to){
+	scrollReady = false;
+	$("html, body").stop().animate(
+		{scrollTop: to},
+		500,
+		'easeOutExpo',
+		function(){scrollReady = true;}
+	);
+}
+
+function goevent(flag){
+	if (flag == 1){
+		goPosition($('.area1').height());
+	}else if(flag == 2){
+		goPosition($('.area1').height()+$('.area2').height());
+	}else if(flag == 3){
+		goPosition($('.area1').height()+$('.area2').height()+$('.area3').height());
+	}
+}
+
+
