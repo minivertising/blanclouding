@@ -62,37 +62,45 @@
 </div>
 <!--contents_wrap-->
 <!-------------------------- 이벤트 응모 DIV -------------------------->
-  <div id="input_div" class="pop_input zoom-anim-dialog mfp-hide">
-    <div class="header">
-      <div class="btn_close"><a href="#" onclick="javascript:close_input()">닫기</a></div>
-    </div>
-    <div class="contents">
-      <div class="member_info_block">
-        <ul>
-          <li class="clearfix">
-            <div class="label">이름</div>
-            <div class="input"><input type="text" name="mb_name" id="mb_name"></div>
-          </li>
-          <li class="clearfix">
-            <div class="label">전화번호</div>
-            <div class="input">
-              <select name="mb_phone1" id="mb_phone1">
-                <option value="010">010</option>
-                <option value="011">011</option>
-                <option value="016">016</option>
-                <option value="017">017</option>
-                <option value="018">018</option>
-                <option value="019">019</option>
-              </select> - 
-              <input type="text" name="mb_phone2" id="mb_phone2" onkeyup="only_num(this)" maxlength="4"> - 
-              <input type="text" name="mb_phone3" id="mb_phone3" onkeyup="only_num(this)" maxlength="4">
-            </div>
-          </li>
-          <li>
-            <div class="label">받으실매장</div>
-            <div class="input">
-              <select name="addr1" id="addr1" onchange="addr_change(this.value)">
-                <option value="">선택하세요</option>
+  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close" onclick="javascript:close_input()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div class="block_content">
+        <div class="inner">
+          <div class="title">
+            <img src="images/popup/pop_input_title.png" />
+          </div>
+          <div class="input_block">
+            <ul class="clearfix">
+              <li class="t_name"><img src="images/popup/txt_name.png" alt=""/></li>
+              <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
+            </ul>
+            <ul class="clearfix">
+              <li class="t_name"><img src="images/popup/txt_phone.png" alt=""/></li>
+              <li class="input_txt phone clearfix">
+                <div>
+                  <select id="mb_phone1" name="mb_phone1" style="width:79px">
+                    <option>010</option>
+                    <option>011</option>
+                    <option>016</option>
+                    <option>017</option>
+                    <option>018</option>
+                    <option>019</option>
+                  </select>
+                </div>
+                <div><input type="tel" name="mb_phone2" id="mb_phone2"></div>
+                <div><input type="tel" name="mb_phone3" id="mb_phone3"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="input_block">
+            <ul class="clearfix">
+              <li class="t_name"></li>
+              <li class="input_txt store">
+                <select name="addr1" id="addr1" onchange="addr_change(this.value)">
+                  <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
 	$query 		= "SELECT * FROM ".$_gl['addr_info_table']." WHERE addr_level='1'";
@@ -101,49 +109,62 @@
 	while($addr1_data = @mysqli_fetch_array($result))
 	{
 ?>
-                <option value="<?=$addr1_data['addr_sido']?>"><?=$addr1_data['addr_sido']?></option>
+                  <option value="<?=$addr1_data['addr_sido']?>"><?=$addr1_data['addr_sido']?></option>
 <?
 	}
 ?>
-              </select>
-              <select name="addr2" id="addr2" onchange="shop_change(this.value)">
-                <option value="">선택하세요</option>
-              </select>
-              <select name="shop" id="shop">
-                <option value="">선택하세요</option>
-              </select>
-              <a href="#map_div" class="popup-with-zoom-anim" onclick="show_map()">가까운 매장 찾기</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="check_block">
-        <ul>
-          <li class="clearfix">
-            <div class="input"><input type="checkbox" name="privacy_agree" id="privacy_agree"><label for="privacy_agree">개인정보활용, 개인정보취급위탁동의, 광고성 정보 전송 동의</label></div>
-            <div class="label"><a href="#look_div" class="popup-with-zoom-anim" onclick="open_look()">자세히보기</a></div>
-          </li>
-        </ul>
-      </div>
-      <div class="btn_block">
-        <a href="#" onclick="chk_input()">신청완료</a>
-        <a href="#" onclick="close_input()">닫기</a>
+                </select>
+
+              <li class="input_txt store" id="sel_addr2">
+                <select name="addr2" id="addr2" onchange="shop_change(this.value)">
+                  <option value="">선택하세요</option>
+                </select>
+              </li>
+            </ul>
+            <ul class="clearfix">
+              <li class="t_name"><img src="images/popup/txt_store.png" alt=""/></li>
+              <li class="input_txt store" id="sel_shop">
+                <select name="shop" id="shop">
+                  <option value="">선택하세요</option>
+                </select>
+              </li>
+              <li>
+                <a href="#map_div" id="search_shop" class="popup-with-zoom-anim" onclick="javascript:show_map();return false;"><img src="images/popup/btn_store.png" alt=""/></a>
+              </li>
+            </ul>
+          </div>
+          <div class="input_block input_check">
+            <ul class="clearfix">
+              <li class="in_check"><input type="checkbox" name="uses_agree" id="uses_agree"></li>
+              <li class="in_check_label"><a href="#use_div" class="btn_detail popup-with-zoom-anim" onclick="open_use()"><img src="images/popup/btn_detail_01.png" alt=""/></a></li>
+            </ul>
+            <ul class="clearfix">
+              <li class="in_check"><input type="checkbox" name="privacy_agree" id="privacy_agree"></li>
+              <li class="in_check_label"><a href="#privacy_div" class="btn_detail popup-with-zoom-anim" onclick="open_privacy()"><img src="images/popup/btn_detail_02.png" alt=""/></a></li>
+            </ul>
+            <ul class="clearfix">
+              <li class="in_check"><input type="checkbox" name="send_agree" id="send_agree"></li>
+              <li class="in_check_label"><a href="#adver_div" class="btn_detail popup-with-zoom-anim" onclick="open_adver()"><img src="images/popup/btn_detail_03.png" alt=""/></a></li>
+            </ul>
+          </div>
+          <div class="btn_block">
+            <a href="#" onclick="chk_input()"><img src="images/popup/btn_input_ok.png" alt=""/></a>
+          </div>
+        </div><!--inner-->
       </div>
     </div>
   </div>
 <!-------------------------- 이벤트 응모 DIV -------------------------->
 <!-------------------------- 선물 확인 DIV -------------------------->
-  <div id="gift_div" class="pop_gift zoom-anim-dialog mfp-hide">
-    <div class="header">
-      <div class="btn_close"><a href="#" onclick="close_gift()">닫기</a></div>
-    </div>
-    <div class="contents">
-      <div class="content_block">
-      추첨을 통해 1만분께 BLANCLOUDING선물 (10ml)과<br />
-      클라우딩 제품 구매시 5,000원 할인 쿠폰 증정<br />
+  <div id="gift_div" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" onclick="close_gift()" class="btn_close"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
-      <div class="btn_block">
-        <a href="#" onclick="close_gift()">확인</a>
+      <div class="block_content product">
+        <div class="inner">
+          <img src="images/popup/img_product.png" alt=""/>
+        </div><!--inner-->
       </div>
     </div>
   </div>
@@ -159,16 +180,42 @@
 
   </div>
 <!-------------------------- 지도 DIV -------------------------->
-<!-------------------------- 약관 DIV ----------------------->
-  <div id="look_div" class="pop_agree zoom-anim-dialog mfp-hide">
-    <div class="header">
-      <div class="btn_close"><a href="#input_div" class="first-popup-link" onclick="javascript:close_look()">닫기</a></div>
-    </div>
+<!--------------------------  개인정보 활용 약관 DIV ----------------------->
+  	<div id="use_div" class="popup_wrap zoom-anim-dialog mfp-hide">
+   	  <div class="p_mid">
+            <div class="block_close clearfix">
+                <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
+            </div>
+<?
+	include_once "./use_agree.php";
+?>
+        </div>
+	</div>
+<!--------------------------  개인정보 활용 약관 DIV ----------------------->
+<!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
+  	<div id="privacy_div" class="popup_wrap zoom-anim-dialog mfp-hide">
+   	  <div class="p_mid">
+            <div class="block_close clearfix">
+                <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
+            </div>
 <?
 	include_once "./privacy_agree.php";
 ?>
-  </div>
-<!-------------------------- 약관 DIV ----------------------->
+        </div>
+	</div>
+<!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
+<!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
+  	<div id="adver_div" class="popup_wrap zoom-anim-dialog mfp-hide">
+   	  <div class="p_mid">
+            <div class="block_close clearfix">
+                <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
+            </div>
+<?
+	include_once "./adver_agree.php";
+?>
+        </div>
+	</div>
+<!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
 
 </body>
 </html>
@@ -199,6 +246,10 @@
 		{
 			//controllable_player.playVideo();
 			$("#video_control").text('재생');
+		}
+		else if (e.data === 3)
+		{
+			//alert('4444');
 		}
     	//controllable_player.playVideo(); 
     };
@@ -253,10 +304,10 @@
 		setTimeout("auto_play();",2000);
 */
 		// 체크박스 스타일 설정
-		$('.pop_input input').on('ifChecked ifUnchecked', function(event){
+		$('.popup_wrap input').on('ifChecked ifUnchecked', function(event){
 			//alert(this.id);
 		}).iCheck({
-			checkboxClass: 'icheckbox_flat-red',
+			checkboxClass: 'icheckbox_flat-blue',
 			increaseArea: '0%'
 		});
 
@@ -284,7 +335,6 @@
 					$("#post_div").hide();*/
 				}
 			}
-
 		});
 
 		$('.first-popup-link').magnificPopup({
@@ -292,6 +342,24 @@
 		});
 
 		var magnificPopup = $.magnificPopup.instance;
+
+		// 셀렉트박스 스타일
+		$( "#mb_phone1" ).dropkick({
+			mobile: true
+		});
+
+		$( "#addr1" ).dropkick({
+			mobile: true
+		});
+		
+		$( "#addr2" ).dropkick({
+			mobile: true
+		});
+
+
+		$( "#shop" ).dropkick({
+			mobile: true
+		});
 		
 	});
 	</script>

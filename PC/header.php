@@ -16,10 +16,13 @@
        content="1. 서장훈, 촉촉하게 수지랑! 
                서장훈 구름탄 기분이랄까~촉촉한 선물 
                2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물" />
-    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico" />
+    <title>Blan Clouding</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link href="css/style_yang.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
     <link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 
+    <link rel="stylesheet" href="../lib/DropKick/dropkick.css"> 
     <script type='text/javascript' src="../js/jquery-1.11.2.min.js"></script>
     <script type='text/javascript' src="../js/jquery.easing.min.js"></script>
     <script type='text/javascript' src="../js/main.js"></script>
@@ -27,6 +30,7 @@
     <script type='text/javascript' src='../lib/iCheck/icheck.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
     <script type="text/javascript" src="../lib/Magnific-Popup/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="../lib/DropKick/dropkick.js"></script>
     <style>
 	html,body { height: 100%; margin: 0; padding: 0; }
     </style>

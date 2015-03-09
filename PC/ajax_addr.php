@@ -6,8 +6,9 @@
 
 	$addr1 = $_REQUEST['addr1'];
 ?>
-    <select name="addr2" id="addr2" onchange="shop_change(this.value)">
-      <option value="">선택하세요</option>
+              <li class="input_txt store" id="sel_addr2">
+                <select name="addr2" id="addr2" onchange="shop_change(this.value)">
+                  <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
 	$query 		= "SELECT * FROM ".$_gl['addr_info_table']." WHERE addr_sido='".$addr1."' AND addr_level='2'";
@@ -20,4 +21,11 @@
 <?
 	}
 ?>
-    </select>
+                </select>
+              </li>
+<script type="text/javascript">
+		$( "#addr2" ).dropkick({
+			mobile: true
+		});
+
+</script>
