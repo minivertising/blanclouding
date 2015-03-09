@@ -80,8 +80,8 @@
             <ul class="clearfix">
               <li class="t_name"><img src="images/popup/txt_phone.png" alt=""/></li>
               <li class="input_txt phone clearfix">
-                <div>
-                  <select id="mb_phone1" name="mb_phone1" style="width:79px">
+                <div style="width:79px;magin-left:2px">
+                  <select id="mb_phone1" name="mb_phone1">
                     <option>010</option>
                     <option>011</option>
                     <option>016</option>
@@ -90,7 +90,7 @@
                     <option>019</option>
                   </select>
                 </div>
-                <div><input type="tel" name="mb_phone2" id="mb_phone2"></div>
+                <div style="margin-left:4px;"><input type="tel" name="mb_phone2" id="mb_phone2"></div>
                 <div><input type="tel" name="mb_phone3" id="mb_phone3"></div>
               </li>
             </ul>
@@ -372,5 +372,15 @@
 			mobile: true
 		});
 		
+		$("#dk0-combobox").css("width","79px");
+		$("#dk1-addr1").css("width","120px");
+		$("#dk1-addr1").css("font-size","14px");
+		$("#dk1-combobox").css("height","34px");
+		$("#dk2-addr2").css("width","120px");
+		$("#dk2-addr2").css("font-size","14px");
+		$("#dk2-combobox").css("height","34px");
+		$("#dk3-shop").css("width","120px");
+		$("#dk3-shop").css("font-size","14px");
+		$("#dk3-combobox").css("height","34px");
 	});
 	</script>
