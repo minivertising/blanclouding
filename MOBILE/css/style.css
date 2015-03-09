@@ -102,7 +102,7 @@ body {
 .block_logo a{
 	display:block;
 	float:right;
-	padding:20px 10px;
+	padding:10px;
 
 }
 
@@ -135,8 +135,10 @@ body {
 }
 
 .wrap_page .content.coupon .block_time{
-	padding:20px 0;
+	padding:0 0 15px;
 	border-bottom:1px solid #1fa3de;
+	margin:0 auto;
+	width:95%;
 }
 .wrap_page .content.coupon .block_time .txt{
 }
