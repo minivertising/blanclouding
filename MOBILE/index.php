@@ -22,7 +22,7 @@
       </div>
 <!--icon_area-->
 <!--center_menu_area-->
-      <div class="center_menu_area">
+      <div class="center_menu_area" style="margin-top:0px">
         <div>
         더 페이스샵 블랑클라우딩
         </div>
