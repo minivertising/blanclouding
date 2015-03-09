@@ -41,7 +41,7 @@
 <!--sns_area-->
 <!--scroll_navi_area-->
       <div class="scroll_navi_area">
-	    <a href="#" onclick="javascript:goevent('2');">하단 이동</a>
+	    <a href="#">하단 이동</a>
       </div>
 <!--scroll_navi_area-->
     </div>
@@ -180,6 +180,7 @@
 	$(window).scroll(function() {
 		quickTop = ($(window).height()-$('.quickmenu').height()) /2;
 		$('.quickmenu').stop().animate({top:$(window).scrollTop()+quickTop},400,'easeOutExpo');
+		
 	});
 
     // 유튜브 반복 재생
@@ -245,7 +246,17 @@
 				return false;
 			}
 		});
+		$( '.quickmenu' ).click( function() {
+	    $( 'html, body' ).animate( { scrollTop : 0 }, 800 );
+		  return false;
+		} );
+
+		$( '.scroll_navi_area' ).click( function() {
+	    $( 'html, body' ).animate({ scrollTop: $(document).height()},1500);
+		  return false;
+		} );
 		
+
 		// 퀵메뉴 기본 위치
 		var quick_height	= $(window).height()/2;
 		$('.quickmenu').css("top",quick_height);
