@@ -149,13 +149,19 @@ body{
 .popup_wrap .p_alert{
 	width:400px;
 	height:260px;
-	background:#eee;
+	background:url(../images/popup/bg_popup.png) top right;
+	border:1px solid #ccc;
 }
 .popup_wrap .block_content .title{
 	text-align:center;
 }
+
+.popup_wrap .p_alert .block_content .title{
+	padding-top:25px;
+}
 .popup_wrap .p_alert .block_content .btn_block{
 	text-align:center;
+	padding-top:35px;
 }
 
 .popup_wrap .block_content .input_block{
