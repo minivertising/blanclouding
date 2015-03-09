@@ -1,66 +1,26 @@
 <?
 	include_once "./header.php";
 ?>
-<!--contents_wrap-->
-<div class="contents_wrap" style="position:relative;width:100%;">
-<!--area1-->
-  <div class="area1" style="position:relative;overflow:hidden">
-<!--video_area-->
-    <div class="video_area" style="position:relative;width:100%;height:100%;overflow:hidden">
-<!--youtube_div-->
-      <div class="youtube_div" style="overflow:hidden;width:100%;height:100%;">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer"></iframe>
-      </div>
-<!--youtube_div-->
-<!--cover_area-->
-      <div class="cover_area" style="overflow:hidden">
-      </div>
-<!--cover_area-->
-<!--icon_area-->
-      <div class="icon_area" style="position:absolute;z-index:30;top:20px;left:30px;">
-        <a href="#">로고 부분</a>
-      </div>
-<!--icon_area-->
-<!--center_menu_area-->
-      <div class="center_menu_area" style="position:absolute;top:50%;left:50%;margin-top:-200px;margin-left:-300px;width:600px;height:400px;text-align:center;z-index:40">
-        <div>
-        더 페이스샵 블랑클라우딩
-        </div>
-        <div class="btn_group">
-          <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()">이벤트 참여</a>
-          <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()">선물안내</a>
-        </div>
-      </div>
-<!--center_menu_area-->
-<!--sns_area-->
-      <div class="sns_area" style="position:absolute;z-index:40;bottom:100px;right:12px;overflow:hidden">
-        <a href="#" id="video_control">일시정지</a>
-        <a href="#" onclick="sns_share('facebook');return false;">페이스북 공유</a>
-        <a href="#" onclick="sns_share('twitter');return false;">트위터 공유</a>
-      </div>
-<!--sns_area-->
-<!--scroll_navi_area-->
-      <div class="scroll_navi_area" style="position:absolute;z-index:40;bottom:100px;left:50%;">
-	    <a href="#" onclick="javascript:goevent('2');">하단 이동</a>
-      </div>
-<!--scroll_navi_area-->
-    </div>
-<!--video_area-->
+<ul id="myMenu" style="position:absolute;z-index:100000">
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()">이벤트 참여</a></li>
+    <li data-menuanchor="secondPage"><a href="#firstPage" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()">선물 안내</a></li>
+    <li data-menuanchor="thirdPage"><a href="#secondPage">BlanClouding이란?</a></li>
+    <li data-menuanchor="fourthPage"><a href="#firstPage" id="video_control">영상보기</a></li>
+</ul>
+<!-------------------------- 네비게이션 -------------------------->
+<div id="fullpage">
+<!-------------------------- 메인 1st DIV -------------------------->
+  <div class="section active" id="section0">
+      <iframe width="100%" height="100%" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer" allowfullscreen></iframe>
+    <a href="#" onclick="sns_share('facebook')">페이스북 공유</a>
+    <a href="#" onclick="sns_share('twitter')">트위터 공유</a>
   </div>
-<!--area1-->
-<!--area2-->
-  <div class="area2" style="height:1000px;">
-  블랑클라우드 이벤트 소개 및 제품 소개 내용
+<!-------------------------- 메인 1st DIV -------------------------->
+<!-------------------------- 메인 2nd DIV -------------------------->
+  <div class="section" id="section1">
   </div>
-<!--area2-->
-<!--quickmenu-->
-<div class="quickmenu" style="position:absolute;right:20px;z-index:50">
-  <a href="#">TOP</a>
-</div>
-<!--quickmenu-->
+<!-------------------------- 메인 2nd DIV -------------------------->
 
-</div>
-<!--contents_wrap-->
 <!-------------------------- 이벤트 응모 DIV -------------------------->
   <div id="input_div" class="pop_input zoom-anim-dialog mfp-hide">
     <div class="header">
@@ -169,41 +129,17 @@
 ?>
   </div>
 <!-------------------------- 약관 DIV ----------------------->
-
 </body>
 </html>
   <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
 	<script type="text/javascript">
-
-	// quick menu
-	var quickTop;
-	$(window).scroll(function() {
-		quickTop = ($(window).height()-$('.quickmenu').height()) /2;
-		$('.quickmenu').stop().animate({top:$(window).scrollTop()+quickTop},400,'easeOutExpo');
-	});
-
     // 유튜브 반복 재생
     var controllable_player,start, 
     statechange = function(e){
-		if (e.data === 0)
-		{
-			$("#video_control").text('일시정지');
-			controllable_player.seekTo(0); controllable_player.playVideo();
-		}
-		else if (e.data === 1)
-		{
-			//controllable_player.pauseVideo();
-			$("#video_control").text('일시정지');
-		}
-		else if (e.data === 2)
-		{
-			//controllable_player.playVideo();
-			$("#video_control").text('재생');
-		}
-    	//controllable_player.playVideo(); 
+    	controllable_player.playVideo(); 
     };
     function onYouTubeIframeAPIReady() {
-		controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
+		controllable_player = new YT.Player('ytplayer', {}); 
     }
 
     if(window.opera){
@@ -215,41 +151,31 @@
     	}
     }, 1000)
 
-
 	$(window).resize(function(){
 		var width = $(window).width();
 		//var height = $(window).height();
 
 		var youtube_height = (width / 16) * 9;
-		$("#ytplayer").width(width);
 		$("#ytplayer").height(youtube_height);
 	});
 
 	$(document).ready(function() {
-		//처음 화면 크기에 따라 영상및 커버 크기 변경
-		var width = $(window).width();
-		var youtube_width = width;
-		$("#ytplayer").width(width);
-		$(".cover_area").width($("#ytplayer").width());
-		var youtube_height = (width / 16) * 9;
-		$("#ytplayer").height(youtube_height);
-		$(".cover_area").height($("#ytplayer").height());
-
-		$("#video_control").click(function(){
-			var control_txt	= $("#video_control").text();
-			if (control_txt == "일시정지"){
-				controllable_player.pauseVideo();
-				return false;
-			}else{
-				controllable_player.playVideo(); 
-				return false;
-			}
+		$('#fullpage').fullpage({
+			sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+			anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+			menu: '#myMenu',
+			loopBottom: true,
+			verticalCentered: true,
+			css3: true,
+			scrollingSpeed: 1000
 		});
-		
-		// 퀵메뉴 기본 위치
-		var quick_height	= $(window).height()/2;
-		$('.quickmenu').css("top",quick_height);
+
 /*
+		$("#video_control").click(function(){
+			controllable_player.seekTo(0);
+			controllable_player.playVideo(); 
+		});
+
 		setTimeout("auto_play();",2000);
 */
 		// 체크박스 스타일 설정
@@ -260,7 +186,6 @@
 			increaseArea: '0%'
 		});
 
-		// 팝업 jQuery 스타일
 		$('.popup-with-zoom-anim').magnificPopup({
 			type: 'inline',
 			fixedContentPos: true,
@@ -292,6 +217,8 @@
 		});
 
 		var magnificPopup = $.magnificPopup.instance;
-		
+
 	});
+
 	</script>
+

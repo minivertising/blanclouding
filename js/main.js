@@ -1,20 +1,3 @@
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '376515979199685',
-      xfbml      : true,
-      version    : 'v2.2'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
 function addr_change(addr1)
 {
 	$.ajax({
@@ -104,7 +87,6 @@ function chk_input()
 		alert("개인정보 활용 동의를 안 하셨습니다");
 		return false;
 	}
-
 	$.ajax({
 		type:"POST",
 		data:{
@@ -121,7 +103,15 @@ function chk_input()
 				alert("참여해주셔서 감사합니다./r/n당첨시 3월 19일에 모바일쿠폰을 보내드립니다./r/n미당첨시 따로 메시지를 보내드리지 않습니다.");
 			else
 				alert("이벤트 참여자 수가 많아 참여가 지연되고 있습니다./r/n다시 응모해 주시기 바랍니다.");
-		$("#input_div").hide();
+				$("#mb_name").val("");
+				$("#mb_phone1").val("010");
+				$("#mb_phone2").val("");
+				$("#mb_phone3").val("");
+				$("#addr1").val("");
+				$("#addr2").val("");
+				$("#shop").val("");
+				$('input').iCheck('uncheck');
+				$.magnificPopup.close();
 
 		}
 	});
@@ -256,6 +246,16 @@ function sns_share(media)
 	if (media == "facebook")
 	{
 		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/PC/index.php'),'sharer','toolbar=0,status=0,width=600,height=325');
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"media" : media
+			}
+		});
+
 	  /*
 	  var media = "fb";
 	  FB.ui(
@@ -289,12 +289,21 @@ function sns_share(media)
 	
 	}else{
 		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물") + '&url='+ encodeURIComponent('http://goo.gl/jTps76'),'sharer','toolbar=0,status=0,width=600,height=325');
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"media" : media
+			}
+		});
 	}
 }
 
 function show_map()
 {
-	var si				= $("#addr1 option:selected").text();
+	var si			= $("#addr1 option:selected").text();
 	var si_val		= $("#addr1").val();
 	var gun			= $("#addr2 option:selected").text();
 	var gun_val		= $("#addr2").val();
@@ -316,7 +325,7 @@ function show_map()
 						"flag"    : "addr",
 						"addr"     : response
 					},
-					url: "./map_ajax.php",
+					url: "../map_ajax.php",
 					success: function(response){
 						$("#map_div").show();
 						$("#map_area").html(response);
@@ -368,4 +377,44 @@ function auto_play()
 	$("#cover_image").hide();
 	controllable_player.seekTo(0);
 	controllable_player.playVideo(); 
+}
+
+// 메뉴 이동
+function goPosition(to){
+	scrollReady = false;
+	$("html, body").stop().animate(
+		{scrollTop: to},
+		500,
+		'easeOutExpo',
+		function(){scrollReady = true;}
+	);
+}
+
+function goevent(flag){
+	if (flag == 1){
+		goPosition($('.area1').height());
+	}else if(flag == 2){
+		goPosition($('.area1').height()+$('.area2').height());
+	}else if(flag == 3){
+		goPosition($('.area1').height()+$('.area2').height()+$('.area3').height());
+	}
+}
+
+function button_event(serial){
+	if (confirm("정말 사용하시겠습니까?") == true){    //확인
+		$.ajax({
+			type:"POST",
+			data:{
+				"exec"				: "update_winner",
+				"serial"		    : serial
+			},
+			url: "../main_exec.php",
+			success: function(response){
+				if (response == "Y")
+					alert("참여해주셔서 감사합니다. 블랑클라우딩 많이 사랑해주세요~");
+				else
+					alert("이벤트 참여자 수가 많아 참여가 지연되고 있습니다./r/n다시 응모해 주시기 바랍니다.");
+			}
+		});
+	}
 }

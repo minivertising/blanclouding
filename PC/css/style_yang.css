@@ -122,8 +122,11 @@ body{
 
 
 /*popup*/
+.popup_wrap{
+}
 .popup_wrap .block_close {
 	width:100%;
+	padding:10px 0;
 }
 .popup_wrap .block_close .btn_close{
 	display:block;
@@ -134,10 +137,12 @@ body{
 .popup_wrap .p_mid{
 	width:450px;
 	height:500px;
-	background:#eee;
+	border:1px solid #ccc;
+	background:url(../images/popup/bg_popup.png) top right;
 }
 .popup_wrap .p_mid .inner{
 	padding:20px;
+	padding-right:0;
 }
 .popup_wrap .block_close{
 }
@@ -154,7 +159,13 @@ body{
 }
 
 .popup_wrap .block_content .input_block{
-	padding-top:20px;
+	padding-top:15px;
+}
+.popup_wrap .block_content .input_block ul{
+	width:100%;
+}
+.popup_wrap .block_content .input_block.input_check{
+	padding-left:90px;
 }
 .popup_wrap .block_content .input_block ul li{
 	display:block;
@@ -163,4 +174,37 @@ body{
 
 .popup_wrap .block_content .input_block ul li.t_name{
 	width:84px;
+	text-align:right;
+	padding-right:10px;
+	padding-top:9px;
+}
+.popup_wrap .block_content .input_txt input{
+	background:#d4e5ee;
+	height:31px;
+	padding:2px;
+	border:none;
+	width:241px;
+	font-size:13px;
+}
+.popup_wrap .block_content .input_txt.phone div{
+	float:left;
+	width:83px;
+}
+.popup_wrap .block_content .input_txt.phone input{
+	width:75px;
+}
+.popup_wrap .block_content .input_txt.store{
+	width:125px;
+}
+.popup_wrap .block_content .input_txt.store input{
+	width:116px;
+}
+
+.popup_wrap .block_content .input_block.input_check .in_check_label{
+	padding-left:5px;
+}
+
+.popup_wrap .block_content .btn_block{
+	text-align:center;
+	padding-top:10px;
 }
