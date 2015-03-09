@@ -53,8 +53,8 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "update_winner" :
-		$userid = $_REQUEST['userid'];
-		$query = "UPDATE ".$_gl['member_info_table']." SET mb_use='Y' where idx='".$userid."'";
+		$serial = $_REQUEST['serial'];
+		$query = "UPDATE ".$_gl['member_info_table']." SET mb_use='Y' where mb_serialnumber='".$serial."'";
 		$result = mysqli_query($my_db, $query);
 
 		if ($result)

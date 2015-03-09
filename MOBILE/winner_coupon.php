@@ -1,6 +1,6 @@
 <?php
     include_once "../config.php";
-    $userid = $_REQUEST['userid'];
+    $serialnumber = $_REQUEST['serialnumber'];
 
     //ë‚¨ì€ ì‹œê°„ êµ¬í•˜ê¸°
     $startdate = date("Y-m-d h:i:s", time());
@@ -11,13 +11,13 @@
     $minute=floor(($timediffer-($day*60*60*24)-($hour*60*60))/(60));
 
 
-    $query = "SELECT s.shop_name, s.shop_addr, m.mb_use FROM member_info m, shop_info s where m.shop_idx = s.idx and m.idx = '".$userid."' and m.mb_winner = 'Y'";
+    $query = "SELECT s.shop_name, s.shop_addr, m.mb_use FROM member_info m, shop_info s where m.shop_idx = s.idx and m.mb_serialnumber = '".$serialnumber."' and m.mb_winner = 'Y'";
     $result = mysqli_query($my_db, $query);
     $user_info    = @mysqli_fetch_array($result);
 
 	if (!$user_info)
 	{
-		echo "<script>alert('당첨된 고객님이 아니십니다.');</script>";
+		echo "<script>alert('당첨된 고객이 아닙니다.');</script>";
 		exit;
 	}
 print_r($user_info['shop_addr']);
@@ -124,7 +124,7 @@ print_r($user_info['shop_addr']);
 <?
 	}else{
 ?>
-	  <input type = "button" value="사용 확인" onclick="button_event('<?=$userid?>')">
+	  <input type = "button" value="사용 확인" onclick="button_event('<?=$serialnumber?>')">
 <?
 	}
 ?>
