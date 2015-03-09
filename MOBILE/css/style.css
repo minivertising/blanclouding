@@ -234,6 +234,19 @@ body {
 	width:30%;
 	padding-left:2%;
 }
+
+.wrap_page.popup .content .input_block ul li.address{
+	width:63%;
+}
+.wrap_page.popup .content .input_block ul li.address .inner div{
+	float:left;
+	width:50%;
+}
+.wrap_page.popup .content .input_block ul li.address .inner div input{
+	float:left;
+	width:95%;
+}
+
 .wrap_page.popup .content .input_block.input_check{
 	padding-left:27%;
 }
