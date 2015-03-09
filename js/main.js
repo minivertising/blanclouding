@@ -99,7 +99,6 @@ function chk_input()
 		},
 		url: "../main_exec.php",
 		success: function(response){
-				alert(response);
 			if (response == "Y")
 				alert("참여해주셔서 감사합니다./r/n당첨시 3월 19일에 모바일쿠폰을 보내드립니다./r/n미당첨시 따로 메시지를 보내드리지 않습니다.");
 			else
@@ -401,13 +400,13 @@ function goevent(flag){
 	}
 }
 
-function button_event(userid){
+function button_event(serial){
 	if (confirm("정말 사용하시겠습니까?") == true){    //확인
 		$.ajax({
 			type:"POST",
 			data:{
 				"exec"				: "update_winner",
-				"userid"		    : userid
+				"serial"		    : serial
 			},
 			url: "../main_exec.php",
 			success: function(response){
