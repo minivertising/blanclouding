@@ -33,11 +33,11 @@
       </div>
 <!--center_menu_area-->
 <!--sns_area-->
-      <div class="sns_area">
+      <!-- <div class="sns_area">
         <a href="#" id="video_control">일시정지</a>
         <a href="#" onclick="sns_share('facebook');return false;">페이스북 공유</a>
         <a href="#" onclick="sns_share('twitter');return false;">트위터 공유</a>
-      </div>
+      </div> -->
 <!--sns_area-->
 <!--scroll_navi_area-->
       <div class="scroll_navi_area">
