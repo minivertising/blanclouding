@@ -2,16 +2,7 @@
     include_once "../config.php";
     $serialnumber = $_REQUEST['serialnumber'];
 
-    //ë‚¨ì€ ì‹œê°„ êµ¬í•˜ê¸°
-    $startdate = date("Y-m-d h:i:s", time());
-    $enddate = "2015-03-06 18:00:00";
-
-    $timediffer=strtotime($enddate)-strtotime($startdate);
-    $hour=floor((($timediffer)-($day*60*60*24))/(60*60));
-    $minute=floor(($timediffer-($day*60*60*24)-($hour*60*60))/(60));
-
-
-    $query = "SELECT s.shop_name, s.shop_addr, m.mb_use FROM member_info m, shop_info s where m.shop_idx = s.idx and m.mb_serialnumber = '".$serialnumber."' and m.mb_winner = 'Y'";
+	$query = "SELECT s.shop_name, s.shop_addr, m.mb_use FROM member_info m, shop_info s where m.shop_idx = s.idx and m.mb_serialnumber = '".$serialnumber."' and m.mb_winner = 'Y'";
     $result = mysqli_query($my_db, $query);
     $user_info    = @mysqli_fetch_array($result);
 
@@ -50,7 +41,7 @@ print_r($user_info['shop_addr']);
     }
 	
 	<!--- hide 
-	var millenium = new Date("March 10, 2015 22:00:00") //이곳을 수정하면 됩니다
+	var millenium = new Date("March 11, 2015 22:00:00") //이곳을 수정하면 됩니다
 	function CalcRemaining(theForm)
 	{
 	var now = new Date();
@@ -58,57 +49,55 @@ print_r($user_info['shop_addr']);
 	var difference = parseInt(((millenium.getTime() - now.getTime()) / 1000) + 0.999)
 	var secs = difference % 60
 
+	var secslen = String(secs).length;
+	if (secslen < 2)
+		secs = "0" + secs;
+
 	difference = parseInt(difference / 60)
 	var minutes  = difference % 60
+
+	var minuteslen = String(minutes).length;
+	if (minuteslen < 2)
+		minute = "0" + minute;
 
 	difference = parseInt(difference / 60)
 	var hours  = difference % 1000000
 
-	difference = parseInt(difference / 24)
-	var days  = difference
+	var hourslen = String(hours).length;
+	if (hourslen < 2)
+		hours = "0" + hours;
 
-	theForm.txtHours.value = hours;
-	theForm.txtMins.value = minutes;
-	theForm.txtSecs.value = secs;
+	var hours1     = String(hours).substr(0,1)
+	var hours2     = String(hours).substr(1,2)
+	var minutes1   = String(minutes).substr(0,1)
+	var minutes2   = String(minutes).substr(1,2)
+	var secs1      = String(secs).substr(0,1)
+	var secs2      = String(secs).substr(1,2)
+	
+
+	$("#realtime_h1").attr("src","./images/time_" + hours1 + ".png");
+	$("#realtime_h2").attr("src","./images/time_" + hours2 + ".png");
+	$("#realtime_m1").attr("src","./images/time_" + minutes1 + ".png");
+	$("#realtime_m2").attr("src","./images/time_" + minutes2 + ".png");
+	$("#realtime_s1").attr("src","./images/time_" + secs1 + ".png");
+	$("#realtime_s2").attr("src","./images/time_" + secs2 + ".png");
+
 
 	setTimeout("CalcRemaining(document.clock)", 250);
 	}
-    </script>
+	</script>
 	
-	<?
-	/*
-		$lg_zip =  "SELECT * FROM ".$_gl['member_info_table']." WHERE";
-		$lg_sucess = $lg_zip. "mb_winner ='Y'and mb_use='N'";
-		$lg_consume = $lg_zip. "WHERE mb_winner or mb_use = 'Y'";
-		$lg_fail = $lg_zip. "WHERE mb_winner ='N'";
-		$lg_use = "UPDATE member_info set mb_use='Y' where mb_use='N'";
-
-		$lg_info = "SELECT * FROM ".$_gl['member_info_table']." WHERE idx"
-		
-		$res = mysqli_query($my_db, $lg_info);
-
-		if($userid==""){
-
-*/
-		
-
-	?>
-  <body onLoad=CalcRemaining(document.clock) onLoad="timerONE=window.setTimeout('scrollit_r21(50)',100);">
-	<h4><B><font color="maroon">이벤트 참여 남은시간</B></h4></font>
-	<TABLE WIDTH="250" >
-	<FORM NAME=clock>
-		<TD COLSPAN=4>
-		<INPUT TYPE=TEXT NAME=txtHours SIZE=4 onFocus="blur()"><BR>Hours
-		<TD>
-		<INPUT TYPE=TEXT NAME=txtMins SIZE=4 onFocus="blur()"><BR>Minutes 
-		<TD>
-		<INPUT TYPE=TEXT NAME=txtSecs SIZE=4 onFocus="blur()"><BR>Seconds
-		<tr align=center>
-
+  <body onLoad="CalcRemaining(document.clock)">
+    <TABLE WIDTH="250" >
+	  <FORM NAME=clock>
+	    <img src="./images/time_0.png" id="realtime_h1">
+	    <img src="./images/time_0.png" id="realtime_h2">:
+	    <img src="./images/time_0.png" id="realtime_m1">
+	    <img src="./images/time_0.png" id="realtime_m2">:
+	    <img src="./images/time_0.png" id="realtime_s1">
+	    <img src="./images/time_0.png" id="realtime_s2">
 	</FORM>
 	</TABLE>
-
-	</FORM>
     <input type="button" value="지도" onclick="show_map()">
     <div id="map_area" style="width:50%; heigh:50%">
     </div>
