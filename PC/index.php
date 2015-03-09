@@ -2,27 +2,27 @@
 	include_once "./header.php";
 ?>
 <!--contents_wrap-->
-<div class="contents_wrap" style="position:relative;width:100%;">
+<div class="contents_wrap">
 <!--area1-->
-  <div class="area1" style="position:relative;overflow:hidden">
+  <div class="area1">
 <!--video_area-->
-    <div class="video_area" style="position:relative;width:100%;height:100%;overflow:hidden">
+    <div class="video_area">
 <!--youtube_div-->
-      <div class="youtube_div" style="overflow:hidden;width:100%;height:100%;">
+      <div class="youtube_div">
         <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer"></iframe>
       </div>
 <!--youtube_div-->
 <!--cover_area-->
-      <div class="cover_area" style="overflow:hidden">
+      <div class="cover_area">
       </div>
 <!--cover_area-->
 <!--icon_area-->
-      <div class="icon_area" style="position:absolute;z-index:30;top:20px;left:30px;">
+      <div class="icon_area">
         <a href="#">로고 부분</a>
       </div>
 <!--icon_area-->
 <!--center_menu_area-->
-      <div class="center_menu_area" style="position:absolute;top:50%;left:50%;margin-top:-200px;margin-left:-300px;width:600px;height:400px;text-align:center;z-index:40">
+      <div class="center_menu_area">
         <div>
         더 페이스샵 블랑클라우딩
         </div>
@@ -33,14 +33,14 @@
       </div>
 <!--center_menu_area-->
 <!--sns_area-->
-      <div class="sns_area" style="position:absolute;z-index:40;bottom:100px;right:12px;overflow:hidden">
+      <div class="sns_area">
         <a href="#" id="video_control">일시정지</a>
         <a href="#" onclick="sns_share('facebook');return false;">페이스북 공유</a>
         <a href="#" onclick="sns_share('twitter');return false;">트위터 공유</a>
       </div>
 <!--sns_area-->
 <!--scroll_navi_area-->
-      <div class="scroll_navi_area" style="position:absolute;z-index:40;bottom:100px;left:50%;">
+      <div class="scroll_navi_area">
 	    <a href="#" onclick="javascript:goevent('2');">하단 이동</a>
       </div>
 <!--scroll_navi_area-->
@@ -49,12 +49,12 @@
   </div>
 <!--area1-->
 <!--area2-->
-  <div class="area2" style="height:1000px;">
+  <div class="area2">
   블랑클라우드 이벤트 소개 및 제품 소개 내용
   </div>
 <!--area2-->
 <!--quickmenu-->
-<div class="quickmenu" style="position:absolute;right:20px;z-index:50">
+<div class="quickmenu">
   <a href="#">TOP</a>
 </div>
 <!--quickmenu-->
