@@ -12,13 +12,20 @@ switch ($_REQUEST['exec'])
 		$mb_phone = $mb_phone1."-".$mb_phone2."-".$mb_phone3;
 		$serialNumber	= BC_SerialNumber();
 
-		$query 		= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr, mb_phone, shop_idx, mb_regdate, mb_gubun, mb_serialnumber) values('".$_SERVER['REMOTE_ADDR']."','".$mb_phone."','".$shop."','".date("Y-m-d H:i:s")."','".$gubun."','".$serialNumber."')";
-		$result 	= mysqli_query($my_db, $query);
+		$chk_member	= BC_memberChk($mb_phone);
 
-		if ($result)
-			$flag = "Y";
-		else
-			$flag = "N";
+		if ($chk_member == 0)
+		{
+			$query 		= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr, mb_phone, shop_idx, mb_regdate, mb_gubun, mb_serialnumber) values('".$_SERVER['REMOTE_ADDR']."','".$mb_phone."','".$shop."','".date("Y-m-d H:i:s")."','".$gubun."','".$serialNumber."')";
+			$result 	= mysqli_query($my_db, $query);
+
+			if ($result)
+				$flag = "Y";
+			else
+				$flag = "N";
+		}else{
+			$flag = "D";
+		}
 
 		echo $flag;
 	break;
