@@ -90,9 +90,14 @@
 /* 이벤트 응모 팝업*/
 .popup_wrap{
 	position:absolute;
-	left:30%;
-	margin-top:-300px;
-	display:none;
+	top:50%;
+	left:50%;
+	margin-top:-280px;
+	margin-left:-220px;
+	width:400px;
+	height:400px;
+	text-align:center;
+	z-index:40;
 }
 
 .popup_wrap .block_close {
