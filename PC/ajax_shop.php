@@ -27,4 +27,7 @@
 		$( "#shop" ).dropkick({
 			mobile: true
 		});
+		$("#dk5-shop").css("width","120px");
+		$("#dk5-shop").css("font-size","14px");
+		$("#dk5-combobox").css("height","34px");
 </script>

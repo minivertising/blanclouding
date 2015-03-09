@@ -40,7 +40,15 @@ function chk_input()
 	if (mb_name == "")
 	{
 		alert('개인정보 입력을 안 하셨습니다');
-		$("#mb_name").focus();
+		/*
+		$.magnificPopup.open({
+			items: {
+				src: '#input_alert'
+			},
+			type: 'inline'
+		}, 0);
+		*/
+		//$("#mb_name").focus();
 		return false;
 	}
 
