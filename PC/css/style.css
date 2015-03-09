@@ -1,10 +1,30 @@
 	html,body { margin: 0; padding: 0; word-wrap: break-word; word-break: break-all;}
 
+.contents_wrap{
+	position:relative;
+	width:100%;
+}
+
 /* 메인 첫번째 DIV */
-.ytplayer{
+.contents_wrap .area1{
+	position:relative;
 	overflow:hidden;
 }
-.cover_area{
+
+.contents_wrap .area1 .video_area{
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+.contents_wrap .area1 .video_area .youtube_div{
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+
+.contents_wrap .area1 .video_area .cover_area{
 	position : absolute;
 	top : 0;
 	left : 0;
@@ -13,6 +33,56 @@
 	background : url("../images/movCover.png") repeat;
 	overflow : hidden;
 	z-index : 10;
+}
+
+.contents_wrap .area1 .video_area .icon_area{
+	position:absolute;
+	z-index:30;
+	top:20px;
+	left:30px;
+}
+
+.contents_wrap .area1 .video_area .center_menu_area{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-200px;
+	margin-left:-300px;
+	width:600px;
+	height:400px;
+	text-align:center;
+	z-index:40;
+}
+
+.contents_wrap .area1 .video_area .sns_area{
+	position:absolute;
+	z-index:40;
+	bottom:100px;
+	right:12px;
+	overflow:hidden;
+}
+
+.contents_wrap .area1 .video_area .scroll_navi_area{
+	position:absolute;
+	z-index:40;
+	bottom:100px;
+	left:50%;
+}
+
+/* 메인 첫번째 DIV */
+.contents_wrap .area2{
+	height:1000px;
+}
+
+/*퀵메뉴 DIV*/
+.contents_wrap .quickmenu{
+	position:absolute;
+	right:20px;
+	z-index:50;
+}
+
+.ytplayer{
+	overflow:hidden;
 }
 
 /* 이벤트 응모 팝업*/
