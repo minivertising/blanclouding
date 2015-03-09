@@ -138,7 +138,7 @@ body{
 	width:450px;
 	height:500px;
 	border:1px solid #ccc;
-	background:url(../images/popup/bg_popup.png) top right;
+	background:url(../images/popup/bg_popup.png) top right no-repeat;
 }
 .popup_wrap .p_mid .inner{
 	padding:20px;
@@ -168,7 +168,7 @@ body{
 .popup_wrap .p_alert{
 	width:400px;
 	height:260px;
-	background:url(../images/popup/bg_popup.png) top right;
+	background:url(../images/popup/bg_popup.png) top right no-repeat;
 	border:1px solid #ccc;
 }
 .popup_wrap .block_content .title{

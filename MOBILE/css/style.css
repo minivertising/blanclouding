@@ -85,6 +85,84 @@ body {
 	width:100%;
 }
 
+.wrap_page .header.coupon{
+	background:#6dc2e6;
+}
+
+.wrap_page .content.coupon{
+	background:#6dc2e6;
+}
+.wrap_page .content.coupon div{
+	text-align:center;
+}
+
+.block_logo{
+	width:100%;
+}
+.block_logo a{
+	display:block;
+	float:right;
+	padding:20px 10px;
+
+}
+
+.wrap_page .content.coupon .block_title{
+	padding:10px 0 20px;
+}
+
+
+.wrap_page .content.coupon .block_info{
+	padding:20px 0;
+}
+.wrap_page .content.coupon .block_info ul{
+	width:85%;
+	padding-left:15%;
+}
+.wrap_page .content.coupon .block_info ul li{
+	display:block;
+	float:left;
+	font-size:13px;
+	color:#1fa3de;
+	font-weight:bold;
+}
+
+.wrap_page .content.coupon .block_info ul li.txt_detail{
+	color:#555;
+	padding-left:10px;
+}
+.wrap_page .content.coupon .block_info ul li.btn_map{
+	padding-left:10px;
+}
+
+.wrap_page .content.coupon .block_time{
+	padding:20px 0;
+	border-bottom:1px solid #1fa3de;
+}
+.wrap_page .content.coupon .block_time .txt{
+}
+.wrap_page .content.coupon .block_time .time{
+	color:#1fa3de;
+	font-size:42px;
+	font-weight:bold;
+}
+
+.wrap_page .content.coupon .block_check_in{
+	background:#c5e6f4;
+	padding:30px 0;
+}
+.wrap_page .content.coupon .block_check_in .btn_block{
+	padding-top:20px;
+}
+
+
+.wrap_page .block_cloud_bg{
+	background: url(../img/bg_cloud.png) no-repeat 0 -60px;
+}
+.wrap_page .block_cloud_bg .block_time,
+.wrap_page .block_cloud_bg .block_info{
+	background:#fff;
+}
+
 
 /*popup*/
 .wrap_page.popup{
