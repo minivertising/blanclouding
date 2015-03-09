@@ -310,11 +310,11 @@ function sns_share(media)
 
 function show_map()
 {
-	var si			= $("#addr1 option:selected").text();
-	var si_val		= $("#addr1").val();
+	var si				= $("#addr1 option:selected").text();
+	var si_val			= $("#addr1").val();
 	var gun			= $("#addr2 option:selected").text();
 	var gun_val		= $("#addr2").val();
-	var shop_idx	= $("#shop").val();
+	var shop_idx		= $("#shop").val();
 	if (shop_idx)
 	{
 		$.ajax({
