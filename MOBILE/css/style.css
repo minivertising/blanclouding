@@ -92,9 +92,8 @@ body {
 	background: url(../img/popup/bg_popup.png) no-repeat top left;
 }
 .wrap_page.popup .block_close{
-	width:100%;
 	display:block;
-	padding:10px 10px 0 0;
+	padding:10px 0 0;
 }
 .wrap_page.popup .block_close a{
 	display:block;
@@ -173,6 +172,21 @@ body {
 .wrap_page.popup .content .btn_block{
 	text-align:center;
 	padding-top:25px;
+}
+
+.wrap_page.popup .content .inner.alert .title {
+}
+.wrap_page.popup .content .inner.alert .btn_block {
+	padding-top:15px;
+	padding-bottom:30px;
+}
+
+.wrap_page.popup .content .inner.agree{
+	padding:30px;
+	word-break:break-all;
+	color:#555;
+	font-size:13px;
+	line-height:18px;
 }
 
 
