@@ -7,7 +7,7 @@ function addr_change(addr1)
 		},
 		url: "./ajax_addr.php",
 		success: function(response){
-			$("#addr2").html(response);
+			$("#sel_addr2").html(response);
 		}
 	});
 }
@@ -21,7 +21,8 @@ function shop_change(idx)
 		},
 		url: "./ajax_shop.php",
 		success: function(response){
-			$("#shop").html(response);
+			$("#sel_shop").html(response);
+			//$("#shop").html(response);
 		}
 	});
 }
@@ -207,9 +208,19 @@ function open_event()
 	$("#gift_div").hide();
 }
 
-function open_look()
+function open_use()
 {
-	$("#look_div").show();
+	$("#use_div").show();
+}
+
+function open_privacy()
+{
+	$("#privacy_div").show();
+}
+
+function open_adver()
+{
+	$("#adver_div").show();
 }
 
 function open_gift()
@@ -357,8 +368,8 @@ function show_map()
 			});
 		}else{
 			alert("지역이나 매장을 선택하셔야만 지도를 보실 수 있습니다.");
+			$.magnificPopup.close();
 		}
-
 	}
 }
 
