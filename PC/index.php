@@ -97,7 +97,7 @@
           </div>
           <div class="input_block">
             <ul class="clearfix">
-              <li class="t_name"></li>
+              <li class="t_name"><img src="images/popup/txt_store.png" alt=""/></li>
               <li class="input_txt store">
                 <select name="addr1" id="addr1" onchange="addr_change(this.value)">
                   <option value="">선택하세요</option>
@@ -122,7 +122,7 @@
               </li>
             </ul>
             <ul class="clearfix">
-              <li class="t_name"><img src="images/popup/txt_store.png" alt=""/></li>
+              <li class="t_name"></li>
               <li class="input_txt store" id="sel_shop">
                 <select name="shop" id="shop">
                   <option value="">선택하세요</option>
