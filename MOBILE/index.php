@@ -63,9 +63,9 @@
 <!--contents_wrap-->
 <!-------------------------- 이벤트 응모 DIV -------------------------->
   <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid"align="center">
+    <div class="p_mid">
       <div class="block_close clearfix">
-        <a href="#" class="btn_close" onclick="javascript:close_input()"align="right"><img src="images/popup/pop_btn_close.png" /></a>
+        <a href="#" class="btn_close" onclick="javascript:close_input()"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
       <div class="block_content">
         <div class="inner">
@@ -136,15 +136,15 @@
           <div class="input_block input_check">
             <ul class="clearfix">
               <li class="in_check"><input type="checkbox" name="uses_agree" id="uses_agree"></li>
-              <li class="in_check_label"><a href="#use_div" class="btn_detail popup-with-zoom-anim" onclick="open_use()"><img src="images/popup/btn_detail_01.png" alt=""/></a></li>
+              <li class="in_check_label"><a href="./popup_use_agree.php" target="_blank"><img src="images/popup/btn_detail_01.png" alt=""/></a></li>
             </ul>
             <ul class="clearfix">
               <li class="in_check"><input type="checkbox" name="privacy_agree" id="privacy_agree"></li>
-              <li class="in_check_label"><a href="#privacy_div" class="btn_detail popup-with-zoom-anim" onclick="open_privacy()"><img src="images/popup/btn_detail_02.png" alt=""/></a></li>
+              <li class="in_check_label"><a href="./popup_privacy_agree.php" target="_blank"><img src="images/popup/btn_detail_02.png" alt=""/></a></li>
             </ul>
             <ul class="clearfix">
               <li class="in_check"><input type="checkbox" name="send_agree" id="send_agree"></li>
-              <li class="in_check_label"><a href="#adver_div" class="btn_detail popup-with-zoom-anim" onclick="open_adver()"><img src="images/popup/btn_detail_03.png" alt=""/></a></li>
+              <li class="in_check_label"><a href="./popup_adver_agree.php" target="_blank"><img src="images/popup/btn_detail_03.png" alt=""/></a></li>
             </ul>
           </div>
           <div class="btn_block">
@@ -187,7 +187,7 @@
         <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
 <?
-	include_once "./use_agree.php";
+	include_once "./popup_use_agree.php";
 ?>
     </div>
   </div>
@@ -199,7 +199,7 @@
         <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
 <?
-	include_once "./privacy_agree.php";
+	include_once "./popup_privacy_agree.php";
 ?>
     </div>
   </div>
@@ -211,7 +211,7 @@
         <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
 <?
-	include_once "./adver_agree.php";
+	include_once "./popup_adver_agree.php";
 ?>
     </div>
   </div>
