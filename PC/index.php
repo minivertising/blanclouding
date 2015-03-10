@@ -427,7 +427,7 @@
 		} );
 
 		$( '.scroll_navi_area' ).click( function() {
-	    $( 'html, body' ).animate({ scrollTop: $(document).height()},1500);
+	    $( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},1500);
 		  return false;
 		} );
 		
@@ -499,7 +499,12 @@
 		
 		$("#dk0-combobox").css("width","79px");
 		$("#dk1-addr1").css("width","120px");
-		$("#dk1-addr1").css("font-size","14px");
+		$("#dk1-addr1").css("font-size","12px");
+		$(".dk-option").css("float","none");
+		$(".dk-option").css("width","120px");
+		$(".dk-option").css("height","34px");
+		$(".dk-select").css("width","120px");
+		$(".dk-select").css("height","34px");
 		$("#dk1-combobox").css("height","34px");
 		$("#dk2-addr2").css("width","120px");
 		$("#dk2-addr2").css("font-size","14px");
