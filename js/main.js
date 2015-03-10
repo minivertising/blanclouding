@@ -75,7 +75,16 @@ function map_data()
 		},
 		type: 'inline'
 	}, 0);
+}
 
+function inputfrm_data()
+{
+	$.magnificPopup.open({
+		items: {
+			src: '#input_div'
+		},
+		type: 'inline'
+	}, 0);
 }
 
 function chk_input()
@@ -457,7 +466,9 @@ function show_map()
 			});
 		}else{
 			alert("지역이나 매장을 선택하셔야만 지도를 보실 수 있습니다.");
-			return false;
+			setTimeout("inputfrm_data();",0);
+
+			//return false;
 			//$.magnificPopup.close();
 		}
 	}

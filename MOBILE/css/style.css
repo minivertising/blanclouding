@@ -113,6 +113,7 @@ body {
 
 .wrap_page .content.coupon .block_info{
 	padding:20px 0;
+	padding-left:50px;
 }
 .wrap_page .content.coupon .block_info ul{
 	width:85%;
@@ -239,8 +240,6 @@ body {
 	width:90%;
 }
 
-<<<<<<< HEAD
-=======
 .popup_wrap .p_mid .block_content.product .inner{
 	text-align:center;
 	padding:0;
@@ -277,8 +276,6 @@ body {
 	padding-top:20px;
 }
 
-
->>>>>>> 8bfba6061f12cb526e2c1abed325b0a70ad71219
 .wrap_page.popup .content .input_block ul li.store{
 	width:35%;
 }
@@ -304,8 +301,6 @@ body {
 }
 .wrap_page.popup .content .input_block.input_check .in_check{
 	width:8%;
-<<<<<<< HEAD
-=======
 }
 .popup_wrap .block_content .input_block{
 	padding-top:15px;
@@ -370,7 +365,6 @@ body {
 	margin-top:-300px;
 	left:30%;
 	display:none;
->>>>>>> 8bfba6061f12cb526e2c1abed325b0a70ad71219
 }
 .wrap_page.popup .content .input_block.input_check .in_check input{
 	padding:0;
@@ -387,9 +381,7 @@ body {
 }
 
 .wrap_page.popup .content .inner.alert .title {
-<<<<<<< HEAD
-=======
-	text-align:right;
+	text-align: center;
 }
 
 /* 메인 지도 팝업*/
@@ -402,7 +394,6 @@ body {
 	margin-top:-300px;
 	left:30%;
 	display:none;
->>>>>>> 8bfba6061f12cb526e2c1abed325b0a70ad71219
 }
 .wrap_page.popup .content .inner.alert .btn_block {
 	padding-top:15px;
@@ -436,9 +427,6 @@ html[xmlns] .clearfix {
 * html .clearfix {
 	height: 1%;
 }
-<<<<<<< HEAD
-=======
-
 
 /* 팝업 jQuery ( Magnific-Popup ) 관련 CSS */
 /* Styles for dialog window */
@@ -569,5 +557,3 @@ html[xmlns] .clearfix {
 .my-mfp-slide-bottom.mfp-removing.mfp-bg {
 	opacity: 0;
 }
-
->>>>>>> 8bfba6061f12cb526e2c1abed325b0a70ad71219
