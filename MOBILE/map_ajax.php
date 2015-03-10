@@ -2,6 +2,8 @@
 	$flag	= $_REQUEST['flag'];
 	if ($flag == "sigungu")
 		$map_addr	= $_REQUEST["si"]." ".$_REQUEST["gun"];
+	else if  ($flag == "win_coupon")
+		$map_addr	= $_REQUEST['jido'];
 	else
 		$map_addr	= $_REQUEST["addr"];
 ?>
