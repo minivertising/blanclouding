@@ -19,10 +19,10 @@
       <img src="img/main_title.png" width="320" alt=""/>
     </div>
     
-    <div class="navi_btn_block clearfix">
+    <!-- <div class="navi_btn_block clearfix">
           <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()">이벤트 참여</a>
           <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()">선물안내</a>
-    </div>
+    </div> -->
 
 
     <!--area1-->
@@ -61,7 +61,7 @@
 	            <img src="img/title_event.png" alt=""/>
             </div>
             <div class="btn_gift">
-            	<a href="#"><img src="img/btn_gift.png" alt=""/></a>
+              <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a>
             </div>
             <div class="txt_date">
        	    	<img src="img/txt_date.png" alt=""/> </div>
@@ -151,92 +151,86 @@
               </select>
             </li>
             <li class="btn">
-              <a href="#"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
+              <a href="#map_div" id="search_shop" class="popup-with-zoom-anim" onclick="javascript:show_map();return false;"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
             </li>
           </ul>
         </div>
         <div class="input_block input_check">
           <ul class="clearfix">
             <li class="in_check"><input type="checkbox"></li>
-            <li class="in_check_label"><a href="#" class="btn_detail"><img src="img/popup/btn_detail_01.png" width="164" alt=""/></a></li>
+            <li class="in_check_label"><a href="#use_div" class="btn_detail popup-with-zoom-anim" onclick="open_use()"><img src="img/popup/btn_detail_01.png" width="164" alt=""/></a></li>
           </ul>
           <ul class="clearfix">
             <li class="in_check"><input type="checkbox"></li>
-            <li class="in_check_label"><a href="#" class="btn_detail"><img src="img/popup/btn_detail_02.png" width="164" alt=""/></a></li>
+            <li class="in_check_label"><a href="#privacy_div" class="btn_detail popup-with-zoom-anim" onclick="open_privacy()"><img src="img/popup/btn_detail_02.png" width="164" alt=""/></a></li>
           </ul>
           <ul class="clearfix">
             <li class="in_check"><input type="checkbox"></li>
-            <li class="in_check_label"><a href="#" class="btn_detail"><img src="img/popup/btn_detail_03.png" width="164" alt=""/></a>
+            <li class="in_check_label"><a href="#adver_div" class="btn_detail popup-with-zoom-anim" onclick="open_adver()"><img src="img/popup/btn_detail_03.png" width="164" alt=""/></a>
             </li>
           </ul>
         </div>
         <div class="btn_block">
-          <a href="#"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
+          <a href="#" onclick="javascript:chk_input();return false;"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
   </div>
 <!-------------------------- 이벤트 응모 DIV -------------------------->
-<!-------------------------- 선물 확인 DIV -------------------------->
-  <div id="gift_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
-      <div class="block_close clearfix">
-        <a href="#" onclick="close_gift()" class="btn_close"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-      <div class="block_content product">
-        <div class="inner">
-          <img src="images/popup/img_product.png" alt=""/>
-        </div><!--inner-->
-      </div>
-    </div>
-  </div>
-<!-------------------------- 선물 확인 DIV -------------------------->
 <!-------------------------- 지도 DIV -------------------------->
-  <div id="map_div" class="pop_main_map zoom-anim-dialog mfp-hide">
-    <div class="header">
-      <div class="btn_close"><a href="#input_div" class="first-popup-link" onclick="close_map()">닫기</a></div>
+  <div id="map_div"  class="wrap_page popup zoom-anim-dialog mfp-hide">
+    <div class="block_close clearfix">
+      <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_map()"><img src="img/popup/btn_close.png" width="29"/></a>
     </div>
-    <div class="contents">
-      <div id="map_area" class="map_area"></div>
+    <div class="content">
+      <div id="map_area" class="map_area" style="height:440px;border:1px solid skyblue"></div>
     </div>
-
-  </div>
+  </div><!--wrap_page popup-->
 <!-------------------------- 지도 DIV -------------------------->
 <!--------------------------  개인정보 활용 약관 DIV ----------------------->
-  <div id="use_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
-      <div class="block_close clearfix">
-        <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-<?
-	include_once "./use_agree.php";
-?>
+  <div id="use_div"  class="wrap_page popup zoom-anim-dialog mfp-hide">
+    <div class="block_close clearfix">
+      <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="img/popup/btn_close.png" width="29"/></a>
     </div>
-  </div>
+    <div class="content">
+      <div class="inner agree">
+      texttexttexttexttext
+      texttexttexttext
+      texttexttext
+      texttexttexttext
+      </div><!--inner-->
+    </div>
+  </div><!--wrap_page popup-->
 <!--------------------------  개인정보 활용 약관 DIV ----------------------->
 <!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
-  <div id="privacy_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
-      <div class="block_close clearfix">
-        <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-<?
-	include_once "./privacy_agree.php";
-?>
+  <div id="privacy_div" class="wrap_page popup zoom-anim-dialog mfp-hide">
+    <div class="block_close clearfix">
+      <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="img/popup/btn_close.png" width="29"/></a>
     </div>
-  </div>
+    <div class="content">
+      <div class="inner agree">
+      texttexttexttexttext
+      texttexttexttext
+      texttexttext
+      texttexttexttext
+      </div><!--inner-->
+    </div>
+  </div><!--wrap_page popup-->
 <!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
-  <div id="adver_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
-      <div class="block_close clearfix">
-        <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-<?
-	include_once "./adver_agree.php";
-?>
+  <div id="adver_div" class="wrap_page popup zoom-anim-dialog mfp-hide">
+    <div class="block_close clearfix">
+      <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="img/popup/btn_close.png" width="29"/></a>
     </div>
-  </div>
+    <div class="content">
+      <div class="inner agree">
+      texttexttexttexttext
+      texttexttexttext
+      texttexttext
+      texttexttexttext
+      </div><!--inner-->
+    </div>
+  </div><!--wrap_page popup-->
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
 
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
