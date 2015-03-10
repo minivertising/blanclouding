@@ -182,16 +182,17 @@ body {
 }
 
 
-
+.wrap_page.wrap_coupon{
+	background: url(../img/bg_cloud_coupon.png) no-repeat 0 -160px;
+	background-size:cover;
+}
 .wrap_page{
 	width:100%;
 }
 .wrap_page .header.coupon{
-	background:#6dc2e6;
 }
 
 .wrap_page .content.coupon{
-	background:#6dc2e6;
 }
 .wrap_page .content.coupon div{
 	text-align:center;
@@ -209,6 +210,10 @@ body {
 
 .wrap_page .content.coupon .block_title{
 	padding:10px 0 20px;
+	width:100%;
+}
+.wrap_page .content.coupon .block_title img{
+	width:70%;
 }
 
 
