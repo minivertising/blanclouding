@@ -48,11 +48,34 @@
 <!--video_area-->
   </div>
 <!--area1-->
+
+
 <!--area2-->
   <div class="area2">
   블랑클라우드 이벤트 소개 및 제품 소개 내용
   </div>
 <!--area2-->
+
+<!--area3-->
+<div class="area3_bg">
+  <div class="area3">
+  	<div class="product_group">
+    	<div>
+  		<img src="images/img_area_3.png" width="860" height="663" alt=""/>
+        </div>
+    </div>
+  </div>
+</div> 
+<!--area3-->
+
+<!--footer-->
+  <div class="footer">
+  	<img src="images/footer.png" width="979" height="140" alt=""/>
+  </div>
+<!--footer-->
+
+
+
 <!--quickmenu-->
 <div class="quickmenu">
   <a href="#">TOP</a>
