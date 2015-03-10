@@ -250,6 +250,10 @@ body {
 }
 .wrap_page .content.coupon .block_time .txt{
 	padding-bottom:13px;
+	width:100%;
+}
+.wrap_page .content.coupon .block_time .txt img{
+	width:50%;
 }
 .wrap_page .content.coupon .block_time .time{
 	
