@@ -15,16 +15,16 @@
 <!doctype html>
 <html>
   <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0,aximum-scale=3.0"/>
-	<title>Blan Clouding</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
-	<link type="text/javascript" href="js/default.js"/>
+	  <title>Blan Clouding</title>
+	  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	  <link type="text/javascript" href="js/default.js"/>
   </head>
     <script src="../js/jquery-1.11.2.min.js"></script>
     <script src="../js/main.js"></script>
     <script type="text/javascript">
-    function show_map(){
+      function show_map(){
         $.ajax({
             type:"POST",
             data:{
@@ -35,48 +35,42 @@
             success: function(response){
                 $("#map_div").show();
                 $("#map_area").html(response);
-            }
-        });
-    }
+             }
+         });
+        }
     
-    function close_map()
-    {
+      function close_map()
+      {
         $("#map_div").hide();
-    }
+      }
 	
-	var millenium = new Date("March 11, 2015 22:00:00") //이곳을 수정하면 됩니다
+		var millenium = new Date("March 11, 2015 22:00:00") //이곳을 수정하면 됩니다
 
-	function CalcRemaining(theForm)
-	{
-	var now = new Date();
+		function CalcRemaining(theForm)
+		{
+		var now = new Date();
+		var difference = parseInt(((millenium.getTime() - now.getTime()) / 1000) + 0.999)
+		var secs = difference % 60
+		var secslen = String(secs).length;
+		if (secslen < 2)
+			secs = "0" + secs;
+			difference = parseInt(difference / 60)
+		var minutes  = difference % 60
+		var minuteslen = String(minutes).length;
+		if (minuteslen < 2)
+			minute = "0" + minute;
+			difference = parseInt(difference / 60)
+		var hours  = difference % 1000000
+		var hourslen = String(hours).length;
+		if (hourslen < 2)
+			hours = "0" + hours;
 
-	var difference = parseInt(((millenium.getTime() - now.getTime()) / 1000) + 0.999)
-	var secs = difference % 60
-
-	var secslen = String(secs).length;
-	if (secslen < 2)
-		secs = "0" + secs;
-
-	difference = parseInt(difference / 60)
-	var minutes  = difference % 60
-
-	var minuteslen = String(minutes).length;
-	if (minuteslen < 2)
-		minute = "0" + minute;
-
-	difference = parseInt(difference / 60)
-	var hours  = difference % 1000000
-
-	var hourslen = String(hours).length;
-	if (hourslen < 2)
-		hours = "0" + hours;
-
-	var hours1     = String(hours).substr(0,1)
-	var hours2     = String(hours).substr(1,2)
-	var minutes1   = String(minutes).substr(0,1)
-	var minutes2   = String(minutes).substr(1,2)
-	var secs1      = String(secs).substr(0,1)
-	var secs2      = String(secs).substr(1,2)
+		var hours1     = String(hours).substr(0,1)
+		var hours2     = String(hours).substr(1,2)
+		var minutes1   = String(minutes).substr(0,1)
+		var minutes2   = String(minutes).substr(1,2)
+		var secs1      = String(secs).substr(0,1)
+		var secs2      = String(secs).substr(1,2)
 	
 
     $("#realtime_h1").attr("src","./img/time_" + hours1 + ".png");
@@ -96,88 +90,84 @@
             <div class="block_logo clearfix">
                 <a href="#" class="logo_tfs"><img src="img/logo_tfs.png" width="100" alt=""/></a>
             </div>
-      </div>
+        </div>
         <div class="content coupon">
-          <div class="block_title">
-                   <img src="img/coupon_title.png" width="215" alt=""/>
+            <div class="block_title">
+                <img src="img/coupon_title.png" width="215" alt=""/>
           </div>
           <div class="block_cloud_bg">
-          
               <div class="product">
-                    <img src="img/img_product.png" width="320" alt=""/>
+                  <img src="img/img_product.png" width="320" alt=""/>
               </div>
-              
               <div class="inner">
                   <div class="block_time">
-                    <div class="txt">
-                        <img src="img/txt_time.png" width="140" alt=""/>
+                      <div class="txt">
+                          <img src="img/txt_time.png" width="140" alt=""/>
+                      </div>
+                  <div class="time clearfix">
+                  <div class="num"><!-- 시 -->
+                      <img src="./img/time_0.png" id="realtime_h1" alt="" />
+                      <img src="./img/time_0.png" id="realtime_h2" alt="" />
+                  </div>
+                  <div class="dash">
+                      <img src="img/time_dash.png" alt=""/>
+                  </div>
+                  <div class="num"><!-- 분 -->
+                      <img src="./img/time_0.png" id="realtime_m1" alt="" />
+                      <img src="./img/time_0.png" id="realtime_m2" alt="" />
+                  </div>
+                  <div class="dash">
+                      <img src="img/time_dash.png" alt=""/>
+                  </div>
+                  <div class="num"><!-- 초 -->
+                      <img src="./img/time_0.png" id="realtime_s1" alt="" />
+                      <img src="./img/time_0.png" id="realtime_s2" alt="" />
+                  </div>
+              </div>
+          </div>
+
+        <div class="block_info">
+            <ul class="clearfix">
+                <li class="txt_label">교환기간 |</li>
+                <li class="txt_detail">2015.03.19 ~ 03.21</li>
+            </ul>
+            <ul class="clearfix">
+                <li class="txt_label">내가 선택한 매장 |</li>
+                <li class="txt_detail"><?=$user_info['shop_name']?></li>
+                <li class="btn_map"><a href="#" onclick="show_map()"><img src="img/btn_map.png" width="55" alt=""/></a></li>
+                <div id="map_div" style="position:absolute;background:black;width:1000px;height:500px;top:20%;left:30%;display:none">
+                    <a href="#" onclick="close_map()">닫기</a>
+                    <div id="map_area" style="width:100%;height:90%;margin-top:5%">
                     </div>
-                    <div class="time clearfix">
-                    <div class="num"><!-- 시 -->
-                                <img src="./img/time_0.png" id="realtime_h1" alt="" />
-                                <img src="./img/time_0.png" id="realtime_h2" alt="" />
-                            </div>
-                            <div class="dash">
-                                <img src="img/time_dash.png" alt=""/>
-                            </div>
-                            <div class="num"><!-- 분 -->
-                                <img src="./img/time_0.png" id="realtime_m1" alt="" />
-                                <img src="./img/time_0.png" id="realtime_m2" alt="" />
-                            </div>
-                            <div class="dash">
-                                <img src="img/time_dash.png" alt=""/>
-                            </div>
-                            <div class="num"><!-- 초 -->
-                                <img src="./img/time_0.png" id="realtime_s1" alt="" />
-                                <img src="./img/time_0.png" id="realtime_s2" alt="" />
-                            </div>
-						</div>
-                  </div>
+                </div>
+                </ul>
+        </div>
+      </div><!--inner-->
+    <div><!--block_cloud_bg-->
 
-				   <div class="block_info">
-                      <ul class="clearfix">
-                          <li class="txt_label">교환기간 |</li>
-                          <li class="txt_detail">2015.03.19 ~ 03.21</li>
-                      </ul>
-                      <ul class="clearfix">
-                          <li class="txt_label">내가 선택한 매장 |</li>
-                          <li class="txt_detail"><?=$user_info['shop_name']?></li>
-                          <li class="btn_map"><a href="#" onclick="show_map()"><img src="img/btn_map.png" width="55" alt=""/></a></li>
-							<div id="map_div" style="position:absolute;background:black;width:1000px;height:500px;top:20%;left:30%;display:none">
-                            <a href="#" onclick="close_map()">닫기</a>
-                            <div id="map_area" style="width:100%;height:90%;margin-top:5%"></div>
-                          </div>
-                      </ul>
-                  </div>
-              </div><!--inner-->
-              
-            </div><!--block_cloud_bg-->
-
-			<div class="btn_block">
-				 <div class="block_check_in">
-				 		<div class="txt" ><img src="img/txt_notice.png" width="200" alt=""/><br><br>
-
+      <div class="btn_block">
+        <div class="block_check_in">
+          <div class="txt" ><img src="img/txt_notice.png" width="200" alt=""/><br><br>
 <?
 	if ($user_info['mb_use'] == "Y")
 	{
 ?>
-			<img src="img/btn_use_after.png" width="220" alt=""/>
+	<img src="img/btn_use_after.png" width="220" alt=""/>
 <?
 	}else{
 ?>
-			<a href="#" onclick="button_event('<?=$serialnumber?>')"><img src="img/btn_use_before.png" width="220"  alt=""/></a>
+	<a href="#" onclick="button_event('<?=$serialnumber?>')"><img src="img/btn_use_before.png" width="220"  alt=""/></a>
 <?
 }
 ?>
-                </div>
-            </div>
+          </div>
         </div>
-		</div>
-        <div class="footer">
+      </div>
+    </div>
+      <div class="footer">
             footer
-        </div>
-	</div>
-</body>
-
+      </div>
+    </div>
+  </body>
 </html>
 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
