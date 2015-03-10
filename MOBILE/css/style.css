@@ -89,19 +89,25 @@ body {
 }
 .contents_wrap .icon_area{
 	width:100%;
+	padding-top:10px;
 }
 .contents_wrap .icon_area a{
 	display:block;
 	float:left;
-	width:50%;
+	width:30%;
 	background:#eee;
+	padding:0 10px;
 }
 .contents_wrap .icon_area a.fb_logo{
-	text-align:right;
+	float:right;
+}
+.contents_wrap .icon_area a img{
+	width:100%;
 }
 
 .contents_wrap .main_title{
 	text-align:center;
+	padding-bottom:20px;
 }
 .contents_wrap .navi_btn_block{
 	width:100%;
