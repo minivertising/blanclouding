@@ -139,13 +139,22 @@ body {
 	border-bottom:1px solid #1fa3de;
 	margin:0 auto;
 	width:95%;
+	background:#fff;
 }
 .wrap_page .content.coupon .block_time .txt{
+	padding-bottom:13px;
 }
 .wrap_page .content.coupon .block_time .time{
-	color:#1fa3de;
-	font-size:42px;
-	font-weight:bold;
+	
+}
+.wrap_page .content.coupon .block_time .time div{
+	float:left;
+}
+.wrap_page .content.coupon .block_time .time img{
+	width:50%;
+}
+.wrap_page .content.coupon .block_time .time .num img{
+	width:25px;
 }
 
 .wrap_page .content.coupon .block_check_in{
@@ -158,8 +167,11 @@ body {
 
 
 .wrap_page .block_cloud_bg{
-	background: url(../img/bg_cloud.png) no-repeat 0 -60px;
+	background: url(../img/bg_cloud.png) no-repeat 0 -170px;
+	background-size: auto;
 }
+
+.wrap_page .block_cloud_bg .inner,
 .wrap_page .block_cloud_bg .block_time,
 .wrap_page .block_cloud_bg .block_info{
 	background:#fff;
