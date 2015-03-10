@@ -50,6 +50,8 @@
 <!--area1-->
 
 
+
+
 <!--area2-->
   <div class="area2">
     <div class="product_group">
@@ -59,6 +61,17 @@
     </div>
   </div>
 <!--area2-->
+
+<!--area3-->
+  <div class="area3">
+    <div class="product_group">
+      <div class="product_area">
+        <img src="images/img_area_3.png" width="860" height="663" alt=""/>
+      </div>
+    </div>
+  </div>
+<!--area3-->
+
 <!--footer-->
   <div class="footer">
     <img src="images/footer.png" width="979" height="140" alt=""/>

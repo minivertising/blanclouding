@@ -89,6 +89,32 @@
 	overflow: hidden;
 }
 
+
+/* 메인 첫번째 DIV */
+.contents_wrap .area3{
+	position: relative;
+	height:1000px;
+	background:#eee;
+}
+
+.contents_wrap .area3 .product_group{
+	position: relative;
+	left: 50%;
+	margin-top: 120px;
+	margin-left: -440px;
+	width: 880px;
+	/*
+	height: 560px;
+	text-align: center;*/
+	overflow: hidden;
+}
+
+
+
+
+
+
+
 .footer{
 	position: relative;
 	background:#fff;
