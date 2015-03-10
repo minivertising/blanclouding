@@ -1,5 +1,5 @@
 <?
-	$serial = $_REQUEST['jido'];
+	$serialnumber = $_REQUEST['jido'];
 ?>
 
 
@@ -25,7 +25,7 @@ var map = new daum.maps.Map(mapContainer, mapOption);
 var ps = new daum.maps.services.Places(); 
 
 // 키워드로 장소를 검색합니다
-ps.keywordSearch('<?= $serial ?> 더페이스샵', placesSearchCB); 
+ps.keywordSearch('<?= $serialnumber ?> 더페이스샵', placesSearchCB); 
 
 // 키워드 검색 완료 시 호출되는 콜백함수 입니다
 function placesSearchCB (status, data, pagination) {
