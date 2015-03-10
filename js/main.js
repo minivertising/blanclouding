@@ -528,10 +528,12 @@ function button_event(serial){
 			},
 			url: "../main_exec.php",
 			success: function(response){
-				if (response == "Y")
+				if (response == "Y"){
 					alert("참여해주셔서 감사합니다. 블랑클라우딩 많이 사랑해주세요~");
-				else
+					location.reload();
+				}else{
 					alert("이벤트 참여자 수가 많아 참여가 지연되고 있습니다.\n다시 응모해 주시기 바랍니다.");
+				}
 			}
 		});
 	}
