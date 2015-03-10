@@ -184,14 +184,13 @@
   </div>
 <!-------------------------- 선물 확인 DIV -------------------------->
 <!-------------------------- 지도 DIV -------------------------->
-  <div id="map_div" class="pop_main_map zoom-anim-dialog mfp-hide">
-    <div class="header">
-      <div class="btn_close"><a href="#input_div" class="first-popup-link" onclick="close_map()">닫기</a></div>
+  <div id="map_div" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="map_area" class="map_area" style="height:440px;border:1px solid skyblue"></div>
     </div>
-    <div class="contents">
-      <div id="map_area" class="map_area"></div>
-    </div>
-
   </div>
 <!-------------------------- 지도 DIV -------------------------->
 <!--------------------------  개인정보 활용 약관 DIV ----------------------->

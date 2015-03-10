@@ -160,8 +160,8 @@
 <?
 	if ($user_info['mb_use'] == "Y")
 	{
-?>                
-			<a href="#"><img src="img/btn_use_after.png" width="220" alt=""/></a>
+?>
+			<img src="img/btn_use_after.png" width="220" alt=""/>
 <?
 	}else{
 ?>
