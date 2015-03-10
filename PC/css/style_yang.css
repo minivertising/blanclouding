@@ -116,6 +116,7 @@ body{
 
 
 
+<<<<<<< HEAD
 .page_wrap{
 	width:100%;
 	position:relative;
@@ -186,6 +187,10 @@ body{
 	text-align:center;
 	border-top:1px solid #ddd;
 }
+=======
+
+
+>>>>>>> 804ecc289923f51fb0bb17f8fbc2e6a6d928898c
 
 
 
@@ -206,7 +211,7 @@ body{
 	width:450px;
 	height:500px;
 	border:1px solid #ccc;
-	background:url(../images/popup/bg_popup.png) top right no-repeat;
+	background:url(../images/popup/bg_popup.png) top right;
 }
 .popup_wrap .p_mid .inner{
 	padding:20px;
@@ -236,7 +241,7 @@ body{
 .popup_wrap .p_alert{
 	width:400px;
 	height:260px;
-	background:url(../images/popup/bg_popup.png) top right no-repeat;
+	background:url(../images/popup/bg_popup.png) top right;
 	border:1px solid #ccc;
 }
 .popup_wrap .block_content .title{
