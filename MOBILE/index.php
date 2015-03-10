@@ -7,7 +7,7 @@
 <!--icon_area-->
     <div class="icon_area clearfix">
       <a href="#" class="cl_logo">
-   	  	<img src="img/logo_blan.png" width="115" height="31" alt=""/>
+   	  	<img src="img/logo_blan.png" alt=""/>
       </a>
       <a href="#" class="fb_logo">
    	  	<img src="img/logo_fs.png" alt=""/>
