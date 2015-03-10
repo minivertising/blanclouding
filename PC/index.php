@@ -295,14 +295,14 @@
     <div class="p_alert">
       <div class="inner">
         <div class="block_close clearfix">
-          <a href="#" data-mfp-src="#input_div" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
+          <a href="#" onclick="javascript:close_input()" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
         </div>
         <div class="block_content thanks">
           <div class="title">
             <img src="images/popup/alert_txt_thanks.png" alt=""/>
           </div>
           <div class="btn_block">
-            <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim"><img src="images/popup/pop_btn_ok.png" alt=""/></a>
+            <a href="#" onclick="javascript:close_input()" class="popup-with-zoom-anim"><img src="images/popup/pop_btn_ok.png" alt=""/></a>
           </div>
         </div>
       </div>
@@ -427,7 +427,7 @@
 		} );
 
 		$( '.scroll_navi_area' ).click( function() {
-	    $( 'html, body' ).animate({ scrollTop: $(document).height()},1500);
+	    $( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},1500);
 		  return false;
 		} );
 		
@@ -499,7 +499,12 @@
 		
 		$("#dk0-combobox").css("width","79px");
 		$("#dk1-addr1").css("width","120px");
-		$("#dk1-addr1").css("font-size","14px");
+		$("#dk1-addr1").css("font-size","12px");
+		$(".dk-option").css("float","none");
+		$(".dk-option").css("width","120px");
+		$(".dk-option").css("height","34px");
+		$(".dk-select").css("width","120px");
+		$(".dk-select").css("height","34px");
 		$("#dk1-combobox").css("height","34px");
 		$("#dk2-addr2").css("width","120px");
 		$("#dk2-addr2").css("font-size","14px");

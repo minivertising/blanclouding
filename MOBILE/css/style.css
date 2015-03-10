@@ -381,7 +381,7 @@ body {
 }
 
 .wrap_page.popup .content .inner.alert .title {
-	text-align: center;
+	text-align:right;
 }
 
 /* 메인 지도 팝업*/

@@ -30,5 +30,10 @@
 		$("#dk4-addr2").css("width","120px");
 		$("#dk4-addr2").css("font-size","14px");
 		$("#dk4-combobox").css("height","34px");
+		$(".dk-option").css("float","none");
+		$(".dk-option").css("width","120px");
+		$(".dk-option").css("height","34px");
+		$(".dk-select").css("width","120px");
+		$(".dk-select").css("height","34px");
 
 </script>
