@@ -295,14 +295,14 @@
     <div class="p_alert">
       <div class="inner">
         <div class="block_close clearfix">
-          <a href="#" data-mfp-src="#input_div" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
+          <a href="#" onclick="javascript:close_input()" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
         </div>
         <div class="block_content thanks">
           <div class="title">
             <img src="images/popup/alert_txt_thanks.png" alt=""/>
           </div>
           <div class="btn_block">
-            <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim"><img src="images/popup/pop_btn_ok.png" alt=""/></a>
+            <a href="#" onclick="javascript:close_input()" class="popup-with-zoom-anim"><img src="images/popup/pop_btn_ok.png" alt=""/></a>
           </div>
         </div>
       </div>
