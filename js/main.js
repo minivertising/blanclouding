@@ -93,12 +93,13 @@ function chk_input()
 	var mb_phone1	= $('#mb_phone1').val();
 	var mb_phone2	= $('#mb_phone2').val();
 	var mb_phone3	= $('#mb_phone3').val();
-	var addr1			= $('#addr1').val();
-	var addr2			= $('#addr2').val();
-	var shop				= $('#shop').val();
+	var addr1		= $('#addr1').val();
+	var addr2		= $('#addr2').val();
+	var shop		= $('#shop').val();
 
 	if (mb_name == "")
 	{
+
 		//alert('개인정보 입력을 안 하셨습니다');
 		setTimeout("ins_data();",500);
 
@@ -223,7 +224,7 @@ function chk_input()
 
 }
 
-function CheckHangul(name) {
+function Check_Hangul(name) {
     strarr = new Array(name.value.length);
     schar = new Array('/','.','>','<',',','?','}','{',' ','\\','|','(',')','+','!','@','#','$','%','^','&','*','~','-');
     for (i=0; i<name.value.length; i++)    {

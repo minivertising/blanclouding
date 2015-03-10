@@ -1,42 +1,31 @@
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <title>jQuery Tip</title>
-    <style>
-      div.a {
-        margin: auto;
-        width: 500px;
-        height: 2000px;
-        border: 1px solid #bcbcbc;
-      }
-      a.top {
-        position: fixed;
-        left: 50%;
-        bottom: 50px;
-        display: none;
-      }
-    </style>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script>
-      $( document ).ready( function() {
-        $( window ).scroll( function() {
-          if ( $( this ).scrollTop() > 200 ) {
-            $( '.top' ).fadeIn();
-          } else {
-            $( '.top' ).fadeOut();
-          }
-        } );
-        $( '.top' ).click( function() {
-          $( 'html, body' ).animate( { scrollTop : 0 }, 800 );
-          return false;
-        } );
-      } );
-    </script>
-  </head>
-  <body>
-    <div class="a">
-      <a href="#" class="top">Top</a>
-    </div>
-  </body>
-</html>
+<script language='javascript'>
+function onlyNumber() 
+{
+    if(((event.keyCode >= 48) && (event.keyCode <= 57))) {
+       event.returnValue = true;
+    } else {
+       event.returnValue = false;
+    }
+} 
+
+function focusMove(obj,max,toObj) {
+   value = obj.value;
+ if (value.length >= max) {
+   toObj.focus();
+   return;
+ }
+}
+
+//-->
+</SCRIPT>
+
+
+<form name="f" method='post'>
+
+<input name="hp1" type="text" class="formbox"  style="height:20px;ime-mode:disabled;" size="4" onfocus="this.style.backgroundColor='#dddddd'" onblur="this.style.backgroundColor=''" onkeypress="onlyNumber()" maxlength="3"  onkeyup="focusMove(this,3,document.f.hp2)" />
+          -
+          <input name="hp2" type="text" class="formbox"  style="height:20px;ime-mode:disabled;" size="4" onfocus="this.style.backgroundColor='#dddddd'" onblur="this.style.backgroundColor=''" onkeypress="onlyNumber()" maxlength="4"   onkeyup="focusMove(this,4,document.f.hp3)"  />
+          -
+          <input name="hp3" type="text" class="formbox"  style="height:20px;ime-mode:disabled;" size="4" onfocus="this.style.backgroundColor='#dddddd'" onblur="this.style.backgroundColor=''" onkeypress="onlyNumber()" maxlength="4" onkeyup="focusMove(this,4,document.f.email)" />
+
+</form>
