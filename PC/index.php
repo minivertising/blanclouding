@@ -75,7 +75,7 @@
           <div class="input_block">
             <ul class="clearfix">
               <li class="t_name"><img src="images/popup/txt_name.png" alt=""/></li>
-              <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
+              <li class="input_txt"><input type="text" name="mb_name" id="mb_name" onkeydown="Check_Hangul(this)"></li>
             </ul>
             <ul class="clearfix">
               <li class="t_name"><img src="images/popup/txt_phone.png" alt=""/></li>
@@ -90,8 +90,8 @@
                     <option>019</option>
                   </select>
                 </div>
-                <div style="margin-left:4px;"><input type="tel" name="mb_phone2" id="mb_phone2"></div>
-                <div><input type="tel" name="mb_phone3" id="mb_phone3"></div>
+                <div style="margin-left:4px;"><input type="tel" name="mb_phone2" id="mb_phone2" maxlength="4" onchange="Check_Number()"></div>
+                <div><input type="tel" name="mb_phone3" id="mb_phone3" maxlength="4"></div>
               </li>
             </ul>
           </div>

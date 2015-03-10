@@ -41,7 +41,7 @@ print_r($user_info['shop_addr']);
     }
 	
 	<!--- hide 
-	var millenium = new Date("March 11, 2015 22:00:00") //이곳을 수정하면 됩니다
+	var millenium = new Date("March 12, 2015 22:00:00") //이곳을 수정하면 됩니다
 	function CalcRemaining(theForm)
 	{
 	var now = new Date();
@@ -99,9 +99,7 @@ print_r($user_info['shop_addr']);
 	</FORM>
 	</TABLE>
     <input type="button" value="지도" onclick="show_map()">
-    <div id="map_area" style="width:50%; heigh:50%">
-    </div>
-     <div id="map_div" style="position:absolute;background:black;width:1000px;height:500px;top:20%;left:30%;display:none">
+    <div id="map_div" style="position:absolute;background:black;width:1000px;height:500px;top:20%;left:30%;display:none">
         <a href="#" onclick="close_map()">닫기</a>
         <div id="map_area" style="width:100%;height:90%;margin-top:5%"></div>
       </div>
