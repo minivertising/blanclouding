@@ -62,12 +62,12 @@
 </div>
 <!--contents_wrap-->
 <!-------------------------- 이벤트 응모 DIV -------------------------->
-  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="z-index:50000">
     <div class="p_mid"align="center">
       <div class="block_close clearfix">
         <a href="#" class="btn_close" onclick="javascript:close_input()"align="right"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
-      <div class="block_content">
+      <div class="block_content" style="background:white;">
         <div class="inner">
           <div class="title">
             <img src="images/popup/pop_input_title.png" />
