@@ -48,25 +48,11 @@
 <!--video_area-->
   </div>
 <!--area1-->
-
-
 <!--area2-->
   <div class="area2">
-    <div class="product_group">
-      <div class="product_area">
-        <img src="images/img_area_3.png" width="860" height="663" alt=""/>
-      </div>
-    </div>
+  블랑클라우드 이벤트 소개 및 제품 소개 내용
   </div>
 <!--area2-->
-<!--footer-->
-  <div class="footer">
-    <img src="images/footer.png" width="979" height="140" alt=""/>
-  </div>
-<!--footer-->
-
-
-
 <!--quickmenu-->
 <div class="quickmenu">
   <a href="#">TOP</a>
@@ -89,7 +75,7 @@
           <div class="input_block">
             <ul class="clearfix">
               <li class="t_name"><img src="images/popup/txt_name.png" alt=""/></li>
-              <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
+              <li class="input_txt"><input type="text" name="mb_name" id="mb_name" onblur="only_kor(this)"></li>
             </ul>
             <ul class="clearfix">
               <li class="t_name"><img src="images/popup/txt_phone.png" alt=""/></li>
@@ -104,8 +90,8 @@
                     <option>019</option>
                   </select>
                 </div>
-                <div style="margin-left:4px;"><input type="tel" name="mb_phone2" id="mb_phone2"></div>
-                <div><input type="tel" name="mb_phone3" id="mb_phone3"></div>
+                <div style="margin-left:4px;"><input type="tel" name="mb_phone2" id="mb_phone2" onblur="only_num(this)" ></div>
+                <div><input type="tel" name="mb_phone3" id="mb_phone3" onblur="only_num(this)"></div>
               </li>
             </ul>
           </div>
@@ -371,20 +357,6 @@
 		var youtube_height = (width / 16) * 9;
 		$("#ytplayer").width(width);
 		$("#ytplayer").height(youtube_height);
-
-		var wHeight =$(window).height();
-
-		if ('v'=='\v'){ // 8이하
-			wHeight = 773;
-		}else if (wHeight <= 780){
-			wHeight = 780;
-		}else if(wHeight > 1000){
-			wHeight = 1000;
-		}
-		$('.area2').height(wHeight); // 제품
-		//$('.product_group').width(width); // 제품
-		//$('.product_area').width(width); // 제품
-
 	});
 
 	$(document).ready(function() {
@@ -396,19 +368,6 @@
 		var youtube_height = (width / 16) * 9;
 		$("#ytplayer").height(youtube_height);
 		$(".cover_area").height($("#ytplayer").height());
-		
-		var wHeight =$(window).height();
-
-		if ('v'=='\v'){ // 8이하
-			wHeight = 773;
-		}else if (wHeight <= 780){
-			wHeight = 780;
-		}else if(wHeight > 1000){
-			wHeight = 1000;
-		}
-		$('.area2').height(wHeight); // 제품
-		//$('.product_group').width(width); // 제품
-		//$('.product_area').width(width); // 제품
 
 		$("#video_control").click(function(){
 			var control_txt	= $("#video_control").text();

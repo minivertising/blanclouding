@@ -114,12 +114,76 @@ body{
 	margin:0 auto;
 }
 
+.page_wrap{
+	width:100%;
+	position:relative;
+	position: relative;
+	width: 100%;
+	min-width: 1000px;
+	height: auto;
+	margin: 0 auto;	
+}
+.page_wrap .header a{
+	display:block;
+	float:left;
+}
+.page_wrap .header{
+	width:100%;
+}
+.page_wrap .header a.cl_logo{
+	width:100px;
+	background:#ccc;
+	height:50px;	
+}
+.page_wrap .header a.tfs_logo{
+	float:right;
+	width:100px;
+	background:#ccc;
+	height:50px;
+}
 
 
+.page_wrap .block_gift{
+	width:100%;
+	height:100%;
+}
+.inner_wrap{
+	position:relative;
+}
+.page_wrap .block_gift .inner{
+  position: absolute;
+  top: 50%;
+  left: 50%;	
+}
 
 
+.area3_bg{
+  width: 100%;
+  height: 100%;
+  background: #ffecd8 url('http://image.ethefaceshop.com/websrc/event/datebutter/images/area4/area4_bg.jpg') center 0 no-repeat;
+  background-size: cover;
+}
+.area3_bg .area3{
+	position:relative;
+}
+.area3_bg .area3 .product_group{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -280px;
+	margin-left: -440px;
+	width: 880px;
+	height: 560px;
+	text-align: center;
+	overflow: hidden;
+}
 
-
+.footer{
+	background:#fff;
+	padding:30px 0;
+	text-align:center;
+	border-top:1px solid #ddd;
+}
 
 /*popup*/
 .popup_wrap{
