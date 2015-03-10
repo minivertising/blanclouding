@@ -1,0 +1,21 @@
+diff a/MOBILE/map_ajax.php b/MOBILE/map_ajax.php	(rejected hunks)
+@@ -1,9 +1,5 @@
+ <?
+-	$flag	= $_REQUEST['flag'];
+-	if ($flag == "sigungu")
+-		$map_addr	= $_REQUEST["si"]." ".$_REQUEST["gun"];
+-	else
+-		$map_addr	= $_REQUEST["addr"];
++	$serial = $_REQUEST['jido'];
+ ?>
+ 
+ 
+@@ -29,7 +25,7 @@
+ var ps = new daum.maps.services.Places(); 
+ 
+ // 키워드로 장소를 검색합니다
+-ps.keywordSearch('<?= $map_addr ?> 더페이스샵', placesSearchCB); 
++ps.keywordSearch('<?= $serial ?> 더페이스샵', placesSearchCB); 
+ 
+ // 키워드 검색 완료 시 호출되는 콜백함수 입니다
+ function placesSearchCB (status, data, pagination) {

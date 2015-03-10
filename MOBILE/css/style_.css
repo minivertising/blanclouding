@@ -1,3 +1,169 @@
+<<<<<<< HEAD
+	html,body { margin: 0; padding: 0; word-wrap: break-word; word-break: break-all;}
+
+.contents_wrap{
+	position:relative;
+	width:100%;
+}
+
+/* 메인 첫번째 DIV */
+.contents_wrap .area1{
+	position:relative;
+	width:100%;
+	height:100%
+	overflow:hidden;
+}
+
+.contents_wrap .area1 .video_area{
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+.contents_wrap .area1 .video_area .youtube_div{
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+
+.contents_wrap .area1 .video_area .cover_area{
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100%;
+	background : url("../images/movCover.png") repeat;
+	overflow : hidden;
+	z-index : 10;
+}
+
+.contents_wrap .area1 .video_area .icon_area{
+	position:absolute;
+	z-index:30;
+	top:20px;
+	left:30px;
+}
+
+.contents_wrap .area1 .video_area .center_menu_area{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-200px;
+	margin-left:-300px;
+	width:600px;
+	height:400px;
+	text-align:center;
+	z-index:40;
+}
+
+.contents_wrap .area1 .video_area .sns_area{
+	position:absolute;
+	z-index:40;
+	bottom:100px;
+	right:12px;
+	overflow:hidden;
+}
+
+.contents_wrap .area1 .video_area .scroll_navi_area{
+	position:absolute;
+	z-index:40;
+	bottom:100px;
+	left:50%;
+}
+
+/* 메인 첫번째 DIV */
+.contents_wrap .area2{
+	height:1000px;
+}
+
+/*퀵메뉴 DIV*/
+.contents_wrap .quickmenu{
+	position:absolute;
+	right:20px;
+	z-index:50;
+}
+
+.ytplayer{
+	overflow:hidden;
+}
+
+/* 이벤트 응모 팝업*/
+.popup_wrap{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-280px;
+	margin-left:-220px;
+	width:400px;
+	height:400px;
+	text-align:center;
+	z-index:40;
+}
+
+.popup_wrap .block_close {
+	width:100%;
+	padding:10px 0;
+}
+.popup_wrap .block_close .btn_close{
+	display:block;
+	float:right;
+	width:40px;
+	height:40px;
+}
+.popup_wrap .p_mid{
+	width:450px;
+	height:500px;
+	border:1px solid #ccc;
+	background:url(../images/popup/bg_popup.png) top right;
+}
+.popup_wrap .p_mid .inner{
+	padding:20px;
+	padding-right:0;
+}
+
+.popup_wrap .p_mid .block_content.agree .inner{
+	padding:30px;
+	padding-right:20px;
+	font-size:13px;
+	line-height:20px;
+	word-break:break-all;
+	overflow-y:scroll;
+	width:370px;
+	height:360px;
+}
+
+.popup_wrap .p_mid .block_content.product .inner{
+	text-align:center;
+	padding:0;
+	padding-top:20px;
+}
+
+
+.popup_wrap .block_close{
+}
+.popup_wrap .p_alert{
+	width:400px;
+	height:260px;
+	background:url(../images/popup/bg_popup.png) top right;
+	border:1px solid #ccc;
+}
+.popup_wrap .block_content .title{
+	text-align:center;
+}
+
+.popup_wrap .p_alert .block_content .title{
+	padding-top:25px;
+}
+.popup_wrap .p_alert .block_content .btn_block{
+	text-align:center;
+	padding-top:35px;
+}
+
+
+.popup_wrap .p_alert .block_content.thanks .title{
+	padding-top:20px;
+=======
 @charset "UTF-8";
 /* CSS Document */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
@@ -139,22 +305,13 @@ body {
 	border-bottom:1px solid #1fa3de;
 	margin:0 auto;
 	width:95%;
-	background:#fff;
 }
 .wrap_page .content.coupon .block_time .txt{
-	padding-bottom:13px;
 }
 .wrap_page .content.coupon .block_time .time{
-	
-}
-.wrap_page .content.coupon .block_time .time div{
-	float:left;
-}
-.wrap_page .content.coupon .block_time .time img{
-	width:50%;
-}
-.wrap_page .content.coupon .block_time .time .num img{
-	width:25px;
+	color:#1fa3de;
+	font-size:42px;
+	font-weight:bold;
 }
 
 .wrap_page .content.coupon .block_check_in{
@@ -167,11 +324,8 @@ body {
 
 
 .wrap_page .block_cloud_bg{
-	background: url(../img/bg_cloud.png) no-repeat 0 -170px;
-	background-size: auto;
+	background: url(../img/bg_cloud.png) no-repeat 0 -60px;
 }
-
-.wrap_page .block_cloud_bg .inner,
 .wrap_page .block_cloud_bg .block_time,
 .wrap_page .block_cloud_bg .block_info{
 	background:#fff;
@@ -237,38 +391,7 @@ body {
 }
 .wrap_page.popup .content .input_block ul li.phone div input{
 	width:90%;
-}
-
-.popup_wrap .p_mid .block_content.product .inner{
-	text-align:center;
-	padding:0;
-	padding-top:20px;
-}
-
-
-.popup_wrap .block_close{
-}
-.popup_wrap .p_alert{
-	width:400px;
-	height:260px;
-	background:url(../images/popup/bg_popup.png) top right;
-	border:1px solid #ccc;
-}
-.popup_wrap .block_content .title{
-	text-align:center;
-}
-
-.popup_wrap .p_alert .block_content .title{
-	padding-top:25px;
-}
-.popup_wrap .p_alert .block_content .btn_block{
-	text-align:center;
-	padding-top:35px;
-}
-
-
-.popup_wrap .p_alert .block_content.thanks .title{
-	padding-top:20px;
+>>>>>>> ea8c93c761af43813a7c10a709539ffd06d8b04b
 }
 .popup_wrap .p_alert .block_content.thanks .btn_block{
 	text-align:center;
@@ -276,32 +399,7 @@ body {
 }
 
 
-.wrap_page.popup .content .input_block ul li.store{
-	width:35%;
-}
-.wrap_page.popup .content .input_block ul li.btn {
-	width:30%;
-	padding-left:2%;
-}
-
-.wrap_page.popup .content .input_block ul li.address{
-	width:63%;
-}
-.wrap_page.popup .content .input_block ul li.address .inner div{
-	float:left;
-	width:50%;
-}
-.wrap_page.popup .content .input_block ul li.address .inner div input{
-	float:left;
-	width:95%;
-}
-
-.wrap_page.popup .content .input_block.input_check{
-	padding-left:27%;
-}
-.wrap_page.popup .content .input_block.input_check .in_check{
-	width:8%;
-}
+<<<<<<< HEAD
 .popup_wrap .block_content .input_block{
 	padding-top:15px;
 }
@@ -365,22 +463,37 @@ body {
 	margin-top:-300px;
 	left:30%;
 	display:none;
+=======
+.wrap_page.popup .content .input_block ul li.store{
+	width:35%;
+}
+.wrap_page.popup .content .input_block ul li.btn {
+	width:30%;
+	padding-left:2%;
+}
+
+.wrap_page.popup .content .input_block ul li.address{
+	width:63%;
+}
+.wrap_page.popup .content .input_block ul li.address .inner div{
+	float:left;
+	width:50%;
+}
+.wrap_page.popup .content .input_block ul li.address .inner div input{
+	float:left;
+	width:95%;
+}
+
+.wrap_page.popup .content .input_block.input_check{
+	padding-left:27%;
+}
+.wrap_page.popup .content .input_block.input_check .in_check{
+	width:8%;
+>>>>>>> ea8c93c761af43813a7c10a709539ffd06d8b04b
 }
 .wrap_page.popup .content .input_block.input_check .in_check input{
 	padding:0;
-	height: 22px;
-}
-.wrap_page.popup .content .input_block.input_check .in_check_label{
-	width:60%;
-	padding-top:2px;
-}
-
-.wrap_page.popup .content .btn_block{
-	text-align:center;
-	padding-top:25px;
-}
-
-.wrap_page.popup .content .inner.alert .title {
+<<<<<<< HEAD
 	text-align:right;
 }
 
@@ -394,6 +507,21 @@ body {
 	margin-top:-300px;
 	left:30%;
 	display:none;
+=======
+	height: 22px;
+}
+.wrap_page.popup .content .input_block.input_check .in_check_label{
+	width:60%;
+	padding-top:2px;
+}
+
+.wrap_page.popup .content .btn_block{
+	text-align:center;
+	padding-top:25px;
+}
+
+.wrap_page.popup .content .inner.alert .title {
+>>>>>>> ea8c93c761af43813a7c10a709539ffd06d8b04b
 }
 .wrap_page.popup .content .inner.alert .btn_block {
 	padding-top:15px;
@@ -427,6 +555,7 @@ html[xmlns] .clearfix {
 * html .clearfix {
 	height: 1%;
 }
+<<<<<<< HEAD
 
 
 /* 팝업 jQuery ( Magnific-Popup ) 관련 CSS */
@@ -559,3 +688,5 @@ html[xmlns] .clearfix {
 	opacity: 0;
 }
 
+=======
+>>>>>>> ea8c93c761af43813a7c10a709539ffd06d8b04b

@@ -62,12 +62,12 @@
 </div>
 <!--contents_wrap-->
 <!-------------------------- 이벤트 응모 DIV -------------------------->
-  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="z-index:50000">
     <div class="p_mid"align="center">
       <div class="block_close clearfix">
         <a href="#" class="btn_close" onclick="javascript:close_input()"align="right"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
-      <div class="block_content">
+      <div class="block_content" style="background:white;">
         <div class="inner">
           <div class="title">
             <img src="images/popup/pop_input_title.png" />
@@ -148,7 +148,7 @@
             </ul>
           </div>
           <div class="btn_block">
-            <a href="#" onclick="javascript:chk_input();"><img src="images/popup/btn_input_ok.png" alt=""/></a>
+            <a href="#" onclick="javascript:chk_input();return false;"><img src="images/popup/btn_input_ok.png" alt=""/></a>
           </div>
         </div><!--inner-->
       </div>
@@ -218,25 +218,84 @@
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
 
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
-    <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
-    	<div class="p_alert">
-        	<div class="inner">
-                <div class="block_close clearfix">
-                    <a href="#" class="btn_close"><img src="images/popup/pop_btn_close.png" /></a>
-                </div>
-                <div class="block_content">
-                    <div class="title">
-                        <img src="images/popup/alert_txt_info.png" alt=""/>
-                    </div>
-                    <div class="btn_block">
-                        <a href="#"><img src="images/popup/pop_btn_ok.png" alt=""/></a>
-                    </div>
-                </div>
-            </div>
+  <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_alert">
+      <div class="inner">
+        <div class="block_close clearfix">
+          <a href="#" data-mfp-src="#input_div" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
         </div>
-	</div>
+        <div class="block_content">
+          <div class="title">
+            <img src="images/popup/alert_txt_info.png" alt=""/>
+          </div>
+          <div class="btn_block">
+            <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim"><img src="images/popup/pop_btn_ok.png" alt=""/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
 
+<!--------------------------  매장을 선택해주세요 ALERT DIV ----------------------->
+  <div id="shop_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_alert">
+      <div class="inner">
+        <div class="block_close clearfix">
+          <a href="#" data-mfp-src="#input_div" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
+        </div>
+        <div class="block_content">
+          <div class="title">
+            <img src="images/popup/alert_txt_select_store.png" alt=""/>
+          </div>
+          <div class="btn_block">
+            <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim"><img src="images/popup/pop_btn_ok.png" alt=""/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--------------------------  매장을 선택해주세요 ALERT DIV ----------------------->
+
+<!--------------------------  정보 활용 동의를 해주세요 ALERT DIV ----------------------->
+  <div id="agree_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_alert">
+      <div class="inner">
+        <div class="block_close clearfix">
+          <a href="#" data-mfp-src="#input_div" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
+        </div>
+        <div class="block_content">
+          <div class="title">
+            <img src="images/popup/alert_txt_agree.png" alt=""/>
+          </div>
+          <div class="btn_block">
+            <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim"><img src="images/popup/pop_btn_ok.png" alt=""/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--------------------------  정보 활용 동의를 해주세요 ALERT DIV ----------------------->
+
+<!--------------------------  참여완료 ALERT DIV ----------------------->
+  <div id="ok_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_alert">
+      <div class="inner">
+        <div class="block_close clearfix">
+          <a href="#" data-mfp-src="#input_div" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
+        </div>
+        <div class="block_content thanks">
+          <div class="title">
+            <img src="images/popup/alert_txt_thanks.png" alt=""/>
+          </div>
+          <div class="btn_block">
+            <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim"><img src="images/popup/pop_btn_ok.png" alt=""/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--------------------------  참여완료 ALERT DIV ----------------------->
 
 </body>
 </html>
@@ -262,6 +321,7 @@
 		else if (e.data === 1)
 		{
 			//controllable_player.pauseVideo();
+			$(".cover_area").css("background","url('./images/movCover.png') repeat");
 			$("#video_control").text('일시정지');
 		}
 		else if (e.data === 2)
@@ -269,9 +329,8 @@
 			//controllable_player.playVideo();
 			$("#video_control").text('재생');
 		}
-		else if (e.data === 3)
+		else if (e.data === 5)
 		{
-			//alert('4444');
 		}
     	//controllable_player.playVideo(); 
     };
@@ -286,6 +345,8 @@
     	if (typeof(controllable_player) == 'undefined'){
     		onYouTubeIframeAPIReady();
     	}
+		$(".cover_area").css("background","url('./images/movCover.png') repeat");
+
     }, 1000)
 
 
@@ -352,6 +413,7 @@
 			closeBtnInside: true,
 			//preloader: false,
 			midClick: true,
+
 			removalDelay: 300,
 			mainClass: 'my-mfp-zoom-in',
 			showCloseBtn : false,
