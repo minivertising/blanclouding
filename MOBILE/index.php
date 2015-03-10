@@ -3,61 +3,74 @@
 ?>
 <!--contents_wrap-->
 <div class="contents_wrap">
-<!--area1-->
-  <div class="area1">
-<!--video_area-->
-    <div class="video_area">
-<!--youtube_div-->
-      <div class="youtube_div">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer"></iframe>
-      </div>
-<!--youtube_div-->
-<!--cover_area-->
-      <div class="cover_area">
-      </div>
-<!--cover_area-->
+
 <!--icon_area-->
-      <div class="icon_area">
-        <a href="#">로고 부분</a>
-      </div>
+    <div class="icon_area clearfix">
+      <a href="#" class="cl_logo">블란</a>
+      <a href="#" class="fb_logo">페샵</a>
+    </div>
 <!--icon_area-->
-<!--center_menu_area-->
-      <div class="center_menu_area">
-        <div>
-        더 페이스샵 블랑클라우딩
-        </div>
-        <div class="btn_group">
+
+    <div class="main_title">
+      <img src="img/main_title.png" width="320" alt=""/>
+    </div>
+    
+    <div class="navi_btn_block clearfix">
           <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()">이벤트 참여</a>
           <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()">선물안내</a>
-        </div>
-      </div>
-<!--center_menu_area-->
-<!--sns_area-->
-      <div class="sns_area">
-        <a href="#" id="video_control">일시정지</a>
-        <a href="#" onclick="sns_share('facebook');return false;">페이스북 공유</a>
-        <a href="#" onclick="sns_share('twitter');return false;">트위터 공유</a>
-      </div>
-<!--sns_area-->
-<!--scroll_navi_area-->
-      <div class="scroll_navi_area">
-	    <a href="#">하단 이동</a>
-      </div>
-<!--scroll_navi_area-->
     </div>
-<!--video_area-->
-  </div>
-<!--area1-->
-<!--area2-->
-  <div class="area2">
-  블랑클라우드 이벤트 소개 및 제품 소개 내용
-  </div>
-<!--area2-->
-<!--quickmenu-->
-<div class="quickmenu">
-  <a href="#">TOP</a>
-</div>
-<!--quickmenu-->
+
+
+    <!--area1-->
+      <div class="area1">
+    <!--video_area-->
+        <div class="video_area">
+    <!--youtube_div-->
+          <div class="youtube_div">
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer"></iframe>
+          </div>
+    <!--youtube_div-->
+        </div>
+    <!--video_area-->
+      </div>
+    <!--area1-->
+
+
+    <div class="bg_cloud">
+        <!--sns_area-->
+          <div class="sns_area clearfix">
+            <a href="#" onclick="sns_share('facebook');return false;">
+           		<img src="img/btn_fb.png" alt=""/>
+            </a>
+            <a href="#" onclick="sns_share('twitter');return false;">
+            	<img src="img/btn_kt.png" alt=""/>
+            </a>
+            <a href="#" onclick="sns_share('twitter');return false;">
+            	<img src="img/btn_tw.png" alt=""/>
+            </a>
+          </div>
+        <!--sns_area-->
+    
+        <!--event-->
+          <div class="event">
+          	<div class="title_event">
+	            <img src="img/title_event.png" alt=""/>
+            </div>
+            <div class="btn_gift">
+            	<a href="#"><img src="img/btn_gift.png" alt=""/></a>
+            </div>
+            <div class="txt_date">
+       	    	<img src="img/txt_date.png" alt=""/> </div>
+            </div>
+        <!--event-->
+    </div>
+    
+    <div class="bottom">
+    	<img src="img/bg_bottom.png" />
+    </div>
+
+
+
 
 </div>
 <!--contents_wrap-->

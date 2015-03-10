@@ -81,10 +81,105 @@ body {
 	/*background: url(../images/bg.jpg)*/
 	background-color: #fff;
 }
-.wrap_page{
+
+
+/*main*/
+.contents_wrap{
+	width:100%;
+}
+.contents_wrap .icon_area{
+	width:100%;
+}
+.contents_wrap .icon_area a{
+	display:block;
+	float:left;
+	width:50%;
+	background:#eee;
+}
+.contents_wrap .icon_area a.fb_logo{
+	text-align:right;
+}
+
+.contents_wrap .main_title{
+	text-align:center;
+}
+.contents_wrap .navi_btn_block{
+	width:100%;
+}
+.contents_wrap .navi_btn_block a{
+	display:block;
+	float:left;
+	width:50%;
+	padding:5px 0;
+	background:#eee;
+	text-align:center;
+}
+
+.contents_wrap .bg_cloud{
+	position:relative;
+	width:100%;
+	background:url(../img/bg_main.png) top center ;
+	background-size: cover;
+	padding:5% 0 70%;
+}
+
+.contents_wrap .sns_area{
+	width:90%;
+	padding:0 0 5%;
+	padding-left:10%;
+}
+.contents_wrap .sns_area a{
+	display:block;
+	float:left;
+	width:30%;
+	background:#eee;
+}
+.contents_wrap .sns_area a img{
+	width:96%;
+}
+
+.contents_wrap .bg_cloud .event .title_event{
+	width:100%;
+	text-align:center;
+	padding-top:40px;
+}
+.contents_wrap .bg_cloud .event .title_event img{
+	width:70%;
+}
+.contents_wrap .bg_cloud .event .btn_gift{
+    width:100%;
+	padding:20px 0;
+}
+.contents_wrap .bg_cloud .event .btn_gift a{
+    width:100%;
+	text-align:center;
+	display:block;
+}
+.contents_wrap .bg_cloud .event .btn_gift a img{
+	width:70%;
+}
+
+.contents_wrap .bg_cloud .event .txt_date{
+    width:100%;
+	text-align:center;	
+}
+.contents_wrap .bg_cloud .event .txt_date img{
+    width:60%;
+}
+
+.contents_wrap .bottom{
+	text-align:center;
+	width:100%;
+}
+.contents_wrap .bottom img{
 	width:100%;
 }
 
+
+
+.wrap_page{
+	width:100%;
+}
 .wrap_page .header.coupon{
 	background:#6dc2e6;
 }
