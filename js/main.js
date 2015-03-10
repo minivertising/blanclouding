@@ -27,6 +27,57 @@ function shop_change(idx)
 	});
 }
 
+function ins_data()
+{
+	$.magnificPopup.open({
+		items: {
+			src: '#input_alert'
+		},
+		type: 'inline'
+	}, 0);
+}
+
+function shop_data()
+{
+	$.magnificPopup.open({
+		items: {
+			src: '#shop_alert'
+		},
+		type: 'inline'
+	}, 0);
+}
+
+function agree_data()
+{
+	$.magnificPopup.open({
+		items: {
+			src: '#agree_alert'
+		},
+		type: 'inline'
+	}, 0);
+}
+
+function ok_data()
+{
+	$.magnificPopup.open({
+		items: {
+			src: '#ok_alert'
+		},
+		type: 'inline'
+	}, 0);
+}
+
+function map_data()
+{
+	$.magnificPopup.open({
+		items: {
+			src: '#map_div'
+		},
+		type: 'inline'
+	}, 0);
+
+}
+
 function chk_input()
 {
 	var mb_name		= $('#mb_name').val();
@@ -39,55 +90,82 @@ function chk_input()
 
 	if (mb_name == "")
 	{
-		alert('개인정보 입력을 안 하셨습니다');
-		$("#mb_name").focus();
+
+		//alert('개인정보 입력을 안 하셨습니다');
+		setTimeout("ins_data();",500);
+
+		//$("#mb_name").focus();
+		//$("#input_alert").show();
 		return false;
 	}
 
 	if (mb_phone1 == "")
 	{
-		alert('개인정보 입력을 안 하셨습니다');
+		//alert('개인정보 입력을 안 하셨습니다');
+		setTimeout("ins_data();",500);
+
 		$("#mb_phone1").focus();
 		return false;
 	}
 
 	if (mb_phone2 == "")
 	{
-		alert('개인정보 입력을 안 하셨습니다');
+		//alert('개인정보 입력을 안 하셨습니다');
+		setTimeout("ins_data();",500);
 		$("#mb_phone2").focus();
 		return false;
 	}
 
 	if (mb_phone3 == "")
 	{
-		alert('개인정보 입력을 안 하셨습니다');
+		//alert('개인정보 입력을 안 하셨습니다');
+		setTimeout("ins_data();",500);
 		$("#mb_phone3").focus();
 		return false;
 	}
 
 	if (addr1 == "")
 	{
-		alert('매장 선택을 안 하셨습니다');
+		//alert('매장 선택을 안 하셨습니다');
+		setTimeout("shop_data();",500);
 		return false;
 	}
 
 	if (addr2 == "")
 	{
-		alert('매장 선택을 안 하셨습니다');
+		//alert('매장 선택을 안 하셨습니다');
+		setTimeout("shop_data();",500);
 		return false;
 	}
 
 	if (shop == "")
 	{
-		alert('매장 선택을 안 하셨습니다');
+		//alert('매장 선택을 안 하셨습니다');
+		setTimeout("shop_data();",500);
+		return false;
+	}
+
+	if ($('#uses_agree').is(":checked") == false)
+	{
+		//alert("개인정보 활용 동의를 안 하셨습니다");
+		setTimeout("agree_data();",500);
 		return false;
 	}
 
 	if ($('#privacy_agree').is(":checked") == false)
 	{
-		alert("개인정보 활용 동의를 안 하셨습니다");
+		//alert("개인정보 활용 동의를 안 하셨습니다");
+		setTimeout("agree_data();",500);
 		return false;
 	}
+
+	if ($('#send_agree').is(":checked") == false)
+	{
+		//alert("개인정보 활용 동의를 안 하셨습니다");
+		setTimeout("agree_data();",500);
+		return false;
+	}
+
 	$.ajax({
 		type:"POST",
 		data:{
@@ -102,11 +180,22 @@ function chk_input()
 		success: function(response){
 			if (response == "Y")
 			{
-				alert("참여해주셔서 감사합니다.\n당첨시 3월 19일에 모바일쿠폰을 보내드립니다.\n미당첨시 따로 메시지를 보내드리지 않습니다.");
+				//alert("참여해주셔서 감사합니다.\n당첨시 3월 19일에 모바일쿠폰을 보내드립니다.\n미당첨시 따로 메시지를 보내드리지 않습니다.");
+				setTimeout("ok_data();",1000);
+
 			}
 			else if (response == "D")
 			{
 				alert("이미 이벤트에 응모하셨습니다.\n다음에 다시 참여해 주세요.");
+				$("#mb_name").val("");
+				$("#mb_phone1").val("010");
+				$("#mb_phone2").val("");
+				$("#mb_phone3").val("");
+				$("#addr1").val("");
+				$("#addr2").val("");
+				$("#shop").val("");
+				$('input').iCheck('uncheck');
+				$.magnificPopup.close();
 			}
 			else
 			{
@@ -368,7 +457,8 @@ function show_map()
 			});
 		}else{
 			alert("지역이나 매장을 선택하셔야만 지도를 보실 수 있습니다.");
-			$.magnificPopup.close();
+			return false;
+			//$.magnificPopup.close();
 		}
 	}
 }

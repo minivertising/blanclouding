@@ -1,5 +1,11 @@
 <?
-	$serialnumber = $_REQUEST['jido'];
+	$flag	= $_REQUEST['flag'];
+	if ($flag == "sigungu")
+		$map_addr	= $_REQUEST["si"]." ".$_REQUEST["gun"];
+	else if  ($flag == "win_coupon")
+		$map_addr	= $_REQUEST['jido'];
+	else
+		$map_addr	= $_REQUEST["addr"];
 ?>
 
 
@@ -25,7 +31,7 @@ var map = new daum.maps.Map(mapContainer, mapOption);
 var ps = new daum.maps.services.Places(); 
 
 // 키워드로 장소를 검색합니다
-ps.keywordSearch('<?= $serialnumber ?> 더페이스샵', placesSearchCB); 
+ps.keywordSearch('<?= $map_addr ?> 더페이스샵', placesSearchCB); 
 
 // 키워드 검색 완료 시 호출되는 콜백함수 입니다
 function placesSearchCB (status, data, pagination) {

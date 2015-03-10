@@ -1,0 +1,419 @@
+	html,body { margin: 0; padding: 0; word-wrap: break-word; word-break: break-all;}
+
+.contents_wrap{
+	position:relative;
+	width:100%;
+}
+
+/* 메인 첫번째 DIV */
+.contents_wrap .area1{
+	position:relative;
+	width:100%;
+	height:100%
+	overflow:hidden;
+}
+
+.contents_wrap .area1 .video_area{
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+.contents_wrap .area1 .video_area .youtube_div{
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+
+.contents_wrap .area1 .video_area .cover_area{
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100%;
+	background : url("../images/area1_bg.jpg");
+	overflow : hidden;
+	z-index : 10;
+}
+
+.contents_wrap .area1 .video_area .icon_area{
+	position:absolute;
+	z-index:30;
+	top:20px;
+	left:30px;
+}
+
+.contents_wrap .area1 .video_area .center_menu_area{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-200px;
+	margin-left:-300px;
+	width:600px;
+	height:400px;
+	text-align:center;
+	z-index:40;
+}
+
+.contents_wrap .area1 .video_area .sns_area{
+	position:absolute;
+	z-index:40;
+	bottom:100px;
+	right:12px;
+	overflow:hidden;
+}
+
+.contents_wrap .area1 .video_area .scroll_navi_area{
+	position:absolute;
+	z-index:40;
+	bottom:100px;
+	left:50%;
+}
+
+/* 메인 첫번째 DIV */
+.contents_wrap .area2{
+	height:1000px;
+}
+
+/*퀵메뉴 DIV*/
+.contents_wrap .quickmenu{
+	position:absolute;
+	right:20px;
+	z-index:50;
+}
+
+.ytplayer{
+	overflow:hidden;
+}
+
+/* 이벤트 응모 팝업*/
+.popup_wrap{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-280px;
+	margin-left:-220px;
+	width:400px;
+	height:400px;
+	text-align:center;
+	z-index:40;
+}
+
+.popup_wrap .block_close {
+	width:100%;
+	padding:10px 0;
+}
+.popup_wrap .block_close .btn_close{
+	display:block;
+	float:right;
+	width:40px;
+	height:40px;
+}
+.popup_wrap .p_mid{
+	width:450px;
+	height:500px;
+	border:1px solid #ccc;
+	background:url(../images/popup/bg_popup.png) top right;
+}
+.popup_wrap .p_mid .inner{
+	padding:20px;
+	padding-right:0;
+}
+
+.popup_wrap .p_mid .block_content.agree .inner{
+	padding:30px;
+	padding-right:20px;
+	font-size:13px;
+	line-height:20px;
+	word-break:break-all;
+	overflow-y:scroll;
+	width:370px;
+	height:360px;
+}
+
+.popup_wrap .p_mid .block_content.product .inner{
+	text-align:center;
+	padding:0;
+	padding-top:20px;
+}
+
+
+.popup_wrap .block_close{
+}
+.popup_wrap .p_alert{
+	width:400px;
+	height:260px;
+	background:url(../images/popup/bg_popup.png) top right;
+	border:1px solid #ccc;
+}
+.popup_wrap .block_content .title{
+	text-align:center;
+}
+
+.popup_wrap .p_alert .block_content .title{
+	padding-top:25px;
+}
+.popup_wrap .p_alert .block_content .btn_block{
+	text-align:center;
+	padding-top:35px;
+}
+
+
+.popup_wrap .p_alert .block_content.thanks .title{
+	padding-top:20px;
+}
+.popup_wrap .p_alert .block_content.thanks .btn_block{
+	text-align:center;
+	padding-top:20px;
+}
+
+
+.popup_wrap .block_content .input_block{
+	padding-top:15px;
+}
+.popup_wrap .block_content .input_block ul{
+	width:100%;
+}
+.popup_wrap .block_content .input_block.input_check{
+	padding-left:90px;
+}
+.popup_wrap .block_content .input_block ul li{
+	display:block;
+	float:left;
+}
+
+.popup_wrap .block_content .input_block ul li.t_name{
+	width:84px;
+	text-align:right;
+	padding-right:10px;
+	padding-top:9px;
+}
+.popup_wrap .block_content .input_txt select input{
+	background:#d4e5ee;
+	height:31px;
+	padding:2px;
+	border:none;
+	width:241px;
+	font-size:13px;
+}
+.popup_wrap .block_content .input_txt.phone div{
+	float:left;
+	width:83px;
+}
+.popup_wrap .block_content .input_txt.phone select input{
+	width:75px;
+}
+.popup_wrap .block_content .input_txt.store{
+	width:125px;
+}
+.popup_wrap .block_content .input_txt.store select input{
+	width:116px;
+}
+
+.popup_wrap .block_content .input_block.input_check .in_check_label{
+	padding-left:5px;
+}
+
+.popup_wrap .block_content .btn_block{
+	text-align:center;
+	padding-top:10px;
+}
+
+
+
+/* 약관 동의 팝업*/
+.pop_agree{
+	position:absolute;
+	background:white;
+	border: 1px solid black;
+	width:700px;
+	height:500px;
+	margin-top:-300px;
+	left:30%;
+	display:none;
+}
+
+.pop_agree .header .btn_close{
+	padding:0;
+	text-align:right;
+}
+
+/* 메인 지도 팝업*/
+.pop_main_map{
+	position:absolute;
+	background:white;
+	border: 1px solid black;
+	width:1000px;
+	height:500px;
+	margin-top:-300px;
+	left:30%;
+	display:none;
+}
+
+.pop_main_map .contents{
+	width:100%;
+	height:500px;
+}
+
+.pop_main_map .contents .map_area{
+	width:100%;
+	height:90%;
+	margin-top:5%;
+}
+
+.pop_main_map .header .btn_close{
+	padding:0;
+	text-align:right;
+}
+
+/*clearfix*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+html[xmlns] .clearfix {
+	display: block;
+}
+* html .clearfix {
+	height: 1%;
+}
+
+
+/* 팝업 jQuery ( Magnific-Popup ) 관련 CSS */
+/* Styles for dialog window */
+#input_1 {
+	background: white;
+	position: relative;
+}
+
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+	opacity: 0;
+
+	-webkit-transition: all 0.2s ease-in-out; 
+	-moz-transition: all 0.2s ease-in-out; 
+	-o-transition: all 0.2s ease-in-out; 
+	transition: all 0.2s ease-in-out; 
+
+
+
+	-webkit-transform: scale(0.8); 
+	-moz-transform: scale(0.8); 
+	-ms-transform: scale(0.8); 
+	-o-transform: scale(0.8); 
+	transform: scale(0.8); 
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+
+	-webkit-transform: scale(1); 
+	-moz-transform: scale(1); 
+	-ms-transform: scale(1); 
+	-o-transform: scale(1); 
+	transform: scale(1); 
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+	-webkit-transform: scale(0.8); 
+	-moz-transform: scale(0.8); 
+	-ms-transform: scale(0.8); 
+	-o-transform: scale(0.8); 
+	transform: scale(0.8); 
+
+	opacity: 0;
+}
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+	opacity: 0.001; /* Chrome opacity transition bug */
+	-webkit-transition: opacity 0.3s ease-out; 
+	-moz-transition: opacity 0.3s ease-out; 
+	-o-transition: opacity 0.3s ease-out; 
+	transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+
+
+/**
+ * Fade-move animation for second dialog
+ */
+
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+
+	-webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	-moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	-ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	-o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+	opacity: 0;
+
+	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+}
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+	opacity: 0.01;
+
+	-webkit-transition: opacity 0.3s ease-out; 
+	-moz-transition: opacity 0.3s ease-out; 
+	-o-transition: opacity 0.3s ease-out; 
+	transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+

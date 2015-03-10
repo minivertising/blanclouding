@@ -11,13 +11,16 @@
 		echo "<script>alert('당첨된 고객이 아닙니다.');</script>";
 		exit;
 	}
-print_r($user_info['shop_addr']);
-
 ?>
-
+<!doctype html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0,aximum-scale=3.0"/>
+	<title>Blan Clouding</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link type="text/javascript" href="js/default.js"/>
+  </head>
     <script src="../js/jquery-1.11.2.min.js"></script>
     <script src="../js/main.js"></script>
     <script type="text/javascript">
@@ -25,6 +28,7 @@ print_r($user_info['shop_addr']);
         $.ajax({
             type:"POST",
             data:{
+				"flag"   : "win_coupon",
                 "jido"   : "<?=$user_info['shop_addr']?>"
             },
             url: "./map_ajax.php",
@@ -40,8 +44,8 @@ print_r($user_info['shop_addr']);
         $("#map_div").hide();
     }
 	
-	<!--- hide 
-	var millenium = new Date("March 12, 2015 22:00:00") //이곳을 수정하면 됩니다
+	var millenium = new Date("March 11, 2015 22:00:00") //이곳을 수정하면 됩니다
+
 	function CalcRemaining(theForm)
 	{
 	var now = new Date();
@@ -75,46 +79,105 @@ print_r($user_info['shop_addr']);
 	var secs2      = String(secs).substr(1,2)
 	
 
-	$("#realtime_h1").attr("src","./images/time_" + hours1 + ".png");
-	$("#realtime_h2").attr("src","./images/time_" + hours2 + ".png");
-	$("#realtime_m1").attr("src","./images/time_" + minutes1 + ".png");
-	$("#realtime_m2").attr("src","./images/time_" + minutes2 + ".png");
-	$("#realtime_s1").attr("src","./images/time_" + secs1 + ".png");
-	$("#realtime_s2").attr("src","./images/time_" + secs2 + ".png");
+    $("#realtime_h1").attr("src","./img/time_" + hours1 + ".png");
+    $("#realtime_h2").attr("src","./img/time_" + hours2 + ".png");
+    $("#realtime_m1").attr("src","./img/time_" + minutes1 + ".png");
+    $("#realtime_m2").attr("src","./img/time_" + minutes2 + ".png");
+    $("#realtime_s1").attr("src","./img/time_" + secs1 + ".png");
+    $("#realtime_s2").attr("src","./img/time_" + secs2 + ".png");
 
 
 	setTimeout("CalcRemaining(document.clock)", 250);
 	}
 	</script>
-	
   <body onLoad="CalcRemaining(document.clock)">
-    <TABLE WIDTH="250" >
-	  <FORM NAME=clock>
-	    <img src="./images/time_0.png" id="realtime_h1">
-	    <img src="./images/time_0.png" id="realtime_h2">:
-	    <img src="./images/time_0.png" id="realtime_m1">
-	    <img src="./images/time_0.png" id="realtime_m2">:
-	    <img src="./images/time_0.png" id="realtime_s1">
-	    <img src="./images/time_0.png" id="realtime_s2">
-	</FORM>
-	</TABLE>
-    <input type="button" value="지도" onclick="show_map()">
-    <div id="map_div" style="position:absolute;background:black;width:1000px;height:500px;top:20%;left:30%;display:none">
-        <a href="#" onclick="close_map()">닫기</a>
-        <div id="map_area" style="width:100%;height:90%;margin-top:5%"></div>
+	<div class="wrap_page">
+        <div class="header coupon">
+            <div class="block_logo clearfix">
+                <a href="#" class="logo_tfs"><img src="img/logo_tfs.png" width="100" alt=""/></a>
+            </div>
       </div>
+        <div class="content coupon">
+          <div class="block_title">
+                   <img src="img/coupon_title.png" width="215" alt=""/>
+          </div>
+          <div class="block_cloud_bg">
+          
+              <div class="product">
+                    <img src="img/img_product.png" width="320" alt=""/>
+              </div>
+              
+              <div class="inner">
+                  <div class="block_time">
+                    <div class="txt">
+                        <img src="img/txt_time.png" width="140" alt=""/>
+                    </div>
+                    <div class="time clearfix">
+                    <div class="num"><!-- 시 -->
+                                <img src="./img/time_0.png" id="realtime_h1" alt="" />
+                                <img src="./img/time_0.png" id="realtime_h2" alt="" />
+                            </div>
+                            <div class="dash">
+                                <img src="img/time_dash.png" alt=""/>
+                            </div>
+                            <div class="num"><!-- 분 -->
+                                <img src="./img/time_0.png" id="realtime_m1" alt="" />
+                                <img src="./img/time_0.png" id="realtime_m2" alt="" />
+                            </div>
+                            <div class="dash">
+                                <img src="img/time_dash.png" alt=""/>
+                            </div>
+                            <div class="num"><!-- 초 -->
+                                <img src="./img/time_0.png" id="realtime_s1" alt="" />
+                                <img src="./img/time_0.png" id="realtime_s2" alt="" />
+                            </div>
+						</div>
+                  </div>
+
+				   <div class="block_info">
+                      <ul class="clearfix">
+                          <li class="txt_label">교환기간 |</li>
+                          <li class="txt_detail">2015.03.19 ~ 03.21</li>
+                      </ul>
+                      <ul class="clearfix">
+                          <li class="txt_label">내가 선택한 매장 |</li>
+                          <li class="txt_detail"><?=$user_info['shop_name']?></li>
+                          <li class="btn_map"><a href="#" onclick="show_map()"><img src="img/btn_map.png" width="55" alt=""/></a></li>
+							<div id="map_div" style="position:absolute;background:black;width:1000px;height:500px;top:20%;left:30%;display:none">
+                            <a href="#" onclick="close_map()">닫기</a>
+                            <div id="map_area" style="width:100%;height:90%;margin-top:5%"></div>
+                          </div>
+                      </ul>
+                  </div>
+              </div><!--inner-->
+              
+            </div><!--block_cloud_bg-->
+
+			<div class="btn_block">
+				 <div class="block_check_in">
+				 		<div class="txt" ><img src="img/txt_notice.png" width="200" alt=""/><br><br>
+
 <?
 	if ($user_info['mb_use'] == "Y")
 	{
-?>
-	  <input type = "button" value="사용 완료" onclick="alert('이미 사용하셨습니다.')">
+?>                
+			<a href="#"><img src="img/btn_use_after.png" width="220" alt=""/></a>
 <?
 	}else{
 ?>
-	  <input type = "button" value="사용 확인" onclick="button_event('<?=$serialnumber?>')">
+			<a href="#" onclick="button_event('<?=$serialnumber?>')"><img src="img/btn_use_before.png" width="220"  alt=""/></a>
 <?
-	}
+}
 ?>
+                </div>
+            </div>
+        </div>
+		</div>
+        <div class="footer">
+            footer
+        </div>
+	</div>
 </body>
-<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
+
 </html>
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
