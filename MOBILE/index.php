@@ -182,7 +182,7 @@
     <div class="block_close clearfix">
       <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_map()"><img src="img/popup/btn_close.png" width="29"/></a>
     </div>
-    <div class="content">
+    <div class="content" style="z-index:800000">
       <div id="map_area" class="map_area" style="height:440px;border:1px solid skyblue"></div>
     </div>
   </div><!--wrap_page popup-->
