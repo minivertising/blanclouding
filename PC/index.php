@@ -371,6 +371,8 @@
 		var youtube_height = (width / 16) * 9;
 		$("#ytplayer").width(width);
 		$("#ytplayer").height(youtube_height);
+		$(".cover_area").width($("#ytplayer").width());
+		$(".cover_area").height($("#ytplayer").height());
 
 		var wHeight =$(window).height();
 
