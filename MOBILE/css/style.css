@@ -382,7 +382,7 @@ body {
 }
 
 .wrap_page.popup .content .inner.alert .title {
-	text-align:right;
+	text-align: center;
 }
 
 /* 메인 지도 팝업*/
