@@ -19,7 +19,6 @@
 			$check_mobile = "N";
 		}
 	}
-print_r($_SERVER['HTTP_USER_AGENT']);
 	if($check_mobile == "Y")
 		$gubun = "MOBILE";
 	else
