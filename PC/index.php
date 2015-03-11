@@ -16,11 +16,18 @@
       <div class="cover_area">
       </div>
 <!--cover_area-->
-<!--icon_area-->
-      <div class="icon_area">
-        <a href="#">로고 부분</a>
-      </div>
-<!--icon_area-->
+  <!--icon_area-->
+    <div class="icon_area">
+      <a href="#"><img src="images/logo_blan.png" alt=""/></a>
+    </div>
+  <!--icon_area-->
+  <!--icon_area-->
+    <div class="icon_area2">
+      <a href="#"><img src="images/logo_tfs.png" alt=""/></a>
+    </div>
+  <!--icon_area-->
+	<div class="block_logo">  
+    </div>
 <!--center_menu_area-->
       <div class="center_menu_area">
         <div>
@@ -34,14 +41,17 @@
 <!--center_menu_area-->
 <!--sns_area-->
       <div class="sns_area">
-        <a href="#" id="video_control">일시정지</a>
-        <a href="#" onclick="sns_share('facebook');return false;">페이스북 공유</a>
-        <a href="#" onclick="sns_share('twitter');return false;">트위터 공유</a>
+        <a href="#" id="video_control"><img src="images/btn_pause.png" alt=""/></a>
+        <a href="#" onclick="sns_share('facebook');return false;"><img src="images/btn_fb.png" alt=""/></a>
+        <a href="#" onclick="sns_share('twitter');return false;"><img src="images/btn_tw.png" alt=""/></a>
       </div>
 <!--sns_area-->
 <!--scroll_navi_area-->
       <div class="scroll_navi_area">
-	    <a href="#">하단 이동</a>
+	    <a href="#"><img src="images/arrow.png" alt=""/></a>
+      </div>
+      <div class="bg_cloud">
+   	  	<img src="images/movie_bg.png" alt=""/>
       </div>
 <!--scroll_navi_area-->
     </div>
@@ -53,16 +63,19 @@
 
 
 <!--area2-->
+<div class="area2_bg">
   <div class="area2">
     <div class="product_group">
       <div class="product_area">
-        <img src="images/img_area_3.png" width="860" height="663" alt=""/>
+      	<img src="images/event_txt.png" alt=""/>
       </div>
     </div>
   </div>
+ </div>
 <!--area2-->
 
 <!--area3-->
+<div class="area3_bg">
   <div class="area3">
     <div class="product_group">
       <div class="product_area">
@@ -70,6 +83,7 @@
       </div>
     </div>
   </div>
+ </div>  
 <!--area3-->
 
 <!--footer-->
@@ -82,7 +96,7 @@
 
 <!--quickmenu-->
 <div class="quickmenu">
-  <a href="#">TOP</a>
+  <a href="#"><img src="images/btn_top.png" width="45" height="45" alt=""/></a>
 </div>
 <!--quickmenu-->
 

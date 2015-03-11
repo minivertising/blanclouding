@@ -37,22 +37,35 @@
 	z-index : 10;
 }
 
+
+.contents_wrap .area1 .video_area .block_logo{
+	background:rgba(255, 255, 255, 0.8);
+    position:absolute;
+	z-index:29;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:70px;	
+}
 .contents_wrap .area1 .video_area .icon_area{
 	position:absolute;
 	z-index:30;
 	top:20px;
 	left:30px;
 }
+.contents_wrap .area1 .video_area .icon_area2{
+	position:absolute;
+	z-index:30;
+	top:25px;
+	right:30px;
+}
 
 .contents_wrap .area1 .video_area .center_menu_area{
 	position:absolute;
-	top:50%;
-	left:50%;
-	margin-top:-200px;
-	margin-left:-300px;
+	bottom:10%;
+	left:2%;
 	width:600px;
-	height:400px;
-	text-align:center;
+	height:100px;
 	z-index:40;
 }
 
@@ -67,22 +80,39 @@
 .contents_wrap .area1 .video_area .scroll_navi_area{
 	position:absolute;
 	z-index:40;
-	bottom:100px;
+	bottom:70px;
 	left:50%;
 }
+.contents_wrap .area1 .video_area .bg_cloud{
+	position:absolute;
+	z-index:39;
+	bottom:-70px;
+	left:0;
+	width:100%;
+}
+.contents_wrap .area1 .video_area .bg_cloud img{
+	width:100%;
+}
 
-/* 메인 첫번째 DIV */
+/* 메인 두번째 DIV */
+.contents_wrap .area2_bg{
+  width: 100%;
+  height: 100%;
+  background: #ffecd8 url('http://image.ethefaceshop.com/websrc/event/datebutter/images/area4/area4_bg.jpg') center 0 no-repeat;
+  background-size: cover;
+}
 .contents_wrap .area2{
 	position: relative;
 	height:1000px;
 }
 
 .contents_wrap .area2 .product_group{
-	position: relative;
+	position: absolute;
 	left: 50%;
-	margin-top: 120px;
-	margin-left: -440px;
-	width: 880px;
+	top:50%;
+	margin-top: -390px;
+	margin-left: -475px;
+	width: 950px;
 	/*
 	height: 560px;
 	text-align: center;*/
@@ -90,24 +120,31 @@
 }
 
 
-/* 메인 첫번째 DIV */
+/* 메인 세번째 DIV */
+.contents_wrap .area3_bg{
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  background-size: cover;
+}
 .contents_wrap .area3{
 	position: relative;
 	height:1000px;
-	background:#eee;
 }
-
 .contents_wrap .area3 .product_group{
-	position: relative;
+	position: absolute;
 	left: 50%;
-	margin-top: 120px;
-	margin-left: -440px;
-	width: 880px;
+	top:50%;
+	margin-top: -330px;
+	margin-left: -420px;
+	width: 860px;
 	/*
 	height: 560px;
 	text-align: center;*/
 	overflow: hidden;
 }
+
+
 
 
 
