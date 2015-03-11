@@ -217,6 +217,7 @@
 		var magnificPopup = $.magnificPopup.instance;
 
 		// 셀렉트박스 스타일
+		/*
 		$( "#mb_phone1" ).dropkick({
 			mobile: true
 		});
@@ -246,6 +247,7 @@
 		$("#dk3-combobox").css("width","120px");
 		$("ul[id*=dk3-]").css("width","120px");
 		$("li[id*=dk3-]").css("width","100px");
+		*/
 /*
 		$("#dk1-addr1").css("width","120px");
 		$("#dk1-addr1").css("font-size","14px");
