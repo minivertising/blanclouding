@@ -543,7 +543,7 @@
 		$("#dk3-combobox").css("height","34px");
 
 		setInterval(function(){
-			$('.scroll_navi_area').animate({bottom:30},500).animate({bottom:40},500);
+			$('.scroll_navi_area').animate({bottom:80},500).animate({bottom:90},500);
 		},1000);
 
 	});
