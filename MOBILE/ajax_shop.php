@@ -6,7 +6,7 @@
 
 	$addr2_idx = $_REQUEST['addr2_idx'];
 ?>
-              <select name="shop" id="shop" style="width:140px; height:31px;">
+              <select name="shop" id="shop" style="width:100px; height:31px;">
                 <option value="">선택하세요</option>
 <?
 	// 주소 쿼리

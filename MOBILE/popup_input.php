@@ -41,7 +41,7 @@
             <li class="input_txt address">
               <div class="inner clearfix">
                 <div>
-                  <select name="addr1" id="addr1" onchange="addr_change(this.value)"style="width:140px; height:31px;">
+                  <select name="addr1" id="addr1" onchange="addr_change(this.value)"style="width:100px; height:31px;">
                     <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
@@ -58,7 +58,7 @@
                   </select>
                 </div>
                 <div id="sel_addr2">
-                  <select name="addr2" id="addr2" onchange="shop_change(this.value)"style="width:140px; height:31px;">
+                  <select name="addr2" id="addr2" onchange="shop_change(this.value)"style="width:100px; height:31px;">
                     <option value="">선택하세요</option>
                   </select>
                 </div>
@@ -68,7 +68,7 @@
           <ul class="clearfix">
             <li class="t_name"></li>
             <li class="input_txt store" id="sel_shop">
-              <select name="shop" id="shop"style="width:140px; height:32px;">
+              <select name="shop" id="shop"style="width:100px; height:32px;">
                 <option value="">선택하세요</option>
               </select>
             </li>
