@@ -23,6 +23,4 @@
 	else
 		$gubun = "PC";
 
-print_r($check_mobile);
-exit;
 ?>
