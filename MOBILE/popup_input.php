@@ -80,15 +80,16 @@
         <div class="input_block input_check">
           <ul class="clearfix">
             <li class="in_check"><input type="checkbox"></li>
-            <li class="in_check_label"><a href="#use_div" class="btn_detail popup-with-zoom-anim" onclick="open_use()"><img src="img/popup/btn_detail_01.png" width="164" alt=""/></a></li>
+            <li class="in_check_label"><a href="popup_use_agree.php" target="_blank" >
+			<img src="img/popup/btn_detail_01.png" width="164" alt=""/></a></li>
           </ul>
           <ul class="clearfix">
             <li class="in_check"><input type="checkbox"></li>
-            <li class="in_check_label"><a href="#privacy_div" class="btn_detail popup-with-zoom-anim" onclick="open_privacy()"><img src="img/popup/btn_detail_02.png" width="164" alt=""/></a></li>
+            <li class="in_check_label"><a href="popup_privacy_agree.php" target="_blank" ><img src="img/popup/btn_detail_02.png" width="164" alt=""/></a></li>
           </ul>
           <ul class="clearfix">
             <li class="in_check"><input type="checkbox"></li>
-            <li class="in_check_label"><a href="#adver_div" class="btn_detail popup-with-zoom-anim" onclick="open_adver()"><img src="img/popup/btn_detail_03.png" width="164" alt=""/></a>
+            <li class="in_check_label"><a href="popup_adver_agree.php" target="_blank" ><img src="img/popup/btn_detail_03.png" width="164" alt=""/></a>
             </li>
           </ul>
         </div>
