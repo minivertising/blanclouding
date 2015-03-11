@@ -191,7 +191,7 @@
             </ul>
           </div>
           <div class="btn_block">
-            <a href="#" onclick="javascript:chk_input('<?=$gubun?>');return false;"><img src="images/popup/btn_input_ok.png" alt=""/></a>
+            <a href="#" onclick="javascript:chk_input();return false;"><img src="images/popup/btn_input_ok.png" alt=""/></a>
           </div>
         </div><!--inner-->
       </div>

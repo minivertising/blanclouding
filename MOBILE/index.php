@@ -78,29 +78,6 @@
 <div class="bottom">
     <img src="img/bg_bottom.png" />
 </div>
-
-
-<!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
-    <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
-    	<div class="p_alert">
-        	<div class="inner">
-                <div class="block_close clearfix">
-                    <a href="#" class="btn_close"><img src="images/popup/pop_btn_close.png" /></a>
-                </div>
-                <div class="block_content">
-                    <div class="title">
-                        <img src="images/popup/alert_txt_info.png" alt=""/>
-                    </div>
-                    <div class="btn_block">
-                        <a href="#"><img src="images/popup/pop_btn_ok.png" alt=""/></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-	</div>
-<!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
-
-
 </body>
 </html>
   <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
