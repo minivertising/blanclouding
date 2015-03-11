@@ -18,7 +18,7 @@
 <!--cover_area-->
   <!--icon_area-->
     <div class="icon_area">
-      <a href="http://www.thefaceshopclouding.com/?media=self"><img src="images/logo_blan.png" alt=""/></a>
+      <a href="http://www.thefaceshopclouding.co.kr/PC/index.php"><img src="images/logo_blan.png" alt=""/></a>
     </div>
   <!--icon_area-->
   <!--icon_area-->
@@ -178,7 +178,7 @@
           </div>
           <div class="input_block input_check">
             <ul class="clearfix">
-              <li class="in_check"><input type="checkbox" name="uses_agree" id="uses_agree"></li>
+              <li class="in_check"><input type="checkbox" name="use_agree" id="use_agree"></li>
               <li class="in_check_label"><a href="#use_div" class="btn_detail popup-with-zoom-anim" onclick="open_use()"><img src="images/popup/btn_detail_01.png" alt=""/></a></li>
             </ul>
             <ul class="clearfix">
@@ -186,7 +186,7 @@
               <li class="in_check_label"><a href="#privacy_div" class="btn_detail popup-with-zoom-anim" onclick="open_privacy()"><img src="images/popup/btn_detail_02.png" alt=""/></a></li>
             </ul>
             <ul class="clearfix">
-              <li class="in_check"><input type="checkbox" name="send_agree" id="send_agree"></li>
+              <li class="in_check"><input type="checkbox" name="adver_agree" id="adver_agree"></li>
               <li class="in_check_label"><a href="#adver_div" class="btn_detail popup-with-zoom-anim" onclick="open_adver()"><img src="images/popup/btn_detail_03.png" alt=""/></a></li>
             </ul>
           </div>

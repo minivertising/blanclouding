@@ -7,10 +7,10 @@
 <div class="block_top">
     <!--icon_area-->
         <div class="icon_area clearfix">
-          <a href="#" class="cl_logo">
+          <a href="http://www.thefaceshopclouding.co.kr/MOBILE/index.php" class="cl_logo">
             <img src="img/logo_blan.png" alt=""/>
           </a>
-          <a href="#" class="fb_logo">
+          <a href="http://www.thefaceshop.com/index.jsp" class="fb_logo">
             <img src="img/logo_fs.png" alt=""/>
           </a>
         </div>
