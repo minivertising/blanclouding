@@ -3,7 +3,7 @@
 ?>
   <div id="input_div" class="wrap_page popup">
     <div class="block_close clearfix">
-      <a href="#" class="btn_close" onclick="javascript:close_input()"><img src="img/popup/btn_close.png" width="29"/></a>
+      <a href="#" class="btn_close" onclick="javascript:window.close()"><img src="img/popup/btn_close.png" width="29"/></a>
     </div>
     <div class="content" style="background:white;">
       <div class="inner">
