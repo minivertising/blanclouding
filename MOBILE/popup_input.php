@@ -253,9 +253,10 @@
 			mobile: true
 		});
 		
-		$("#dk0-combobox").css("width","79px");
+		$("#dk0-combobox").css("width","75px");
 		$("ul[id*=dk0-]").css("width","79px");
 		$("li[id*=dk0-]").css("width","60px");
+		$("#dk1-addr1").css("width","120px");
 		$("#dk1-combobox").css("width","120px");
 		$("ul[id*=dk1-]").css("width","120px");
 		$("li[id*=dk1-]").css("width","100px");
