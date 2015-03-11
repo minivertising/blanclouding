@@ -14,12 +14,13 @@
 	$check_mobile = false;
 	for($i=0; $i<sizeof($mobile_agent); $i++){
 		if(stripos( $_SERVER['HTTP_USER_AGENT'], $mobile_agent[$i] )){
-			$check_mobile = true;
-			break;
+			$check_mobile = "Y";
+		}else{
+			$check_mobile = "N";
 		}
 	}
 print_r($_SERVER['HTTP_USER_AGENT']);
-	if($check_mobile)
+	if($check_mobile == "Y")
 		$gubun = "MOBILE";
 	else
 		$gubun = "PC";
