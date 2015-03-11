@@ -5,9 +5,9 @@
 <html prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta property="og:title" content="더페이스샵-블랑클라우닝" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.thefaceshopclouding.co.kr/?media=fb" />
@@ -19,7 +19,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico" />
     <title>Blan Clouding</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <link href="css/style_yang.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
     <link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link rel="stylesheet" href="../lib/DropKick/dropkick.css"> 
