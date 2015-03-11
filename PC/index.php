@@ -189,7 +189,7 @@
             </ul>
           </div>
           <div class="btn_block">
-            <a href="#" onclick="javascript:chk_input();return false;"><img src="images/popup/btn_input_ok.png" alt=""/></a>
+            <a href="#" onclick="javascript:chk_input('<?=$gubun?>');return false;"><img src="images/popup/btn_input_ok.png" alt=""/></a>
           </div>
         </div><!--inner-->
       </div>
@@ -543,7 +543,7 @@
 		$("#dk3-combobox").css("height","34px");
 
 		setInterval(function(){
-			$('.scroll_navi_area').animate({bottom:30},500).animate({bottom:40},500);
+			$('.scroll_navi_area').animate({bottom:80},500).animate({bottom:90},500);
 		},1000);
 
 	});
