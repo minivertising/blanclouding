@@ -16,7 +16,7 @@
 <!--icon_area-->
 
     <div class="main_title">
-      <img src="img/main_title.png" width="320" alt=""/>
+      <img src="img/main_title.png" alt=""/>
     </div>
     
     <div class="navi_btn_block clearfix">
