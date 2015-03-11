@@ -79,7 +79,7 @@
 </div>
 <!--contents_wrap-->
 <!-------------------------- 이벤트 응모 DIV -------------------------->
-  <div id="input_div" class="wrap_page popup zoom-anim-dialog mfp-hide" style="z-index:50000">
+  <div id="input_div" class="wrap_page popup">
     <div class="block_close clearfix">
       <a href="#" class="btn_close" onclick="javascript:close_input()"><img src="img/popup/btn_close.png" width="29"/></a>
     </div>
