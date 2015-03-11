@@ -18,6 +18,7 @@
 			break;
 		}
 	}
+
 	if($check_mobile)
 		$gubun = "MOBILE";
 	else

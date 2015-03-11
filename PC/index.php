@@ -396,6 +396,7 @@
 			wHeight = 1000;
 		}
 		$('.area2').height(wHeight); // 제품
+		$('.area3').height(wHeight); // 제품
 		//$('.product_group').width(width); // 제품
 		//$('.product_area').width(width); // 제품
 
@@ -421,6 +422,7 @@
 			wHeight = 1000;
 		}
 		$('.area2').height(wHeight); // 제품
+		$('.area3').height(wHeight); // 제품
 		//$('.product_group').width(width); // 제품
 		//$('.product_area').width(width); // 제품
 
