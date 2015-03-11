@@ -4,21 +4,22 @@
 <!--contents_wrap-->
 <div class="contents_wrap">
 
-<!--icon_area-->
-    <div class="icon_area clearfix">
-      <a href="#" class="cl_logo">
-   	  	<img src="img/logo_blan.png" alt=""/>
-      </a>
-      <a href="#" class="fb_logo">
-   	  	<img src="img/logo_fs.png" alt=""/>
-      </a>
-    </div>
-<!--icon_area-->
-
-    <div class="main_title">
-      <img src="img/main_title.png" alt=""/>
-    </div>
+<div class="block_top">
+    <!--icon_area-->
+        <div class="icon_area clearfix">
+          <a href="#" class="cl_logo">
+            <img src="img/logo_blan.png" alt=""/>
+          </a>
+          <a href="#" class="fb_logo">
+            <img src="img/logo_fs.png" alt=""/>
+          </a>
+        </div>
+    <!--icon_area-->
     
+        <div class="main_title">
+          <img src="img/main_title.png" alt=""/>
+        </div>
+</div>    
     <!-- <div class="navi_btn_block clearfix">
           <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()">이벤트 참여</a>
           <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()">선물안내</a>
@@ -46,9 +47,15 @@
             <a href="#" onclick="sns_share('facebook');return false;">
            		<img src="img/btn_fb.png" alt=""/>
             </a>
+            <span>
+           		<img src="img/bar.png" alt=""/>
+            </span>
             <a  id="kakao-link-btn" href="#" onclick="sns_share('kakao');return false;">
            		<img src="img/btn_kt.png" alt=""/>
             </a>
+            <span>
+           		<img src="img/bar.png" alt=""/>
+            </span>
             <a href="#" onclick="sns_share('twitter');return false;">
             	<img src="img/btn_tw.png" alt=""/>
             </a>
@@ -64,20 +71,15 @@
               <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a> -->
               <a href="popup_input.php" target="_blank"><img src="img/btn_gift.png" alt=""/></a>
             </div>
-            <div class="txt_date">
-       	    	<img src="img/txt_date.png" alt=""/> </div>
-            </div>
+          </div>
         <!--event-->
-    </div>
-    
-    <div class="bottom">
-    	<img src="img/bg_bottom.png" />
-    </div>
-
-
-
-
 </div>
+
+<div class="bottom">
+    <img src="img/bg_bottom.png" />
+</div>
+
+
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
     <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
     	<div class="p_alert">
