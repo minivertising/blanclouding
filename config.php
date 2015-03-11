@@ -10,7 +10,7 @@
 
 	mysqli_query ($my_db,"set names utf8");
 
-	$mobile_agent = array("iPhone","iPod","Android","Blackberry","SymbianOS|SCH-M\d+","Opera Mini", "Windows ce", "Nokia", "sony" );
+	$mobile_agent = array("iPhone","iPod","iPad","Android","Blackberry","SymbianOS|SCH-M\d+","Opera Mini", "Windows ce", "Nokia", "sony" );
 	//$check_mobile = false;
 	for($i=0; $i<sizeof($mobile_agent); $i++){
 		if(stripos( $_SERVER['HTTP_USER_AGENT'], $mobile_agent[$i] )){
@@ -24,5 +24,6 @@
 	else
 		$gubun = "PC";
 
-
+print_r($gubun);
+exit;
 ?>
