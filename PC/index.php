@@ -124,7 +124,7 @@
               <li class="t_name"><img src="images/popup/txt_phone.png" alt=""/></li>
               <li class="input_txt phone clearfix">
                 <div style="width:79px;magin-left:2px">
-                  <select id="mb_phone1" name="mb_phone1">
+                  <select id="mb_phone1" name="mb_phone1" style="width:78px;height:35px;">
                     <option>010</option>
                     <option>011</option>
                     <option>016</option>
@@ -142,7 +142,7 @@
             <ul class="clearfix">
               <li class="t_name"><img src="images/popup/txt_store.png" alt=""/></li>
               <li class="input_txt store">
-                <select name="addr1" id="addr1" onchange="addr_change(this.value)">
+                <select name="addr1" id="addr1" onchange="addr_change(this.value)"style="width:120px;height:30px;float:left;">
                   <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
@@ -159,15 +159,15 @@
                 </select>
 
               <li class="input_txt store" id="sel_addr2">
-                <select name="addr2" id="addr2" onchange="shop_change(this.value)">
+                <select name="addr2" id="addr2" onchange="shop_change(this.value)"style="width:120px;height:30px;">
                   <option value="">선택하세요</option>
                 </select>
               </li>
             </ul>
             <ul class="clearfix">
               <li class="t_name"></li>
-              <li class="input_txt store" id="sel_shop">
-                <select name="shop" id="shop">
+              <li class="input_txt store" id="sel_shop" >
+                <select name="shop" id="shop"style="width:120px;height:30px; float:left;">
                   <option value="">선택하세요</option>
                 </select>
               </li>
