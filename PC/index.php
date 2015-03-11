@@ -35,7 +35,8 @@
         </div>
         <div class="btn_group">
           <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="images/btn_gift.png" alt=""/></a> -->
-          <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="images/btn_gift.png" alt="" onmouseover="change_image('over','gift')" onmouseout="change_image('out','gift')" id="btn_gift"/></a>
+          <!-- <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="images/btn_gift.png" alt="" onmouseover="change_image('over','gift')" onmouseout="change_image('out','gift')" id="btn_gift"/></a> -->
+		  <a href="#" class="view_event"><img src="images/btn_gift.png" alt="" onmouseover="change_image('over','gift')" onmouseout="change_image('out','gift')" id="btn_gift"/></a>
           <a href="#" class="view_product"><img src="images/btn_blan.png" alt="" onmouseover="change_image('over','blan')" onmouseout="change_image('out','blan')" id="btn_blan"/></a>
         </div>
       </div>
@@ -370,7 +371,8 @@
 		else if (e.data === 2)
 		{
 			//controllable_player.playVideo();
-			$("#video_control").text('재생');
+			$("#video_control").attr('src','images/btn_play.png');
+			//$("#video_control").text('재생');
 		}
 		else if (e.data === 5)
 		{
@@ -459,6 +461,11 @@
 		} );
 
 		$( '.scroll_navi_area' ).click( function() {
+	    $( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},1500);
+		  return false;
+		} );
+
+		$( '.view_event' ).click( function() {
 	    $( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},1500);
 		  return false;
 		} );
