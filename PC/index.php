@@ -18,21 +18,21 @@
 <!--cover_area-->
   <!--icon_area-->
     <div class="icon_area">
-      <a href="#"><img src="images/logo_blan.png" alt=""/></a>
+      <a href="http://www.thefaceshopclouding.com/?media=self"><img src="images/logo_blan.png" alt=""/></a>
     </div>
   <!--icon_area-->
   <!--icon_area-->
     <div class="icon_area2">
-      <a href="#"><img src="images/logo_tfs.png" alt=""/></a>
+      <a href="http://www.thefaceshop.com/index.jsp"><img src="images/logo_tfs.png" alt=""/></a>
     </div>
   <!--icon_area-->
 	<div class="block_logo">  
     </div>
 <!--center_menu_area-->
       <div class="center_menu_area">
-        <div>
+        <!-- <div>
         더 페이스샵 블랑클라우딩
-        </div>
+        </div> -->
         <div class="btn_group">
           <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="images/btn_gift.png" alt=""/></a>
           <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="images/btn_blan.png" alt=""/></a>
@@ -541,5 +541,10 @@
 		$("#dk3-shop").css("width","120px");
 		$("#dk3-shop").css("font-size","14px");
 		$("#dk3-combobox").css("height","34px");
+
+		setInterval(function(){
+			$('.scroll_navi_area').animate({bottom:30},500).animate({bottom:40},500);
+		},1000);
+
 	});
 	</script>

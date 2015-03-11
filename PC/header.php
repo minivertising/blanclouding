@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link rel="stylesheet" href="../lib/DropKick/dropkick.css"> 
     <script type='text/javascript' src="../js/jquery-1.11.2.min.js"></script>
-    <script type='text/javascript' src="../js/jquery.easing.min.js"></script>
+    <script type='text/javascript' src="../js/jquery.easing.1.3.js"></script>
     <script type='text/javascript' src="../js/main.js"></script>
     <script type='text/javascript' src="../js/analytics.js"></script>
     <script type='text/javascript' src='../lib/iCheck/icheck.js'></script>
