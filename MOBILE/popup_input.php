@@ -73,7 +73,7 @@
               </select>
             </li>
             <li class="btn">
-              <a href="#map_div" id="search_shop" class="popup-with-zoom-anim" onclick="javascript:show_map();return false;"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
+              <a href="popup_map.php" target="blank"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
             </li>
           </ul>
         </div>
