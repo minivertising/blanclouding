@@ -418,20 +418,30 @@ function sns_share(media)
 	}else if(media == "kakao") {
 		Kakao.init('62027fc7fd5be42191c4c2e4787386ca');
 
-    // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-    Kakao.Link.createTalkLinkButton({
-      container: '#kakao-link-btn',
-      label: 'TheFaceShop의 BlanClouding 보러가기',
-      image: {
-        src: 'http://dn.api1.kage.kakao.co.kr/14/dn/btqaWmFftyx/tBbQPH764Maw2R6IBhXd6K/o.jpg',
-        width: '300',
-        height: '200'
-      },
-      webButton: {
-        text: '카카오 디벨로퍼스',
-        url: 'http://www.thefaceshopclouding.co.kr' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
-      }
-    });
+		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+		Kakao.Link.createTalkLinkButton({
+		  container: '#kakao-link-btn',
+		  label: "1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물",
+		  image: {
+			src: 'http://dn.api1.kage.kakao.co.kr/14/dn/btqaWmFftyx/tBbQPH764Maw2R6IBhXd6K/o.jpg',
+			width: '300',
+			height: '200'
+		  },
+		  webButton: {
+			text: '더페이스샵',
+			url: 'http://www.thefaceshopclouding.co.kr' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+		  }
+		});
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"media" : media
+			}
+		});
+
 	}
 }
 
@@ -578,14 +588,14 @@ function change_image(param1, param2)
 	{
 		if (param2 == "gift")
 		{
-			$("#btn_gift").css("src","../PC/images/btn_gift_on.png");
+			$("#btn_gift").attr("src","../PC/images/btn_gift_on.png");
 		}else{
 			$("#btn_blan").attr("src","../PC/images/btn_blan_on.png");
 		}
 	}else{
 		if (param2 == "gift")
 		{
-			$("#btn_gift").css("src","../PC/images/btn_gift.png");
+			$("#btn_gift").attr("src","../PC/images/btn_gift.png");
 		}else{
 			$("#btn_blan").attr("src","../PC/images/btn_blan.png");
 		}
