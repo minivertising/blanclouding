@@ -1,7 +1,11 @@
+jQuery.ajaxSetup({cache:false});
+
+
 function addr_change(addr1)
 {
 	$.ajax({
 		type:"POST",
+		cache: false,
 		data:{
 			"addr1"    : addr1
 		},
@@ -14,8 +18,10 @@ function addr_change(addr1)
 
 function shop_change(idx)
 {
+	jQuery.ajaxSetup({cache:false});
 	$.ajax({
 		type:"POST",
+		cache: false,
 		data:{
 			"addr2_idx"    : idx
 		},

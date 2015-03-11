@@ -24,6 +24,7 @@
                 </select>
               </li>
 <script type="text/javascript">
+/*
 		$( "#addr2" ).dropkick({
 			mobile: true
 		});
@@ -35,5 +36,5 @@
 		$(".dk-option").css("height","34px");
 		$(".dk-select").css("width","120px");
 		$(".dk-select").css("height","34px");
-
+*/
 </script>

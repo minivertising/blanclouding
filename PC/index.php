@@ -523,6 +523,7 @@
 		var magnificPopup = $.magnificPopup.instance;
 
 		// 셀렉트박스 스타일
+		/*
 		$( "#mb_phone1" ).dropkick({
 			mobile: true
 		});
@@ -555,7 +556,7 @@
 		$("#dk3-shop").css("width","120px");
 		$("#dk3-shop").css("font-size","14px");
 		$("#dk3-combobox").css("height","34px");
-
+		*/
 		setInterval(function(){
 			$('.scroll_navi_area').animate({bottom:100},500).animate({bottom:110},500);
 		},1000);
