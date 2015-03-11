@@ -30,9 +30,9 @@
     </div>
 <!--center_menu_area-->
       <div class="center_menu_area">
-        <!-- <div>
-        더 페이스샵 블랑클라우딩
-        </div> -->
+        <div class="title">
+   	    	<img src="images/title_main.png" alt=""/>
+        </div>
         <div class="btn_group">
           <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="images/btn_gift.png" alt=""/></a> -->
           <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="images/btn_gift.png" alt=""/></a>
@@ -68,7 +68,7 @@
   <div class="area2">
     <div class="product_group">
       <div class="product_area">
-      	<img src="images/event_txt.png" alt=""/>
+      	<a href="#">신청하기</a>
       </div>
     </div>
   </div>

@@ -62,17 +62,20 @@
 
 .contents_wrap .area1 .video_area .center_menu_area{
 	position:absolute;
-	bottom:10%;
+	bottom:27%;
 	left:2%;
 	width:600px;
 	height:100px;
 	z-index:40;
 }
+.contents_wrap .area1 .video_area .center_menu_area .title{
+	padding-bottom:15px;
+}
 
 .contents_wrap .area1 .video_area .sns_area{
 	position:absolute;
 	z-index:40;
-	bottom:100px;
+	bottom:15%;
 	right:12px;
 	overflow:hidden;
 }
@@ -80,7 +83,7 @@
 .contents_wrap .area1 .video_area .scroll_navi_area{
 	position:absolute;
 	z-index:40;
-	bottom:70px;
+	bottom:25%;
 	left:50%;
 }
 .contents_wrap .area1 .video_area .bg_cloud{
@@ -98,7 +101,7 @@
 .contents_wrap .area2_bg{
   width: 100%;
   height: 100%;
-  background: #ffecd8 url('http://image.ethefaceshop.com/websrc/event/datebutter/images/area4/area4_bg.jpg') center 0 no-repeat;
+  background: #fff url(../images/bg_event.png) center 0 no-repeat;
   background-size: cover;
 }
 .contents_wrap .area2{
@@ -118,13 +121,30 @@
 	text-align: center;*/
 	overflow: hidden;
 }
+.contents_wrap .area2 .product_group .product_area{
+	position:relative;
+	background:url(../images/event_txt.png) no-repeat center top;
+	height:781px;
+}
+.contents_wrap .area2 .product_group .product_area a{
+	display:block;
+	position:absolute;
+	left:30px;
+	top:38%;
+	width:320px;
+	height:60px;
+	background:#eee;
+	text-indent:-999999px;
+}
+@media(max-width:1000px){
+}
 
 
 /* 메인 세번째 DIV */
 .contents_wrap .area3_bg{
   width: 100%;
   height: 100%;
-  background: #eee;
+  background: #fff url(../images/bg_product.png) center 0 no-repeat;
   background-size: cover;
 }
 .contents_wrap .area3{
