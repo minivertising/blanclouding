@@ -46,9 +46,15 @@
             <a href="#" onclick="sns_share('facebook');return false;">
            		<img src="img/btn_fb.png" alt=""/>
             </a>
+            <span>
+           		<img src="img/bar.png" alt=""/>
+            </span>
             <a  id="kakao-link-btn" href="#" onclick="sns_share('kakao');return false;">
            		<img src="img/btn_kt.png" alt=""/>
             </a>
+            <span>
+           		<img src="img/bar.png" alt=""/>
+            </span>
             <a href="#" onclick="sns_share('twitter');return false;">
             	<img src="img/btn_tw.png" alt=""/>
             </a>
@@ -64,20 +70,15 @@
               <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a> -->
               <a href="popup_input.php" target="_blank"><img src="img/btn_gift.png" alt=""/></a>
             </div>
-            <div class="txt_date">
-       	    	<img src="img/txt_date.png" alt=""/> </div>
-            </div>
+          </div>
         <!--event-->
-    </div>
-    
-    <div class="bottom">
-    	<img src="img/bg_bottom.png" />
-    </div>
-
-
-
-
 </div>
+
+<div class="bottom">
+    <img src="img/bg_bottom.png" />
+</div>
+
+
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
     <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
     	<div class="p_alert">

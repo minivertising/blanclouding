@@ -108,6 +108,10 @@ body {
 .contents_wrap .main_title{
 	text-align:center;
 	padding-bottom:20px;
+	width:100%;
+}
+.contents_wrap .main_title img{
+	width:100%;
 }
 .contents_wrap .navi_btn_block{
 	width:100%;
@@ -126,39 +130,41 @@ body {
 	width:100%;
 	background:url(../img/bg_main.png) top center ;
 	background-size: cover;
-	padding:5% 0 70%;
+	padding:5% 0 0;
 }
 
 .contents_wrap .sns_area{
-	width:90%;
-	padding:0 0 5%;
-	padding-left:10%;
+	width:70%;
+	padding:0 0 6%;
+	padding-left:25%;
 }
-.contents_wrap .sns_area a{
+.contents_wrap .sns_area a,
+.contents_wrap .sns_area span{
 	display:block;
 	float:left;
-	width:30%;
-	background:#eee;
+	width:14%;
+	text-align:center;
 }
-.contents_wrap .sns_area a img{
-	width:96%;
+.contents_wrap .sns_area a img,
+.contents_wrap .sns_area span img{
+	width:100%;
 }
 
 .contents_wrap .bg_cloud .event .title_event{
-	width:100%;
-	text-align:center;
+	width:90%;
 	padding-top:40px;
+	padding-left:10%;
 }
 .contents_wrap .bg_cloud .event .title_event img{
-	width:70%;
+	width:85%;
 }
 .contents_wrap .bg_cloud .event .btn_gift{
-    width:100%;
-	padding:20px 0;
+    width:90%;
+	padding:4% 0 55%;
+	padding-left:10%;
 }
 .contents_wrap .bg_cloud .event .btn_gift a{
-    width:100%;
-	text-align:center;
+    width:80%;
 	display:block;
 }
 .contents_wrap .bg_cloud .event .btn_gift a img{
