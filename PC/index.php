@@ -42,7 +42,7 @@
 <!--center_menu_area-->
 <!--sns_area-->
       <div class="sns_area">
-        <a href="#" id="video_control"><img src="images/btn_pause.png" alt=""/></a>
+        <a href="#"><img src="images/btn_pause.png" alt="" id="video_control" /></a>
         <a href="#" onclick="sns_share('facebook');return false;"><img src="images/btn_fb.png" alt=""/></a>
         <a href="#" onclick="sns_share('twitter');return false;"><img src="images/btn_tw.png" alt=""/></a>
       </div>
@@ -68,7 +68,7 @@
   <div class="area2">
     <div class="product_group">
       <div class="product_area">
-      	<a href="#">신청하기</a>
+      	<a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()" style="background:none">신청하기</a>
       </div>
     </div>
   </div>
@@ -356,14 +356,16 @@
     statechange = function(e){
 		if (e.data === 0)
 		{
-			$("#video_control").text('일시정지');
+			//$("#video_control").text('일시정지');images/btn_pause.png
+			$("#video_control").attr('src','images/btn_pause.png');
 			controllable_player.seekTo(0); controllable_player.playVideo();
 		}
 		else if (e.data === 1)
 		{
 			//controllable_player.pauseVideo();
 			$(".cover_area").css("background","url('./images/movCover.png') repeat");
-			$("#video_control").text('일시정지');
+			//$("#video_control").text('일시정지');
+			$("#video_control").attr('src','images/btn_pause.png');
 		}
 		else if (e.data === 2)
 		{
@@ -442,8 +444,8 @@
 		//$('.product_area').width(width); // 제품
 
 		$("#video_control").click(function(){
-			var control_txt	= $("#video_control").text();
-			if (control_txt == "일시정지"){
+			var control_txt	= $("#video_control").attr('src');
+			if (control_txt == "images/btn_pause.png"){
 				controllable_player.pauseVideo();
 				return false;
 			}else{
@@ -548,7 +550,7 @@
 		$("#dk3-combobox").css("height","34px");
 
 		setInterval(function(){
-			$('.scroll_navi_area').animate({bottom:80},500).animate({bottom:90},500);
+			$('.scroll_navi_area').animate({bottom:100},500).animate({bottom:110},500);
 		},1000);
 
 	});

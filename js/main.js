@@ -593,3 +593,12 @@ function button_event(serial){
 	}
 }
 
+function change_image(param)
+{
+	if (param == "gift")
+	{
+		$("#btn_gift").css("filter","alpha(opacity=0)");
+	}else{
+		$("#btn_blah").css("filter","alpha(opacity=100)");
+	}
+}
