@@ -89,7 +89,7 @@
 .contents_wrap .area1 .video_area .bg_cloud{
 	position:absolute;
 	z-index:39;
-	bottom:-70px;
+	bottom:-50px;
 	left:0;
 	width:100%;
 }
@@ -106,7 +106,6 @@
 }
 .contents_wrap .area2{
 	position: relative;
-	height:1000px;
 }
 
 .contents_wrap .area2 .product_group{
@@ -149,15 +148,14 @@
 }
 .contents_wrap .area3{
 	position: relative;
-	height:1000px;
 }
 .contents_wrap .area3 .product_group{
 	position: absolute;
 	left: 50%;
 	top:50%;
-	margin-top: -330px;
-	margin-left: -420px;
-	width: 860px;
+	margin-top: -364px;
+	margin-left: -462px;
+	width: 924px;
 	/*
 	height: 560px;
 	text-align: center;*/

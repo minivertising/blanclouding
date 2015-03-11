@@ -80,7 +80,7 @@
   <div class="area3">
     <div class="product_group">
       <div class="product_area">
-        <img src="images/img_area_3.png" width="860" height="663" alt=""/>
+        <img src="images/img_area_3.png" alt=""/>
       </div>
     </div>
   </div>
