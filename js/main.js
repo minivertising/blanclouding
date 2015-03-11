@@ -593,12 +593,22 @@ function button_event(serial){
 	}
 }
 
-function change_image(param)
+function change_image(param1, param2)
 {
-	if (param == "gift")
+	if (param1 == "over")
 	{
-		$("#btn_gift").css("filter","alpha(opacity=0)");
+		if (param2 == "gift")
+		{
+			$("#btn_gift").css("src","../PC/images/btn_gift_on.png");
+		}else{
+			$("#btn_blan").attr("src","../PC/images/btn_blan_on.png");
+		}
 	}else{
-		$("#btn_blah").css("filter","alpha(opacity=100)");
+		if (param2 == "gift")
+		{
+			$("#btn_gift").css("src","../PC/images/btn_gift.png");
+		}else{
+			$("#btn_blan").attr("src","../PC/images/btn_blan.png");
+		}
 	}
 }

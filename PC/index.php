@@ -35,8 +35,8 @@
         </div>
         <div class="btn_group">
           <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="images/btn_gift.png" alt=""/></a> -->
-          <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="images/btn_gift.png" alt=""/></a>
-          <a href="#" class="view_product"><img src="images/btn_blan.png" alt=""/></a>
+          <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="images/btn_gift.png" alt="" onmouseover="change_image('over','gift')" onmouseout="change_image('out','gift')" id="btn_gift"/></a>
+          <a href="#" class="view_product"><img src="images/btn_blan.png" alt="" onmouseover="change_image('over','blan')" onmouseout="change_image('out','blan')" id="btn_blan"/></a>
         </div>
       </div>
 <!--center_menu_area-->
