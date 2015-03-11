@@ -11,12 +11,11 @@
 	mysqli_query ($my_db,"set names utf8");
 
 	$mobile_agent = array("iPhone","iPod","iPad","Android","Blackberry","SymbianOS|SCH-M\d+","Opera Mini", "Windows ce", "Nokia", "sony" );
-	//$check_mobile = false;
+	$check_mobile = "N";
 	for($i=0; $i<sizeof($mobile_agent); $i++){
 		if(stripos( $_SERVER['HTTP_USER_AGENT'], $mobile_agent[$i] )){
 			$check_mobile = "Y";
-		}else{
-			$check_mobile = "N";
+			break;
 		}
 	}
 	if($check_mobile == "Y")
