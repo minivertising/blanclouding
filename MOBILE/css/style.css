@@ -87,19 +87,26 @@ body {
 .contents_wrap{
 	width:100%;
 }
+
+.contents_wrap .block_top{
+	width:100%;
+	background:url(../img/bg_top.png) top center;
+	background-size:cover;	
+}
+
 .contents_wrap .icon_area{
 	width:100%;
-	padding-top:10px;
+	padding-top:15px;
 }
 .contents_wrap .icon_area a{
 	display:block;
 	float:left;
 	width:30%;
-	background:#eee;
 	padding:0 10px;
 }
 .contents_wrap .icon_area a.fb_logo{
 	float:right;
+	width:25%;
 }
 .contents_wrap .icon_area a img{
 	width:100%;

@@ -4,21 +4,22 @@
 <!--contents_wrap-->
 <div class="contents_wrap">
 
-<!--icon_area-->
-    <div class="icon_area clearfix">
-      <a href="#" class="cl_logo">
-   	  	<img src="img/logo_blan.png" alt=""/>
-      </a>
-      <a href="#" class="fb_logo">
-   	  	<img src="img/logo_fs.png" alt=""/>
-      </a>
-    </div>
-<!--icon_area-->
-
-    <div class="main_title">
-      <img src="img/main_title.png" alt=""/>
-    </div>
+<div class="block_top">
+    <!--icon_area-->
+        <div class="icon_area clearfix">
+          <a href="#" class="cl_logo">
+            <img src="img/logo_blan.png" alt=""/>
+          </a>
+          <a href="#" class="fb_logo">
+            <img src="img/logo_fs.png" alt=""/>
+          </a>
+        </div>
+    <!--icon_area-->
     
+        <div class="main_title">
+          <img src="img/main_title.png" alt=""/>
+        </div>
+</div>    
     <!-- <div class="navi_btn_block clearfix">
           <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()">이벤트 참여</a>
           <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()">선물안내</a>
