@@ -256,12 +256,12 @@
 		$("#dk0-combobox").css("width","75px");
 		$("ul[id*=dk0-]").css("width","79px");
 		$("li[id*=dk0-]").css("width","60px");
-		$("#dk1-addr1").css("width","120px");
-		$("#dk1-combobox").css("width","120px");
-		$("ul[id*=dk1-]").css("width","120px");
+		$("#dk1-addr1").css("width","115px");
+		$("#dk1-combobox").css("width","115px");
+		$("ul[id*=dk1-]").css("width","115px");
 		$("li[id*=dk1-]").css("width","100px");
-		$("#dk2-combobox").css("width","120px");
-		$("ul[id*=dk2-]").css("width","120px");
+		$("#dk2-combobox").css("width","115px");
+		$("ul[id*=dk2-]").css("width","115px");
 		$("li[id*=dk2-]").css("width","100px");
 		$("#dk3-combobox").css("width","120px");
 		$("ul[id*=dk3-]").css("width","120px");
