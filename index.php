@@ -8,6 +8,8 @@
 	$_SESSION['ss_media'] = $media;
 
 	BC_InsertTrackingInfo($media, $gubun);
+	print_r($gubun);
+	exit;
 	if($gubun == "MOBILE")
 	{
 		Header("Location:http://www.thefaceshopclouding.co.kr/MOBILE/index.php");
