@@ -24,6 +24,6 @@
 	else
 		$gubun = "PC";
 
-print_r($_SERVER['HTTP_USER_AGENT']);
+print_r($check_mobile);
 exit;
 ?>
