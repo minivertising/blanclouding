@@ -89,7 +89,7 @@
 .contents_wrap .area1 .video_area .bg_cloud{
 	position:absolute;
 	z-index:39;
-	bottom:-70px;
+	bottom:-50px;
 	left:0;
 	width:100%;
 }
@@ -106,7 +106,6 @@
 }
 .contents_wrap .area2{
 	position: relative;
-	height:1000px;
 }
 
 .contents_wrap .area2 .product_group{
