@@ -236,6 +236,7 @@
 		var magnificPopup = $.magnificPopup.instance;
 
 		// 셀렉트박스 스타일
+		/*
 		$( "#mb_phone1" ).dropkick({
 			mobile: true
 		});
@@ -266,6 +267,25 @@
 		$("#dk3-combobox").css("width","120px");
 		$("ul[id*=dk3-]").css("width","120px");
 		$("li[id*=dk3-]").css("width","100px");
+		*/
+/*
+PC 버전
+		$("#dk0-combobox").css("width","79px");
+		$("#dk1-addr1").css("width","120px");
+		$("#dk1-addr1").css("font-size","12px");
+		$(".dk-option").css("float","none");
+		$(".dk-option").css("width","120px");
+		$(".dk-option").css("height","34px");
+		$(".dk-select").css("width","120px");
+		$(".dk-select").css("height","34px");
+		$("#dk1-combobox").css("height","34px");
+		$("#dk2-addr2").css("width","120px");
+		$("#dk2-addr2").css("font-size","14px");
+		$("#dk2-combobox").css("height","34px");
+		$("#dk3-shop").css("width","120px");
+		$("#dk3-shop").css("font-size","14px");
+		$("#dk3-combobox").css("height","34px");
+*/
 /*
 		$("#dk1-addr1").css("width","120px");
 		$("#dk1-addr1").css("font-size","14px");
