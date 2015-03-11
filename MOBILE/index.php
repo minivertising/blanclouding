@@ -19,10 +19,10 @@
       <img src="img/main_title.png" alt=""/>
     </div>
     
-    <div class="navi_btn_block clearfix">
+    <!-- <div class="navi_btn_block clearfix">
           <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()">이벤트 참여</a>
           <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()">선물안내</a>
-    </div>
+    </div> -->
 
 
     <!--area1-->
@@ -46,8 +46,8 @@
             <a href="#" onclick="sns_share('facebook');return false;">
            		<img src="img/btn_fb.png" alt=""/>
             </a>
-            <a href="#" onclick="sns_share('twitter');return false;">
-            	<img src="img/btn_kt.png" alt=""/>
+            <a href="#" onclick="sns_share('kakao');return false;">
+           		<img src="img/btn_kt.png" alt=""/>
             </a>
             <a href="#" onclick="sns_share('twitter');return false;">
             	<img src="img/btn_tw.png" alt=""/>
@@ -61,7 +61,7 @@
 	            <img src="img/title_event.png" alt=""/>
             </div>
             <div class="btn_gift">
-            	<a href="#"><img src="img/btn_gift.png" alt=""/></a>
+              <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a>
             </div>
             <div class="txt_date">
        	    	<img src="img/txt_date.png" alt=""/> </div>
@@ -79,25 +79,25 @@
 </div>
 <!--contents_wrap-->
 <!-------------------------- 이벤트 응모 DIV -------------------------->
-  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid"align="center">
-      <div class="block_close clearfix">
-        <a href="#" class="btn_close" onclick="javascript:close_input()"align="right"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-      <div class="block_content">
-        <div class="inner">
-          <div class="title">
-            <img src="images/popup/pop_input_title.png" />
-          </div>
-          <div class="input_block">
-            <ul class="clearfix">
-              <li class="t_name"><img src="images/popup/txt_name.png" alt=""/></li>
-              <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
-            </ul>
-            <ul class="clearfix">
-              <li class="t_name"><img src="images/popup/txt_phone.png" alt=""/></li>
-              <li class="input_txt phone clearfix">
-                <div style="width:79px;magin-left:2px">
+  <div id="input_div" class="wrap_page popup zoom-anim-dialog mfp-hide" style="z-index:50000">
+    <div class="block_close clearfix">
+      <a href="#" class="btn_close" onclick="javascript:close_input()"><img src="img/popup/btn_close.png" width="29"/></a>
+    </div>
+    <div class="content" style="background:white;">
+      <div class="inner">
+        <div class="title">
+          <img src="img/popup/title_input.png" width="192" alt=""/>
+        </div>
+        <div class="input_block">
+          <ul class="clearfix">
+            <li class="t_name"><img src="img/popup/txt_label_name.png" width="32" alt=""/></li>
+            <li class="input_txt"><input type="text" name="mb_name" id="mb_name" onkeydown="Check_Hangul(this)"></li>
+          </ul>
+          <ul class="clearfix">
+            <li class="t_name"><img src="img/popup/txt_label_phone.png" width="48" alt=""/></li>
+            <li class="input_txt phone">
+              <div class="inner clearfix">
+                <div>
                   <select id="mb_phone1" name="mb_phone1">
                     <option>010</option>
                     <option>011</option>
@@ -107,17 +107,20 @@
                     <option>019</option>
                   </select>
                 </div>
-                <div style="margin-left:4px;"><input type="tel" name="mb_phone2" id="mb_phone2"></div>
-                <div><input type="tel" name="mb_phone3" id="mb_phone3"></div>
-              </li>
-            </ul>
-          </div>
-          <div class="input_block">
-            <ul class="clearfix">
-              <li class="t_name"><img src="images/popup/txt_store.png" alt=""/></li>
-              <li class="input_txt store">
-                <select name="addr1" id="addr1" onchange="addr_change(this.value)">
-                  <option value="">선택하세요</option>
+                <div><input type="tel" id="mb_phone2" name="mb_phone2"></div>
+                <div><input type="tel" id="mb_phone3" name="mb_phone3"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="input_block">
+          <ul class="clearfix">
+            <li class="t_name"><img src="img/popup/txt_label_store.png" width="63" alt=""/></li>
+            <li class="input_txt address">
+              <div class="inner clearfix">
+                <div>
+                  <select name="addr1" id="addr1" onchange="addr_change(this.value)">
+                    <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
 	$query 		= "SELECT * FROM ".$_gl['addr_info_table']." WHERE addr_level='1'";
@@ -126,112 +129,108 @@
 	while($addr1_data = @mysqli_fetch_array($result))
 	{
 ?>
-                  <option value="<?=$addr1_data['addr_sido']?>"><?=$addr1_data['addr_sido']?></option>
+                    <option value="<?=$addr1_data['addr_sido']?>"><?=$addr1_data['addr_sido']?></option>
 <?
 	}
 ?>
-                </select>
-
-              <li class="input_txt store" id="sel_addr2">
-                <select name="addr2" id="addr2" onchange="shop_change(this.value)">
-                  <option value="">선택하세요</option>
-                </select>
-              </li>
-            </ul>
-            <ul class="clearfix">
-              <li class="t_name"></li>
-              <li class="input_txt store" id="sel_shop">
-                <select name="shop" id="shop">
-                  <option value="">선택하세요</option>
-                </select>
-              </li>
-              <li>
-                <a href="#map_div" id="search_shop" class="popup-with-zoom-anim" onclick="javascript:show_map();return false;"><img src="images/popup/btn_store.png" alt=""/></a>
-              </li>
-            </ul>
-          </div>
-          <div class="input_block input_check">
-            <ul class="clearfix">
-              <li class="in_check"><input type="checkbox" name="uses_agree" id="uses_agree"></li>
-              <li class="in_check_label"><a href="#use_div" class="btn_detail popup-with-zoom-anim" onclick="open_use()"><img src="images/popup/btn_detail_01.png" alt=""/></a></li>
-            </ul>
-            <ul class="clearfix">
-              <li class="in_check"><input type="checkbox" name="privacy_agree" id="privacy_agree"></li>
-              <li class="in_check_label"><a href="#privacy_div" class="btn_detail popup-with-zoom-anim" onclick="open_privacy()"><img src="images/popup/btn_detail_02.png" alt=""/></a></li>
-            </ul>
-            <ul class="clearfix">
-              <li class="in_check"><input type="checkbox" name="send_agree" id="send_agree"></li>
-              <li class="in_check_label"><a href="#adver_div" class="btn_detail popup-with-zoom-anim" onclick="open_adver()"><img src="images/popup/btn_detail_03.png" alt=""/></a></li>
-            </ul>
-          </div>
-          <div class="btn_block">
-            <a href="#" onclick="javascript:chk_input();"><img src="images/popup/btn_input_ok.png" alt=""/></a>
-          </div>
-        </div><!--inner-->
-      </div>
+                  </select>
+                </div>
+                <div id="sel_addr2">
+                  <select name="addr2" id="addr2" onchange="shop_change(this.value)">
+                    <option value="">선택하세요</option>
+                  </select>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="clearfix">
+            <li class="t_name"></li>
+            <li class="input_txt store" id="sel_shop">
+              <select name="shop" id="shop">
+                <option value="">선택하세요</option>
+              </select>
+            </li>
+            <li class="btn">
+              <a href="#map_div" id="search_shop" class="popup-with-zoom-anim" onclick="javascript:show_map();return false;"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
+            </li>
+          </ul>
+        </div>
+        <div class="input_block input_check">
+          <ul class="clearfix">
+            <li class="in_check"><input type="checkbox"></li>
+            <li class="in_check_label"><a href="#use_div" class="btn_detail popup-with-zoom-anim" onclick="open_use()"><img src="img/popup/btn_detail_01.png" width="164" alt=""/></a></li>
+          </ul>
+          <ul class="clearfix">
+            <li class="in_check"><input type="checkbox"></li>
+            <li class="in_check_label"><a href="#privacy_div" class="btn_detail popup-with-zoom-anim" onclick="open_privacy()"><img src="img/popup/btn_detail_02.png" width="164" alt=""/></a></li>
+          </ul>
+          <ul class="clearfix">
+            <li class="in_check"><input type="checkbox"></li>
+            <li class="in_check_label"><a href="#adver_div" class="btn_detail popup-with-zoom-anim" onclick="open_adver()"><img src="img/popup/btn_detail_03.png" width="164" alt=""/></a>
+            </li>
+          </ul>
+        </div>
+        <div class="btn_block">
+          <a href="#" onclick="javascript:chk_input();return false;"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
+        </div>
+      </div><!--inner-->
     </div>
   </div>
 <!-------------------------- 이벤트 응모 DIV -------------------------->
-<!-------------------------- 선물 확인 DIV -------------------------->
-  <div id="gift_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
-      <div class="block_close clearfix">
-        <a href="#" onclick="close_gift()" class="btn_close"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-      <div class="block_content product">
-        <div class="inner">
-          <img src="images/popup/img_product.png" alt=""/>
-        </div><!--inner-->
-      </div>
-    </div>
-  </div>
-<!-------------------------- 선물 확인 DIV -------------------------->
 <!-------------------------- 지도 DIV -------------------------->
-  <div id="map_div" class="pop_main_map zoom-anim-dialog mfp-hide">
-    <div class="header">
-      <div class="btn_close"><a href="#input_div" class="first-popup-link" onclick="close_map()">닫기</a></div>
+  <div id="map_div"  class="wrap_page popup zoom-anim-dialog mfp-hide">
+    <div class="block_close clearfix">
+      <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_map()"><img src="img/popup/btn_close.png" width="29"/></a>
     </div>
-    <div class="contents">
-      <div id="map_area" class="map_area"></div>
+    <div class="content" style="z-index:800000">
+      <div id="map_area" class="map_area" style="height:440px;border:1px solid skyblue"></div>
     </div>
-
-  </div>
+  </div><!--wrap_page popup-->
 <!-------------------------- 지도 DIV -------------------------->
 <!--------------------------  개인정보 활용 약관 DIV ----------------------->
-  <div id="use_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
-      <div class="block_close clearfix">
-        <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-<?
-	include_once "./use_agree.php";
-?>
+  <div id="use_div"  class="wrap_page popup zoom-anim-dialog mfp-hide">
+    <div class="block_close clearfix">
+      <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="img/popup/btn_close.png" width="29"/></a>
     </div>
-  </div>
+    <div class="content">
+      <div class="inner agree">
+      texttexttexttexttext
+      texttexttexttext
+      texttexttext
+      texttexttexttext
+      </div><!--inner-->
+    </div>
+  </div><!--wrap_page popup-->
 <!--------------------------  개인정보 활용 약관 DIV ----------------------->
 <!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
-  <div id="privacy_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
-      <div class="block_close clearfix">
-        <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-<?
-	include_once "./privacy_agree.php";
-?>
+  <div id="privacy_div" class="wrap_page popup zoom-anim-dialog mfp-hide">
+    <div class="block_close clearfix">
+      <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="img/popup/btn_close.png" width="29"/></a>
     </div>
-  </div>
+    <div class="content">
+      <div class="inner agree">
+      texttexttexttexttext
+      texttexttexttext
+      texttexttext
+      texttexttexttext
+      </div><!--inner-->
+    </div>
+  </div><!--wrap_page popup-->
 <!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
-  <div id="adver_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
-      <div class="block_close clearfix">
-        <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-<?
-	include_once "./adver_agree.php";
-?>
+  <div id="adver_div" class="wrap_page popup zoom-anim-dialog mfp-hide">
+    <div class="block_close clearfix">
+      <a href="#input_div" class="btn_close first-popup-link" onclick="javascript:close_look()"><img src="img/popup/btn_close.png" width="29"/></a>
     </div>
-  </div>
+    <div class="content">
+      <div class="inner agree">
+      texttexttexttexttext
+      texttexttexttext
+      texttexttext
+      texttexttexttext
+      </div><!--inner-->
+    </div>
+  </div><!--wrap_page popup-->
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
 
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
@@ -318,6 +317,7 @@
 	$(document).ready(function() {
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
 		var width = $(window).width();
+		var height = $(window).height();
 		var youtube_width = width;
 		$("#ytplayer").width(width);
 		$(".cover_area").width($("#ytplayer").width());
@@ -411,6 +411,18 @@
 		});
 		
 		$("#dk0-combobox").css("width","79px");
+		$("ul[id*=dk0-]").css("width","79px");
+		$("li[id*=dk0-]").css("width","60px");
+		$("#dk1-combobox").css("width","120px");
+		$("ul[id*=dk1-]").css("width","120px");
+		$("li[id*=dk1-]").css("width","100px");
+		$("#dk2-combobox").css("width","120px");
+		$("ul[id*=dk2-]").css("width","120px");
+		$("li[id*=dk2-]").css("width","100px");
+		$("#dk3-combobox").css("width","120px");
+		$("ul[id*=dk3-]").css("width","120px");
+		$("li[id*=dk3-]").css("width","100px");
+/*
 		$("#dk1-addr1").css("width","120px");
 		$("#dk1-addr1").css("font-size","14px");
 		$("#dk1-combobox").css("height","34px");
@@ -420,5 +432,6 @@
 		$("#dk3-shop").css("width","120px");
 		$("#dk3-shop").css("font-size","14px");
 		$("#dk3-combobox").css("height","34px");
+*/
 	});
 	</script>

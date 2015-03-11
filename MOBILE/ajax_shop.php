@@ -6,9 +6,8 @@
 
 	$addr2_idx = $_REQUEST['addr2_idx'];
 ?>
-              <li class="input_txt store" id="sel_shop" onchange="shop_change(this.value)">
-                <select name="shop" id="shop">
-                  <option value="">선택하세요</option>
+              <select name="shop" id="shop">
+                <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
 	$query 		= "SELECT * FROM ".$_gl['shop_info_table']." WHERE addr_idx='".$addr2_idx."'";
@@ -17,17 +16,20 @@
 	while($shop_data = @mysqli_fetch_array($result))
 	{
 ?>
-                  <option value="<?=$shop_data['idx']?>"><?=$shop_data['shop_name']?></option>
+                <option value="<?=$shop_data['idx']?>"><?=$shop_data['shop_name']?></option>
 <?
 	}
 ?>
-                </select>
-              </li>
+              </select>
 <script type="text/javascript">
 		$( "#shop" ).dropkick({
 			mobile: true
 		});
-		$("#dk5-shop").css("width","120px");
-		$("#dk5-shop").css("font-size","14px");
-		$("#dk5-combobox").css("height","34px");
+
+		$("#dk5-combobox").css("width","120px");
+		$("#dk5-listbox").css("width","120px");
+		$("li[id*=dk5-]").css("width","100px");
+		$("#dk6-combobox").css("width","120px");
+		$("#dk6-listbox").css("width","120px");
+		$("li[id*=dk6-]").css("width","100px");
 </script>
