@@ -7,7 +7,7 @@
 	$addr1 = $_REQUEST['addr1'];
 ?>
               <li class="input_txt store" id="sel_addr2">
-                <select name="addr2" id="addr2" onchange="shop_change(this.value)">
+                <select name="addr2" id="addr2" onchange="shop_change(this.value)"style="width:120px;height:30px; float:left;">
                   <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
