@@ -149,15 +149,14 @@
 }
 .contents_wrap .area3{
 	position: relative;
-	height:1000px;
 }
 .contents_wrap .area3 .product_group{
 	position: absolute;
 	left: 50%;
 	top:50%;
-	margin-top: -330px;
-	margin-left: -430px;
-	width: 860px;
+	margin-top: -364px;
+	margin-left: -462px;
+	width: 924px;
 	/*
 	height: 560px;
 	text-align: center;*/
