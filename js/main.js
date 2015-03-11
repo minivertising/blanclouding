@@ -492,6 +492,21 @@ function show_map()
 	}
 }
 
+function m_show_map()
+{
+	var si				= $("#addr1 option:selected").text();
+	var si_val			= $("#addr1").val();
+	var gun			= $("#addr2 option:selected").text();
+	var gun_val		= $("#addr2").val();
+	var shop_idx		= $("#shop").val();
+	if (shop_idx)
+	{
+		window.open("popup_map.php?exec=select_address&shop_idx=" + shop_idx+ "","win","width:100%;height:100%");
+	}else{
+		window.open("popup_map.php?exec=sigungu&si=" + si+ "&gun=" + gun + "","win","width:100%;height:100%");
+	}
+}
+
 function only_kor(obj)
 {
 	var inText = obj.value;

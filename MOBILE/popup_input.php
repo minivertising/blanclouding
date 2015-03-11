@@ -73,7 +73,7 @@
               </select>
             </li>
             <li class="btn">
-              <a href="popup_map.php" target="blank"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
+              <a href="#" onclick="m_show_map();"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
             </li>
           </ul>
         </div>

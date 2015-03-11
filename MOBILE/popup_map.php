@@ -1,35 +1,31 @@
 <?
 	include_once "./header.php";
-	$flag	= $_REQUEST['flag'];
-	if ($flag == "sigungu")
-		$map_addr	= $_REQUEST["si"]." ".$_REQUEST["gun"];
-	else if  ($flag == "win_coupon")
-		$map_addr	= $_REQUEST['jido'];
-	else
-		$map_addr	= $_REQUEST["addr"];
+	$exec			= $_REQUEST['exec'];
+	$si				= $_REQUEST['si'];
+	$gun			= $_REQUEST['gun'];
+	$shop_idx	= $_REQUEST['shop_idx'];
 ?>
-<div class="wrap_page popup">
-  <div class="block_close clearfix">
-    <a href="#" class="btn_close" onclick="javascript:window.close()"><img src="img/popup/btn_close.png" width="29"/></a>
-  </div>
-  <div class="content">
-    <div class="inner agree">
-	      <div id="#map_area" class="map_area" style="height:440px;border:1px solid skyblue"></div>
-
-    </div><!--inner-->
-  </div>
-</div><!--wrap_page popup-->
-
+<input type="hidden" name="exec" id="exec" value="<?=$exec;?>">
+<input type="hidden" name="si" id="si" value="<?=$si;?>">
+<input type="hidden" name="gun" id="gun" value="<?=$gun;?>">
+<input type="hidden" name="shop_idx" id="shop_idx" value="<?=$shop_idx;?>">
+  <div id="map_div"  class="wrap_page popup">
+    <div class="block_close clearfix">
+      <a href="#" class="btn_close" onclick="javascript:window.close()"><img src="img/popup/btn_close.png" width="29"/></a>
+    </div>
+    <div class="content" style="z-index:800000">
+      <div id="map_area" class="map_area" style="height:440px;border:1px solid skyblue"></div>
+    </div>
+  </div><!--wrap_page popup-->
 </body>
 </html>
 <script>
 $(document).ready(function() {
-	var si				= $("#addr1 option:selected").text();
-	var si_val			= $("#addr1").val();
-	var gun			= $("#addr2 option:selected").text();
-	var gun_val		= $("#addr2").val();
-	var shop_idx		= $("#shop").val();
-	if (shop_idx)
+	var si				= $("#si").val();
+	var gun			= $("#gun").val();
+	var exec			= $("#exec").val();
+	var shop_idx		= $("#shop_idx").val();
+	if (exec == "select_address")
 	{
 		$.ajax({
 			type:"POST",
@@ -42,35 +38,29 @@ $(document).ready(function() {
 				$.ajax({
 					type:"POST",
 					data:{
-						"flag"    : "addr",
+						"flag"    : exec,
 						"addr"     : response
 					},
 					url: "../map_ajax.php",
 					success: function(response){
-						$("#map_div").show();
 						$("#map_area").html(response);
 					}
 				});
 			}
 		});
 	}else{
-		if (gun_val)
-		{
-			$.ajax({
-				type:"POST",
-				data:{
-					"flag"    : "sigungu",
-					"si"       : si,
-					"gun"    : gun
-				},
-				url: "../map_ajax.php",
-				success: function(response){
-					$("#map_div").show();
-					$("#map_area").html(response);
-				}
-			});
-		}else{
-			alert("지역이나 매장을 선택하셔야만 지도를 보실 수 있습니다.");
-			setTimeout("inputfrm_data();",0);
+		$.ajax({
+			type:"POST",
+			data:{
+				"flag"    : exec,
+				"si"       : si,
+				"gun"    : gun
+			},
+			url: "../map_ajax.php",
+			success: function(response){
+				$("#map_area").html(response);
+			}
 		});
+	}
+});
 </script>
