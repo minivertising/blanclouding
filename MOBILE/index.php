@@ -46,7 +46,7 @@
             <a href="#" onclick="sns_share('facebook');return false;">
            		<img src="img/btn_fb.png" alt=""/>
             </a>
-            <a href="#" onclick="sns_share('kakao');return false;">
+            <a  id="kakao-link-btn" href="#" onclick="sns_share('kakao');return false;">
            		<img src="img/btn_kt.png" alt=""/>
             </a>
             <a href="#" onclick="sns_share('twitter');return false;">
