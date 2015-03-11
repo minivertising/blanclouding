@@ -34,8 +34,9 @@
         더 페이스샵 블랑클라우딩
         </div> -->
         <div class="btn_group">
-          <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="images/btn_gift.png" alt=""/></a>
-          <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="images/btn_blan.png" alt=""/></a>
+          <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="images/btn_gift.png" alt=""/></a> -->
+          <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="images/btn_gift.png" alt=""/></a>
+          <a href="#" class="view_product"><img src="images/btn_blan.png" alt=""/></a>
         </div>
       </div>
 <!--center_menu_area-->
@@ -459,8 +460,12 @@
 	    $( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},1500);
 		  return false;
 		} );
-		
 
+		$( '.view_product' ).click( function() {
+	    $( 'html, body' ).animate({ scrollTop: $("#ytplayer").height() + $(".area2_bg").height()},1500);
+		  return false;
+		} );
+		
 		// 퀵메뉴 기본 위치
 		var quick_height	= $(window).height()/2;
 		$('.quickmenu').css("top",quick_height);
