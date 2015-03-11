@@ -56,7 +56,7 @@
 	}
 ?>
                   </select>
-                </div><div>&nbsp&nbsp&nbsp&nbsp<div>
+                </div><div>&nbsp&nbsp&nbsp<div>
                 <div id="sel_addr2">
                   <select name="addr2" id="addr2" onchange="shop_change(this.value)"style="width:100px; height:31px;">
                     <option value="">선택하세요</option>
