@@ -61,7 +61,8 @@
 	            <img src="img/title_event.png" alt=""/>
             </div>
             <div class="btn_gift">
-              <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a>
+              <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a> -->
+              <a href="popup_input.php" target="_blank"><img src="img/btn_gift.png" alt=""/></a>
             </div>
             <div class="txt_date">
        	    	<img src="img/txt_date.png" alt=""/> </div>
