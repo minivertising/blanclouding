@@ -22,6 +22,7 @@
 ?>
               </select>
 <script type="text/javascript">
+/*
 		$( "#shop" ).dropkick({
 			mobile: true
 		});
@@ -32,4 +33,5 @@
 		$("#dk6-combobox").css("width","120px");
 		$("#dk6-listbox").css("width","120px");
 		$("li[id*=dk6-]").css("width","100px");
+*/
 </script>

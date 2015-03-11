@@ -25,6 +25,7 @@
                 </div>
 
 <script type="text/javascript">
+/*
 		$( "#addr2" ).dropkick({
 			mobile: true
 		});
@@ -32,5 +33,5 @@
 		$("#dk4-combobox").css("width","120px");
 		$("ul[id*=dk4-]").css("width","120px");
 		$("li[id*=dk4-]").css("width","100px");
-
+*/
 </script>
