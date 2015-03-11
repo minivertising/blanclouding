@@ -89,6 +89,7 @@ function inputfrm_data()
 
 function chk_input(gubun)
 {
+
 	var mb_name		= $('#mb_name').val();
 	var mb_phone1	= $('#mb_phone1').val();
 	var mb_phone2	= $('#mb_phone2').val();
@@ -154,7 +155,7 @@ function chk_input(gubun)
 		return false;
 	}
 
-	if ($('#uses_agree').is(":checked") == false)
+	if ($('#use_agree').is(":checked") == false)
 	{
 		//alert("개인정보 활용 동의를 안 하셨습니다");
 		setTimeout("agree_data();",500);
@@ -168,13 +169,12 @@ function chk_input(gubun)
 		return false;
 	}
 
-	if ($('#send_agree').is(":checked") == false)
+	if ($('#adver_agree').is(":checked") == false)
 	{
 		//alert("개인정보 활용 동의를 안 하셨습니다");
 		setTimeout("agree_data();",500);
 		return false;
 	}
-
 	$.ajax({
 		type:"POST",
 		data:{
@@ -187,7 +187,7 @@ function chk_input(gubun)
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			if (gubun = "PC")
+			if (gubun == "PC")
 			{
 				if (response == "Y")
 				{

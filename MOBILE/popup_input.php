@@ -79,22 +79,22 @@
         </div>
         <div class="input_block input_check">
           <ul class="clearfix">
-            <li class="in_check"><input type="checkbox"></li>
+            <li  id = "use_agree" class="in_check"><input type="checkbox"></li>
             <li class="in_check_label"><a href="popup_use_agree.php" target="_blank" >
 			<img src="img/popup/btn_detail_01.png" width="164" alt=""/></a></li>
           </ul>
           <ul class="clearfix">
-            <li class="in_check"><input type="checkbox"></li>
+            <li  id = "privacy_agree" class="in_check"><input type="checkbox"></li>
             <li class="in_check_label"><a href="popup_privacy_agree.php" target="_blank" ><img src="img/popup/btn_detail_02.png" width="164" alt=""/></a></li>
           </ul>
           <ul class="clearfix">
-            <li class="in_check"><input type="checkbox"></li>
+            <li  id = "adver_agree"class="in_check"><input type="checkbox"></li>
             <li class="in_check_label"><a href="popup_adver_agree.php" target="_blank" ><img src="img/popup/btn_detail_03.png" width="164" alt=""/></a>
             </li>
           </ul>
         </div>
         <div class="btn_block">
-          <a href="#" onclick="javascript:chk_input('<?=$gubun?>');return false;"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
+          <a href="#" onclick="javascript:chk_input('MOBILE');return false;"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
