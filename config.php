@@ -18,7 +18,7 @@
 			break;
 		}
 	}
-print_r($_SERVER['HTTP_USER_AGENT']);
+
 	if($check_mobile)
 		$gubun = "MOBILE";
 	else
