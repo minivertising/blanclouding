@@ -162,21 +162,19 @@ body {
 }
 
 .contents_wrap .bg_cloud .event {
-	padding:75% 0 70%;
+	padding:73% 0 72%;
 }
 .contents_wrap .bg_cloud .event .btn_gift{
-    width:90%;
+    width:62%;
 	padding:0;
 	padding-left:8%;
 }
 .contents_wrap .bg_cloud .event .btn_gift a{
-    width:45%;
+    width:73%;
 	display:block;
-	text-indent:-999999999px;
-	padding:5%;
 }
 .contents_wrap .bg_cloud .event .btn_gift a img{
-	width:70%;
+	width:100%;
 }
 
 .contents_wrap .bg_cloud .event .txt_date{
