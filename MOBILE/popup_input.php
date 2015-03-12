@@ -23,7 +23,19 @@
         <div class="title">
           <img src="img/popup/title_input.png" width="192" alt=""/>
         </div>
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
         <div class="input_block ip">
+<?
+	}else{
+?>
+        <div class="input_block">
+<?
+	}
+?>
+
           <ul class="clearfix">
             <li class="t_name"><img src="img/popup/txt_label_name.png" width="32" alt=""/></li>
             <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
@@ -48,7 +60,18 @@
             </li>
           </ul>
         </div>
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
         <div class="input_block ip">
+<?
+	}else{
+?>
+        <div class="input_block">
+<?
+	}
+?>
           <ul class="clearfix">
             <li class="t_name"><img src="img/popup/txt_label_store.png" width="63" alt=""/></li>
             <li class="input_txt address">
