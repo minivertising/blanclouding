@@ -138,10 +138,10 @@
 .contents_wrap .area2 .product_group .product_area a{
 	display:block;
 	position:absolute;
-	left:30px;
-	top:38%;
+	left:0;
+	top:41%;
 	width:320px;
-	height:60px;
+	height:80px;
 	background:#eee;
 	text-indent:-999999px;
 }
