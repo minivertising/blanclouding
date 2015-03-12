@@ -41,36 +41,34 @@
       </div>
     <!--area1-->
 
+    <!--sns_area-->
+      <div class="sns_area clearfix">
+        <a href="#" onclick="sns_share('facebook');return false;">
+            <img src="img/btn_fb.png" alt=""/>
+        </a>
+        <span>
+            <img src="img/bar.png" alt=""/>
+        </span>
+        <a  id="kakao-link-btn" href="#" onclick="sns_share('kakao');return false;">
+            <img src="img/btn_kt.png" alt=""/>
+        </a>
+        <span>
+            <img src="img/bar.png" alt=""/>
+        </span>
+        <a href="#" onclick="sns_share('twitter');return false;">
+            <img src="img/btn_tw.png" alt=""/>
+        </a>
+      </div>
+    <!--sns_area-->
+
+
 
     <div class="bg_cloud">
-        <!--sns_area-->
-          <div class="sns_area clearfix">
-            <a href="#" onclick="sns_share('facebook');return false;">
-           		<img src="img/btn_fb.png" alt=""/>
-            </a>
-            <span>
-           		<img src="img/bar.png" alt=""/>
-            </span>
-            <a  id="kakao-link-btn" href="#" onclick="sns_share('kakao');return false;">
-           		<img src="img/btn_kt.png" alt=""/>
-            </a>
-            <span>
-           		<img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" onclick="sns_share('twitter');return false;">
-            	<img src="img/btn_tw.png" alt=""/>
-            </a>
-          </div>
-        <!--sns_area-->
-    
         <!--event-->
           <div class="event">
-          	<div class="title_event">
-	            <img src="img/title_event.png" alt=""/>
-            </div>
             <div class="btn_gift">
               <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a> -->
-              <a href="popup_input.php" target="_blank"><img src="img/btn_gift_event.png" alt=""/></a>
+              <a href="popup_input.php" target="_blank">신청하기</a>
             </div>
           </div>
         <!--event-->
