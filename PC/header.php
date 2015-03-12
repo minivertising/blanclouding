@@ -1,5 +1,8 @@
 <?
 	include_once "../config.php";
+
+	if ($gubun == "MOBILE")
+		echo "<script>location.href='http://www.thefaceshopclouding.co.kr/MOBILE/index.php'</script>";
 ?>
 <!doctype html>
 <html prefix="og: http://ogp.me/ns#">
