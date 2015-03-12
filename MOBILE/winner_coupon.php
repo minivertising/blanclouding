@@ -2,7 +2,7 @@
     include_once "../config.php";
     $serialnumber = $_REQUEST['serialnumber'];
 
-	$query = "SELECT s.shop_name, s.shop_addr, m.mb_use FROM member_info m, shop_info s where m.shop_idx = s.idx and m.mb_serialnumber = '".$serialnumber."' and m.mb_winner = 'Y'";
+	$query = "SELECT s.idx, s.shop_name, s.shop_addr, m.mb_use FROM member_info m, shop_info s where m.shop_idx = s.idx and m.mb_serialnumber = '".$serialnumber."' and m.mb_winner = 'Y'";
     $result = mysqli_query($my_db, $query);
     $user_info    = @mysqli_fetch_array($result);
 
@@ -136,7 +136,7 @@
             <ul class="clearfix">
                 <li class="txt_label">내가 선택한 매장 |</li>
                 <li class="txt_detail"><?=$user_info['shop_name']?></li>
-                <li class="btn_map"><a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php" target="_blank"><img src="img/btn_map.png" width="55" alt=""/></a></li>
+                <li class="btn_map"><a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>" target="_blank"><img src="img/btn_map.png" width="55" alt=""/></a></li>
               </ul>
         </div>
       </div><!--inner-->
