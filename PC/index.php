@@ -90,7 +90,7 @@
 
 <!--footer-->
   <div class="footer">
-    <img src="images/footer.png" width="979" height="140" alt=""/>
+    <img src="images/footer.png" alt=""/>
   </div>
 <!--footer-->
 

@@ -139,11 +139,14 @@ body {
 	background:url(../img/bg_main.png) top center ;
 	background-size: cover;
 	margin:5% 0 0;
+	
+}
+.contents_wrap .bg_cloud .event{
 }
 
 .contents_wrap .sns_area{
 	width:70%;
-	padding:0 0 6%;
+	padding:10% 0 10%;
 	padding-left:25%;
 }
 .contents_wrap .sns_area a,
@@ -158,25 +161,20 @@ body {
 	width:100%;
 }
 
-.contents_wrap .bg_cloud .event .title_event{
-	width:90%;
-	padding-top:40px;
-	padding-left:10%;
-}
-.contents_wrap .bg_cloud .event .title_event img{
-	width:85%;
+.contents_wrap .bg_cloud .event {
+	padding:73% 0 72%;
 }
 .contents_wrap .bg_cloud .event .btn_gift{
-    width:90%;
-	padding:4% 0 55%;
-	padding-left:10%;
+    width:62%;
+	padding:0;
+	padding-left:8%;
 }
 .contents_wrap .bg_cloud .event .btn_gift a{
-    width:80%;
+    width:73%;
 	display:block;
 }
 .contents_wrap .bg_cloud .event .btn_gift a img{
-	width:70%;
+	width:100%;
 }
 
 .contents_wrap .bg_cloud .event .txt_date{
@@ -353,6 +351,9 @@ body {
 	border:none;
 	width:100%;
 	font-size:13px;
+    -webkit-appearance: none;
+    -webkit-border-radius:0; 
+    border-radius:0;	
 }
 .wrap_page.popup .content .input_block ul li.phone .inner{
 	width:100%;
