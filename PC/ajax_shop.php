@@ -6,7 +6,7 @@
 
 	$addr2_idx = $_REQUEST['addr2_idx'];
 ?>
-              <li class="input_txt store" id="sel_shop" onchange="shop_change(this.value)">
+              <li class="input_txt store" id="sel_shop">
                 <select name="shop" id="shop"style="width:120px;height:30px; float:left;">
                   <option value="">선택하세요</option>
 <?

@@ -1,6 +1,3 @@
-jQuery.ajaxSetup({cache:false});
-
-
 function addr_change(addr1)
 {
 	$.ajax({
@@ -18,7 +15,6 @@ function addr_change(addr1)
 
 function shop_change(idx)
 {
-	jQuery.ajaxSetup({cache:false});
 	$.ajax({
 		type:"POST",
 		cache: false,
@@ -196,6 +192,8 @@ function chk_input()
 			if (response == "Y")
 			{
 				//alert("참여해주셔서 감사합니다.\n당첨시 3월 19일에 모바일쿠폰을 보내드립니다.\n미당첨시 따로 메시지를 보내드리지 않습니다.");
+				//$.magnificPopup.close();
+
 				setTimeout("ok_data();",1000);
 
 			}
@@ -345,6 +343,13 @@ function close_input()
 	$("#shop").val("");
 	$('input').iCheck('uncheck');
 	$.magnificPopup.close();
+}
+
+function close_ok()
+{
+	//$("#input_div").hide();
+	$.magnificPopup.close();
+	close_input();
 }
 
 function close_gift()
