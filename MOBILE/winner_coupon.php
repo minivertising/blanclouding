@@ -85,10 +85,10 @@
 	}
 	</script>
   <body onLoad="CalcRemaining(document.clock)">
-	<div class="wrap_page">
+	<div class="wrap_page wrap_coupon">
         <div class="header coupon">
             <div class="block_logo clearfix">
-                <a href="#" class="logo_tfs"><img src="img/logo_tfs.png" width="100" alt=""/></a>
+                <a href="http://www.thefaceshop.com/m/" class="logo_tfs" target="_blank"><img src="img/logo_tfs.png" width="100" alt=""/></a>
             </div>
         </div>
         <div class="content coupon">
@@ -164,9 +164,6 @@
         </div>
       </div>
     </div>
-      <div class="footer">
-            footer
-      </div>
     </div>
   </body>
 </html>
