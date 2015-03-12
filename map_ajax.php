@@ -52,7 +52,7 @@ function placesSearchCB (status, data, pagination) {
 
 // 지도에 마커를 표시하는 함수입니다
 function displayMarker(place) {
-    var imageSrc = './images/map_chk.png', // 마커이미지의 주소입니다    
+    var imageSrc = '.http://www.thefaceshopclouding.co.kr/PC/images/map_chk.png', // 마커이미지의 주소입니다    
     imageSize = new daum.maps.Size(100, 41), // 마커이미지의 크기입니다
     imageOption = {offset: new daum.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
       
