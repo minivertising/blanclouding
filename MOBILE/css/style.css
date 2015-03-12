@@ -504,10 +504,19 @@ body {
 	height: 22px;
 }
 .wrap_page.popup .content .input_block.input_check .in_check_label{
-	width:60%;
+	width:40%;
 	padding-top:2px;
 }
-
+.wrap_page.popup .content .input_block.input_check .in_check_label img{
+	width:95%;
+}
+.wrap_page.popup .content .input_block.input_check .in_check_btn{
+	width:27%;
+	padding-top:2px;
+}
+.wrap_page.popup .content .input_block.input_check .in_check_btn a img{
+	width:100%;
+}
 .wrap_page.popup .content .btn_block{
 	text-align:center;
 	padding-top:25px;
