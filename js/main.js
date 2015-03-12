@@ -35,7 +35,8 @@ function ins_data()
 		items: {
 			src: '#input_alert'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 
@@ -45,7 +46,8 @@ function shop_data()
 		items: {
 			src: '#shop_alert'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 
@@ -55,7 +57,8 @@ function agree_data()
 		items: {
 			src: '#agree_alert'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 
@@ -65,7 +68,8 @@ function ok_data()
 		items: {
 			src: '#ok_alert'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 
@@ -75,7 +79,8 @@ function map_data()
 		items: {
 			src: '#map_div'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 
@@ -85,7 +90,8 @@ function inputfrm_data()
 		items: {
 			src: '#input_div'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 

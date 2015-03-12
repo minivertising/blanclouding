@@ -22,8 +22,8 @@
 </div>    
 
   <div class="navi_btn_block clearfix">
-        <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a>
-        <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="img/btn_product.png" alt=""/></a>
+        <a href="#" class="view_event"><img src="img/btn_gift.png" alt=""/></a>
+        <a href="#" class="view_product"><img src="img/btn_product.png" alt=""/></a>
   </div>
 
 
@@ -68,7 +68,7 @@
           <div class="event">
             <div class="btn_gift">
               <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a> -->
-              <a href="popup_input.php" target="_blank"><img src="img/btn_gift_event.png" alt=""/></a>
+              <a href="popup_input.php" target="_blank"><img src="img/btn_gift_event.png" alt="1"/></a>
             </div>
           </div>
         <!--event-->
@@ -158,16 +158,19 @@
 				return false;
 			}
 		});
-		$( '.quickmenu' ).click( function() {
-	    $( 'html, body' ).animate( { scrollTop : 0 }, 800 );
-		  return false;
+
+		var move_gift = ($(".block_top").height() +$(".navi_btn_block").height() +$("#ytplayer").height() + $(".sns_area").height()) * 1.1;
+		var move_product = move_gift + $(".bg_cloud").height() * 1.1;
+		$( '.view_event' ).click( function() {
+			$( 'html, body' ).animate({ scrollTop: move_gift},500);
+			return false;
 		} );
 
-		$( '.scroll_navi_area' ).click( function() {
-	    $( 'html, body' ).animate({ scrollTop: $(document).height()},1500);
-		  return false;
+		$( '.view_product' ).click( function() {
+			$( 'html, body' ).animate({ scrollTop: move_product},500);
+			return false;
 		} );
-		
+
 
 		// 퀵메뉴 기본 위치
 		var quick_height	= $(window).height()/2;
