@@ -118,7 +118,7 @@
           <div class="input_block">
             <ul class="clearfix">
               <li class="t_name"><img src="images/popup/txt_name.png" alt=""/></li>
-              <li class="input_txt"><input type="text" name="mb_name" id="mb_name" onblur="only_kor(this)"></li>
+              <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
             </ul>
             <ul class="clearfix">
               <li class="t_name"><img src="images/popup/txt_phone.png" alt=""/></li>
