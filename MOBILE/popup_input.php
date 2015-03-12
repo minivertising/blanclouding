@@ -93,7 +93,7 @@
             </li>
           </ul>
         </div>
-        <div class="btn_block">
+        <div class="btn_block" style="background:white;">
           <a href="javascript:chk_input();" class="popup-with-zoom-anim" onclick="javascript:chk_input();"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
         </div>
       </div><!--inner-->
@@ -109,7 +109,7 @@
         <div class="title" style="text-align:center">
           <img src="img/popup/title_info.png" width="160" alt=""/>
         </div>
-        <div class="btn_block">
+        <div class="btn_block" style="background:white;">
           <a href="#" onclick="	$.magnificPopup.close();"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
         </div>
       </div><!--inner-->
@@ -127,7 +127,7 @@
         <div class="title" style="text-align:center">
           <img src="img/popup/title_select_store.png" width="140" alt=""/>
         </div>
-        <div class="btn_block">
+        <div class="btn_block" style="background:white;">
           <a href="#" onclick="	$.magnificPopup.close();"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
         </div>
       </div><!--inner-->
@@ -145,7 +145,7 @@
         <div class="title" style="text-align:center">
           <img src="img/popup/title_agree.png" width="166" alt=""/>
         </div>
-        <div class="btn_block">
+        <div class="btn_block" style="background:white;">
           <a href="#" onclick="	$.magnificPopup.close();"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
         </div>
       </div><!--inner-->
@@ -163,7 +163,7 @@
         <div class="title" style="text-align:center">
           <img src="img/popup/title_thanks.png" width="220" alt=""/>
         </div>
-        <div class="btn_block">
+        <div class="btn_block" style="background:white;">
           <a href="#" onclick="$.magnificPopup.close();window.close();"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
         </div>
       </div><!--inner-->
