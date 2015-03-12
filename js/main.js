@@ -476,6 +476,7 @@ function show_map()
 					},
 					url: "../map_ajax.php",
 					success: function(response){
+							alert(response);
 						$("#map_div").show();
 						$("#map_area").html(response);
 					}
