@@ -68,7 +68,18 @@
           <div class="event">
             <div class="btn_gift">
               <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a> -->
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+              <a href="popup_input.php"><img src="img/btn_gift_event.png" alt="1"/></a>
+<?
+	}else{
+?>
               <a href="popup_input.php" target="_blank"><img src="img/btn_gift_event.png" alt="1"/></a>
+<?
+	}
+?>
             </div>
           </div>
         <!--event-->

@@ -3,7 +3,18 @@
 ?>
   <div id="input_div" class="wrap_page popup">
     <div class="block_close clearfix">
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+      <a href="index.php" class="btn_close"><img src="img/popup/btn_close.png" width="29"/></a>
+<?
+	}else{
+?>
       <a href="#" class="btn_close" onclick="javascript:window.close()"><img src="img/popup/btn_close.png" width="29"/></a>
+<?
+	}
+?>
     </div>
     <div class="content" style="background:white;">
       <div class="inner">
