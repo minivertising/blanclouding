@@ -81,7 +81,7 @@
           <ul class="clearfix">
             <li  class="in_check"><input type="checkbox" id="use_agree"></li>
             <li class="in_check_label">
-				<img src="img/popup/btn_detail_01.png" alt="" onclick="use_chk()"/>
+				<label for="use_agree"><img src="img/popup/btn_detail_01.png" alt=""/></label>
             </li>
             <li class="in_check_btn">
                 <a href="popup_use_agree.php" target="_blank" >
@@ -92,14 +92,14 @@
           <ul class="clearfix">
             <li  class="in_check"><input type="checkbox" id="privacy_agree"></li>
             <li class="in_check_label">
-				<img src="img/popup/btn_detail_02.png" alt="" onclick="privacy_chk()"/>
+				<label for="privacy_agree"><img src="img/popup/btn_detail_02.png" alt=""/></label>
             </li>
             <li class="in_check_btn"><a href="popup_privacy_agree.php" target="_blank" ><img src="img/popup/btn_detail.png" alt=""/></a></li>
           </ul>
           <ul class="clearfix">
             <li class="in_check"><input type="checkbox" id="adver_agree"></li>
             <li class="in_check_label">
-				<img src="img/popup/btn_detail_03.png" alt="" onclick="adver_chk()"/>
+				<label for="adver_agree"><img src="img/popup/btn_detail_03.png" alt=""/></label>
             </li>
             <li class="in_check_btn"><a href="popup_adver_agree.php" target="_blank" ><img src="img/popup/btn_detail.png" alt=""/></a>
             </li>
@@ -186,86 +186,6 @@
 
   <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
 	<script type="text/javascript">
-	function use_chk()
-	{
-		if ($('#use_agree').is(":checked") == false){
-			$('#use_agree').attr("checked", true);
-		}else{
-			$('#use_agree').attr("checked", false);
-		}
-	}
-	
-	function adver_chk()
-	{
-		if ($('#adver_agree').is(":checked") == false)
-			$('#adver_agree').attr("checked", true);
-		else
-			$('#adver_agree').attr("checked", false);
-	}
-
-	function privacy_chk()
-	{
-		if ($('#privacy_agree').is(":checked") == false)
-			$('#privacy_agree').attr("checked", true);
-		else
-			$('#privacy_agree').attr("checked", false);
-	}
-
-	// quick menu
-	var quickTop;
-	$(window).scroll(function() {
-		quickTop = ($(window).height()-$('.quickmenu').height()) /2;
-		$('.quickmenu').stop().animate({top:$(window).scrollTop()+quickTop},400,'easeOutExpo');
-		
-	});
-
-    // 유튜브 반복 재생
-    var controllable_player,start, 
-    statechange = function(e){
-		if (e.data === 0)
-		{
-			$("#video_control").text('일시정지');
-			controllable_player.seekTo(0); controllable_player.playVideo();
-		}
-		else if (e.data === 1)
-		{
-			//controllable_player.pauseVideo();
-			$("#video_control").text('일시정지');
-		}
-		else if (e.data === 2)
-		{
-			//controllable_player.playVideo();
-			$("#video_control").text('재생');
-		}
-		else if (e.data === 3)
-		{
-			//alert('4444');
-		}
-    	//controllable_player.playVideo(); 
-    };
-    function onYouTubeIframeAPIReady() {
-		controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
-    }
-
-    if(window.opera){
-		addEventListener('load', onYouTubeIframeAPIReady, false);
-    }
-	setTimeout(function(){
-    	if (typeof(controllable_player) == 'undefined'){
-    		onYouTubeIframeAPIReady();
-    	}
-    }, 1000)
-
-
-	$(window).resize(function(){
-		var width = $(window).width();
-		//var height = $(window).height();
-
-		var youtube_height = (width / 16) * 9;
-		$("#ytplayer").width(width);
-		$("#ytplayer").height(youtube_height);
-	});
-
 	$(document).ready(function() {
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
 		// 체크박스 스타일 설정
