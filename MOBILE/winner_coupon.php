@@ -93,11 +93,11 @@
         </div>
         <div class="content coupon">
             <div class="block_title">
-                <img src="img/coupon_title.png" width="215" alt=""/>
+                <img src="img/coupon_title.png" alt=""/>
           </div>
           <div class="block_cloud_bg">
               <div class="product">
-                  <img src="img/img_product.png" width="320" alt=""/>
+                  <img src="img/img_product.png" alt=""/>
               </div>
               <div class="inner">
                   <div class="block_time">

@@ -299,7 +299,11 @@ body {
 
 .wrap_page .block_cloud_bg{
 	background: url(../img/bg_cloud.png) no-repeat 0 -170px;
-	background-size: auto;
+	background-size: cover;
+}
+
+.wrap_page .block_cloud_bg .product img{
+	width:100%;
 }
 
 .wrap_page .block_cloud_bg .inner,
