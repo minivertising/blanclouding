@@ -106,7 +106,9 @@ geocoder.addr2coord('<?= $map_addr ?>', function(status, result) {
         infowindow.open(map, marker);
 
         map.setBounds(bounds);
-    } 
+    }else{
+		print_r('111');
+	}
 	
 });
 
