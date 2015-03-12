@@ -20,7 +20,7 @@
             <li class="input_txt phone">
               <div class="inner clearfix">
                 <div class="dropdown">
-                  <select id="mb_phone1" name="mb_phone1"style="width:60px; height:31px;">
+                  <select id="mb_phone1" name="mb_phone1"style="width:65px; height:31px;">
                     <option>010</option>
                     <option>011</option>
                     <option>016</option>
@@ -75,7 +75,7 @@
             </li>
 			</div>
             <li class="btn">
-              <a href="#" onclick="m_show_map();"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
+              <a href="#" onclick="m_show_map();"><img src="img/popup/btn_store.png" width="100" alt=""/></a>
             </li>
           </ul>
         </div>
@@ -174,7 +174,6 @@
 <!--------------------------  참여완료 ALERT DIV ----------------------->
 
 
-  <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
 	<script type="text/javascript">
 
 	// quick menu

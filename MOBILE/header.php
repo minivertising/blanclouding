@@ -31,7 +31,7 @@
     <script type="text/javascript" src="../lib/Magnific-Popup/jquery.magnific-popup.js"></script>
     <script type="text/javascript" src="../lib/DropKick/dropkick.js"></script>
     <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
+    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=be9027b0d0b10e92265c61865004559b&libraries=services"></script>
     <style>
 	html,body { height: 100%; margin: 0; padding: 0; }
     </style>

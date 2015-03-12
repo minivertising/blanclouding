@@ -44,7 +44,7 @@
         $("#map_div").hide();
       }
 	
-		var millenium = new Date("March 11, 2015 22:00:00") //이곳을 수정하면 됩니다
+		var millenium = new Date("March 13, 2015 22:00:00") //이곳을 수정하면 됩니다
 
 		function CalcRemaining(theForm)
 		{
@@ -53,6 +53,7 @@
 		var secs = difference % 60
 		var secslen = String(secs).length;
 		if (secslen < 2)
+	
 			secs = "0" + secs;
 			difference = parseInt(difference / 60)
 		var minutes  = difference % 60
@@ -134,13 +135,8 @@
             <ul class="clearfix">
                 <li class="txt_label">내가 선택한 매장 |</li>
                 <li class="txt_detail"><?=$user_info['shop_name']?></li>
-                <li class="btn_map"><a href="#" onclick="show_map()"><img src="img/btn_map.png" width="55" alt=""/></a></li>
-                <div id="map_div" style="position:absolute;background:black;width:1000px;height:500px;top:20%;left:30%;display:none">
-                    <a href="#" onclick="close_map()">닫기</a>
-                    <div id="map_area" style="width:100%;height:90%;margin-top:5%">
-                    </div>
-                </div>
-                </ul>
+                <li class="btn_map"><a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php" target="_blank"><img src="img/btn_map.png" width="55" alt=""/></a></li>
+              </ul>
         </div>
       </div><!--inner-->
     <div><!--block_cloud_bg-->
@@ -170,4 +166,3 @@
     </div>
   </body>
 </html>
-<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
