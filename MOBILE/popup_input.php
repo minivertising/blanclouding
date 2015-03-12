@@ -15,33 +15,13 @@
 <?
 	}
 ?>
-
-<style>
-
-.dropdown select {
-
-     border: 0 !important;  /*Removes border*/
-      -webkit-appearance: none;  /*Removes default chrome and safari style*/
-      -moz-appearance: none; /* Removes Default Firefox style*/
-      background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  /*Adds background-image*/
-      background-position: 25px 5px;   /*Position of the background-image*/
-      width: 45px; /*Width of select dropdown to give space for arrow image*/
-      text-indent: 0.01px; /* Removes default arrow from firefox*/
-      text-overflow: '';  /*Removes default arrow from firefox*/
-	  background-color:#d4e5ee;
-	  color:#000000;
-     -webkit-border-radius: 0;
-      /*My custom style for fonts*/*/
-}
-</style>
-
     </div>
     <div class="content" style="background:white;">
       <div class="inner">
         <div class="title">
           <img src="img/popup/title_input.png" width="192" alt=""/>
         </div>
-        <div class="input_block ip">
+        <div class="input_block">
           <ul class="clearfix">
             <li class="t_name"><img src="img/popup/txt_label_name.png" width="32" alt=""/></li>
             <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
@@ -50,8 +30,8 @@
             <li class="t_name"><img src="img/popup/txt_label_phone.png" width="48" alt=""/></li>
             <li class="input_txt phone">
               <div class="inner clearfix">
-                <div class="dropdown">
-                  <select id="mb_phone1" name="mb_phone1"style="background-image: url(http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png); background-position:45px 15px; background-size:10px;">
+                <div>
+                  <select id="mb_phone1" name="mb_phone1">
                     <option>010</option>
                     <option>011</option>
                     <option>016</option>
@@ -66,15 +46,13 @@
             </li>
           </ul>
         </div>
-        <div class="input_block" class="dropdown">
+        <div class="input_block">
           <ul class="clearfix">
             <li class="t_name"><img src="img/popup/txt_label_store.png" width="63" alt=""/></li>
             <li class="input_txt address">
               <div class="inner clearfix">
-                <div class="dropdown">
-                  <select name="addr1" id="addr1" onchange="addr_change(this.value)"style=" border: 0 !important; -webkit-appearance: none; -moz-appearance: none;
-					  background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;   text-indent: 0.01px; 
-					  text-overflow: ''; background-color:#d4e5ee; color:#000000; -webkit-border-radius: 0;background-position: 85px 15px;background-size:10px;>
+                <div>
+                  <select name="addr1" id="addr1" onchange="addr_change(this.value)">
                     <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
@@ -89,11 +67,9 @@
 	}
 ?>
                   </select>
-                </div><div>&nbsp&nbsp&nbsp<div>
-                <div class="dropdown1" id="sel_addr2">
-                  <select name="addr2" id="addr2" onchange="shop_change(this.value)"style=" border: 0 !important; -webkit-appearance: none; -moz-appearance: none;
-					 background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  width:100% text-indent: 0.01px; 
-				     text-overflow: ''; background-color:#d4e5ee; color:#000000; -webkit-border-radius: 0;background-position: 85px 15px; background-size:10px;">
+                </div>
+                <div id="sel_addr2">
+                  <select name="addr2" id="addr2" onchange="shop_change(this.value)">
                     <option value="">선택하세요</option>
                   </select>
                 </div>
@@ -102,11 +78,9 @@
           </ul>
           <ul class="clearfix" style="padding-top:7px;">
             <li class="t_name"></li>
-			<div class="dropdown1">
+			<div>
             <li class="input_txt store" id="sel_shop" >
-              <select name="shop" id="shop"style=" border: 0 !important; -webkit-appearance: none; -moz-appearance: none;
-				 background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;   text-indent: 0.01px; 
-			     text-overflow: ''; background-color:#d4e5ee; color:#000000; -webkit-border-radius: 0;background-position: 85px 15px; background-size:10px;">
+              <select name="shop" id="shop">
                 <option value="">선택하세요</option>
               </select>
             </li>
