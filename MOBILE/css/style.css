@@ -303,8 +303,9 @@ body {
 
 /*popup*/
 .wrap_page.popup{
-	width:100%;
-	background: url(../img/popup/bg_popup.png) no-repeat top center;
+	width:95%;
+	margin:0 auto; 
+	background:#fff url(../img/popup/bg_popup.png) no-repeat top center;
 	background-size:contain;
 }
 .wrap_page.popup .block_close{
