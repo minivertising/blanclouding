@@ -352,6 +352,10 @@ body {
 	width:100%;
 	font-size:13px;
 }
+
+.wrap_page.popup .content .input_block ul li select{
+	height:31px;
+}
 .wrap_page.popup .content .input_block.ip ul li input{
     -webkit-appearance: none;
     -webkit-border-radius:0; 
