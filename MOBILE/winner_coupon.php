@@ -17,7 +17,7 @@
   <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0,aximum-scale=3.0"/>
-	  <title>Blan Clouding</title>
+	  <title>THEFACESHOP</title>
 	  <link rel="stylesheet" type="text/css" href="css/style.css"/>
 	  <link type="text/javascript" href="js/default.js"/>
   </head>
