@@ -33,7 +33,7 @@
             <li class="input_txt phone">
               <div class="inner clearfix">
                 <div>
-                  <select id="mb_phone1" name="mb_phone1" class="dropdown">
+                  <select id="mb_phone1" name="mb_phone1">
                     <option>010</option>
                     <option>011</option>
                     <option>016</option>
@@ -48,7 +48,7 @@
             </li>
           </ul>
         </div>
-        <div class="input_block">
+        <div class="input_block ip">
           <ul class="clearfix">
             <li class="t_name"><img src="img/popup/txt_label_store.png" width="63" alt=""/></li>
             <li class="input_txt address">
