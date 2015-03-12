@@ -15,7 +15,7 @@
 	if ($iPhoneYN == "Y")
 	{
 ?>
-      <a href="#" class="btn_close" onclick="javascript:history.back()"><img src="img/popup/btn_close.png" width="29"/></a>
+      <a href="#" class="btn_close" onclick="javascript:history.go(-1); return false;"><img src="img/popup/btn_close.png" width="29"/></a>
 <?
 	}else{
 ?>

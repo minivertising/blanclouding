@@ -536,12 +536,12 @@ function m_show_map(flag)
 	if (shop_idx)
 	{
 		if (flag == "Y")
-			location.href("popup_map.php?exec=select_address&shop_idx=" + shop_idx+ "","win","width:100%;height:100%");
+			location.href = "popup_map.php?exec=select_address&shop_idx=" + shop_idx+ "","win","width:100%;height:100%";
 		else
 			window.open("popup_map.php?exec=select_address&shop_idx=" + shop_idx+ "","win","width:100%;height:100%");
 	}else{
 		if (flag == "Y")
-			location.href("popup_map.php?exec=sigungu&si=" + si+ "&gun=" + gun + "","win","width:100%;height:100%");
+			location.href = "popup_map.php?exec=sigungu&si=" + si+ "&gun=" + gun + "","win","width:100%;height:100%";
 		else
 			window.open("popup_map.php?exec=sigungu&si=" + si+ "&gun=" + gun + "","win","width:100%;height:100%");
 	}
