@@ -137,7 +137,7 @@ body {
 	width:100%;
 	background:url(../img/bg_main.png) top center ;
 	background-size: cover;
-	padding:5% 0 0;
+	margin:5% 0 0;
 }
 
 .contents_wrap .sns_area{
