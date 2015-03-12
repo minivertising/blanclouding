@@ -81,7 +81,7 @@
           <ul class="clearfix">
             <li  class="in_check"><input type="checkbox" id="use_agree"></li>
             <li class="in_check_label">
-				<img src="img/popup/btn_detail_01.png" alt=""/>
+				<img src="img/popup/btn_detail_01.png" alt="" onclick="use_chk()"/>
             </li>
             <li class="in_check_btn">
                 <a href="popup_use_agree.php" target="_blank" >
@@ -92,14 +92,14 @@
           <ul class="clearfix">
             <li  class="in_check"><input type="checkbox" id="privacy_agree"></li>
             <li class="in_check_label">
-				<img src="img/popup/btn_detail_02.png" alt=""/>
+				<img src="img/popup/btn_detail_02.png" alt="" onclick="privacy_chk()"/>
             </li>
             <li class="in_check_btn"><a href="popup_privacy_agree.php" target="_blank" ><img src="img/popup/btn_detail.png" alt=""/></a></li>
           </ul>
           <ul class="clearfix">
             <li class="in_check"><input type="checkbox" id="adver_agree"></li>
             <li class="in_check_label">
-				<img src="img/popup/btn_detail_03.png" alt=""/>
+				<img src="img/popup/btn_detail_03.png" alt="" onclick="adver_chk()"/>
             </li>
             <li class="in_check_btn"><a href="popup_adver_agree.php" target="_blank" ><img src="img/popup/btn_detail.png" alt=""/></a>
             </li>
@@ -186,6 +186,30 @@
 
   <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
 	<script type="text/javascript">
+	function use_chk()
+	{
+		if ($('#use_agree').is(":checked") == false){
+			$('#use_agree').attr("checked", true);
+		}else{
+			$('#use_agree').attr("checked", false);
+		}
+	}
+	
+	function adver_chk()
+	{
+		if ($('#adver_agree').is(":checked") == false)
+			$('#adver_agree').attr("checked", true);
+		else
+			$('#adver_agree').attr("checked", false);
+	}
+
+	function privacy_chk()
+	{
+		if ($('#privacy_agree').is(":checked") == false)
+			$('#privacy_agree').attr("checked", true);
+		else
+			$('#privacy_agree').attr("checked", false);
+	}
 
 	// quick menu
 	var quickTop;
