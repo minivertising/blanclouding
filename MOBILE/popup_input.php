@@ -15,6 +15,26 @@
 <?
 	}
 ?>
+
+<style>
+
+.dropdown select {
+
+     border: 0 !important;  /*Removes border*/
+      -webkit-appearance: none;  /*Removes default chrome and safari style*/
+      -moz-appearance: none; /* Removes Default Firefox style*/
+      background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  /*Adds background-image*/
+      background-position: 25px 5px;   /*Position of the background-image*/
+      width: 45px; /*Width of select dropdown to give space for arrow image*/
+      text-indent: 0.01px; /* Removes default arrow from firefox*/
+      text-overflow: '';  /*Removes default arrow from firefox*/
+	  background-color:#d4e5ee;
+	  color:#000000;
+     -webkit-border-radius: 0;
+      /*My custom style for fonts*/*/
+}
+</style>
+
     </div>
     <div class="content" style="background:white;">
       <div class="inner">
@@ -31,7 +51,7 @@
             <li class="input_txt phone">
               <div class="inner clearfix">
                 <div class="dropdown">
-                  <select id="mb_phone1" name="mb_phone1"style="width:60px; height:31px;">
+                  <select id="mb_phone1" name="mb_phone1"style="background-image: url(http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png); background-position:40px 8px;">
                     <option>010</option>
                     <option>011</option>
                     <option>016</option>
@@ -51,8 +71,10 @@
             <li class="t_name"><img src="img/popup/txt_label_store.png" width="63" alt=""/></li>
             <li class="input_txt address">
               <div class="inner clearfix">
-                <div class="dropdown1">
-                  <select name="addr1" id="addr1" onchange="addr_change(this.value)"style="width:100px; height:31px;">
+                <div class="dropdown">
+                  <select name="addr1" id="addr1" onchange="addr_change(this.value)"style=" border: 0 !important; -webkit-appearance: none; -moz-appearance: none;
+					  background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  width: 100px; text-indent: 0.01px; 
+					  text-overflow: ''; background-color:#d4e5ee; color:#000000; -webkit-border-radius: 0;background-position: 75px 8px;">
                     <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
@@ -69,7 +91,9 @@
                   </select>
                 </div><div>&nbsp&nbsp&nbsp<div>
                 <div class="dropdown1" id="sel_addr2">
-                  <select name="addr2" id="addr2" onchange="shop_change(this.value)"style="width:100px; height:31px;">
+                  <select name="addr2" id="addr2" onchange="shop_change(this.value)"style=" border: 0 !important; -webkit-appearance: none; -moz-appearance: none;
+					 background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  width: 100px; text-indent: 0.01px; 
+				     text-overflow: ''; background-color:#d4e5ee; color:#000000; -webkit-border-radius: 0;background-position: 75px 8px;">
                     <option value="">선택하세요</option>
                   </select>
                 </div>
@@ -80,12 +104,15 @@
             <li class="t_name"></li>
 			<div class="dropdown1">
             <li class="input_txt store" id="sel_shop" >
-              <select name="shop" id="shop"style="width:100px; height:31px;">
+              <select name="shop" id="shop"style=" border: 0 !important; -webkit-appearance: none; -moz-appearance: none;
+				 background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  width: 100px; text-indent: 0.01px; 
+			     text-overflow: ''; background-color:#d4e5ee; color:#000000; -webkit-border-radius: 0;background-position: 75px 8px;">
                 <option value="">선택하세요</option>
               </select>
             </li>
 			</div>
             <li class="btn">
+
               <a href="#" onclick="m_show_map('<?=$iPhoneYN?>');"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
             </li>
           </ul>
@@ -230,7 +257,6 @@
 <!--------------------------  참여완료 ALERT DIV ----------------------->
 
 
-  <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
 	<script type="text/javascript">
 	$(document).ready(function() {
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
@@ -276,41 +302,4 @@
 
 	});
 	</script>
-<style>
-	.dropdown p {
-	display: inline-block;
-	font-weight: bold;
-}
 
-.dropdown select {
-
-      border: 0 !important;  /*Removes border*/
-      -webkit-appearance: none;  /*Removes default chrome and safari style*/
-      -moz-appearance: none; /* Removes Default Firefox style*/
-      background: url('http://jonathanphz.tk/dropdown_arrow.png') no-repeat;  /*Adds background-image*/
-      background-position: 40px;   /*Position of the background-image*/
-      width: 40px; /*Width of select dropdown to give space for arrow image*/
-      text-indent: 0.01px; /* Removes default arrow from firefox*/
-      text-overflow: "";  /*Removes default arrow from firefox*/
-	  background-color:#d4e5ee;;
-	  -webkit-border-radius: 0; 
-      color: #000000;/*My custom style for fonts*/
-}
-.dropdownp{
-display:inline-block;
-font-weight:bold;
-}
-.dropdown1 select{
-  border: 0 !important;  /*Removes border*/
-      -webkit-appearance: none;  /*Removes default chrome and safari style*/
-      -moz-appearance: none; /* Removes Default Firefox style*/
-      background: url('http://jonathanphz.tk/dropdown_arrow.png') no-repeat;  /*Adds background-image*/
-      background-position: 80px;   /*Position of the background-image*/
-      width: 40px; /*Width of select dropdown to give space for arrow image*/
-      text-indent: 0.01px; /* Removes default arrow from firefox*/
-      text-overflow: "";  /*Removes default arrow from firefox*/
-	  background-color:#d4e5ee;;
-	  -webkit-border-radius: 0; 
-      color: #000000;/*My custom style for fonts*/
-}
-</style>
