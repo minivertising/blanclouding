@@ -43,7 +43,7 @@
 
     <!--sns_area-->
       <div class="sns_area clearfix">
-        <a href="#" onclick="sns_share('facebook');return false;">
+        <a href="#" onclick="fb_share();return false;">
             <img src="img/btn_fb.png" alt=""/>
         </a>
         <span>

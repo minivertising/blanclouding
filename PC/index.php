@@ -44,8 +44,8 @@
 <!--sns_area-->
       <div class="sns_area">
         <a href="#"><img src="images/btn_pause.png" alt="" id="video_control" /></a>
-        <a href="#" onclick="sns_share('facebook');return false;"><img src="images/btn_fb.png" alt=""/></a>
-        <a href="#" onclick="sns_share('twitter');return false;"><img src="images/btn_tw.png" alt=""/></a>
+        <a href="#" onclick="sns_share('facebook');return false;"><img src="images/btn_fb.png" alt="" style="margin-bottom:8px"/></a>
+        <a href="#" onclick="sns_share('twitter');return false;"><img src="images/btn_tw.png" alt="" style="margin-bottom:8px"/></a>
       </div>
 <!--sns_area-->
 <!--scroll_navi_area-->
@@ -522,44 +522,9 @@
 
 		var magnificPopup = $.magnificPopup.instance;
 
-		// 셀렉트박스 스타일
-		/*
-		$( "#mb_phone1" ).dropkick({
-			mobile: true
-		});
-
-		$( "#addr1" ).dropkick({
-			mobile: true
-		});
-		
-		$( "#addr2" ).dropkick({
-			mobile: true
-		});
-
-
-		$( "#shop" ).dropkick({
-			mobile: true
-		});
-		
-		$("#dk0-combobox").css("width","79px");
-		$("#dk1-addr1").css("width","120px");
-		$("#dk1-addr1").css("font-size","12px");
-		$(".dk-option").css("float","none");
-		$(".dk-option").css("width","120px");
-		$(".dk-option").css("height","34px");
-		$(".dk-select").css("width","120px");
-		$(".dk-select").css("height","34px");
-		$("#dk1-combobox").css("height","34px");
-		$("#dk2-addr2").css("width","120px");
-		$("#dk2-addr2").css("font-size","14px");
-		$("#dk2-combobox").css("height","34px");
-		$("#dk3-shop").css("width","120px");
-		$("#dk3-shop").css("font-size","14px");
-		$("#dk3-combobox").css("height","34px");
-		*/
-		setInterval(function(){
-			$('.scroll_navi_area').animate({bottom:100},500).animate({bottom:110},500);
-		},1000);
+		//setInterval(function(){
+		//	$('.scroll_navi_area').animate({bottom:100},500).animate({bottom:110},500);
+		//},1000);
 
 	});
 	</script>

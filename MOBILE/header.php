@@ -2,20 +2,17 @@
 	include_once "../config.php";
 ?>
 <!doctype html>
-<html prefix="og: http://ogp.me/ns#">
+<html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-    <meta property="og:title" content="더페이스샵-블랑클라우닝" />
+    <meta property="og:title" content="더페이스샵 블란클라우딩" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://www.thefaceshopclouding.co.kr/?media=fb" />
+    <meta property="og:url" content="http://www.thefaceshopclouding.co.kr/MOBILE/index.php" />
     <meta property="og:image" content="http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg" />
-    <meta property="og:description"
-       content="1. 서장훈, 촉촉하게 수지랑! 
-               서장훈 구름탄 기분이랄까~촉촉한 선물 
-               2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물" />
+    <meta property="og:description" content="1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물" />
     <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico" />
     <title>THEFACESHOP</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
@@ -31,7 +28,7 @@
     <script type="text/javascript" src="../lib/Magnific-Popup/jquery.magnific-popup.js"></script>
     <script type="text/javascript" src="../lib/DropKick/dropkick.js"></script>
     <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=be9027b0d0b10e92265c61865004559b&libraries=services"></script>
+    <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
     <style>
 	html,body { height: 100%; margin: 0; padding: 0; }
     </style>

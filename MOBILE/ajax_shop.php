@@ -13,9 +13,7 @@
 	if ($shop_cnt	> 0)
 	{
 ?>
-              <select name="shop" id="shop" style=" border: 0 !important; -webkit-appearance: none; -moz-appearance: none;
-					 background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  text-indent: 0.01px; 
-				     text-overflow: ''; background-color:#d4e5ee; color:#000000; -webkit-border-radius: 0;background-position: 85px 15px; background-size:10px;"">
+              <select name="shop" id="shop">
                 <option value="">선택하세요</option>
 <?
 
