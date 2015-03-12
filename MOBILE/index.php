@@ -159,14 +159,15 @@
 			}
 		});
 
-		var move_gift = $(".area1").height() + $(".sns_area").height();
+		var move_gift = ($(".block_top").height() +$(".navi_btn_block").height() +$("#ytplayer").height() + $(".sns_area").height()) * 1.1;
+		var move_product = move_gift + $(".bg_cloud").height() * 1.1;
 		$( '.view_event' ).click( function() {
-			$( 'html, body' ).animate({ scrollTop: move_gift},1500);
+			$( 'html, body' ).animate({ scrollTop: move_gift},500);
 			return false;
 		} );
 
 		$( '.view_product' ).click( function() {
-			$( 'html, body' ).animate({ scrollTop: $("#ytplayer").height() + $(".area2_bg").height()},1500);
+			$( 'html, body' ).animate({ scrollTop: move_product},500);
 			return false;
 		} );
 
