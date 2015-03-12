@@ -526,7 +526,7 @@ function show_map()
 	}
 }
 
-function m_show_map()
+function m_show_map(flag)
 {
 	var si				= $("#addr1 option:selected").text();
 	var si_val			= $("#addr1").val();
@@ -535,9 +535,15 @@ function m_show_map()
 	var shop_idx		= $("#shop").val();
 	if (shop_idx)
 	{
-		window.open("popup_map.php?exec=select_address&shop_idx=" + shop_idx+ "","win","width:100%;height:100%");
+		if (flag == "Y")
+			location.href("popup_map.php?exec=select_address&shop_idx=" + shop_idx+ "","win","width:100%;height:100%");
+		else
+			window.open("popup_map.php?exec=select_address&shop_idx=" + shop_idx+ "","win","width:100%;height:100%");
 	}else{
-		window.open("popup_map.php?exec=sigungu&si=" + si+ "&gun=" + gun + "","win","width:100%;height:100%");
+		if (flag == "Y")
+			location.href("popup_map.php?exec=sigungu&si=" + si+ "&gun=" + gun + "","win","width:100%;height:100%");
+		else
+			window.open("popup_map.php?exec=sigungu&si=" + si+ "&gun=" + gun + "","win","width:100%;height:100%");
 	}
 }
 

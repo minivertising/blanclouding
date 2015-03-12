@@ -84,7 +84,7 @@
               </select>
             </li>
             <li class="btn">
-              <a href="#" onclick="m_show_map();"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
+              <a href="#" onclick="m_show_map('<?=$iPhoneYN?>');"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
             </li>
           </ul>
         </div>
@@ -95,7 +95,18 @@
 				<label for="use_agree"><img src="img/popup/btn_detail_01.png" alt=""/></label>
             </li>
             <li class="in_check_btn">
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+                <a href="popup_use_agree.php" >
+<?
+	}else{
+?>
                 <a href="popup_use_agree.php" target="_blank" >
+<?
+	}
+?>
                 	<img src="img/popup/btn_detail.png" alt=""/>
                 </a>
             </li>
@@ -105,14 +116,36 @@
             <li class="in_check_label">
 				<label for="privacy_agree"><img src="img/popup/btn_detail_02.png" alt=""/></label>
             </li>
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+            <li class="in_check_btn"><a href="popup_privacy_agree.php" ><img src="img/popup/btn_detail.png" alt=""/></a></li>
+<?
+	}else{
+?>
             <li class="in_check_btn"><a href="popup_privacy_agree.php" target="_blank" ><img src="img/popup/btn_detail.png" alt=""/></a></li>
+<?
+	}
+?>
           </ul>
           <ul class="clearfix">
             <li class="in_check"><input type="checkbox" id="adver_agree"></li>
             <li class="in_check_label">
 				<label for="adver_agree"><img src="img/popup/btn_detail_03.png" alt=""/></label>
             </li>
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+            <li class="in_check_btn"><a href="popup_adver_agree.php" ><img src="img/popup/btn_detail.png" alt=""/></a>
+<?
+	}else{
+?>
             <li class="in_check_btn"><a href="popup_adver_agree.php" target="_blank" ><img src="img/popup/btn_detail.png" alt=""/></a>
+<?
+	}
+?>
             </li>
           </ul>
         </div>

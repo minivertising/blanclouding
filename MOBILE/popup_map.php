@@ -11,7 +11,18 @@
 <input type="hidden" name="shop_idx" id="shop_idx" value="<?=$shop_idx;?>">
   <div id="map_div"  class="wrap_page popup">
     <div class="block_close clearfix">
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+      <a href="#" class="btn_close" onclick="javascript:history.back()"><img src="img/popup/btn_close.png" width="29"/></a>
+<?
+	}else{
+?>
       <a href="#" class="btn_close" onclick="javascript:window.close()"><img src="img/popup/btn_close.png" width="29"/></a>
+<?
+	}
+?>
     </div>
     <div class="content" style="z-index:800000">
       <div id="map_area" class="map_area" style="height:440px;border:1px solid skyblue"></div>
