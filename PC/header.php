@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-    <meta property="og:title" content="더페이스샵-블랑클라우닝" />
+    <meta property="og:title" content="더페이스샵 블란클라우딩" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.thefaceshopclouding.co.kr/PC/index.php" />
     <meta property="og:image" content="http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg" />
