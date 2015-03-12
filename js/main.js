@@ -23,8 +23,15 @@ function shop_change(idx)
 		},
 		url: "./ajax_shop.php",
 		success: function(response){
-			$("#sel_shop").html(response);
-			//$("#shop").html(response);
+			if (response == "N")
+			{
+				alert("선택하신 지역에는 행사매장이 없습니다.");
+				$("#addr1").val("");
+				$("#addr2").val("");
+			}else{
+				$("#sel_shop").html(response);
+				//$("#shop").html(response);
+			}
 		}
 	});
 }
@@ -35,7 +42,8 @@ function ins_data()
 		items: {
 			src: '#input_alert'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 
@@ -45,7 +53,8 @@ function shop_data()
 		items: {
 			src: '#shop_alert'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 
@@ -55,7 +64,8 @@ function agree_data()
 		items: {
 			src: '#agree_alert'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 
@@ -65,7 +75,8 @@ function ok_data()
 		items: {
 			src: '#ok_alert'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 
@@ -75,7 +86,8 @@ function map_data()
 		items: {
 			src: '#map_div'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 
@@ -85,7 +97,8 @@ function inputfrm_data()
 		items: {
 			src: '#input_div'
 		},
-		type: 'inline'
+		type: 'inline',
+		showCloseBtn : false
 	}, 0);
 }
 
@@ -434,9 +447,9 @@ function sns_share(media)
 		  container: '#kakao-link-btn',
 		  label: "1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물",
 		  image: {
-			src: 'http://dn.api1.kage.kakao.co.kr/14/dn/btqaWmFftyx/tBbQPH764Maw2R6IBhXd6K/o.jpg',
-			width: '300',
-			height: '200'
+			src: 'http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg',
+			width: '1200',
+			height: '630'
 		  },
 		  webButton: {
 			text: '더페이스샵',
@@ -481,7 +494,6 @@ function show_map()
 					},
 					url: "../map_ajax.php",
 					success: function(response){
-							alert(response);
 						$("#map_div").show();
 						$("#map_area").html(response);
 					}
@@ -514,18 +526,29 @@ function show_map()
 	}
 }
 
-function m_show_map()
+function m_show_map(flag)
 {
 	var si				= $("#addr1 option:selected").text();
 	var si_val			= $("#addr1").val();
 	var gun			= $("#addr2 option:selected").text();
 	var gun_val		= $("#addr2").val();
 	var shop_idx		= $("#shop").val();
+	if (si_val == "")
+	{
+		alert("지역이나 매장을 선택하셔야만 지도를 보실 수 있습니다.");
+		return false;
+	}
 	if (shop_idx)
 	{
-		window.open("popup_map.php?exec=select_address&shop_idx=" + shop_idx+ "","win","width:100%;height:100%");
+		if (flag == "Y")
+			location.href = "popup_map.php?exec=select_address&shop_idx=" + shop_idx+ "","win","width:100%;height:100%";
+		else
+			window.open("popup_map.php?exec=select_address&shop_idx=" + shop_idx+ "","win","width:100%;height:100%");
 	}else{
-		window.open("popup_map.php?exec=sigungu&si=" + si+ "&gun=" + gun + "","win","width:100%;height:100%");
+		if (flag == "Y")
+			location.href = "popup_map.php?exec=sigungu&si=" + si+ "&gun=" + gun + "","win","width:100%;height:100%";
+		else
+			window.open("popup_map.php?exec=sigungu&si=" + si+ "&gun=" + gun + "","win","width:100%;height:100%");
 	}
 }
 

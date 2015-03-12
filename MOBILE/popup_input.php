@@ -3,14 +3,45 @@
 ?>
   <div id="input_div" class="wrap_page popup">
     <div class="block_close clearfix">
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+      <a href="index.php" class="btn_close"><img src="img/popup/btn_close.png" width="29"/></a>
+<?
+	}else{
+?>
       <a href="#" class="btn_close" onclick="javascript:window.close()"><img src="img/popup/btn_close.png" width="29"/></a>
+<?
+	}
+?>
+
+<style>
+
+.dropdown select {
+
+     border: 0 !important;  /*Removes border*/
+      -webkit-appearance: none;  /*Removes default chrome and safari style*/
+      -moz-appearance: none; /* Removes Default Firefox style*/
+      background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  /*Adds background-image*/
+      background-position: 25px 5px;   /*Position of the background-image*/
+      width: 45px; /*Width of select dropdown to give space for arrow image*/
+      text-indent: 0.01px; /* Removes default arrow from firefox*/
+      text-overflow: '';  /*Removes default arrow from firefox*/
+	  background-color:#d4e5ee;
+	  color:#000000;
+     -webkit-border-radius: 0;
+      /*My custom style for fonts*/*/
+}
+</style>
+
     </div>
     <div class="content" style="background:white;">
       <div class="inner">
         <div class="title">
           <img src="img/popup/title_input.png" width="192" alt=""/>
         </div>
-        <div class="input_block">
+        <div class="input_block ip">
           <ul class="clearfix">
             <li class="t_name"><img src="img/popup/txt_label_name.png" width="32" alt=""/></li>
             <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
@@ -20,7 +51,7 @@
             <li class="input_txt phone">
               <div class="inner clearfix">
                 <div class="dropdown">
-                  <select id="mb_phone1" name="mb_phone1"style="width:65px; height:31px;">
+                  <select id="mb_phone1" name="mb_phone1"style="background-image: url(http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png); background-position:40px 8px;">
                     <option>010</option>
                     <option>011</option>
                     <option>016</option>
@@ -40,8 +71,10 @@
             <li class="t_name"><img src="img/popup/txt_label_store.png" width="63" alt=""/></li>
             <li class="input_txt address">
               <div class="inner clearfix">
-                <div class="dropdown1">
-                  <select name="addr1" id="addr1" onchange="addr_change(this.value)"style="width:100px; height:31px;">
+                <div class="dropdown">
+                  <select name="addr1" id="addr1" onchange="addr_change(this.value)"style=" border: 0 !important; -webkit-appearance: none; -moz-appearance: none;
+					  background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  width: 100px; text-indent: 0.01px; 
+					  text-overflow: ''; background-color:#d4e5ee; color:#000000; -webkit-border-radius: 0;background-position: 75px 8px;">
                     <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
@@ -58,45 +91,95 @@
                   </select>
                 </div><div>&nbsp&nbsp&nbsp<div>
                 <div class="dropdown1" id="sel_addr2">
-                  <select name="addr2" id="addr2" onchange="shop_change(this.value)"style="width:100px; height:31px;">
+                  <select name="addr2" id="addr2" onchange="shop_change(this.value)"style=" border: 0 !important; -webkit-appearance: none; -moz-appearance: none;
+					 background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  width: 100px; text-indent: 0.01px; 
+				     text-overflow: ''; background-color:#d4e5ee; color:#000000; -webkit-border-radius: 0;background-position: 75px 8px;">
                     <option value="">선택하세요</option>
                   </select>
                 </div>
               </div>
             </li>
           </ul>
-          <ul class="clearfix">
+          <ul class="clearfix" style="padding-top:7px;">
             <li class="t_name"></li>
 			<div class="dropdown1">
             <li class="input_txt store" id="sel_shop" >
-              <select name="shop" id="shop"style="width:100px; height:31px;">
+              <select name="shop" id="shop"style=" border: 0 !important; -webkit-appearance: none; -moz-appearance: none;
+				 background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  width: 100px; text-indent: 0.01px; 
+			     text-overflow: ''; background-color:#d4e5ee; color:#000000; -webkit-border-radius: 0;background-position: 75px 8px;">
                 <option value="">선택하세요</option>
               </select>
             </li>
 			</div>
             <li class="btn">
-              <a href="#" onclick="m_show_map();"><img src="img/popup/btn_store.png" width="100" alt=""/></a>
+
+              <a href="#" onclick="m_show_map('<?=$iPhoneYN?>');"><img src="img/popup/btn_store.png" width="98" alt=""/></a>
             </li>
           </ul>
         </div>
         <div class="input_block input_check">
           <ul class="clearfix">
             <li  class="in_check"><input type="checkbox" id="use_agree"></li>
-            <li class="in_check_label"><a href="popup_use_agree.php" target="_blank" >
-			<img src="img/popup/btn_detail_01.png" width="164" alt=""/></a></li>
+            <li class="in_check_label">
+				<label for="use_agree"><img src="img/popup/btn_detail_01.png" alt=""/></label>
+            </li>
+            <li class="in_check_btn">
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+                <a href="popup_use_agree.php" >
+<?
+	}else{
+?>
+                <a href="popup_use_agree.php" target="_blank" >
+<?
+	}
+?>
+                	<img src="img/popup/btn_detail.png" alt=""/>
+                </a>
+            </li>
           </ul>
           <ul class="clearfix">
             <li  class="in_check"><input type="checkbox" id="privacy_agree"></li>
-            <li class="in_check_label"><a href="popup_privacy_agree.php" target="_blank" ><img src="img/popup/btn_detail_02.png" width="164" alt=""/></a></li>
+            <li class="in_check_label">
+				<label for="privacy_agree"><img src="img/popup/btn_detail_02.png" alt=""/></label>
+            </li>
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+            <li class="in_check_btn"><a href="popup_privacy_agree.php" ><img src="img/popup/btn_detail.png" alt=""/></a></li>
+<?
+	}else{
+?>
+            <li class="in_check_btn"><a href="popup_privacy_agree.php" target="_blank" ><img src="img/popup/btn_detail.png" alt=""/></a></li>
+<?
+	}
+?>
           </ul>
           <ul class="clearfix">
             <li class="in_check"><input type="checkbox" id="adver_agree"></li>
-            <li class="in_check_label"><a href="popup_adver_agree.php" target="_blank" ><img src="img/popup/btn_detail_03.png" width="164" alt=""/></a>
+            <li class="in_check_label">
+				<label for="adver_agree"><img src="img/popup/btn_detail_03.png" alt=""/></label>
+            </li>
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+            <li class="in_check_btn"><a href="popup_adver_agree.php" ><img src="img/popup/btn_detail.png" alt=""/></a>
+<?
+	}else{
+?>
+            <li class="in_check_btn"><a href="popup_adver_agree.php" target="_blank" ><img src="img/popup/btn_detail.png" alt=""/></a>
+<?
+	}
+?>
             </li>
           </ul>
         </div>
-        <div class="btn_block">
-          <a href="#" onclick="javascript:chk_input();return false;"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
+        <div class="btn_block" style="background:white;">
+          <a href="javascript:chk_input();" class="popup-with-zoom-anim" onclick="javascript:chk_input();"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
@@ -111,7 +194,7 @@
         <div class="title" style="text-align:center">
           <img src="img/popup/title_info.png" width="160" alt=""/>
         </div>
-        <div class="btn_block">
+        <div class="btn_block" style="background:white;">
           <a href="#" onclick="	$.magnificPopup.close();"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
         </div>
       </div><!--inner-->
@@ -129,7 +212,7 @@
         <div class="title" style="text-align:center">
           <img src="img/popup/title_select_store.png" width="140" alt=""/>
         </div>
-        <div class="btn_block">
+        <div class="btn_block" style="background:white;">
           <a href="#" onclick="	$.magnificPopup.close();"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
         </div>
       </div><!--inner-->
@@ -147,7 +230,7 @@
         <div class="title" style="text-align:center">
           <img src="img/popup/title_agree.png" width="166" alt=""/>
         </div>
-        <div class="btn_block">
+        <div class="btn_block" style="background:white;">
           <a href="#" onclick="	$.magnificPopup.close();"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
         </div>
       </div><!--inner-->
@@ -165,7 +248,7 @@
         <div class="title" style="text-align:center">
           <img src="img/popup/title_thanks.png" width="220" alt=""/>
         </div>
-        <div class="btn_block">
+        <div class="btn_block" style="background:white;">
           <a href="#" onclick="$.magnificPopup.close();window.close();"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
         </div>
       </div><!--inner-->
@@ -175,62 +258,6 @@
 
 
 	<script type="text/javascript">
-
-	// quick menu
-	var quickTop;
-	$(window).scroll(function() {
-		quickTop = ($(window).height()-$('.quickmenu').height()) /2;
-		$('.quickmenu').stop().animate({top:$(window).scrollTop()+quickTop},400,'easeOutExpo');
-		
-	});
-
-    // 유튜브 반복 재생
-    var controllable_player,start, 
-    statechange = function(e){
-		if (e.data === 0)
-		{
-			$("#video_control").text('일시정지');
-			controllable_player.seekTo(0); controllable_player.playVideo();
-		}
-		else if (e.data === 1)
-		{
-			//controllable_player.pauseVideo();
-			$("#video_control").text('일시정지');
-		}
-		else if (e.data === 2)
-		{
-			//controllable_player.playVideo();
-			$("#video_control").text('재생');
-		}
-		else if (e.data === 3)
-		{
-			//alert('4444');
-		}
-    	//controllable_player.playVideo(); 
-    };
-    function onYouTubeIframeAPIReady() {
-		controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
-    }
-
-    if(window.opera){
-		addEventListener('load', onYouTubeIframeAPIReady, false);
-    }
-	setTimeout(function(){
-    	if (typeof(controllable_player) == 'undefined'){
-    		onYouTubeIframeAPIReady();
-    	}
-    }, 1000)
-
-
-	$(window).resize(function(){
-		var width = $(window).width();
-		//var height = $(window).height();
-
-		var youtube_height = (width / 16) * 9;
-		$("#ytplayer").width(width);
-		$("#ytplayer").height(youtube_height);
-	});
-
 	$(document).ready(function() {
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
 		// 체크박스 스타일 설정
@@ -275,39 +302,4 @@
 
 	});
 	</script>
-<style>
-	.dropdown p {
-	display: inline-block;
-	font-weight: bold;
-}
 
-.dropdown select {
-
-      border: 0 !important;  /*Removes border*/
-      -webkit-appearance: none;  /*Removes default chrome and safari style*/
-      -moz-appearance: none; /* Removes Default Firefox style*/
-      background: url('http://jonathanphz.tk/dropdown_arrow.png') no-repeat;  /*Adds background-image*/
-      background-position: 40px;   /*Position of the background-image*/
-      width: 40px; /*Width of select dropdown to give space for arrow image*/
-      text-indent: 0.01px; /* Removes default arrow from firefox*/
-      text-overflow: "";  /*Removes default arrow from firefox*/
-	  background-color:#d4e5ee;;
-	  -webkit-border-radius: 0; 
-      color: #000000;/*My custom style for fonts*/
-}
-
-.dropdown1 select{
-  border: 0 !important;  /*Removes border*/
-      -webkit-appearance: none;  /*Removes default chrome and safari style*/
-      -moz-appearance: none; /* Removes Default Firefox style*/
-      background: url('http://jonathanphz.tk/dropdown_arrow.png') no-repeat;  /*Adds background-image*/
-      background-position: 80px;   /*Position of the background-image*/
-      width: 40px; /*Width of select dropdown to give space for arrow image*/
-      text-indent: 0.01px; /* Removes default arrow from firefox*/
-      text-overflow: "";  /*Removes default arrow from firefox*/
-	  background-color:#d4e5ee;;
-	  -webkit-border-radius: 0; 
-      color: #000000;/*My custom style for fonts*/
-}
-
-</style>

@@ -3,7 +3,18 @@
 ?>
 <div class="wrap_page popup">
   <div class="block_close clearfix">
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+    <a href="#" class="btn_close" onclick="javascript:history.go(-1); return false;"><img src="img/popup/btn_close.png" width="29"/></a>
+<?
+	}else{
+?>
     <a href="#" class="btn_close" onclick="javascript:window.close()"><img src="img/popup/btn_close.png" width="29"/></a>
+<?
+	}
+?>
   </div>
   <div class="content">
     <div class="inner agree" align="left">

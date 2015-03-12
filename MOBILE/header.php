@@ -11,13 +11,13 @@
     <meta property="og:title" content="더페이스샵-블랑클라우닝" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.thefaceshopclouding.co.kr/?media=fb" />
-    <!-- <meta property="og:image" content="http://www.ohuimall.co.kr/images/can_img_1.jpg" /> -->
+    <meta property="og:image" content="http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg" />
     <meta property="og:description"
        content="1. 서장훈, 촉촉하게 수지랑! 
                서장훈 구름탄 기분이랄까~촉촉한 선물 
                2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물" />
     <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico" />
-    <title>Blan Clouding</title>
+    <title>THEFACESHOP</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
     <link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 

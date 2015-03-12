@@ -7,10 +7,10 @@
 <div class="block_top">
     <!--icon_area-->
         <div class="icon_area clearfix">
-          <a href="http://www.thefaceshopclouding.co.kr/MOBILE/index.php" class="cl_logo">
+          <a href="http://www.thefaceshopclouding.co.kr/MOBILE/index.php" class="cl_logo" target="_blank">
             <img src="img/logo_blan.png" alt=""/>
           </a>
-          <a href="http://www.thefaceshop.com/index.jsp" class="fb_logo">
+          <a href="http://www.thefaceshop.com/m/" class="fb_logo" target="_blank">
             <img src="img/logo_fs.png" alt=""/>
           </a>
         </div>
@@ -20,14 +20,15 @@
           <img src="img/main_title.png" alt=""/>
         </div>
 </div>    
-    <!-- <div class="navi_btn_block clearfix">
-          <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()">이벤트 참여</a>
-          <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()">선물안내</a>
-    </div> -->
+
+  <div class="navi_btn_block clearfix">
+        <a href="#" class="view_event"><img src="img/btn_gift.png" alt=""/></a>
+        <a href="#" class="view_product"><img src="img/btn_product.png" alt=""/></a>
+  </div>
 
 
     <!--area1-->
-      <div class="area1">
+      <div class="area1" style="margin-top:-3%;">
     <!--video_area-->
         <div class="video_area">
     <!--youtube_div-->
@@ -40,36 +41,45 @@
       </div>
     <!--area1-->
 
+    <!--sns_area-->
+      <div class="sns_area clearfix">
+        <a href="#" onclick="sns_share('facebook');return false;">
+            <img src="img/btn_fb.png" alt=""/>
+        </a>
+        <span>
+            <img src="img/bar.png" alt=""/>
+        </span>
+        <a  id="kakao-link-btn" href="#" onclick="sns_share('kakao');return false;">
+            <img src="img/btn_kt.png" alt=""/>
+        </a>
+        <span>
+            <img src="img/bar.png" alt=""/>
+        </span>
+        <a href="#" onclick="sns_share('twitter');return false;">
+            <img src="img/btn_tw.png" alt=""/>
+        </a>
+      </div>
+    <!--sns_area-->
+
+
 
     <div class="bg_cloud">
-        <!--sns_area-->
-          <div class="sns_area clearfix">
-            <a href="#" onclick="sns_share('facebook');return false;">
-           		<img src="img/btn_fb.png" alt=""/>
-            </a>
-            <span>
-           		<img src="img/bar.png" alt=""/>
-            </span>
-            <a  id="kakao-link-btn" href="#" onclick="sns_share('kakao');return false;">
-           		<img src="img/btn_kt.png" alt=""/>
-            </a>
-            <span>
-           		<img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" onclick="sns_share('twitter');return false;">
-            	<img src="img/btn_tw.png" alt=""/>
-            </a>
-          </div>
-        <!--sns_area-->
-    
         <!--event-->
           <div class="event">
-          	<div class="title_event">
-	            <img src="img/title_event.png" alt=""/>
-            </div>
             <div class="btn_gift">
               <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a> -->
-              <a href="popup_input.php" target="_blank"><img src="img/btn_gift.png" alt=""/></a>
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+              <a href="popup_input.php"><img src="img/btn_gift_event.png" alt="1"/></a>
+<?
+	}else{
+?>
+              <a href="popup_input.php" target="_blank"><img src="img/btn_gift_event.png" alt="1"/></a>
+<?
+	}
+?>
             </div>
           </div>
         <!--event-->
@@ -158,16 +168,19 @@
 				return false;
 			}
 		});
-		$( '.quickmenu' ).click( function() {
-	    $( 'html, body' ).animate( { scrollTop : 0 }, 800 );
-		  return false;
+
+		var move_gift = ($(".block_top").height() +$(".navi_btn_block").height() +$("#ytplayer").height() + $(".sns_area").height()) * 1.1;
+		var move_product = move_gift + $(".bg_cloud").height() * 1.1;
+		$( '.view_event' ).click( function() {
+			$( 'html, body' ).animate({ scrollTop: move_gift},500);
+			return false;
 		} );
 
-		$( '.scroll_navi_area' ).click( function() {
-	    $( 'html, body' ).animate({ scrollTop: $(document).height()},1500);
-		  return false;
+		$( '.view_product' ).click( function() {
+			$( 'html, body' ).animate({ scrollTop: move_product},500);
+			return false;
 		} );
-		
+
 
 		// 퀵메뉴 기본 위치
 		var quick_height	= $(window).height()/2;

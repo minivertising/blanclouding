@@ -18,12 +18,12 @@
 <!--cover_area-->
   <!--icon_area-->
     <div class="icon_area">
-      <a href="http://www.thefaceshopclouding.co.kr/PC/index.php"><img src="images/logo_blan.png" alt=""/></a>
+      <a href="http://www.thefaceshopclouding.co.kr/PC/index.php" target="_blank"><img src="images/logo_blan.png" alt=""/></a>
     </div>
   <!--icon_area-->
   <!--icon_area-->
     <div class="icon_area2">
-      <a href="http://www.thefaceshop.com/index.jsp"><img src="images/logo_tfs.png" alt=""/></a>
+      <a href="http://www.thefaceshop.com/index.jsp" target="_blank"><img src="images/logo_tfs.png" alt=""/></a>
     </div>
   <!--icon_area-->
 	<div class="block_logo">  
@@ -90,7 +90,7 @@
 
 <!--footer-->
   <div class="footer">
-    <img src="images/footer.png" width="979" height="140" alt=""/>
+    <img src="images/footer.png" alt=""/>
   </div>
 <!--footer-->
 
@@ -118,7 +118,7 @@
           <div class="input_block">
             <ul class="clearfix">
               <li class="t_name"><img src="images/popup/txt_name.png" alt=""/></li>
-              <li class="input_txt"><input type="text" name="mb_name" id="mb_name" onblur="only_kor(this)"></li>
+              <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
             </ul>
             <ul class="clearfix">
               <li class="t_name"><img src="images/popup/txt_phone.png" alt=""/></li>
@@ -341,7 +341,7 @@
 
 </body>
 </html>
-  <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=be9027b0d0b10e92265c61865004559b&libraries=services"></script>
+  <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script>
 	<script type="text/javascript">
 
 	// quick menu

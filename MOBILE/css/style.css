@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
+*{
+font-family: '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif !important;
+font-family: "Malgun Gothic";	
+}
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -127,9 +131,10 @@ body {
 	display:block;
 	float:left;
 	width:50%;
-	padding:5px 0;
-	background:#eee;
 	text-align:center;
+}
+.contents_wrap .navi_btn_block a img{
+	width:100%;
 }
 
 .contents_wrap .bg_cloud{
@@ -137,12 +142,15 @@ body {
 	width:100%;
 	background:url(../img/bg_main.png) top center ;
 	background-size: cover;
-	padding:5% 0 0;
+	margin:5% 0 0;
+	
+}
+.contents_wrap .bg_cloud .event{
 }
 
 .contents_wrap .sns_area{
 	width:70%;
-	padding:0 0 6%;
+	padding:10% 0 10%;
 	padding-left:25%;
 }
 .contents_wrap .sns_area a,
@@ -157,25 +165,20 @@ body {
 	width:100%;
 }
 
-.contents_wrap .bg_cloud .event .title_event{
-	width:90%;
-	padding-top:40px;
-	padding-left:10%;
-}
-.contents_wrap .bg_cloud .event .title_event img{
-	width:85%;
+.contents_wrap .bg_cloud .event {
+	padding:73% 0 72%;
 }
 .contents_wrap .bg_cloud .event .btn_gift{
-    width:90%;
-	padding:4% 0 55%;
-	padding-left:10%;
+    width:62%;
+	padding:0;
+	padding-left:8%;
 }
 .contents_wrap .bg_cloud .event .btn_gift a{
-    width:80%;
+    width:73%;
 	display:block;
 }
 .contents_wrap .bg_cloud .event .btn_gift a img{
-	width:70%;
+	width:100%;
 }
 
 .contents_wrap .bg_cloud .event .txt_date{
@@ -250,6 +253,10 @@ body {
 	color:#555;
 	padding-left:10px;
 }
+.wrap_page .content.coupon .block_info ul li.txt_label,
+.wrap_page .content.coupon .block_info ul li.txt_detail{
+	padding-top:4px;
+}
 .wrap_page .content.coupon .block_info ul li.btn_map{
 	padding-left:10px;
 }
@@ -292,7 +299,11 @@ body {
 
 .wrap_page .block_cloud_bg{
 	background: url(../img/bg_cloud.png) no-repeat 0 -170px;
-	background-size: auto;
+	background-size: cover;
+}
+
+.wrap_page .block_cloud_bg .product img{
+	width:100%;
 }
 
 .wrap_page .block_cloud_bg .inner,
@@ -304,8 +315,8 @@ body {
 
 /*popup*/
 .wrap_page.popup{
-	width:100%;
-	background: url(../img/popup/bg_popup.png) no-repeat top left;
+	background:#fff url(../img/popup/bg_popup.png) no-repeat top center;
+	background-size:contain;
 }
 .wrap_page.popup .block_close{
 	display:block;
@@ -344,7 +355,8 @@ body {
 	padding-right:2%;
 	text-align:right;
 }
-.wrap_page.popup .content .input_block ul li input{
+.wrap_page.popup .content .input_block ul li input,
+.wrap_page.popup .content .input_block ul li select{
 	background:#d4e5ee;
 	height:27px;
 	padding:2px;
@@ -352,6 +364,26 @@ body {
 	width:100%;
 	font-size:13px;
 }
+
+.wrap_page.popup .content .input_block ul li select{
+	height:31px;
+}
+.wrap_page.popup .content .input_block.ip ul li input{
+    -webkit-appearance: none;
+    -webkit-border-radius:0; 
+    border-radius:0;		
+}
+.wrap_page.popup .content .input_block.ip ul li select{
+    -webkit-appearance: none;
+    border-radius:0;	
+    background-image: url(img/popup/arrow.png);
+    background-position: right 2px;
+    background-repeat: no-repeat;
+    width: 100%;
+    display:block;
+    margin-bottom:-1.5em;
+}
+
 .wrap_page.popup .content .input_block ul li.phone .inner{
 	width:100%;
 }
@@ -359,6 +391,7 @@ body {
 	width:33%;
 	float:left;
 }
+.wrap_page.popup .content .input_block ul li.phone div select,
 .wrap_page.popup .content .input_block ul li.phone div input{
 	width:90%;
 }
@@ -410,11 +443,15 @@ body {
 .wrap_page.popup .content .input_block ul li.address{
 	width:63%;
 }
+.wrap_page.popup .content .input_block ul li.address .inner{
+	width:100%;
+}
 .wrap_page.popup .content .input_block ul li.address .inner div{
 	float:left;
 	width:50%;
 }
-.wrap_page.popup .content .input_block ul li.address .inner div input{
+.wrap_page.popup .content .input_block ul li.address .inner div input,
+.wrap_page.popup .content .input_block ul li.address .inner div select{
 	float:left;
 	width:95%;
 }
@@ -423,7 +460,7 @@ body {
 	padding-left:27%;
 }
 .wrap_page.popup .content .input_block.input_check .in_check{
-	width:8%;
+	width:12%;
 }
 .popup_wrap .block_content .input_block{
 	padding-top:15px;
@@ -494,10 +531,19 @@ body {
 	height: 22px;
 }
 .wrap_page.popup .content .input_block.input_check .in_check_label{
-	width:60%;
+	width:40%;
 	padding-top:2px;
 }
-
+.wrap_page.popup .content .input_block.input_check .in_check_label img{
+	width:95%;
+}
+.wrap_page.popup .content .input_block.input_check .in_check_btn{
+	width:27%;
+	padding-top:2px;
+}
+.wrap_page.popup .content .input_block.input_check .in_check_btn a img{
+	width:100%;
+}
 .wrap_page.popup .content .btn_block{
 	text-align:center;
 	padding-top:25px;
@@ -520,7 +566,7 @@ body {
 }
 .wrap_page.popup .content .inner.alert .btn_block {
 	padding-top:15px;
-	padding-bottom:30px;
+	padding-bottom:50px;
 }
 
 .wrap_page.popup .content .inner.agree{
@@ -556,68 +602,6 @@ html[xmlns] .clearfix {
 #input_1 {
 	background: white;
 	position: relative;
-}
-
-
-/**
- * Fade-zoom animation for first dialog
- */
-
-/* start state */
-.my-mfp-zoom-in .zoom-anim-dialog {
-	opacity: 0;
-
-	-webkit-transition: all 0.2s ease-in-out; 
-	-moz-transition: all 0.2s ease-in-out; 
-	-o-transition: all 0.2s ease-in-out; 
-	transition: all 0.2s ease-in-out; 
-
-
-
-	-webkit-transform: scale(0.8); 
-	-moz-transform: scale(0.8); 
-	-ms-transform: scale(0.8); 
-	-o-transform: scale(0.8); 
-	transform: scale(0.8); 
-}
-
-/* animate in */
-.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
-	opacity: 1;
-
-	-webkit-transform: scale(1); 
-	-moz-transform: scale(1); 
-	-ms-transform: scale(1); 
-	-o-transform: scale(1); 
-	transform: scale(1); 
-}
-
-/* animate out */
-.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
-	-webkit-transform: scale(0.8); 
-	-moz-transform: scale(0.8); 
-	-ms-transform: scale(0.8); 
-	-o-transform: scale(0.8); 
-	transform: scale(0.8); 
-
-	opacity: 0;
-}
-
-/* Dark overlay, start state */
-.my-mfp-zoom-in.mfp-bg {
-	opacity: 0.001; /* Chrome opacity transition bug */
-	-webkit-transition: opacity 0.3s ease-out; 
-	-moz-transition: opacity 0.3s ease-out; 
-	-o-transition: opacity 0.3s ease-out; 
-	transition: opacity 0.3s ease-out;
-}
-/* animate in */
-.my-mfp-zoom-in.mfp-ready.mfp-bg {
-	opacity: 0.8;
-}
-/* animate out */
-.my-mfp-zoom-in.mfp-removing.mfp-bg {
-	opacity: 0;
 }
 
 

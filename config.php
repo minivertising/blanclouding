@@ -15,6 +15,11 @@
 	for($i=0; $i<sizeof($mobile_agent); $i++){
 		if(stripos( $_SERVER['HTTP_USER_AGENT'], $mobile_agent[$i] )){
 			$check_mobile = "Y";
+			if ($mobile_agent[$i] == "iPhone" || $mobile_agent[$i] == "iPod" || $mobile_agent[$i] == "iPad"){
+				$iPhoneYN = "Y";
+			}else{
+				$iPhoneYN = "N";
+			}
 			break;
 		}
 	}
