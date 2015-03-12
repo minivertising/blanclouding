@@ -448,8 +448,8 @@ function sns_share(media)
 		  label: "1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물",
 		  image: {
 			src: 'http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg',
-			width: '300',
-			height: '200'
+			width: '1200',
+			height: '630'
 		  },
 		  webButton: {
 			text: '더페이스샵',
