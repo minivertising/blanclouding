@@ -344,16 +344,19 @@ body {
 	padding-right:2%;
 	text-align:right;
 }
-.wrap_page.popup .content .input_block ul li input{
+.wrap_page.popup .content .input_block ul li input,
+.wrap_page.popup .content .input_block ul li select{
 	background:#d4e5ee;
 	height:27px;
 	padding:2px;
 	border:none;
 	width:100%;
 	font-size:13px;
+}
+.wrap_page.popup .content .input_block.ip ul li input{
     -webkit-appearance: none;
     -webkit-border-radius:0; 
-    border-radius:0;	
+    border-radius:0;		
 }
 .wrap_page.popup .content .input_block ul li.phone .inner{
 	width:100%;
@@ -362,6 +365,7 @@ body {
 	width:33%;
 	float:left;
 }
+.wrap_page.popup .content .input_block ul li.phone div select,
 .wrap_page.popup .content .input_block ul li.phone div input{
 	width:90%;
 }
@@ -413,11 +417,15 @@ body {
 .wrap_page.popup .content .input_block ul li.address{
 	width:63%;
 }
+.wrap_page.popup .content .input_block ul li.address .inner{
+	width:100%;
+}
 .wrap_page.popup .content .input_block ul li.address .inner div{
 	float:left;
 	width:50%;
 }
-.wrap_page.popup .content .input_block ul li.address .inner div input{
+.wrap_page.popup .content .input_block ul li.address .inner div input,
+.wrap_page.popup .content .input_block ul li.address .inner div select{
 	float:left;
 	width:95%;
 }
