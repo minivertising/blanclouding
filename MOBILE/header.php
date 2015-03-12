@@ -2,7 +2,7 @@
 	include_once "../config.php";
 ?>
 <!doctype html>
-<html prefix="og: http://ogp.me/ns#">
+<html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,10 +12,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.thefaceshopclouding.co.kr/MOBILE/index.php" />
     <meta property="og:image" content="http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg" />
-    <meta property="og:description"
-       content="1. 서장훈, 촉촉하게 수지랑! 
-               서장훈 구름탄 기분이랄까~촉촉한 선물 
-               2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물" />
+    <meta property="og:description" content="1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물" />
     <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico" />
     <title>THEFACESHOP</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
