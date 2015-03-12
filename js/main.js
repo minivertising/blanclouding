@@ -533,6 +533,11 @@ function m_show_map(flag)
 	var gun			= $("#addr2 option:selected").text();
 	var gun_val		= $("#addr2").val();
 	var shop_idx		= $("#shop").val();
+	if (si_val == "")
+	{
+		alert("지역이나 매장을 선택하셔야만 지도를 보실 수 있습니다.");
+		return false;
+	}
 	if (shop_idx)
 	{
 		if (flag == "Y")
