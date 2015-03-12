@@ -76,7 +76,7 @@
               </div>
             </li>
           </ul>
-          <ul class="clearfix">
+          <ul class="clearfix" style="padding-top:7px;">
             <li class="t_name"></li>
 			<div class="dropdown1">
             <li class="input_txt store" id="sel_shop" >
