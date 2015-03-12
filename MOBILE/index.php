@@ -20,10 +20,11 @@
           <img src="img/main_title.png" alt=""/>
         </div>
 </div>    
-    <!-- <div class="navi_btn_block clearfix">
-          <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()">이벤트 참여</a>
-          <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()">선물안내</a>
-    </div> -->
+
+  <div class="navi_btn_block clearfix">
+        <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a>
+        <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="img/btn_product.png" alt=""/></a>
+  </div>
 
 
     <!--area1-->
@@ -69,7 +70,7 @@
             </div>
             <div class="btn_gift">
               <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a> -->
-              <a href="popup_input.php" target="_blank"><img src="img/btn_gift.png" alt=""/></a>
+              <a href="popup_input.php" target="_blank"><img src="img/btn_gift_event.png" alt=""/></a>
             </div>
           </div>
         <!--event-->

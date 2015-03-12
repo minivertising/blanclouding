@@ -127,9 +127,10 @@ body {
 	display:block;
 	float:left;
 	width:50%;
-	padding:5px 0;
-	background:#eee;
 	text-align:center;
+}
+.contents_wrap .navi_btn_block a img{
+	width:100%;
 }
 
 .contents_wrap .bg_cloud{
@@ -137,7 +138,7 @@ body {
 	width:100%;
 	background:url(../img/bg_main.png) top center ;
 	background-size: cover;
-	padding:5% 0 0;
+	margin:5% 0 0;
 }
 
 .contents_wrap .sns_area{
@@ -305,7 +306,8 @@ body {
 /*popup*/
 .wrap_page.popup{
 	width:100%;
-	background: url(../img/popup/bg_popup.png) no-repeat top left;
+	background: url(../img/popup/bg_popup.png) no-repeat top center;
+	background-size:contain;
 }
 .wrap_page.popup .block_close{
 	display:block;
@@ -520,7 +522,7 @@ body {
 }
 .wrap_page.popup .content .inner.alert .btn_block {
 	padding-top:15px;
-	padding-bottom:30px;
+	padding-bottom:50px;
 }
 
 .wrap_page.popup .content .inner.agree{
