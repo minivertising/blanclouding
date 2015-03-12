@@ -65,7 +65,7 @@
               </div>
             </li>
           </ul>
-          <ul class="clearfix" style="padding-top:3px;">
+          <ul class="clearfix" style="padding-top:7px;">
             <li class="t_name"></li>
             <li class="input_txt store" id="sel_shop">
               <select name="shop" id="shop" >
