@@ -19,8 +19,8 @@
             <li class="t_name"><img src="img/popup/txt_label_phone.png" width="48" alt=""/></li>
             <li class="input_txt phone">
               <div class="inner clearfix">
-                <div>
-                  <select id="mb_phone1" name="mb_phone1"style="width:60px; height:31px;">
+                <div class="dropdown">
+                  <select id="mb_phone1" name="mb_phone1"style="width:65px; height:35px;">
                     <option>010</option>
                     <option>011</option>
                     <option>016</option>
@@ -57,7 +57,7 @@
 ?>
                   </select>
                 </div><div>&nbsp&nbsp&nbsp<div>
-                <div id="sel_addr2">
+                <div class="dropdown" id="sel_addr2">
                   <select name="addr2" id="addr2" onchange="shop_change(this.value)"style="width:100px; height:31px;">
                     <option value="">선택하세요</option>
                   </select>
@@ -274,3 +274,42 @@
 
 	});
 	</script>
+
+.dropdown p {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.dropdown select {
+
+      border: 0 !important;  /*Removes border*/
+      -webkit-appearance: none;  /*Removes default chrome and safari style*/
+      -moz-appearance: none; /* Removes Default Firefox style*/
+      background: url('dropdown_arrow.png') no-repeat;  /*Adds background-image*/
+      background-position: 82px 7px;  /*Position of the background-image*/
+      width: 100px; /*Width of select dropdown to give space for arrow image*/
+      text-indent: 0.01px; /* Removes default arrow from firefox*/
+      text-overflow: "";  /*Removes default arrow from firefox*/
+
+      /*My custom style for fonts*/
+
+      color: #1455a2;
+}
+<style>
+.dropdown select {
+
+      border: 0 !important;  /*Removes border*/
+      -webkit-appearance: none;  /*Removes default chrome and safari style*/
+      -moz-appearance: none; /* Removes Default Firefox style*/
+      background: url('http://jonathanphz.tk/dropdown_arrow.png') no-repeat;  /*Adds background-image*/
+      background-position: 25px;   /*Position of the background-image*/
+      width: 40px; /*Width of select dropdown to give space for arrow image*/
+      text-indent: 0.01px; /* Removes default arrow from firefox*/
+      text-overflow: "";  /*Removes default arrow from firefox*/
+	  background-color:#d4e5ee;;
+	  -webkit-border-radius: 0;
+      /*My custom style for fonts*/
+
+      color: #1455a2;
+}
+</style>
