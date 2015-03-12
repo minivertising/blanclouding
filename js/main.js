@@ -23,8 +23,15 @@ function shop_change(idx)
 		},
 		url: "./ajax_shop.php",
 		success: function(response){
-			$("#sel_shop").html(response);
-			//$("#shop").html(response);
+			if (response == "N")
+			{
+				alert("선택하신 지역에는 행사매장이 없습니다.");
+				$("#addr1").val("");
+				$("#addr2").val("");
+			}else{
+				$("#sel_shop").html(response);
+				//$("#shop").html(response);
+			}
 		}
 	});
 }
