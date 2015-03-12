@@ -136,7 +136,7 @@
             <ul class="clearfix">
                 <li class="txt_label">내가 선택한 매장 |</li>
                 <li class="txt_detail"><?=$user_info['shop_name']?></li>
-                <li class="btn_map"><a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>" target="_blank"><img src="img/btn_map.png" width="55" alt=""/></a></li>
+                <li class="btn_map"><a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>&exec=select_address" target="_blank"><img src="img/btn_map.png" width="55" alt=""/></a></li>
               </ul>
         </div>
       </div><!--inner-->
