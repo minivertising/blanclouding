@@ -17,7 +17,7 @@
                서장훈 구름탄 기분이랄까~촉촉한 선물 
                2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물" />
     <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico" />
-    <title>Blan Clouding</title>
+    <title>THEFACESHOP</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link href="css/style_yang.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
