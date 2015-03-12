@@ -253,6 +253,10 @@ body {
 	color:#555;
 	padding-left:10px;
 }
+.wrap_page .content.coupon .block_info ul li.txt_label,
+.wrap_page .content.coupon .block_info ul li.txt_detail{
+	padding-top:4px;
+}
 .wrap_page .content.coupon .block_info ul li.btn_map{
 	padding-left:10px;
 }
@@ -295,7 +299,11 @@ body {
 
 .wrap_page .block_cloud_bg{
 	background: url(../img/bg_cloud.png) no-repeat 0 -170px;
-	background-size: auto;
+	background-size: cover;
+}
+
+.wrap_page .block_cloud_bg .product img{
+	width:100%;
 }
 
 .wrap_page .block_cloud_bg .inner,

@@ -17,7 +17,7 @@
   <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0,aximum-scale=3.0"/>
-	  <title>Blan Clouding</title>
+	  <title>THEFACESHOP</title>
 	  <link rel="stylesheet" type="text/css" href="css/style.css"/>
 	  <link type="text/javascript" href="js/default.js"/>
   </head>
@@ -85,19 +85,19 @@
 	}
 	</script>
   <body onLoad="CalcRemaining(document.clock)">
-	<div class="wrap_page">
+	<div class="wrap_page wrap_coupon">
         <div class="header coupon">
             <div class="block_logo clearfix">
-                <a href="#" class="logo_tfs"><img src="img/logo_tfs.png" width="100" alt=""/></a>
+                <a href="http://www.thefaceshop.com/m/" class="logo_tfs" target="_blank"><img src="img/logo_tfs.png" width="100" alt=""/></a>
             </div>
         </div>
         <div class="content coupon">
             <div class="block_title">
-                <img src="img/coupon_title.png" width="215" alt=""/>
+                <img src="img/coupon_title.png" alt=""/>
           </div>
           <div class="block_cloud_bg">
               <div class="product">
-                  <img src="img/img_product.png" width="320" alt=""/>
+                  <img src="img/img_product.png" alt=""/>
               </div>
               <div class="inner">
                   <div class="block_time">
@@ -164,9 +164,6 @@
         </div>
       </div>
     </div>
-      <div class="footer">
-            footer
-      </div>
     </div>
   </body>
 </html>

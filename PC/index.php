@@ -18,12 +18,12 @@
 <!--cover_area-->
   <!--icon_area-->
     <div class="icon_area">
-      <a href="http://www.thefaceshopclouding.co.kr/PC/index.php"><img src="images/logo_blan.png" alt=""/></a>
+      <a href="http://www.thefaceshopclouding.co.kr/PC/index.php" target="_blank"><img src="images/logo_blan.png" alt=""/></a>
     </div>
   <!--icon_area-->
   <!--icon_area-->
     <div class="icon_area2">
-      <a href="http://www.thefaceshop.com/index.jsp"><img src="images/logo_tfs.png" alt=""/></a>
+      <a href="http://www.thefaceshop.com/index.jsp" target="_blank"><img src="images/logo_tfs.png" alt=""/></a>
     </div>
   <!--icon_area-->
 	<div class="block_logo">  
