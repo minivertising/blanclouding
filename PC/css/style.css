@@ -122,9 +122,9 @@
 	position: absolute;
 	left: 50%;
 	top:50%;
-	margin-top: -390px;
-	margin-left: -475px;
-	width: 950px;
+	margin-top: -350px;
+	margin-left: -450px;
+	width: 900px;
 	/*
 	height: 560px;
 	text-align: center;*/
@@ -132,8 +132,8 @@
 }
 .contents_wrap .area2 .product_group .product_area{
 	position:relative;
-	background:url(../images/event_txt.png) no-repeat center top;
-	height:781px;
+	background:url(../images/event_txt.png) no-repeat left top;
+	height:700px;
 }
 .contents_wrap .area2 .product_group .product_area a{
 	display:block;
