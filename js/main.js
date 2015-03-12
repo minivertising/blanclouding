@@ -57,7 +57,7 @@ function agree_data()
 		items: {
 			src: '#agree_alert'
 		},
-		type: 'inline',
+		type: 'inline',11
 		showCloseBtn : false
 	}, 0);
 }
