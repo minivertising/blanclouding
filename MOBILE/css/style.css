@@ -382,6 +382,7 @@ body {
 	background-size: 10px;
     width: 100%;
     display:block;
+	z-index:4000
     margin-bottom:-1.5em;
 }
 
