@@ -7,7 +7,9 @@
 	$addr1 = $_REQUEST['addr1'];
 ?>
                 <div id="sel_addr2">
-                  <select name="addr2" id="addr2" onchange="shop_change(this.value)"style="width:100px; height:31px;">
+                  <select name="addr2" id="addr2" onchange="shop_change(this.value)" style=" border: 0 !important; -webkit-appearance: none; -moz-appearance: none;
+					  background: url('http://www.thefaceshopclouding.co.kr/MOBILE/img/popup/arrow.png') no-repeat;  text-indent: 0.01px; 
+					  text-overflow: ''; background-color:#d4e5ee; color:#000000; -webkit-border-radius: 0;background-position: 85px 15px;background-size:10px; background-margin:left 20px;" >
                     <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
