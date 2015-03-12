@@ -10,7 +10,7 @@
         <div class="title">
           <img src="img/popup/title_input.png" width="192" alt=""/>
         </div>
-        <div class="input_block">
+        <div class="input_block ip">
           <ul class="clearfix">
             <li class="t_name"><img src="img/popup/txt_label_name.png" width="32" alt=""/></li>
             <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
@@ -20,7 +20,7 @@
             <li class="input_txt phone">
               <div class="inner clearfix">
                 <div>
-                  <select id="mb_phone1" name="mb_phone1"style="width:60px; height:31px;">
+                  <select id="mb_phone1" name="mb_phone1">
                     <option>010</option>
                     <option>011</option>
                     <option>016</option>
@@ -35,13 +35,13 @@
             </li>
           </ul>
         </div>
-        <div class="input_block">
+        <div class="input_block ip">
           <ul class="clearfix">
             <li class="t_name"><img src="img/popup/txt_label_store.png" width="63" alt=""/></li>
             <li class="input_txt address">
               <div class="inner clearfix">
                 <div>
-                  <select name="addr1" id="addr1" onchange="addr_change(this.value)"style="width:100px; height:31px;">
+                  <select name="addr1" id="addr1" onchange="addr_change(this.value)">
                     <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
@@ -56,9 +56,9 @@
 	}
 ?>
                   </select>
-                </div><div>&nbsp&nbsp&nbsp<div>
+                </div>
                 <div id="sel_addr2">
-                  <select name="addr2" id="addr2" onchange="shop_change(this.value)"style="width:100px; height:31px;">
+                  <select name="addr2" id="addr2" onchange="shop_change(this.value)">
                     <option value="">선택하세요</option>
                   </select>
                 </div>
@@ -68,7 +68,7 @@
           <ul class="clearfix">
             <li class="t_name"></li>
             <li class="input_txt store" id="sel_shop">
-              <select name="shop" id="shop"style="width:100px; height:32px;">
+              <select name="shop" id="shop" >
                 <option value="">선택하세요</option>
               </select>
             </li>
