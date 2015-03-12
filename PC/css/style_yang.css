@@ -186,12 +186,11 @@ body{
 }
 .popup_wrap .p_mid{
 	width:450px;
-	height:500px;
-	border:1px solid #ccc;
-	background:url(../images/popup/bg_popup.png) top right;
+	height:520px;
+	background:#fff url(../images/popup/bg_popup.png) top right no-repeat;
 }
 .popup_wrap .p_mid .inner{
-	padding:20px;
+	padding:10px 0 20px 20px;
 	padding-right:0;
 }
 
@@ -218,8 +217,7 @@ body{
 .popup_wrap .p_alert{
 	width:400px;
 	height:260px;
-	background:url(../images/popup/bg_popup.png) top right;
-	border:1px solid #ccc;
+	background:#fff url(../images/popup/bg_popup.png) top center no-repeat;
 }
 .popup_wrap .block_content .title{
 	text-align:center;
@@ -263,7 +261,9 @@ body{
 	padding-right:10px;
 	padding-top:9px;
 }
-.popup_wrap .block_content .input_txt input{
+
+.popup_wrap .block_content .input_txt input,
+.popup_wrap .block_content .input_txt select{
 	background:#d4e5ee;
 	height:31px;
 	padding:2px;
@@ -275,12 +275,15 @@ body{
 	float:left;
 	width:83px;
 }
-.popup_wrap .block_content .input_txt.phone input{
+
+.popup_wrap .block_content .input_txt.phone input,
+.popup_wrap .block_content .input_txt.phone select{
 	width:75px;
 }
 .popup_wrap .block_content .input_txt.store{
 	width:125px;
 }
+.popup_wrap .block_content .input_txt.store select,
 .popup_wrap .block_content .input_txt.store input{
 	width:116px;
 }
