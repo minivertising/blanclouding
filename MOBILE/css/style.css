@@ -351,6 +351,9 @@ body {
 	border:none;
 	width:100%;
 	font-size:13px;
+    -webkit-appearance: none;
+    -webkit-border-radius:0; 
+    border-radius:0;	
 }
 .wrap_page.popup .content .input_block ul li.phone .inner{
 	width:100%;
