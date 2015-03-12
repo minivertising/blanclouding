@@ -1,6 +1,8 @@
 <?
 	include_once "./header.php";
 ?>
+  <style>
+  </style>
   <div id="input_div" class="wrap_page popup">
     <div class="block_close clearfix">
 <?
@@ -21,7 +23,7 @@
         <div class="title">
           <img src="img/popup/title_input.png" width="192" alt=""/>
         </div>
-        <div class="input_block">
+        <div class="input_block ip">
           <ul class="clearfix">
             <li class="t_name"><img src="img/popup/txt_label_name.png" width="32" alt=""/></li>
             <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
@@ -31,7 +33,7 @@
             <li class="input_txt phone">
               <div class="inner clearfix">
                 <div>
-                  <select id="mb_phone1" name="mb_phone1">
+                  <select id="mb_phone1" name="mb_phone1" class="dropdown">
                     <option>010</option>
                     <option>011</option>
                     <option>016</option>

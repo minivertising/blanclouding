@@ -376,9 +376,10 @@ body {
 .wrap_page.popup .content .input_block.ip ul li select{
     -webkit-appearance: none;
     border-radius:0;	
-    background-image: url(img/popup/arrow.png);
-    background-position: right 2px;
+    background-image: url(../img/popup/arrow.png);
+    background-position: 90% 12px;
     background-repeat: no-repeat;
+	background-size: 10px;
     width: 100%;
     display:block;
     margin-bottom:-1.5em;
