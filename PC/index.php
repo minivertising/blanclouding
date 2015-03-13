@@ -407,14 +407,12 @@
 
 		var wHeight =$(window).height();
 
-		if ('v'=='\v'){ // 8이하
-			wHeight = 773;
-		}else if (wHeight <= 780){
+		if (wHeight <= 780){
 			wHeight = 780;
 		}else if(wHeight > 1000){
 			wHeight = 1000;
 		}
-		$('.area2').height(wHeight); // 제품
+		$('.area2').height(995); // 제품
 		$('.area3').height(wHeight); // 제품
 		//$('.product_group').width(width); // 제품
 		//$('.product_area').width(width); // 제품
@@ -433,14 +431,12 @@
 		
 		var wHeight =$(window).height();
 
-		if ('v'=='\v'){ // 8이하
-			wHeight = 773;
-		}else if (wHeight <= 780){
+		if (wHeight <= 780){
 			wHeight = 780;
 		}else if(wHeight > 1000){
 			wHeight = 1000;
 		}
-		$('.area2').height(wHeight); // 제품
+		$('.area2').height(995); // 제품
 		$('.area3').height(wHeight); // 제품
 		//$('.product_group').width(width); // 제품
 		//$('.product_area').width(width); // 제품
