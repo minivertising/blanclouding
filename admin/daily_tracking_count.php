@@ -30,20 +30,20 @@
             <div id="daily_topgirl_vote_count_div1" style="display:block">
               <table class="table table-hover">
                 <thead>
-                  <tr><th rowspan="2">날짜</th><th rowspan="2">구매한 마음</th><th colspan="2">페이스북광고유입</th><th colspan="2">유튜브광고유입</th><th colspan="2">기타유입</th><th colspan="2">ALL</th><th rowspan="2">Total</th></tr>
+                  <tr><th rowspan="2">날짜</th><th colspan="2">페이스북공유 유입</th><th colspan="2">카카오톡공유 유입</th><th colspan="2">트위터공유 유입</th><th colspan="2">페이스북광고 유입</th><th colspan="2">카카오톡 푸쉬 유입</th><th colspan="2">ALL</th><th rowspan="2">Total</th></tr>
                   <tr><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th></tr>
                   
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT buyer_date FROM ".$_gl['buyer_info_table']." WHERE buyer_date <> '0000-00-00' Group by substr(buyer_date,1,10)";
+	$daily_date_query	= "SELECT tracking_date FROM ".$_gl['tracking_info_table']." group by substr(tracking_date,1,10)";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
-		$daily_date		= substr($date_daily_data['buyer_date'],0,10);
-		$buyer_goods_query	= "SELECT buyer_goods, COUNT( buyer_goods ) buyer_cnt FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' GROUP BY buyer_goods";
-		$buyer_res		= mysqli_query($my_db, $buyer_goods_query);
-		
+		$daily_date			= substr($date_daily_data['buyer_date'],0,10);
+		$tracking_query	= "SELECT tracking_media, COUNT( tracking_media ) tracking_cnt FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' GROUP BY tracking_media";
+		$tracking_res		= mysqli_query($my_db, $tracking_query);
+		/*
 		unset($buyer_goods);
 		unset($buyer_cnt);
     
@@ -55,7 +55,7 @@
 		unset($etc_mobile_cnt);
 		unset($all_pc_cnt);
 		unset($all_mobile_cnt);
-    
+    */
 		$total_fb_pc_cnt = 0;
 		$total_fb_mobile_cnt = 0;
 		$total_yt_pc_cnt = 0;
@@ -66,10 +66,10 @@
 		$total_all_mobile_cnt = 0;
 
 		$total_buyer_cnt = 0;
-		while ($buyer_daily_data = mysqli_fetch_array($buyer_res))
+		while ($tracking_daily_data = mysqli_fetch_array($tracking_res))
 		{
-			$buyer_goods[]	= $buyer_daily_data['buyer_goods'];
-			$buyer_cnt[]	= $buyer_daily_data['buyer_cnt'];
+			$buyer_goods[]	= $tracking_daily_data['buyer_goods'];
+			$buyer_cnt[]	= $tracking_daily_data['buyer_cnt'];
       
 			$fb_pc_query		= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$buyer_daily_data['buyer_goods']."' AND buyer_gubun='PC' AND buyer_media='1'";
 			$fb_pc_count		= mysqli_num_rows(mysqli_query($my_db, $fb_pc_query));
@@ -111,7 +111,7 @@
 <?
 			}
 ?>
-                    <td><?=$val?>번 마음</td>
+                    <!-- <td><?=$val?>번 마음</td> -->
                     <td><?=number_format($fb_pc_cnt[$i])?></td>
                     <td><?=number_format($fb_mobile_cnt[$i])?></td>
                     <td><?=number_format($yt_pc_cnt[$i])?></td>
