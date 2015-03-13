@@ -15,7 +15,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.thefaceshopclouding.co.kr/PC/index.php" />
     <meta property="og:image" content="http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg" />
-    <meta property="og:description" content="< 아니 아니, 그게 아니고~ > 전격 공개! 건조한 피부에 봄비같은 하얀 수분 크림 출시! 지금 10ml Kit도 받아가세요!    더페이스샵 - 블란클라우딩" />
+    <meta property="og:description" content="< 아니 아니, 그게 아니고~ > 전격 공개! 건조한 피부에 봄비같은 하얀 수분 크림 출시! 지금 10ml Kit도 신청하세요!    더페이스샵 - 블란클라우딩" />
     <link rel="shortcut icon" type="image/x-icon" href="./images/pavicon.ico" />
     <title>THEFACESHOP</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
