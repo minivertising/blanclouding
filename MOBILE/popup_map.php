@@ -25,7 +25,7 @@
 ?>
     </div>
     <div class="content" style="z-index:800000">
-      <div id="map_area" class="map_area" style="height:440px;border:1px solid skyblue"></div>
+      <div id="map_area" class="map_area" style="height:440px;"></div>
     </div>
   </div><!--wrap_page popup-->
 </body>
