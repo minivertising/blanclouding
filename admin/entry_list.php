@@ -70,7 +70,7 @@
   <!-- Page Heading -->
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">더페이스샵 매장 목록</h1>
+        <h1 class="page-header">더페이스샵 이벤트 참여자 목록</h1>
       </div>
     </div>
     <!-- /.row -->
@@ -93,9 +93,10 @@
             <thead>
               <tr>
                 <th>순번</th>
-                <th>IP정보</th>
+                <th>이름</th>
                 <th>전화번호</th>
                 <th>매장명</th>
+                <th>IP정보</th>
                 <th>등록일</th>
 				<th>구분</th>
               </tr>
@@ -135,9 +136,10 @@
 ?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
-                <td><?php echo $buyer_info[$key]['mb_ipaddr']?></td>
+                <td><?php echo $buyer_info[$key]['mb_name']?></td>
                 <td><?php echo $buyer_info[$key]['mb_phone']?></td>
                 <td><?php echo $shop_name['shop_name']?></td>
+                <td><?php echo $buyer_info[$key]['mb_ipaddr']?></td>
                 <td><?php echo $buyer_info[$key]['mb_regdate']?></td>
 				<td><?php echo $buyer_info[$key]['mb_gubun']?></td>
               </tr>

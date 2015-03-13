@@ -65,7 +65,7 @@
 
 
 <!--area2-->
-<div class="area2_bg">
+<div class="area2_bg" style="display:none">
   <div class="area2">
     <div class="product_group">
       <div class="product_area">
@@ -77,7 +77,7 @@
 <!--area2-->
 
 <!--area3-->
-<div class="area3_bg">
+<div class="area3_bg" style="display:none">
   <div class="area3">
     <div class="product_group">
       <div class="product_area">
@@ -89,7 +89,7 @@
 <!--area3-->
 
 <!--footer-->
-  <div class="footer">
+  <div class="footer" style="display:none">
     <img src="images/footer.png" alt=""/>
   </div>
 <!--footer-->
@@ -364,7 +364,7 @@
 		else if (e.data === 1)
 		{
 			//controllable_player.pauseVideo();
-			$(".cover_area").css("background","url('./images/movCover.png') repeat");
+			//$(".cover_area").css("background","url('./images/movCover.png') repeat");
 			//$("#video_control").text('일시정지');
 			$("#video_control").attr('src','images/btn_pause.png');
 		}
@@ -390,7 +390,7 @@
     	if (typeof(controllable_player) == 'undefined'){
     		onYouTubeIframeAPIReady();
     	}
-		$(".cover_area").css("background","url('./images/movCover.png') repeat");
+		//$(".cover_area").css("background","url('./images/movCover.png') repeat");
 
     }, 1000)
 
@@ -525,6 +525,12 @@
 		setInterval(function(){
 			$('.scroll_navi_area').animate({bottom:100},500).animate({bottom:110},500);
 		},1000);
+
+		$(".area2_bg").show();
+		$(".area3_bg").show();
+		$(".footer").show();
+		setTimeout("$('.cover_area').css('background','url(./images/movCover.png) repeat');",2000);
+		//$(".cover_area").css("background","url('./images/movCover.png') repeat");
 
 	});
 	</script>

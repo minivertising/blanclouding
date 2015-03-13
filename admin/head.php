@@ -51,7 +51,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="daily_influx_count.php">Ohui mall - Admin</a>
+          <a class="navbar-brand" href="daily_influx_count.php">THEFACESHOP_BLANCLOUDING - Admin</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
@@ -73,16 +73,16 @@ if (isset($_SESSION['ss_mb_name']) == false)
                   <li>
                     <a href="daily_influx_count.php">일자별 매체 유입자 수</a>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="daily_buyer_count.php">일자별 마음 구매자 수</a>
                   </li>                                   
                   <li>
                     <a href="daily_share_count.php">일자별 SNS 공유 수</a>
-                  </li> 
+                  </li>  -->
                 </ul>
               </li>
               <li>
-                <a href="entry_list.php"><i class="fa fa-fw fa-table"></i> 더페이스샵 이벤트 참여자 목록</a>
+                <a href="entry_list.php"><i class="fa fa-fw fa-table"></i> 이벤트 참여자 목록</a>
               </li>
               <li>
                 <a href="shop_list.php"><i class="fa fa-fw fa-table"></i> 매장 정보</a>
