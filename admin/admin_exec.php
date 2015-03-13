@@ -76,17 +76,17 @@
 					$params = array(
 						'send_time' => '', 
 						'send_phone' => '0316897530', 
-						//'dest_phone' => $phone, 
-						'dest_phone' => '01099111804', 
+						'dest_phone' => $phone, 
+						//'dest_phone' => '01099111804', 
 						'send_name' => '', 
 						'dest_name' => '', 
 						'subject' => '더페이스샵 - 하얀 수분 크림 쿠폰',
 						'msg_body' => '
-[하얀 수분 크림 당첨]
+[하얀 수분 크림 당첨!!]
 블란클라우딩 KIT 
 당첨을 축하드립니다.
 
-하얀수분크림을 
+하얀 수분 크림을
 가장 먼저 만나볼 수 있는 기회!
 
 블란 클라우딩 10ML KIT쿠폰!
