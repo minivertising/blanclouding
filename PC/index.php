@@ -529,7 +529,7 @@
 		$(".area2_bg").show();
 		$(".area3_bg").show();
 		$(".footer").show();
-		setTimeout("$('.cover_area').css('background','url(./images/movCover.png) repeat');",2000);
+		setTimeout("$('.cover_area').css('background','url(./images/movCover.png) repeat');",3000);
 		//$(".cover_area").css("background","url('./images/movCover.png') repeat");
 
 	});
