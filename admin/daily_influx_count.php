@@ -33,7 +33,7 @@
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT tracking_date FROM ".$_gl['tracking_info_table']." Group by substr(tracking_date,1,10)";
+	$daily_date_query	= "SELECT tracking_date FROM ".$_gl['tracking_info_table']." Group by substr(tracking_date,1,10) ORDER BY tracking_date DESC";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
