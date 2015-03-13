@@ -69,7 +69,7 @@
   <div class="area2">
     <div class="product_group">
       <div class="product_area">
-      	<a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()" style="background:none">신청하기</a>
+      	<a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()" style="background:none;outline: none;">신청하기</a>
       </div>
     </div>
   </div>

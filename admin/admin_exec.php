@@ -32,18 +32,17 @@
 			$phone_arr		= explode("-",$phone);
 			$cel				= $phone_arr[0].$phone_arr[1].$phone_arr[2];
 
-			
+			/*
 			$httpmethod = "POST";
 			$url = "http://api.openapi.io/ppurio_test/1/message_test/lms/minivertising";
 			$clientKey = "MS0xMzY1NjY2MTAyNDk0LTA2MWE4ZDgyLTZhZmMtNGU5OS05YThkLTgyNmFmYzVlOTkzZQ==";
 			$contentType = "Content-Type: application/x-www-form-urlencoded";
-			
-			/*
+			*/
 			$httpmethod = "POST";
 			$url = "http://api.openapi.io/ppurio/1/message/lms/minivertising";
 			$clientKey = "MTAyMC0xMzg3MzUwNzE3NTQ3LWNlMTU4OTRiLTc4MGItNDQ4MS05NTg5LTRiNzgwYjM0ODEyYw==";
 			$contentType = "Content-Type: application/x-www-form-urlencoded";
-			*/
+
 			$response = sendRequest($httpmethod, $url, $parameters, $clientKey, $contentType, $phone);
 
 			//echo("<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />");
@@ -76,12 +75,28 @@
 
 					$params = array(
 						'send_time' => '', 
-						'send_phone' => '01011113333', 
-						'dest_phone' => $phone, 
+						'send_phone' => '0316897530', 
+						//'dest_phone' => $phone, 
+						'dest_phone' => '01025154373', 
 						'send_name' => '', 
 						'dest_name' => '', 
-						'subject' => '',
-						'msg_body' => '[블랑클라우딩 쿠폰]<br />블랑클라우딩 이벤트에 당첨되신것을 축하드립니다.<br />하얀수분크림, 블랑클라우딩을 제일 먼저 만나볼 수 있는 기회!<br />블랑클라우딩 선물과<br />클라우딩 제품 구매시 5,000원 할인쿠폰까지!<br />쿠폰받기:testurl<br />*오프라인 매장에서만 사용가능합니다.<br />*불법적인 방법으로 이벤트에 참여하신 고객님은 이벤트 당첨 대상에서 제외되며, 당첨 이후에도 당첨이 취소될 수 있습니다.<br />'
+						'subject' => '더페이스샵 - 하얀 수분 크림 쿠폰',
+						'msg_body' => '[하얀 수분 크림 쿠폰]
+					블란클라우딩 KIT 당첨을
+					축하드립니다.
+
+					하얀수분크림을
+					가장 먼저 만나볼 수 있는 기회!
+
+					블란 클라우딩 10ML KIT쿠폰!
+
+					쿠폰받기:
+					http://goo.gl/WGOUQN
+
+					* 응모시 지정하신 페이스샵 매장에서만 사용가능합니다.
+					* 제품 교환 버튼은 직원 확인용으로 개인이 누를시 경품 교환이 불가합니다.
+					* 불법적인 방법으로 이벤트에 참여하신 고객님은 이벤트 당첨 대상에서 제외되며, 당첨 이후에도 당첨이 취소될 수 있습니다.
+					'
 					);
 
 					//curl initialization
