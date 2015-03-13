@@ -177,7 +177,7 @@
           </ul>
         </div>
         <div class="btn_block" style="background:white;">
-          <a href="javascript:m_chk_input('<?=$iPhoneYN?>');" class="popup-with-zoom-anim"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
+          <a href="javascript:m_chk_input('<?=$iPhoneYN?>');" class="popup-with-zoom-anim" onclick="javascript:m_chk_input('<?=$iPhoneYN?>');"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
