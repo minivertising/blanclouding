@@ -593,7 +593,7 @@ function sns_share(media)
 		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
 		Kakao.Link.createTalkLinkButton({
 		  container: '#kakao-link-btn',
-		  label: "1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물",
+		  label: "서장훈이 화장품 CF를?! <아니 아니, 그게 아니고~> 전격 공개! 건조한 피부에 봄비같은 하얀 수분 크림 출시! 지금 10ml Kit도 받아가세요!",
 		  image: {
 			src: 'http://www.thefaceshopclouding.co.kr/PC/images/sns_kt.jpg',
 			width: '1200',
