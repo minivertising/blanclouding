@@ -251,11 +251,11 @@
 	if ($iPhoneYN == "Y")
 	{
 ?>
-          <a href="#" onclick="$.magnificPopup.close();window.close();"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
+          <a href="#" onclick="$.magnificPopup.close();location.href='index.php';"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
 <?
 	}else{
 ?>
-          <a href="#" onclick="$.magnificPopup.close();location.href='index.php';"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
+          <a href="#" onclick="$.magnificPopup.close();window.close();"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
 <?
 	}
 ?>
