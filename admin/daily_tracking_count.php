@@ -30,17 +30,17 @@
             <div id="daily_topgirl_vote_count_div1" style="display:block">
               <table class="table table-hover">
                 <thead>
-                  <tr><th rowspan="2">날짜</th><th colspan="2">페이스북공유 유입</th><th colspan="2">카카오톡공유 유입</th><th colspan="2">트위터공유 유입</th><th colspan="2">페이스북광고 유입</th><th colspan="2">카카오톡 푸쉬 유입</th><th colspan="2">ALL</th><th rowspan="2">Total</th></tr>
-                  <tr><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th></tr>
+                  <tr><th rowspan="2">날짜</th><th colspan="2">페이스북공유 유입</th><th colspan="2">카카오톡공유 유입</th><th colspan="2">트위터공유 유입</th><th colspan="2">페이스북광고 유입</th><th colspan="2">카카오톡 푸쉬 유입</th><th colspan="2">기타 유입</th><th colspan="2">ALL</th><th rowspan="2">Total</th></tr>
+                  <tr><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th><th>PC</th><th>Mobile</th></tr>
                   
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT tracking_date FROM ".$_gl['tracking_info_table']." group by substr(tracking_date,1,10)";
+	$daily_date_query	= "SELECT tracking_date FROM ".$_gl['tracking_info_table']." group by substr(tracking_date,1,10) order by tracking_date DESC";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
-		$daily_date			= substr($date_daily_data['buyer_date'],0,10);
+		$daily_date			= substr($date_daily_data['tracking_date'],0,10);
 		$tracking_query	= "SELECT tracking_media, COUNT( tracking_media ) tracking_cnt FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' GROUP BY tracking_media";
 		$tracking_res		= mysqli_query($my_db, $tracking_query);
 		/*
@@ -66,90 +66,83 @@
 		$total_all_mobile_cnt = 0;
 
 		$total_buyer_cnt = 0;
+		$i = 0;
 		while ($tracking_daily_data = mysqli_fetch_array($tracking_res))
 		{
-			$buyer_goods[]	= $tracking_daily_data['buyer_goods'];
-			$buyer_cnt[]	= $tracking_daily_data['buyer_cnt'];
+			//$buyer_goods[]	= $tracking_daily_data['buyer_goods'];
+			//$buyer_cnt[]	= $tracking_daily_data['buyer_cnt'];
       
-			$fb_pc_query		= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$buyer_daily_data['buyer_goods']."' AND buyer_gubun='PC' AND buyer_media='1'";
-			$fb_pc_count		= mysqli_num_rows(mysqli_query($my_db, $fb_pc_query));
-			$fb_mobile_query	= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$buyer_daily_data['buyer_goods']."' AND buyer_gubun='MOBILE' AND buyer_media='1'";
-			$fb_mobile_count	= mysqli_num_rows(mysqli_query($my_db, $fb_mobile_query));
-			$fb_pc_cnt[]		= $fb_pc_count;
-			$fb_mobile_cnt[]	= $fb_mobile_count;
+			$fbs_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='PC' AND tracking_media='F01'";
+			$fbs_pc_count			= @mysqli_num_rows(mysqli_query($my_db, $fbs_pc_query));
+			$fbs_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='MOBILE' AND tracking_media='F01'";
+			$fbs_mobile_count	= @mysqli_num_rows(mysqli_query($my_db, $fbs_mobile_query));
+			$fbs_pc_cnt[]			= $fbs_pc_count;
+			$fbs_mobile_cnt[]		= $fbs_mobile_count;
 
-			$yt_pc_query		= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$buyer_daily_data['buyer_goods']."' AND buyer_gubun='PC' AND buyer_media='you'";
-			$yt_pc_count		= mysqli_num_rows(mysqli_query($my_db, $yt_pc_query));
-			$yt_mobile_query	= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$buyer_daily_data['buyer_goods']."' AND buyer_gubun='MOBILE' AND buyer_media='you'";
-			$yt_mobile_count	= mysqli_num_rows(mysqli_query($my_db, $yt_mobile_query));
-			$yt_pc_cnt[]		= $yt_pc_count;
-			$yt_mobile_cnt[]	= $yt_mobile_count;
+			$kts_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='PC' AND tracking_media='K01'";
+			$kts_pc_count			= @mysqli_num_rows(mysqli_query($my_db, $kts_pc_query));
+			$kts_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='MOBILE' AND tracking_media='K01'";
+			$kts_mobile_count	= @mysqli_num_rows(mysqli_query($my_db, $kts_mobile_query));
+			$kts_pc_cnt[]			= $kts_pc_count;
+			$kts_mobile_cnt[]		= $kts_mobile_count;
 
-			$all_pc_query		= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$buyer_daily_data['buyer_goods']."' AND buyer_gubun='PC'";
-			$all_pc_count		= mysqli_num_rows(mysqli_query($my_db, $all_pc_query));
+			$tts_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='PC' AND tracking_media='T01'";
+			$tts_pc_count			= @mysqli_num_rows(mysqli_query($my_db, $tts_pc_query));
+			$tts_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='MOBILE' AND tracking_media='T01'";
+			$tts_mobile_count	= @mysqli_num_rows(mysqli_query($my_db, $tts_mobile_query));
+			$tts_pc_cnt[]			= $tts_pc_count;
+			$tts_mobile_cnt[]		= $tts_mobile_count;
+
+			$fba_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='PC' AND tracking_media='FA01'";
+			$fba_pc_count			= @mysqli_num_rows(mysqli_query($my_db, $fba_pc_query));
+			$fba_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='MOBILE' AND tracking_media='FA01'";
+			$fba_mobile_count	= @mysqli_num_rows(mysqli_query($my_db, $fba_mobile_query));
+			$fba_pc_cnt[]			= $fba_pc_count;
+			$fba_mobile_cnt[]	= $fba_mobile_count;
+
+			$ktp_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='PC' AND tracking_media='KM01'";
+			$ktp_pc_count			= @mysqli_num_rows(mysqli_query($my_db, $ktp_pc_query));
+			$ktp_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='MOBILE' AND tracking_media='KM01'";
+			$ktp_mobile_count	= @mysqli_num_rows(mysqli_query($my_db, $ktp_mobile_query));
+			$ktp_pc_cnt[]			= $ktp_pc_count;
+			$ktp_mobile_cnt[]	= $ktp_mobile_count;
+
+			$all_pc_query			= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$buyer_daily_data['buyer_goods']."' AND buyer_gubun='PC'";
+			$all_pc_count			= @mysqli_num_rows(mysqli_query($my_db, $all_pc_query));
 			$all_mobile_query	= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$buyer_daily_data['buyer_goods']."' AND buyer_gubun='MOBILE'";
-			$all_mobile_count	= mysqli_num_rows(mysqli_query($my_db, $all_mobile_query));
-			$all_pc_cnt[]		= $all_pc_count;
-			$all_mobile_cnt[]	= $all_mobile_count;
-      
-      $etc_pc_cnt[] = $all_pc_count - $fb_pc_count - $yt_pc_count;
-      $etc_mobile_cnt[] = $all_mobile_count - $fb_mobile_count - $yt_mobile_count;
+			$all_mobile_count	= @mysqli_num_rows(mysqli_query($my_db, $all_mobile_query));
+			$all_pc_cnt[]			= $all_pc_count;
+			$all_mobile_cnt[]		= $all_mobile_count;
+
+			$etc_pc_cnt[]			= $all_pc_count - $fbs_pc_count - $kts_pc_count - $tts_pc_count - $fba_pc_count - $ktp_pc_count;
+			$etc_mobile_cnt[]		= $all_mobile_count - $fbs_mobile_count - $kts_mobile_count - $tts_mobile_count - $fba_mobile_count - $ktp_mobile_count;
 
 		}
 
-		$rowspan_cnt =  count($buyer_goods);
-		$i = 0;
-		foreach($buyer_goods as $key => $val)
-		{
+		//$rowspan_cnt =  count($buyer_goods);
+		print_r($fbs_pc_count);
+		$total_count = $all_pc_count + $all_mobile_count;
 ?>
                   <tr>
-<?
-			if ($i == 0)
-			{
-?>
-                    <td rowspan="<?=$rowspan_cnt?>"><?php echo $daily_date?></td>
-<?
-			}
-?>
-                    <!-- <td><?=$val?>번 마음</td> -->
-                    <td><?=number_format($fb_pc_cnt[$i])?></td>
-                    <td><?=number_format($fb_mobile_cnt[$i])?></td>
-                    <td><?=number_format($yt_pc_cnt[$i])?></td>
-                    <td><?=number_format($yt_mobile_cnt[$i])?></td>
-                    <td><?=number_format($etc_pc_cnt[$i])?></td>
-                    <td><?=number_format($etc_mobile_cnt[$i])?></td>
-                    <td><?=number_format($all_pc_cnt[$i])?></td>
-                    <td><?=number_format($all_mobile_cnt[$i])?></td>
-                    <td><?=number_format($buyer_cnt[$i])?></td>
+                    <td><?php echo $daily_date?></td>
+                    <td><?=number_format($fbs_pc_count)?></td>
+                    <td><?=number_format($fbs_mobile_count)?></td>
+                    <td><?=number_format($kts_pc_count)?></td>
+                    <td><?=number_format($kts_mobile_count)?></td>
+                    <td><?=number_format($tts_pc_count)?></td>
+                    <td><?=number_format($tts_mobile_count)?></td>
+                    <td><?=number_format($fba_pc_count)?></td>
+                    <td><?=number_format($fba_mobile_count)?></td>
+                    <td><?=number_format($ktp_pc_count)?></td>
+                    <td><?=number_format($ktp_mobile_count)?></td>
+                    <td><?=number_format($etc_pc_count)?></td>
+                    <td><?=number_format($etc_mobile_count)?></td>
+                    <td><?=number_format($all_pc_count)?></td>
+                    <td><?=number_format($all_mobile_count)?></td>
+                    <td><?=number_format($total_count)?></td>
                   </tr>
-<?php
-			$total_buyer_cnt += $buyer_cnt[$i];
-      
-			$total_fb_mobile_cnt += $fb_mobile_cnt[$i];
-			$total_fb_pc_cnt += $fb_pc_cnt[$i];            
-			$total_yt_mobile_cnt += $yt_mobile_cnt[$i];
-			$total_yt_pc_cnt += $yt_pc_cnt[$i];            
-			$total_etc_mobile_cnt += $etc_mobile_cnt[$i];
-			$total_etc_pc_cnt += $etc_pc_cnt[$i];            
-			$total_all_mobile_cnt += $all_mobile_cnt[$i];
-			$total_all_pc_cnt += $all_pc_cnt[$i];            
-			$i++;
-		}
-?>
-                  <tr>
-                    <td colspan="2">합계</td>
-                    <td><?php echo number_format($total_fb_pc_cnt)?></td>
-                    <td><?php echo number_format($total_fb_mobile_cnt)?></td>
-                    <td><?php echo number_format($total_yt_pc_cnt)?></td>
-                    <td><?php echo number_format($total_yt_mobile_cnt)?></td>
-                    <td><?php echo number_format($total_etc_pc_cnt)?></td>
-                    <td><?php echo number_format($total_etc_mobile_cnt)?></td>
-                    <td><?php echo number_format($total_all_pc_cnt)?></td>
-                    <td><?php echo number_format($total_all_mobile_cnt)?></td>
-                    <td><?php echo number_format($total_buyer_cnt)?></td>
-                  </tr>
-
 <?
+		$i++;
 	}
 ?>
                 </tbody>
