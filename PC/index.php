@@ -522,9 +522,9 @@
 
 		var magnificPopup = $.magnificPopup.instance;
 
-		//setInterval(function(){
-		//	$('.scroll_navi_area').animate({bottom:100},500).animate({bottom:110},500);
-		//},1000);
+		setInterval(function(){
+			$('.scroll_navi_area').animate({bottom:100},500).animate({bottom:110},500);
+		},1000);
 
 	});
 	</script>
