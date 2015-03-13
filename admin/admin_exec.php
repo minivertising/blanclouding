@@ -26,5 +26,89 @@
 			session_destroy();
 			echo "<script>location.href='./index.php';</script>";
 		break;
+
+		case "send_sms" :
+			$phone			= $_REQUEST['phone'];
+			$phone_arr		= explode("-",$phone);
+			$cel				= $phone_arr[0].$phone_arr[1].$phone_arr[2];
+
+			
+			$httpmethod = "POST";
+			$url = "http://api.openapi.io/ppurio_test/1/message_test/lms/minivertising";
+			$clientKey = "MS0xMzY1NjY2MTAyNDk0LTA2MWE4ZDgyLTZhZmMtNGU5OS05YThkLTgyNmFmYzVlOTkzZQ==";
+			$contentType = "Content-Type: application/x-www-form-urlencoded";
+			
+			/*
+			$httpmethod = "POST";
+			$url = "http://api.openapi.io/ppurio/1/message/lms/minivertising";
+			$clientKey = "MTAyMC0xMzg3MzUwNzE3NTQ3LWNlMTU4OTRiLTc4MGItNDQ4MS05NTg5LTRiNzgwYjM0ODEyYw==";
+			$contentType = "Content-Type: application/x-www-form-urlencoded";
+			*/
+			$response = sendRequest($httpmethod, $url, $parameters, $clientKey, $contentType, $phone);
+
+			//echo("<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />");
+			$json_data = json_decode($response, true);
+
+			//print_r($json_data);
+			/*
+			받아온 결과값을 DB에 저장 및 Variation
+			*/
+			$query = "INSERT INTO ".$_gl['sms_info_table']."(send_phone, send_status, cmid, send_regdate) values('".$phone."','".$json_data['result_code']."','".$json_data['cmid']."','".date("Y-m-d H:i:s")."')";
+			$result 		= mysqli_query($my_db, $query);
+
+			$query2 = "UPDATE ".$_gl['member_info_table']." SET mb_lms='Y' WHERE mb_phone='".$phone."'";
+			$result2 		= mysqli_query($my_db, $query2);
+
+
+			$flag = "N";
+			if ($result)
+				echo $flag = "Y";
+			else
+				echo $flag = "N";
+		break;
 	}
+
+			function sendRequest($httpMethod, $url, $parameters, $clientKey, $contentType, $phone) {
+
+					//create basic authentication header
+					$headerValue = $clientKey;
+					$headers = array("x-waple-authorization:" . $headerValue);
+
+					$params = array(
+						'send_time' => '', 
+						'send_phone' => '01011113333', 
+						'dest_phone' => $phone, 
+						'send_name' => '', 
+						'dest_name' => '', 
+						'subject' => '',
+						'msg_body' => '[블랑클라우딩 쿠폰]<br />블랑클라우딩 이벤트에 당첨되신것을 축하드립니다.<br />하얀수분크림, 블랑클라우딩을 제일 먼저 만나볼 수 있는 기회!<br />블랑클라우딩 선물과<br />클라우딩 제품 구매시 5,000원 할인쿠폰까지!<br />쿠폰받기:testurl<br />*오프라인 매장에서만 사용가능합니다.<br />*불법적인 방법으로 이벤트에 참여하신 고객님은 이벤트 당첨 대상에서 제외되며, 당첨 이후에도 당첨이 취소될 수 있습니다.<br />'
+					);
+
+					//curl initialization
+					$curl = curl_init();
+
+					//create request url
+					//$url = $url."?".$parameters;
+
+					curl_setopt ($curl, CURLOPT_URL , $url);
+					curl_setopt ($curl, CURLOPT_RETURNTRANSFER, true);
+					curl_setopt ($curl, CURLOPT_HTTPHEADER, $headers);
+					curl_setopt ($curl, CURLINFO_HEADER_OUT, true);
+					curl_setopt ($curl, CURLOPT_SSL_VERIFYPEER, false);
+					
+					curl_setopt($curl, CURLOPT_POST, 1);
+					curl_setopt($curl, CURLOPT_POSTFIELDS, $params);
+					curl_setopt($curl, CURLOPT_TIMEOUT, 30);
+
+					$response = curl_exec($curl);
+
+					$httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+					$responseHeaders = curl_getinfo($curl, CURLINFO_HEADER_OUT);
+
+
+					curl_close($curl);
+
+					return $response;
+			}
+
 ?>

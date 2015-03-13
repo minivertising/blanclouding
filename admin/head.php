@@ -88,7 +88,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
                 <a href="shop_list.php"><i class="fa fa-fw fa-table"></i> 매장 정보</a>
               </li>
               <li>
-                <a href="goods_info.php"><i class="fa fa-fw fa-edit"></i> 상품별 당첨 정보</a>
+                <a href="sms_info.php"><i class="fa fa-fw fa-edit"></i> SMS 발송</a>
               </li>
               <li>
                 <a href="share_media_count.php"><i class="fa fa-fw fa-bar-chart-o"></i> 공유 정보</a>
