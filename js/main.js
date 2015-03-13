@@ -651,3 +651,11 @@ function change_image(param1, param2)
 		}
 	}
 }
+
+function chk_len(val)
+{
+	if (val.length == 4)
+	{
+		$("#mb_phone3").focus();
+	}
+}

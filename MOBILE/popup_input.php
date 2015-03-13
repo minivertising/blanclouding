@@ -54,7 +54,7 @@
                     <option>019</option>
                   </select>
                 </div>
-                <div><input type="tel" id="mb_phone2" name="mb_phone2"></div>
+                <div><input type="tel" id="mb_phone2" name="mb_phone2" onkeyup="chk_len(this.value)"></div>
                 <div><input type="tel" id="mb_phone3" name="mb_phone3"></div>
               </div>
             </li>

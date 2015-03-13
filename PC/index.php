@@ -133,7 +133,7 @@
                     <option>019</option>
                   </select>
                 </div>
-                <div style="margin-left:4px;"><input type="tel" name="mb_phone2" id="mb_phone2" maxlength="4" onblur="only_num(this)"></div>
+                <div style="margin-left:4px;"><input type="tel" name="mb_phone2" id="mb_phone2" maxlength="4" onblur="only_num(this)" onkeyup="chk_len(this.value)"></div>
                 <div><input type="tel" name="mb_phone3" id="mb_phone3" maxlength="4" onblur="only_num(this)"></div>
               </li>
             </ul>
