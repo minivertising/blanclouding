@@ -105,7 +105,7 @@
 </div>
 <!--contents_wrap-->
 <!-------------------------- 이벤트 응모 DIV -------------------------->
-  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="z-index:50000">
+  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="z-index:50000;">
     <div class="p_mid">
       <div class="block_close clearfix">
         <a href="#" class="btn_close" onclick="javascript:close_input()"><img src="images/popup/pop_btn_close.png" /></a>
@@ -260,7 +260,7 @@
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
 
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
-  <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
       <div class="inner">
         <div class="block_close clearfix">
@@ -280,7 +280,7 @@
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
 
 <!--------------------------  매장을 선택해주세요 ALERT DIV ----------------------->
-  <div id="shop_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <div id="shop_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
       <div class="inner">
         <div class="block_close clearfix">
@@ -300,7 +300,7 @@
 <!--------------------------  매장을 선택해주세요 ALERT DIV ----------------------->
 
 <!--------------------------  정보 활용 동의를 해주세요 ALERT DIV ----------------------->
-  <div id="agree_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <div id="agree_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
       <div class="inner">
         <div class="block_close clearfix">
@@ -320,7 +320,7 @@
 <!--------------------------  정보 활용 동의를 해주세요 ALERT DIV ----------------------->
 
 <!--------------------------  참여완료 ALERT DIV ----------------------->
-  <div id="ok_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <div id="ok_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
       <div class="inner">
         <div class="block_close clearfix">
