@@ -141,6 +141,10 @@
         </div>
       </div><!--inner-->
     <div><!--block_cloud_bg-->
+    
+    <div class="footer">
+   	  <img src="img/footer_coupon.png" alt=""/>
+    </div>
 
       <div class="btn_block">
         <div class="block_check_in">
