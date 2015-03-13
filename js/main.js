@@ -362,15 +362,12 @@ function m_chk_input(iPhoneYN)
 			else
 			{
 				alert("이벤트 참여자 수가 많아 참여가 지연되고 있습니다.\n다시 응모해 주시기 바랍니다.");
-				$("#mb_name").val("");
-				$("#mb_phone1").val("010");
-				$("#mb_phone2").val("");
-				$("#mb_phone3").val("");
-				$("#addr1").val("");
-				$("#addr2").val("");
-				$("#shop").val("");
-				$('input').iCheck('uncheck');
-				$.magnificPopup.close();
+				if (iPhoneYN == "Y")
+				{
+					location.href="index.php";
+				}else{
+					window.close();
+				}
 			}
 		}
 	});
