@@ -55,7 +55,7 @@
                   </select>
                 </div>
                 <div><input type="tel" id="mb_phone2" name="mb_phone2" onkeyup="chk_len(this.value)"></div>
-                <div><input type="tel" id="mb_phone3" name="mb_phone3"></div>
+                <div><input type="tel" id="mb_phone3" name="mb_phone3" onkeyup="chk_len2(this.value)"></div>
               </div>
             </li>
           </ul>

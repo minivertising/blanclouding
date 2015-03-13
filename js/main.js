@@ -795,3 +795,11 @@ function chk_len(val)
 		$("#mb_phone3").focus();
 	}
 }
+
+function chk_len2(val)
+{
+	if (val.length == 4)
+	{
+		$("#mb_phone3").blur();
+	}
+}
