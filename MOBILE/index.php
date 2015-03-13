@@ -24,7 +24,7 @@
 
 
     <!--area1-->
-      <div class="area1" style="margin-bottom:-0.5%;">
+      <div class="area1" style="margin-bottom:-1%;">
     <!--video_area-->
         <div class="video_area">
     <!--youtube_div-->
