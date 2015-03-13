@@ -131,7 +131,7 @@
         <div class="block_info">
             <ul class="clearfix">
                 <li class="txt_label">교환기간 |</li>
-                <li class="txt_detail">2015.03.19 ~ 03.21</li>
+                <li class="txt_detail">2015.03.19 ~ 03.22</li>
             </ul>
             <ul class="clearfix">
                 <li class="txt_label">내가 선택한 매장 |</li>
