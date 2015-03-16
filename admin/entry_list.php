@@ -81,8 +81,7 @@
             <form name="frm_execute" method="POST" onsubmit="return checkfrm()">
               <input type="hidden" name="pg" value="<?=$pg?>">
               <select name="search_type">
-				<option value="mb_name"<?php if($search_type == "mb_name"){?>selected<?php }?>>이름</option>
-                <option value="shop_name" <?php if($search_type == "shop_name"){?>selected<?php }?>>매장명</option>
+                <option value="mb_name" <?php if($search_type == "mb_name"){?>selected<?php }?>>이름</option>
                 <option value="mb_phone" <?php if($search_type == "mb_phone"){?>selected<?php }?>>전화번호</option>
               </select>
               <input type="text" name="search_txt" value="<?php echo $search_txt?>">
@@ -120,7 +119,7 @@
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 
-	$buyer_list_query = "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_ipaddr <> 'admin' ".$where." Order by shop_name DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$buyer_list_query = "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_ipaddr <> 'admin' ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 
 	$res = mysqli_query($my_db, $buyer_list_query);
 
@@ -131,7 +130,7 @@
 
 	foreach($buyer_info as $key => $val)
 	{
-		$shop_query = "SELECT shop_name FROM ".$_gl['shop_info_table']." WHERE shop_name='".$buyer_info[$key]['shop_name']."'";
+		$shop_query = "SELECT shop_name FROM ".$_gl['shop_info_table']." WHERE idx='".$buyer_info[$key]['shop_idx']."'";
 		$res = mysqli_query($my_db, $shop_query);
 		$shop_name	= @mysqli_fetch_array($res);
 ?>
@@ -146,34 +145,8 @@
               </tr>
 <?php 
 	}
-
-	$buyer_list_query2 = "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_ipaddr <> 'admin' ".$where." Order by mb_name DESC LIMIT $PAGE_CLASS->page_start, $page_size";
-
-	$res2 = mysqli_query($my_db, $buyer_list_query2);
-
-	while ($buyer_data2 = @mysqli_fetch_array($res2))
-	{
-    $buyer_info2[] = $buyer_data2; 
-	}
-
-	foreach($buyer_info2 as $key => $val)
-	{
-		$name_query = "SELECT shop_name FROM ".$_gl['shop_info_table']." WHERE mb_name='".$buyer_info[$key]['mb_name']."'";
-		$res = mysqli_query($my_db, $name_query);
-		$shop_name	= @mysqli_fetch_array($res);
 ?>
-              <tr>
-                <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
-                <td><?php echo $buyer_info[$key]['mb_name']?></td>
-                <td><?php echo $buyer_info[$key]['mb_phone']?></td>
-                <td><?php echo $shop_name['shop_name']?></td>
-                <td><?php echo $buyer_info[$key]['mb_ipaddr']?></td>
-                <td><?php echo $buyer_info[$key]['mb_regdate']?></td>
-				<td><?php echo $buyer_info[$key]['mb_gubun']?></td>
-              </tr>
-<?php 
-	}
-?>
+
               <tr><td colspan="7"><div class="pageing"><?php echo $BLOCK_LIST?></div></td></tr>
             </tbody>
           </table>
