@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Set Style</title>
         	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script type="text/javascript">
@@ -45,7 +45,7 @@
                 "&format=json&callback=?";
                 
                 jQuery.getJSON(daurl, function(data){
-                	var shortURL = data.results[defaults.longUrl].shortUrl
+                	var shortURL = data.results[defaults.longUrl].shortUrl;
 					$('#subject01').html("짧은주소 : ");
 					$('#myContainer').html(shortURL);
 					
