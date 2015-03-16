@@ -6,6 +6,6 @@
 	$_gl['share_info_table']			= "share_info";             //공유정보 테이블
 	$_gl['sms_info_table']			= "sms_info";             //문자정보 테이블
 
-	$_gl['youtube_url']				= "https://www.youtube.com/embed/I-qVJa2U0oM?controls=0&loop=1&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1"; // 유튜브 URL
+	$_gl['youtube_url']				= "https://www.youtube.com/embed/XDpe5Trw-zs?controls=0&loop=1&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1"; // 유튜브 URL
 
 ?>
