@@ -1,5 +1,5 @@
 <?
-	$bitly_login = "kyhfan@gmail.com";
+	$bitly_login = "kyhfan";
 	$bitly_api_key = "80bff86686590fa91452af2f36c1cdfa923463a1";
 	$long_url = "www.naver.com";
 	$bitly_url = "http://api.bit.ly/v3/shorten";
