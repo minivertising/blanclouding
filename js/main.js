@@ -514,7 +514,7 @@ function close_look()
 	$("#look_div").hide();
 }
 
-function fb_share()
+function fb_share(media)
 {
 	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/?media=F01'),'sharer','toolbar=0,status=0,width=600,height=325');
 	$.ajax({

@@ -89,8 +89,8 @@
 				/*
 				받아온 결과값을 DB에 저장 및 Variation
 				*/
-				//$query = "INSERT INTO ".$_gl['sms_info_table']."(send_phone, send_status, cmid, send_regdate) values('".$phone."','".$json_data['result_code']."','".$json_data['cmid']."','".date("Y-m-d H:i:s")."')";
-				//$result 		= mysqli_query($my_db, $query);
+				$query3 = "INSERT INTO ".$_gl['sms_info_table']."(send_phone, send_status, cmid, send_regdate) values('".$phone."','".$json_data['result_code']."','".$json_data['cmid']."','".date("Y-m-d H:i:s")."')";
+				$result3 		= mysqli_query($my_db, $query3);
 
 				$query2 = "UPDATE ".$_gl['member_info_table']." SET mb_lms='Y' WHERE mb_phone='".$phone."'";
 				$result2 		= mysqli_query($my_db, $query2);
