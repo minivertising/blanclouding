@@ -79,48 +79,47 @@
 			$fbs_pc_cnt[]			= $fbs_pc_count;
 			$fbs_mobile_cnt[]		= $fbs_mobile_count;
 
-			$kts_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='PC' AND tracking_media='K01'";
+			$kts_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='PC' AND tracking_media='K01'";
 			$kts_pc_count			= @mysqli_num_rows(mysqli_query($my_db, $kts_pc_query));
-			$kts_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='MOBILE' AND tracking_media='K01'";
+			$kts_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='MOBILE' AND tracking_media='K01'";
 			$kts_mobile_count	= @mysqli_num_rows(mysqli_query($my_db, $kts_mobile_query));
 			$kts_pc_cnt[]			= $kts_pc_count;
 			$kts_mobile_cnt[]		= $kts_mobile_count;
 
-			$tts_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='PC' AND tracking_media='T01'";
+			$tts_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='PC' AND tracking_media='T01'";
 			$tts_pc_count			= @mysqli_num_rows(mysqli_query($my_db, $tts_pc_query));
-			$tts_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='MOBILE' AND tracking_media='T01'";
+			$tts_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='MOBILE' AND tracking_media='T01'";
 			$tts_mobile_count	= @mysqli_num_rows(mysqli_query($my_db, $tts_mobile_query));
 			$tts_pc_cnt[]			= $tts_pc_count;
 			$tts_mobile_cnt[]		= $tts_mobile_count;
 
-			$fba_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='PC' AND tracking_media='FA01'";
+			$fba_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='PC' AND tracking_media='FA01'";
 			$fba_pc_count			= @mysqli_num_rows(mysqli_query($my_db, $fba_pc_query));
-			$fba_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='MOBILE' AND tracking_media='FA01'";
+			$fba_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='MOBILE' AND tracking_media='FA01'";
 			$fba_mobile_count	= @mysqli_num_rows(mysqli_query($my_db, $fba_mobile_query));
 			$fba_pc_cnt[]			= $fba_pc_count;
 			$fba_mobile_cnt[]	= $fba_mobile_count;
 
-			$ktp_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='PC' AND tracking_media='KM01'";
+			$ktp_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='PC' AND tracking_media='KM01'";
 			$ktp_pc_count			= @mysqli_num_rows(mysqli_query($my_db, $ktp_pc_query));
-			$ktp_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' tracking_gubun='MOBILE' AND tracking_media='KM01'";
+			$ktp_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='MOBILE' AND tracking_media='KM01'";
 			$ktp_mobile_count	= @mysqli_num_rows(mysqli_query($my_db, $ktp_mobile_query));
 			$ktp_pc_cnt[]			= $ktp_pc_count;
 			$ktp_mobile_cnt[]	= $ktp_mobile_count;
 
-			$all_pc_query			= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$buyer_daily_data['buyer_goods']."' AND buyer_gubun='PC'";
+			$all_pc_query			= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='PC'";
 			$all_pc_count			= @mysqli_num_rows(mysqli_query($my_db, $all_pc_query));
-			$all_mobile_query	= "SELECT * FROM ".$_gl['buyer_info_table']." WHERE buyer_date LIKE  '%".$daily_date."%' AND buyer_goods='".$buyer_daily_data['buyer_goods']."' AND buyer_gubun='MOBILE'";
+			$all_mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_gubun='MOBILE'";
 			$all_mobile_count	= @mysqli_num_rows(mysqli_query($my_db, $all_mobile_query));
 			$all_pc_cnt[]			= $all_pc_count;
 			$all_mobile_cnt[]		= $all_mobile_count;
 
-			$etc_pc_cnt[]			= $all_pc_count - $fbs_pc_count - $kts_pc_count - $tts_pc_count - $fba_pc_count - $ktp_pc_count;
-			$etc_mobile_cnt[]		= $all_mobile_count - $fbs_mobile_count - $kts_mobile_count - $tts_mobile_count - $fba_mobile_count - $ktp_mobile_count;
+			$etc_pc_count			= $all_pc_count - $fbs_pc_count - $kts_pc_count - $tts_pc_count - $fba_pc_count - $ktp_pc_count;
+			$etc_mobile_count		= $all_mobile_count - $fbs_mobile_count - $kts_mobile_count - $tts_mobile_count - $fba_mobile_count - $ktp_mobile_count;
 
 		}
 
 		//$rowspan_cnt =  count($buyer_goods);
-		print_r($fbs_pc_count);
 		$total_count = $all_pc_count + $all_mobile_count;
 ?>
                   <tr>
