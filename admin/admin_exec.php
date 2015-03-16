@@ -67,7 +67,7 @@
 		break;
 
 		case "all_send_sms" :
-			$query = "SELECT mb_phone FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N'";
+			$query = "SELECT mb_phone, mb_s_url FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url<>''";
 			$result 		= mysqli_query($my_db, $query);
 
 			$httpmethod = "POST";
@@ -75,25 +75,25 @@
 			$clientKey = "MTAyMC0xMzg3MzUwNzE3NTQ3LWNlMTU4OTRiLTc4MGItNDQ4MS05NTg5LTRiNzgwYjM0ODEyYw==";
 			$contentType = "Content-Type: application/x-www-form-urlencoded";
 
-			while ($data = mysqli_fetch_array($result))
+			while ($data = @mysqli_fetch_array($result))
 			{
-				$phone			= $_REQUEST['mb_phone'];
+				$phone			= $data['mb_phone'];
+				$s_url				= $data['mb_s_url'];
 
-				$response = sendRequest($httpmethod, $url, $parameters, $clientKey, $contentType, $phone);
+				$response = sendRequest($httpmethod, $url, $parameters, $clientKey, $contentType, $phone, $s_url);
 
-				//echo("<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />");
+				echo("<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />");
 				$json_data = json_decode($response, true);
 
 				//print_r($json_data);
 				/*
 				받아온 결과값을 DB에 저장 및 Variation
 				*/
-				$query = "INSERT INTO ".$_gl['sms_info_table']."(send_phone, send_status, cmid, send_regdate) values('".$phone."','".$json_data['result_code']."','".$json_data['cmid']."','".date("Y-m-d H:i:s")."')";
-				$result 		= mysqli_query($my_db, $query);
+				//$query = "INSERT INTO ".$_gl['sms_info_table']."(send_phone, send_status, cmid, send_regdate) values('".$phone."','".$json_data['result_code']."','".$json_data['cmid']."','".date("Y-m-d H:i:s")."')";
+				//$result 		= mysqli_query($my_db, $query);
 
 				$query2 = "UPDATE ".$_gl['member_info_table']." SET mb_lms='Y' WHERE mb_phone='".$phone."'";
 				$result2 		= mysqli_query($my_db, $query2);
-
 			}
 
 			$flag = "N";
@@ -102,23 +102,44 @@
 			else
 				echo $flag = "N";
 		break;
+
+		case "insert_surl" :
+		{
+			//$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url=''";
+			$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url=''";
+			$result 		= mysqli_query($my_db, $query);
+			while ($data = mysqli_fetch_array($result))
+			{
+				$longurl	= "http://www.thefaceshopclouding.co.kr/MOBILE/winner_coupon.php?serialnumber=".$data['mb_serialnumber'];
+				$short_url = get_bitly_short_url($longurl,'kyhfan','R_11ea80ffc2bf4bbe8c848b761e71df8a');
+
+				$query2 = "UPDATE ".$_gl['member_info_table']." SET mb_s_url='".$short_url."' WHERE mb_serialnumber='".$data['mb_serialnumber']."'";
+				$result2 		= mysqli_query($my_db, $query2);
+			}
+
+			$flag = "N";
+			if ($result)
+				echo $flag = "Y";
+			else
+				echo $flag = "N";
+		}
 	}
 
-			function sendRequest($httpMethod, $url, $parameters, $clientKey, $contentType, $phone) {
+	function sendRequest($httpMethod, $url, $parameters, $clientKey, $contentType, $phone, $s_url) {
 
-					//create basic authentication header
-					$headerValue = $clientKey;
-					$headers = array("x-waple-authorization:" . $headerValue);
+		//create basic authentication header
+		$headerValue = $clientKey;
+		$headers = array("x-waple-authorization:" . $headerValue);
 
-					$params = array(
-						'send_time' => '', 
-						'send_phone' => '0316897530', 
-						'dest_phone' => $phone, 
-						//'dest_phone' => '01099111804', 
-						'send_name' => '', 
-						'dest_name' => '', 
-						'subject' => '더페이스샵 - 하얀 수분 크림 쿠폰',
-						'msg_body' => "
+		$params = array(
+			'send_time' => '', 
+			'send_phone' => '0316897530', 
+			'dest_phone' => $phone, 
+			//'dest_phone' => '01099111804', 
+			'send_name' => '', 
+			'dest_name' => '', 
+			'subject' => '더페이스샵 - 하얀 수분 크림 쿠폰',
+			'msg_body' => "
 [하얀 수분 크림 당첨!!]
 블란클라우딩 KIT
 당첨을 축하드립니다.
@@ -131,40 +152,66 @@
 
 블란 클라우딩 10ML KIT쿠폰!
 쿠폰받기▼
-http://goo.gl/WGOUQN
+".$s_url."
 
 * 응모시 지정하신 더페이스샵 매장에서만 사용 가능합니다.
 * 매장 영업 시간에만 교환이 가능합니다.
 * '쿠폰 사용 버튼'은 직원 확인용으로 개인이 누를시 경품 교환이 불가합니다.
 * 불법적인 방법으로 이벤트에 참여하신 고객님은 이벤트 당첨 대상에서 제외되며, 당첨 이후에도 당첨이 취소될 수 있습니다.
 "
-					);
+		);
 
-					//curl initialization
-					$curl = curl_init();
+		//curl initialization
+		$curl = curl_init();
 
-					//create request url
-					//$url = $url."?".$parameters;
+		//create request url
+		//$url = $url."?".$parameters;
 
-					curl_setopt ($curl, CURLOPT_URL , $url);
-					curl_setopt ($curl, CURLOPT_RETURNTRANSFER, true);
-					curl_setopt ($curl, CURLOPT_HTTPHEADER, $headers);
-					curl_setopt ($curl, CURLINFO_HEADER_OUT, true);
-					curl_setopt ($curl, CURLOPT_SSL_VERIFYPEER, false);
-					
-					curl_setopt($curl, CURLOPT_POST, 1);
-					curl_setopt($curl, CURLOPT_POSTFIELDS, $params);
-					curl_setopt($curl, CURLOPT_TIMEOUT, 30);
+		curl_setopt ($curl, CURLOPT_URL , $url);
+		curl_setopt ($curl, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt ($curl, CURLOPT_HTTPHEADER, $headers);
+		curl_setopt ($curl, CURLINFO_HEADER_OUT, true);
+		curl_setopt ($curl, CURLOPT_SSL_VERIFYPEER, false);
 
-					$response = curl_exec($curl);
+		curl_setopt($curl, CURLOPT_POST, 1);
+		curl_setopt($curl, CURLOPT_POSTFIELDS, $params);
+		curl_setopt($curl, CURLOPT_TIMEOUT, 30);
 
-					$httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-					$responseHeaders = curl_getinfo($curl, CURLINFO_HEADER_OUT);
+		$response = curl_exec($curl);
+
+		$httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+		$responseHeaders = curl_getinfo($curl, CURLINFO_HEADER_OUT);
 
 
-					curl_close($curl);
+		curl_close($curl);
 
-					return $response;
-			}
+		return $response;
+	}
+
+
+	/* returns the shortened url */
+	function get_bitly_short_url($url,$login,$appkey,$format='txt') {
+		$connectURL = 'http://api.bit.ly/v3/shorten?login='.$login.'&apiKey='.$appkey.'&uri='.urlencode($url).'&format='.$format;
+		return curl_get_result($connectURL);
+	}
+
+	/* returns expanded url */
+	function get_bitly_long_url($url,$login,$appkey,$format='txt') {
+		$connectURL = 'http://api.bit.ly/v3/expand?login='.$login.'&apiKey='.$appkey.'&shortUrl='.urlencode($url).'&format='.$format;
+		return curl_get_result($connectURL);
+	}
+
+	/* returns a result form url */
+	function curl_get_result($url) {
+		$ch = curl_init();
+		$timeout = 5;
+		curl_setopt($ch,CURLOPT_URL,$url);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,$timeout);
+		$data = curl_exec($ch);
+		curl_close($ch);
+		return $data;
+	}
+
 
 ?>

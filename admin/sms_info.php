@@ -96,12 +96,38 @@
 				},
 				url: "./admin_exec.php",
 				success: function(response){
+					alert(response);
 					alert("당첨인원 모두에게 LMS가 발송되었습니다.");
 					//window.refresh();
 				}
 			});
 		}
 	}
+
+	function create_surl()
+	{
+		if (confirm("당첨 인원 모두에게 짧은 URL을 만드시겠습니까?"))
+		{
+			$.ajax({
+				type:"POST",
+				cache: false,
+				data:{
+					"exec"       : "insert_surl"
+				},
+				url: "./admin_exec.php",
+				success: function(response){
+					if (response == "Y")
+					{
+						alert("당첨인원 모두에게 짧은 URL이 발급되었습니다.");
+					}else{
+						alert("시스템 오류!!다시해라!");
+					}
+					//window.refresh();
+				}
+			});
+		}
+	}
+
 </script>
 
 <div id="page-wrapper">
@@ -187,7 +213,7 @@
 	}
 ?>
               <tr><td colspan="7"><div class="pageing"><?php echo $BLOCK_LIST?></div>
-			  현재 당첨 인원 : <?=$buyer_count?> 명 <input type="button" value="당첨자 전체 발송" onclick="all_send();"></td></tr>
+			  현재 당첨 인원 : <?=$buyer_count?> 명 <input type="button" value="shorturl 생성" onclick="create_surl();"><input type="button" value="당첨자 전체 발송" onclick="all_send();"></td></tr>
             </tbody>
           </table>
         </div>
