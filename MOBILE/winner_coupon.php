@@ -44,7 +44,7 @@
       }
 	
 
-		var millenium = new Date("March 19, 2015 22:00:00") //이곳을 수정하면 됩니다
+		var millenium = new Date("March 18, 2015 22:00:00") //이곳을 수정하면 됩니다
 
 		function CalcRemaining(theForm)
 		{
@@ -59,7 +59,7 @@
 		var minutes  = difference % 60
 		var minuteslen = String(minutes).length;
 		if (minuteslen < 2)
-			minute = "0" + minute;
+			minutes = "0" + minutes;
 			difference = parseInt(difference / 60)
 		var hours  = difference % 1000000
 		var hourslen = String(hours).length;
