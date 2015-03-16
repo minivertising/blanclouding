@@ -65,6 +65,43 @@
 			else
 				echo $flag = "N";
 		break;
+
+		case "all_send_sms" :
+			$query = "SELECT mb_phone FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N'";
+			$result 		= mysqli_query($my_db, $query);
+
+			$httpmethod = "POST";
+			$url = "http://api.openapi.io/ppurio/1/message/lms/minivertising";
+			$clientKey = "MTAyMC0xMzg3MzUwNzE3NTQ3LWNlMTU4OTRiLTc4MGItNDQ4MS05NTg5LTRiNzgwYjM0ODEyYw==";
+			$contentType = "Content-Type: application/x-www-form-urlencoded";
+
+			while ($data = mysqli_fetch_array($result))
+			{
+				$phone			= $_REQUEST['mb_phone'];
+
+				$response = sendRequest($httpmethod, $url, $parameters, $clientKey, $contentType, $phone);
+
+				//echo("<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />");
+				$json_data = json_decode($response, true);
+
+				//print_r($json_data);
+				/*
+				받아온 결과값을 DB에 저장 및 Variation
+				*/
+				$query = "INSERT INTO ".$_gl['sms_info_table']."(send_phone, send_status, cmid, send_regdate) values('".$phone."','".$json_data['result_code']."','".$json_data['cmid']."','".date("Y-m-d H:i:s")."')";
+				$result 		= mysqli_query($my_db, $query);
+
+				$query2 = "UPDATE ".$_gl['member_info_table']." SET mb_lms='Y' WHERE mb_phone='".$phone."'";
+				$result2 		= mysqli_query($my_db, $query2);
+
+			}
+
+			$flag = "N";
+			if ($result)
+				echo $flag = "Y";
+			else
+				echo $flag = "N";
+		break;
 	}
 
 			function sendRequest($httpMethod, $url, $parameters, $clientKey, $contentType, $phone) {
