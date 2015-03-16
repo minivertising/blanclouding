@@ -32,7 +32,7 @@
 	left : 0;
 	width : 100%;
 	height : 100%;
-	background : url("../images/movCover.png") repeat;
+	background : url("../images/area1_bg.jpg") repeat;
 	overflow : hidden;
 	z-index : 10;
 }
@@ -62,9 +62,9 @@
 
 .contents_wrap .area1 .video_area .center_menu_area{
 	position:absolute;
-	bottom:27%;
-	left:2%;
-	width:600px;
+	bottom:28%;
+	right:1%;
+	width:490px;
 	height:100px;
 	z-index:40;
 }

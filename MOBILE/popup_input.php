@@ -76,8 +76,10 @@
             <li class="t_name"><img src="img/popup/txt_label_store.png" width="63" alt=""/></li>
             <li class="input_txt address">
               <div class="inner clearfix">
+
                 <div>
                   <select name="addr1" id="addr1" onchange="addr_change(this.value)">
+
                     <option value="">선택하세요</option>
 <?
 	// 주소 쿼리
@@ -92,9 +94,11 @@
 	}
 ?>
                   </select>
+
                 </div>
                 <div id="sel_addr2">
                   <select name="addr2" id="addr2" onchange="shop_change(this.value)">
+
                     <option value="">선택하세요</option>
                   </select>
                 </div>
