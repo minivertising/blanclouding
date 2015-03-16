@@ -296,9 +296,18 @@ body {
 	padding-top:20px;
 }
 
+.wrap_page .content.coupon .footer{
+	width:100%;
+	padding:5% 0;
+	background:#fff;
+}
+.wrap_page .content.coupon .footer img{
+	width:100%;
+}
+
 
 .wrap_page .block_cloud_bg{
-	background: url(../img/bg_cloud.png) no-repeat 0 -170px;
+	background: url(../img/bg_cloud.png) no-repeat 0 -310px;
 	background-size: cover;
 }
 

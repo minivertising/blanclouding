@@ -63,6 +63,26 @@
 			return false;
 		}
 	}
+
+	function send_sms(phone)
+	{
+		if (confirm("LMS를 발송하시겠습니까?"))
+		{
+			$.ajax({
+				type:"POST",
+				cache: false,
+				data:{
+					"exec"       : "send_sms",
+					"phone"    : phone
+				},
+				url: "./admin_exec.php",
+				success: function(response){
+					alert("LMS가 발송되었습니다.");
+					//window.refresh();
+				}
+			});
+		}
+	}
 </script>
 
 <div id="page-wrapper">
@@ -70,7 +90,7 @@
   <!-- Page Heading -->
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">더페이스샵 이벤트 참여자 목록</h1>
+        <h1 class="page-header">SMS 발송 ( 10,000명 한번에 발송은 다음주 화요일(17일)까지 완료하겠습니다.)</h1>
       </div>
     </div>
     <!-- /.row -->
@@ -81,7 +101,6 @@
             <form name="frm_execute" method="POST" onsubmit="return checkfrm()">
               <input type="hidden" name="pg" value="<?=$pg?>">
               <select name="search_type">
-                <option value="idx" <?php if($search_type == "shop_idx"){?>selected<?php }?>>매장명</option>
                 <option value="mb_phone" <?php if($search_type == "mb_phone"){?>selected<?php }?>>전화번호</option>
               </select>
               <input type="text" name="search_txt" value="<?php echo $search_txt?>">
@@ -96,9 +115,10 @@
                 <th>이름</th>
                 <th>전화번호</th>
                 <th>매장명</th>
-                <th>IP정보</th>
+                <th>당첨여부</th>
+                <th>LMS발송여부</th>
                 <th>등록일</th>
-				<th>구분</th>
+                <th>SMS발송</th>
               </tr>
             </thead>
             <tbody>
@@ -119,7 +139,7 @@
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 
-	$buyer_list_query = "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_ipaddr <> 'admin' ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$buyer_list_query = "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_ipaddr <> 'admin' AND mb_winner='Y' ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 
 	$res = mysqli_query($my_db, $buyer_list_query);
 
@@ -139,9 +159,10 @@
                 <td><?php echo $buyer_info[$key]['mb_name']?></td>
                 <td><?php echo $buyer_info[$key]['mb_phone']?></td>
                 <td><?php echo $shop_name['shop_name']?></td>
-                <td><?php echo $buyer_info[$key]['mb_ipaddr']?></td>
+                <td><?php echo $buyer_info[$key]['mb_winner']?></td>
+                <td><?php echo $buyer_info[$key]['mb_lms']?></td>
                 <td><?php echo $buyer_info[$key]['mb_regdate']?></td>
-				<td><?php echo $buyer_info[$key]['mb_gubun']?></td>
+				<td><input type="button" value="문자 발송" onclick="send_sms('<?php echo $buyer_info[$key]['mb_phone']?>');"></td>
               </tr>
 <?php 
 	}

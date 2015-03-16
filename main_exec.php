@@ -16,7 +16,7 @@ switch ($_REQUEST['exec'])
 
 		if ($chk_member == 0)
 		{
-			$query 		= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr, mb_phone, shop_idx, mb_regdate, mb_gubun, mb_serialnumber) values('".$_SERVER['REMOTE_ADDR']."','".$mb_phone."','".$shop."','".date("Y-m-d H:i:s")."','".$gubun."','".$serialNumber."')";
+			$query 		= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr, mb_phone, shop_idx, mb_name, mb_regdate, mb_gubun, mb_serialnumber) values('".$_SERVER['REMOTE_ADDR']."','".$mb_phone."','".$shop."','".$mb_name."','".date("Y-m-d H:i:s")."','".$gubun."','".$serialNumber."')";
 			$result 	= mysqli_query($my_db, $query);
 
 			$query2 		= "UPDATE ".$_gl['shop_info_table']." SET sel_count = sel_count + 1 WHERE idx = '".$shop."'";

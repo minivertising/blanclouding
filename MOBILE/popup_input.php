@@ -54,8 +54,8 @@
                     <option>019</option>
                   </select>
                 </div>
-                <div><input type="tel" id="mb_phone2" name="mb_phone2"></div>
-                <div><input type="tel" id="mb_phone3" name="mb_phone3"></div>
+                <div><input type="tel" id="mb_phone2" name="mb_phone2" onkeyup="chk_len(this.value)"></div>
+                <div><input type="tel" id="mb_phone3" name="mb_phone3" onkeyup="chk_len2(this.value)"></div>
               </div>
             </li>
           </ul>
@@ -181,7 +181,7 @@
           </ul>
         </div>
         <div class="btn_block" style="background:white;">
-          <a href="javascript:chk_input();" class="popup-with-zoom-anim" onclick="javascript:chk_input();"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
+          <a href="javascript:m_chk_input('<?=$iPhoneYN?>');" class="popup-with-zoom-anim" onclick="javascript:m_chk_input('<?=$iPhoneYN?>');"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
@@ -251,7 +251,18 @@
           <img src="img/popup/title_thanks.png" width="220" alt=""/>
         </div>
         <div class="btn_block" style="background:white;">
+<?
+	if ($iPhoneYN == "Y")
+	{
+?>
+          <a href="#" onclick="$.magnificPopup.close();location.href='index.php';"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
+<?
+	}else{
+?>
           <a href="#" onclick="$.magnificPopup.close();window.close();"><img src="img/popup/btn_confirm.png" width="100" alt=""/></a>
+<?
+	}
+?>
         </div>
       </div><!--inner-->
     </div>

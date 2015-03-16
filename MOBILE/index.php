@@ -21,14 +21,10 @@
         </div>
 </div>    
 
-  <div class="navi_btn_block clearfix">
-        <a href="#" class="view_event"><img src="img/btn_gift.png" alt=""/></a>
-        <a href="#" class="view_product"><img src="img/btn_product.png" alt=""/></a>
-  </div>
 
 
     <!--area1-->
-      <div class="area1" style="margin-top:-3%;">
+      <div class="area1" style="margin-bottom:-1%;">
     <!--video_area-->
         <div class="video_area">
     <!--youtube_div-->
@@ -40,6 +36,10 @@
     <!--video_area-->
       </div>
     <!--area1-->
+  <div class="navi_btn_block clearfix">
+        <a href="#" class="view_event"><img src="img/btn_gift.png" alt=""/></a>
+        <a href="#" class="view_product"><img src="img/btn_product.png" alt=""/></a>
+  </div>
 
     <!--sns_area-->
       <div class="sns_area clearfix">

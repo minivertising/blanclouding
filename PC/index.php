@@ -65,11 +65,11 @@
 
 
 <!--area2-->
-<div class="area2_bg">
+<div class="area2_bg" style="display:none">
   <div class="area2">
     <div class="product_group">
       <div class="product_area">
-      	<a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()" style="background:none">신청하기</a>
+      	<a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()" style="background:none;outline: none;">신청하기</a>
       </div>
     </div>
   </div>
@@ -77,7 +77,7 @@
 <!--area2-->
 
 <!--area3-->
-<div class="area3_bg">
+<div class="area3_bg" style="display:none">
   <div class="area3">
     <div class="product_group">
       <div class="product_area">
@@ -89,7 +89,7 @@
 <!--area3-->
 
 <!--footer-->
-  <div class="footer">
+  <div class="footer" style="display:none">
     <img src="images/footer.png" alt=""/>
   </div>
 <!--footer-->
@@ -105,7 +105,7 @@
 </div>
 <!--contents_wrap-->
 <!-------------------------- 이벤트 응모 DIV -------------------------->
-  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="z-index:50000">
+  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="z-index:50000;">
     <div class="p_mid">
       <div class="block_close clearfix">
         <a href="#" class="btn_close" onclick="javascript:close_input()"><img src="images/popup/pop_btn_close.png" /></a>
@@ -133,7 +133,7 @@
                     <option>019</option>
                   </select>
                 </div>
-                <div style="margin-left:4px;"><input type="tel" name="mb_phone2" id="mb_phone2" maxlength="4" onblur="only_num(this)"></div>
+                <div style="margin-left:4px;"><input type="tel" name="mb_phone2" id="mb_phone2" maxlength="4" onblur="only_num(this)" onkeyup="chk_len(this.value)"></div>
                 <div><input type="tel" name="mb_phone3" id="mb_phone3" maxlength="4" onblur="only_num(this)"></div>
               </li>
             </ul>
@@ -260,7 +260,7 @@
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
 
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
-  <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
       <div class="inner">
         <div class="block_close clearfix">
@@ -280,7 +280,7 @@
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
 
 <!--------------------------  매장을 선택해주세요 ALERT DIV ----------------------->
-  <div id="shop_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <div id="shop_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
       <div class="inner">
         <div class="block_close clearfix">
@@ -300,7 +300,7 @@
 <!--------------------------  매장을 선택해주세요 ALERT DIV ----------------------->
 
 <!--------------------------  정보 활용 동의를 해주세요 ALERT DIV ----------------------->
-  <div id="agree_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <div id="agree_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
       <div class="inner">
         <div class="block_close clearfix">
@@ -320,7 +320,7 @@
 <!--------------------------  정보 활용 동의를 해주세요 ALERT DIV ----------------------->
 
 <!--------------------------  참여완료 ALERT DIV ----------------------->
-  <div id="ok_alert" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <div id="ok_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
       <div class="inner">
         <div class="block_close clearfix">
@@ -364,7 +364,7 @@
 		else if (e.data === 1)
 		{
 			//controllable_player.pauseVideo();
-			$(".cover_area").css("background","url('./images/movCover.png') repeat");
+			//$(".cover_area").css("background","url('./images/movCover.png') repeat");
 			//$("#video_control").text('일시정지');
 			$("#video_control").attr('src','images/btn_pause.png');
 		}
@@ -390,7 +390,7 @@
     	if (typeof(controllable_player) == 'undefined'){
     		onYouTubeIframeAPIReady();
     	}
-		$(".cover_area").css("background","url('./images/movCover.png') repeat");
+		//$(".cover_area").css("background","url('./images/movCover.png') repeat");
 
     }, 1000)
 
@@ -407,14 +407,12 @@
 
 		var wHeight =$(window).height();
 
-		if ('v'=='\v'){ // 8이하
-			wHeight = 773;
-		}else if (wHeight <= 780){
+		if (wHeight <= 780){
 			wHeight = 780;
 		}else if(wHeight > 1000){
 			wHeight = 1000;
 		}
-		$('.area2').height(wHeight); // 제품
+		$('.area2').height(995); // 제품
 		$('.area3').height(wHeight); // 제품
 		//$('.product_group').width(width); // 제품
 		//$('.product_area').width(width); // 제품
@@ -433,14 +431,12 @@
 		
 		var wHeight =$(window).height();
 
-		if ('v'=='\v'){ // 8이하
-			wHeight = 773;
-		}else if (wHeight <= 780){
+		if (wHeight <= 780){
 			wHeight = 780;
 		}else if(wHeight > 1000){
 			wHeight = 1000;
 		}
-		$('.area2').height(wHeight); // 제품
+		$('.area2').height(995); // 제품
 		$('.area3').height(wHeight); // 제품
 		//$('.product_group').width(width); // 제품
 		//$('.product_area').width(width); // 제품
@@ -522,9 +518,15 @@
 
 		var magnificPopup = $.magnificPopup.instance;
 
-		//setInterval(function(){
-		//	$('.scroll_navi_area').animate({bottom:100},500).animate({bottom:110},500);
-		//},1000);
+		setInterval(function(){
+			$('.scroll_navi_area').animate({bottom:100},500).animate({bottom:110},500);
+		},1000);
+
+		$(".area2_bg").show();
+		$(".area3_bg").show();
+		$(".footer").show();
+		setTimeout("$('.cover_area').css('background','url(./images/movCover.png) repeat');",3000);
+		//$(".cover_area").css("background","url('./images/movCover.png') repeat");
 
 	});
 	</script>
