@@ -83,6 +83,25 @@
 			});
 		}
 	}
+
+	function all_send()
+	{
+		if (confirm("당첨 인원 모두에게 LMS를 발송하시겠습니까?"))
+		{
+			$.ajax({
+				type:"POST",
+				cache: false,
+				data:{
+					"exec"       : "all_send_sms"
+				},
+				url: "./admin_exec.php",
+				success: function(response){
+					alert("당첨인원 모두에게 LMS가 발송되었습니다.");
+					//window.refresh();
+				}
+			});
+		}
+	}
 </script>
 
 <div id="page-wrapper">
@@ -131,7 +150,7 @@
 	if ($search_txt != "")
 		$where	.= " AND ".$search_type." like '%".$search_txt."%'";
 
-	$buyer_count_query = "SELECT count(*) FROM ".$_gl['member_info_table']." WHERE mb_ipaddr <> 'admin' ".$where."";
+	$buyer_count_query = "SELECT count(*) FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_ipaddr <> 'admin' ".$where."";
 
 	list($buyer_count) = @mysqli_fetch_array(mysqli_query($my_db, $buyer_count_query));
 	$PAGE_CLASS = new Page($pg,$buyer_count,$page_size,$block_size);
@@ -167,7 +186,8 @@
 <?php 
 	}
 ?>
-              <tr><td colspan="7"><div class="pageing"><?php echo $BLOCK_LIST?></div></td></tr>
+              <tr><td colspan="7"><div class="pageing"><?php echo $BLOCK_LIST?></div>
+			  현재 당첨 인원 : <?=$buyer_count?> 명 <input type="button" value="당첨자 전체 발송" onclick="all_send();"></td></tr>
             </tbody>
           </table>
         </div>
