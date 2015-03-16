@@ -87,6 +87,9 @@ if (isset($_SESSION['ss_mb_name']) == false)
               <li>
                 <a href="shop_list.php"><i class="fa fa-fw fa-table"></i> 매장 정보</a>
               </li>
+               <li>
+                <a href="shop_list2.php"><i class="fa fa-fw fa-table"></i> 매장 정보(선택받은 갯수)</a>
+              </li>
               <li>
                 <a href="sms_info.php"><i class="fa fa-fw fa-edit"></i> SMS 발송</a>
               </li>
