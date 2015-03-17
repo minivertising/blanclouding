@@ -1,5 +1,6 @@
 <?
 	include_once "../config.php";
+	/*
 	$sn = BC_SerialNumber();
 	//print_r($sn);
 
@@ -22,6 +23,19 @@
 			$i++;
 		}
 		$j++;
+	}
+
+	print_r("완료!!");
+*/
+
+	$query = "SELECT * FROM member_info WHERE mb_s_url <> ''";
+	$result 		= mysqli_query($my_db, $query);
+	while ($data = mysqli_fetch_array($result))
+	{
+		$query3		= "UPDATE member_info SET mb_s_url='".$data['mb_s_url']."' WHERE idx='".$data['idx']."'";
+		print_r($query3.";");
+		print_r("<br />");
+
 	}
 
 	print_r("완료!!");
