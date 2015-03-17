@@ -135,7 +135,7 @@
   <!-- Page Heading -->
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">SMS 발송 ( 10,000명 한번에 발송은 다음주 화요일(17일)까지 완료하겠습니다.)</h1>
+        <h1 class="page-header">SMS 발송</h1>
       </div>
     </div>
     <!-- /.row -->
