@@ -341,8 +341,8 @@
 
 </body>
 </html>
-	 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script> 
-  <!-- <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=be9027b0d0b10e92265c61865004559b&libraries=services"></script> -->
+ <!--<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4079f466534bbd570c0fd254a4c2954e&libraries=services"></script> -->
+	 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=be9027b0d0b10e92265c61865004559b&libraries=services"></script>
   <!--<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=d7a94169c5851e63faf049dfb53e9ae0&libraries=services"></script>-->
 
 	<script type="text/javascript">
