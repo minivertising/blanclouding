@@ -12,6 +12,7 @@
 	// 난수 생성
 	function BC_SerialNumber()
 	{
+		/*
 		srand(time());
 		$time = substr(time(),5,5);//5번째문자에서5글자추출(0분터시작) 
 		for($i=0;$i<3;$i++)//알파벳 3개 추출 
@@ -22,6 +23,8 @@
 		$iparr = explode(".",$REMOTE_ADDR);
 		//자신의ip뒤에3자리입력 
 		$randcode=$c.$time.$iparr[3];
+		*/
+		$randcode = md5( mktime() . $_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT'] ); ;
 		return $randcode; // 난수 생성
 	}
 
