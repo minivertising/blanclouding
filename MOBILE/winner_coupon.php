@@ -138,7 +138,7 @@
               <div class="block_info">
                 <ul class="clearfix">
                   <li class="txt_label">교환기간 |</li>
-                  <li class="txt_detail">2015.03.19 ~ 03.22</li>
+                  <li class="txt_detail date">2015.03.19 ~ 03.22</li>
                 </ul>
                 <ul class="clearfix">
                   <li class="txt_label">내가 선택한 매장 |</li>
@@ -147,11 +147,16 @@
 	if ($iPhoneYN == "Y")
 	{
 ?>
-                    <a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>&exec=select_address"><?=$user_info['shop_name']?></a>
+                    <a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>&exec=select_address" class="clearfix">
+                    	<span><img src="img/icon_map.png" alt=""/></span>
+                    	<span class="txt"><?=$user_info['shop_name']?></a></span>
 <?
 	}else{
 ?>
-                    <a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>&exec=select_address" target="_blank"><?=$user_info['shop_name']?></a>
+                    <a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>&exec=select_address" target="_blank" class="clearfix">
+                    	<span><img src="img/icon_map.png" alt=""/></span>
+						<span class="txt"><?=$user_info['shop_name']?></span>
+                    </a>
 <?
 	}
 ?>
