@@ -44,7 +44,7 @@
       }
 	
 
-		var millenium = new Date("March 18, 2015 22:00:00") //이곳을 수정하면 됩니다
+		var millenium = new Date("March 22, 2015 22:00:00") //이곳을 수정하면 됩니다
 
 		function CalcRemaining(theForm)
 		{
