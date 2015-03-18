@@ -148,13 +148,13 @@
 	{
 ?>
                     <a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>&exec=select_address" class="clearfix">
-                    	<span><img src="img/icon_map.png" alt=""/></span>
+                    	<span><img src="img/icon_map.png" width="10" alt=""/></span>
                     	<span class="txt"><?=$user_info['shop_name']?></a></span>
 <?
 	}else{
 ?>
                     <a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>&exec=select_address" target="_blank" class="clearfix">
-                    	<span><img src="img/icon_map.png" alt=""/></span>
+                    	<span><img src="img/icon_map.png" width="10" alt=""/></span>
 						<span class="txt"><?=$user_info['shop_name']?></span>
                     </a>
 <?
