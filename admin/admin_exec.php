@@ -107,15 +107,21 @@
 		{
 			$flag = "N";
 			//$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url=''";
-			$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_use='N' AND mb_s_url=''";
+			$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_use='N' AND mb_s_url='' AND mb_regdate like '%2015-03-16 19:%'";
 			$result 		= mysqli_query($my_db, $query);
 			while ($data = mysqli_fetch_array($result))
 			{
 				$longurl	= "http://www.thefaceshopclouding.co.kr/MOBILE/winner_coupon.php?serialnumber=".$data['mb_serialnumber'];
 				//$short_url = get_bitly_short_url($longurl,'kyhfan','R_11ea80ffc2bf4bbe8c848b761e71df8a');
-				//$short_url = get_bitly_short_url($longurl,'kty0427','R_08ecf5e89640457ea47d238eeab549b2');
+				$short_url = get_bitly_short_url($longurl,'kty0427','R_08ecf5e89640457ea47d238eeab549b2');
 				//$short_url = get_bitly_short_url($longurl,'kyhfan2','R_f7547b30052049679ee65de54c782e20');
-				$short_url = get_bitly_short_url($longurl,'kyhfan3','R_426adbe491a44aee82bd938e9c7f032e');
+				//$short_url = get_bitly_short_url($longurl,'kyhfan3','R_426adbe491a44aee82bd938e9c7f032e');
+				//$short_url = get_bitly_short_url($longurl,'kyhfan4','R_6e2b8aac3f514271a5901cf546f9540a');
+				//$short_url = get_bitly_short_url($longurl,'kyhfan5','R_089bb97a7ff8481da0e7b1600c6b6c0f');
+				//$short_url = get_bitly_short_url($longurl,'kty04275','R_8fa80ea354b74ce681f028394d803875');
+				//$short_url = get_bitly_short_url($longurl,'kty04276','R_e73daafc213d4d44b711ddfc45bde450');
+
+
 
 				if ($short_url == "RATE_LIMIT_EXCEEDED"){
 					$flag	= "F";
