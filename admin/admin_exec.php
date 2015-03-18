@@ -104,7 +104,6 @@
 		break;
 
 		case "insert_surl" :
-		{
 			$flag = "N";
 			//$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url=''";
 			$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_use='N' AND mb_s_url='' AND mb_regdate like '%2015-03-16 19:%'";
@@ -136,7 +135,34 @@
 				echo $flag = "Y";
 			else
 				echo $flag = "N";
-		}
+		break;
+
+		case "sel_winner" :
+			$query = "SELECT * FROM ".$_gl['shop_info_table']."";
+			$result 		= mysqli_query($my_db, $query);
+			while ($data = mysqli_fetch_array($result))
+			{
+				unset($winner_data);
+				$query2 = "SELECT * FROM ".$_gl['member_info_table']." WHERE shop_idx='".$data['idx']."'";
+				$result2 		= mysqli_query($my_db, $query2);
+				while ($data2 = mysqli_fetch_array($result2))
+				{
+					$winner_data[]	= $data2['idx'];
+				}
+				shuffle($winner_data);
+				for ( $i = 0; $i < $data['req_cnt'];$i++)
+				{
+					$query3 = "UPDATE ".$_gl['member_info_table']." SET mb_winner='Y' WHERE idx='".$winner_data[$i]."'";
+					$result3 		= mysqli_query($my_db, $query3);
+					//print_r($query3);
+				}
+
+				if ($result3)
+					echo "Y";
+				else
+					echo "N";
+			}
+		break;
 	}
 
 	function sendRequest($httpMethod, $url, $parameters, $clientKey, $contentType, $phone, $s_url) {
