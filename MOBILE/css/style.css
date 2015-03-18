@@ -239,12 +239,13 @@ body {
 }
 .wrap_page .content.coupon .block_info ul{
 	width:85%;
-	padding-left:15%;
+	padding-left:0;
 }
 .wrap_page .content.coupon .block_info ul li{
 	display:block;
 	float:left;
-	font-size:13px;
+	font-size:16px;
+	letter-spacing:-1px;
 	color:#1fa3de;
 	font-weight:bold;
 }
@@ -259,6 +260,10 @@ body {
 }
 .wrap_page .content.coupon .block_info ul li.btn_map{
 	padding-left:10px;
+	text-align:left;
+}
+.wrap_page .content.coupon .block_info ul li.btn_map img{
+	width:60%;
 }
 
 .wrap_page .content.coupon .block_time{
@@ -289,11 +294,19 @@ body {
 }
 
 .wrap_page .content.coupon .block_check_in{
-	background:#c5e6f4;
+	background:#e0f0f6;
 	padding:30px 0;
 }
+.wrap_page .content.coupon .block_check_in .txt img.txt{
+	width:65%;
+}
+
+
 .wrap_page .content.coupon .block_check_in .btn_block{
 	padding-top:20px;
+}
+.wrap_page .content.coupon .block_check_in .btn_block img{
+	width:70%;
 }
 
 .wrap_page .content.coupon .footer{
@@ -307,7 +320,7 @@ body {
 
 
 .wrap_page .block_cloud_bg{
-	background: url(../img/bg_cloud.png) no-repeat 0 -310px;
+	background: url(../img/bg_cloud.png) no-repeat 0 -100px;
 	background-size: cover;
 }
 
@@ -321,6 +334,10 @@ body {
 	background:#fff;
 }
 
+.wrap_page .content.coupon .footer img{
+	width:95%;
+	
+}
 
 /*popup*/
 .wrap_page.popup{
