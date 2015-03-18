@@ -88,28 +88,30 @@
   </head>
   <body onLoad="CalcRemaining(document.clock)">
     <div class="wrap_page wrap_coupon">
+    
       <div class="header coupon">
         <div class="block_logo clearfix">
           <a href="http://www.thefaceshop.com/m/" class="logo_tfs" target="_blank"><img src="img/logo_tfs.png" width="100" alt=""/></a>
-        </div>
-      </div>
+        </div><!--block_logo clearfix-->
+      </div><!--header coupon-->
 
       <div class="content coupon">
         <div class="block_title">
           <img src="img/coupon_title.png" alt=""/>
-        </div>
+        </div><!--block_title-->
 
         <div class="block_cloud_bg">
 
           <div class="product">
             <img src="img/img_product.png" alt=""/>
-          </div>
+          </div><!--product-->
 
           <div class="inner">
             <div class="block_time">
               <div class="txt">
                 <img src="img/txt_time.png" width="140" alt=""/>
-              </div>
+              </div><!--txt-->
+              
               <div class="time clearfix">
                 <div class="num"><!-- 시 -->
                   <img src="./img/time_0.png" id="realtime_h1" alt="" />
@@ -129,8 +131,9 @@
                     <img src="./img/time_0.png" id="realtime_s1" alt="" />
                     <img src="./img/time_0.png" id="realtime_s2" alt="" />
                   </div>
-                </div><!--block_time-->
-              </div><!--inner-->
+                </div><!--time clearfix-->
+                
+              </div><!--block_time-->
 
               <div class="block_info">
                 <ul class="clearfix">
@@ -144,48 +147,47 @@
 	if ($iPhoneYN == "Y")
 	{
 ?>
-                  <li class="btn_map"><a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>&exec=select_address"><img src="img/btn_map.png" width="55" alt=""/></a></li>
+                  <li class="btn_map"><a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>&exec=select_address"><img src="img/btn_map.png" alt=""/></a></li>
 <?
 	}else{
 ?>
-                  <li class="btn_map"><a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>&exec=select_address" target="_blank"><img src="img/btn_map.png" width="55" alt=""/></a></li>
+                  <li class="btn_map"><a href="http://thefaceshopclouding.co.kr/MOBILE/popup_map.php?shop_idx=<?=$user_info['idx']?>&exec=select_address" target="_blank"><img src="img/btn_map.png" alt=""/></a></li>
 <?
 	}
 ?>
                 </ul>
               </div><!--block_info-->
-    
-	
-	
+    		  </div><!--inner-->
+	        </div><!--block_cloud_bg-->
+	      
 	
     
               <div class="footer">
                 <img src="img/footer_coupon.png" alt=""/>
               </div>
 
-              <div class="btn_block">
-                <div class="block_check_in">
-                  <div class="txt" ><img src="img/txt_notice.png" width="200" alt=""/><br><br>
+			  <div class="block_check_in"> 
+                  <div class="txt" ><img src="img/txt_notice.png" class="txt" alt=""/></div><!--txt-->
+                  <div class="btn_block">
 <?
 	if ($user_info['mb_use'] == "Y")
 	{
 ?>
-	<img src="img/btn_use_after.png" width="220" alt=""/>
+	<img src="img/btn_use_after.png" alt=""/>
 <?
 	}else{
 ?>
-	<a href="#" onclick="button_event('<?=$serialnumber?>')"><img src="img/btn_use_before.png" width="220"  alt=""/></a>
+	<a href="#" onclick="button_event('<?=$serialnumber?>')"><img src="img/btn_use_before.png" alt=""/></a>
 <?
 }
 ?>
+				  </div><!--btn_block-->
                   </div><!--block_check_in-->
-                </div><!--btn_block-->
-              </div><!--block_cloud_bg-->
+                
 
-            </div><!--content coupon-->
-          </div><!--wrap_page wrap_coupon-->
-        </div><!--wrap_page wrap_coupon-->
-      </div><!--wrap_page wrap_coupon-->
-    </div><!--wrap_page wrap_coupon-->
+ 
+        
+      </div><!--content coupon-->
+    </div><!--wrap_page wrap_coupo-->
   </body>
 </html>
