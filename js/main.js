@@ -491,6 +491,11 @@ function close_input()
 	$.magnificPopup.close();
 }
 
+function close_movie()
+{
+	$.magnificPopup.close();
+}
+
 function close_ok()
 {
 	//$("#input_div").hide();
@@ -512,6 +517,47 @@ function close_map()
 function close_look()
 {
 	$("#look_div").hide();
+}
+
+function movie_share(media, num)
+{
+	if (media="fb")
+	{
+		if (num == "1")
+		{
+			//alert('fb1');
+			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/?media=FBmovie1&pg=movie1'),'sharer','toolbar=0,status=0,width=600,height=325');
+			$.ajax({
+				type   : "POST",
+				async  : false,
+				url    : "../main_exec.php",
+				data:{
+					"exec" : "insert_share_info",
+					"media" : "facebook"
+				}
+			});
+
+		}else{
+			//alert('fb2');
+			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/?media=FBmovie2&pg=movie2'),'sharer','toolbar=0,status=0,width=600,height=325');
+			$.ajax({
+				type   : "POST",
+				async  : false,
+				url    : "../main_exec.php",
+				data:{
+					"exec" : "insert_share_info",
+					"media" : "facebook"
+				}
+			});
+		}
+	}else{
+		if (num == "1")
+		{
+			alert('ks1');
+		}else{
+			alert('ks2');
+		}
+	}
 }
 
 function fb_share(media)

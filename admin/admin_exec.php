@@ -67,7 +67,8 @@
 		break;
 
 		case "all_send_sms" :
-			$query = "SELECT mb_phone, mb_s_url FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url<>''";
+			//$query = "SELECT mb_phone, mb_s_url, mb_nansu FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url<>'' AND mb_phone='010-3003-3965'";
+			$query = "SELECT mb_phone, mb_s_url, mb_nansu FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url<>''";
 			$result 		= mysqli_query($my_db, $query);
 
 			$httpmethod = "POST";
@@ -79,8 +80,9 @@
 			{
 				$phone			= $data['mb_phone'];
 				$s_url				= $data['mb_s_url'];
+				$nansu			= $data['mb_nansu'];
 
-				$response = sendRequest($httpmethod, $url, $parameters, $clientKey, $contentType, $phone, $s_url);
+				$response = sendRequest($httpmethod, $url, $parameters, $clientKey, $contentType, $phone, $s_url, $nansu);
 
 				echo("<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />");
 				$json_data = json_decode($response, true);
@@ -106,7 +108,7 @@
 		case "insert_surl" :
 			$flag = "N";
 			//$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url=''";
-			$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_use='N' AND mb_s_url='' AND mb_regdate like '%2015-03-16 19:%'";
+			$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url=''";
 			$result 		= mysqli_query($my_db, $query);
 			while ($data = mysqli_fetch_array($result))
 			{
@@ -163,9 +165,36 @@
 					echo "N";
 			}
 		break;
+
+		case "insert_nansu" :
+			$query = "SELECT * FROM nansu_info";
+			$result 		= mysqli_query($my_db, $query);
+
+			while ($data = mysqli_fetch_array($result))
+			{
+				$nansu_data[]	= $data['nansu_num'];
+			}
+
+			$query2 = "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_winner='Y'";
+			$result2 		= mysqli_query($my_db, $query2);
+
+			$i = 0;
+			while ($data2 = mysqli_fetch_array($result2))
+			{
+				$query3 = "UPDATE ".$_gl['member_info_table']." SET mb_nansu='".$nansu_data[$i]."' WHERE idx='".$data2['idx']."'";
+				$result3 		= mysqli_query($my_db, $query3);
+				$i++;
+			}
+
+			if ($result3)
+				echo "Y";
+			else
+				echo "N";
+
+		break;
 	}
 
-	function sendRequest($httpMethod, $url, $parameters, $clientKey, $contentType, $phone, $s_url) {
+	function sendRequest($httpMethod, $url, $parameters, $clientKey, $contentType, $phone, $s_url, $nansu) {
 
 		//create basic authentication header
 		$headerValue = $clientKey;
@@ -175,29 +204,38 @@
 			'send_time' => '', 
 			'send_phone' => '0316897530', 
 			'dest_phone' => $phone, 
+			//'dest_phone' => '01063041271', 
 			//'dest_phone' => '01099111804', 
+			//'dest_phone' => '01030885731', 
+			//'dest_phone' => '01030033965', 
 			'send_name' => '', 
 			'dest_name' => '', 
 			'subject' => '더페이스샵 - 하얀 수분 크림 쿠폰',
 			'msg_body' => "
-[하얀 수분 크림 당첨!!]
-블란클라우딩 KIT
-당첨을 축하드립니다.
+[더페이스샵_하얀수분크림]
+♥ 1만명 체험Kit 축! 당첨 ♥
+아래 URL을 클릭하시면 모바일 쿠폰 페이지 확인이 가능합니다.
+선택하신 매장에서 쿠폰을 제시하고 하얗고 촉촉한 블란클라우딩 하얀수분크림 10ml로 교환하세요!
 
-하얀 수분 크림을
-가장 먼저 만나볼 수 있는 기회!
-
-쿠폰은 94시간 후 사라집니다!
-선물이 사라지기 전 더페이스샵 매장으로 방문해주세요!
-
-블란 클라우딩 10ML KIT쿠폰!
-쿠폰받기▼
+▶ 하얀 수분 크림 10ml Kit 받기:
 ".$s_url."
+▶ 교환기간 : 3/19 ~ 3/22
 
-* 응모시 지정하신 더페이스샵 매장에서만 사용 가능합니다.
-* 매장 영업 시간에만 교환이 가능합니다.
-* '쿠폰 사용 버튼'은 직원 확인용으로 개인이 누를시 경품 교환이 불가합니다.
+* 직원확인용 버튼 클릭시 제품교환이 불가합니다.
+* 매장은 신청 시 선택한 매장만 가능하며, 변경이 불가능합니다.
 * 불법적인 방법으로 이벤트에 참여하신 고객님은 이벤트 당첨 대상에서 제외되며, 당첨 이후에도 당첨이 취소될 수 있습니다.
+
+★★ 추가 혜택
+체험Kit에 당첨된 1만분께만 드리는 혜택! 하얀 수분 크림 구매 시 5,000원을 할인해드립니다.
+▶ 쿠폰번호
+".$nansu."
+▶ 쿠폰 사용기간 : 3/19 ~ 3/31
+
+* 할인쿠폰은 면세점을 제외한 전국매장에서 사용가능(단, 이마트 매장은 5,000원 적립)
+* 다른 행사와 중복 적용불가능(단, 구름쿠션 증정행사와 중복 가능)
+* 오프라인 매장에서만 사용가능.
+* 쿠폰 사용문의 
+031-689-7506
 "
 		);
 
@@ -226,6 +264,12 @@
 		curl_close($curl);
 
 		return $response;
+	}
+
+	function sendRequest2($httpMethod, $url, $parameters, $clientKey, $contentType, $phone, $s_url, $nansu) {
+
+		
+		return $nansu;
 	}
 
 

@@ -6,11 +6,6 @@
     $result = mysqli_query($my_db, $query);
     $user_info    = @mysqli_fetch_array($result);
 
-	if (!$user_info)
-	{
-		echo "<script>alert('당첨된 고객이 아닙니다.');</script>";
-		exit;
-	}
 ?>
 <!doctype html>
 <html>

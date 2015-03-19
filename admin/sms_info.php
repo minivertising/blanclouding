@@ -154,6 +154,29 @@
 		}
 	}
 
+	function insert_nan()
+	{
+		if (confirm("난수번호를 생성하시겠습니까?"))
+		{
+			$.ajax({
+				type:"POST",
+				cache: false,
+				data:{
+					"exec"       : "insert_nansu"
+				},
+				url: "./admin_exec.php",
+				success: function(response){
+					alert(response);
+					if (response == "Y")
+					{
+						alert("당첨자 선정 완료!.");
+					}else{
+						alert("시스템 오류!!다시해라!");
+					}
+				}
+			});
+		}
+	}
 </script>
 
 <div id="page-wrapper">
@@ -241,7 +264,7 @@
 	}
 ?>
               <tr><td colspan="7"><div class="pageing"><?php echo $BLOCK_LIST?></div>
-			  현재 당첨 인원 : <?=$buyer_count?> 명 <input type="button" value="shorturl 생성" onclick="create_surl();"><input type="button" value="당첨자 전체 발송" onclick="all_send();"><input type="button" value="당첨자 선정하기" onclick="sel_winner();"></td></tr>
+			  현재 당첨 인원 : <?=$buyer_count?> 명 <input type="button" value="shorturl 생성" onclick="create_surl();"><input type="button" value="당첨자 전체 발송" onclick="all_send();"><input type="button" value="당첨자 선정하기" onclick="sel_winner();"><input type="button" value="난수번호 입력" onclick="insert_nan();"></td></tr>
             </tbody>
           </table>
         </div>

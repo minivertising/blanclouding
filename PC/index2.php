@@ -71,10 +71,10 @@
       <div class="product_area">
         <ul>
           <li style="float:left;margin:0;padding:0;word-wrap: break-word;word-break: break-all;">
-            <a href="#" style="vertical-align:top;"><img src="./images/tvcf_img1.png"></a>
+            <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim" style="outline: none;"><img src="./images/tvcf_img1.png"></a>
           </li>
           <li style="float:left;margin:0;padding:0;word-wrap: break-word;word-break: break-all;">
-            <a href="#" style="vertical-align:top;"><img src="./images/tvcf_img2.png"></a>
+            <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim" style="outline: none;"><img src="./images/tvcf_img2.png"></a>
           </li>
       </div>
     </div>
@@ -276,7 +276,36 @@
     </div>
   </div>
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
-
+<!-------------------------- 영상1 DIV -------------------------->
+  <div id="movie_div1" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue"></div>
+      <div>
+        <a href="#" onclick="movie_share('fb','1');">페이스북</a>
+        <a href="#" onclick="movie_share('ks','1');">카카오스토리</a>
+        <a href="#">링크복사</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상1 DIV -------------------------->
+<!-------------------------- 영상2 DIV -------------------------->
+  <div id="movie_div2" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue"></div>
+      <div>
+        <a href="#" onclick="movie_share('fb','2');">페이스북</a>
+        <a href="#" onclick="movie_share('ks','2');">카카오스토리</a>
+        <a href="#">링크복사</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상2 DIV -------------------------->
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
   <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
