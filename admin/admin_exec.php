@@ -115,7 +115,15 @@
 				//$short_url = get_bitly_short_url($longurl,'kyhfan','R_11ea80ffc2bf4bbe8c848b761e71df8a');
 				//$short_url = get_bitly_short_url($longurl,'kty0427','R_08ecf5e89640457ea47d238eeab549b2');
 				//$short_url = get_bitly_short_url($longurl,'kyhfan2','R_f7547b30052049679ee65de54c782e20');
-				$short_url = get_bitly_short_url($longurl,'kyhfan3','R_426adbe491a44aee82bd938e9c7f032e');
+				//$short_url = get_bitly_short_url($longurl,'kyhfan3','R_426adbe491a44aee82bd938e9c7f032e');
+				//$short_url = get_bitly_short_url($longurl,'kimty87','R_9f0f2cd364744ed09914e370c4c069a0');
+				//$short_url = get_bitly_short_url($longurl,'kty04272','R_3cf206392a9d4846ba1701c2570167df');
+				//$short_url = get_bitly_short_url($longurl,'kty04271','R_62e59c001f4f4e24bac474da50cc3c54');
+				$short_url = get_bitly_short_url($longurl,'kty04273','R_08d232ecc56543be9918b3894f6f4188');
+				//$short_url = get_bitly_short_url($longurl,'kty04274','R_c482cbbb34d647519278706200260098');
+
+
+
 
 				if ($short_url == "RATE_LIMIT_EXCEEDED"){
 					$flag	= "F";
@@ -159,7 +167,7 @@
 선물이 사라지기 전 더페이스샵 매장으로 방문해주세요!
 
 블란 클라우딩 10ML KIT쿠폰!
-쿠폰받기▼
+쿠폰받기▼  16 34 37 44 37 45
 ".$s_url."
 
 * 응모시 지정하신 더페이스샵 매장에서만 사용 가능합니다.
