@@ -283,7 +283,7 @@
         <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
       <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" width="400px" name="ytplayer1" id="ytplayer1" ></iframe>
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" width="450px" name="ytplayer1" id="ytplayer1" ></iframe>
       </div>
       <div>
         <a href="#" onclick="movie_share('fb','1');">페이스북</a>
@@ -300,7 +300,7 @@
         <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
       <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" width="400px" name="ytplayer1" id="ytplayer1" ></iframe>
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" width="450px" name="ytplayer2" id="ytplayer2" ></iframe>
       </div>
       <div>
         <a href="#" onclick="movie_share('fb','2');">페이스북</a>
