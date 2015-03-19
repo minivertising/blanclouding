@@ -6,8 +6,7 @@
 	$pg		= $_REQUEST['pg'];
 
 	$_SESSION['ss_media'] = $media;
-$pg
-exit;
+
 	BC_InsertTrackingInfo($media, $gubun);
 	if($gubun == "MOBILE")
 	{
