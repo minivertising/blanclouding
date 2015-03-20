@@ -4,10 +4,26 @@
 	//unset($media);
 	$media	= $_REQUEST['media'];
 	$pg		= $_REQUEST['pg'];
+	$kt_link	= $_REQUEST['kt_link'];
 
 	$_SESSION['ss_media'] = $media;
 
 	BC_InsertTrackingInfo($media, $gubun);
+
+	if ($kt_link == "kt_link1")
+	{
+		Header("Location:http://youtu.be/XDpe5Trw-zs");
+		exit;
+	}else if ($kt_link == "kt_link2"){
+		Header("Location:http://youtu.be/XDpe5Trw-zs");
+		exit;
+	}else if ($kt_link == "kt_link3"){
+		Header("Location:http://youtu.be/XDpe5Trw-zs");
+		exit;
+	}else if ($kt_link == "kt_link4"){
+		Header("Location:http://youtu.be/XDpe5Trw-zs");
+		exit;
+	}
 	if($gubun == "MOBILE")
 	{
 		if ($pg == "movie1")
