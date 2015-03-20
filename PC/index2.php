@@ -1,8 +1,11 @@
 <?
 	include_once "./header.php";
+
+	$play_movie	= $_REQUEST['play_video'];
 ?>
 <!--contents_wrap-->
 <div class="contents_wrap">
+<input type="hidden" name="play_video" id="play_video" value="<?=$play_movie?>">
 <!--area1-->
   <div class="area1">
 <!--video_area-->
@@ -584,6 +587,11 @@
 		$(".footer").show();
 		setTimeout("$('.cover_area').css('background','url(./images/movCover.png) repeat');",3000);
 		//$(".cover_area").css("background","url('./images/movCover.png') repeat");
+
+		if ($("#$play_movie").val() == "movie1")
+		{
+			$("#movie_div1").show();
+		}
 
 	});
 	</script>
