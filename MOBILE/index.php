@@ -69,14 +69,22 @@
             <div class="btn_gift">
               <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a> -->
 <?
-	if ($iPhoneYN == "Y")
+	if (date("Y-m-d") < "2015-03-19")
 	{
+
+		if ($iPhoneYN == "Y")
+		{
 ?>
               <a href="popup_input.php"><img src="img/btn_gift_event.png" alt="1"/></a>
 <?
-	}else{
+		}else{
 ?>
               <a href="popup_input.php" target="_blank"><img src="img/btn_gift_event.png" alt="1"/></a>
+<?
+		}
+	}else{
+?>
+              <a href="#" onclick="javascript:alert('이벤트가 종료되었습니다. \n\n감사합니다.');"><img src="img/btn_gift_event.png" alt="1"/></a>
 <?
 	}
 ?>

@@ -69,7 +69,18 @@
   <div class="area2">
     <div class="product_group">
       <div class="product_area">
-      	<a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()" style="background:none;outline: none;">신청하기</a>
+<?
+	if (date("Y-m-d") >= "2015-03-19")
+	{
+?>
+        <a href="#" onclick="alert('이벤트가 종료되었습니다. \n\n감사합니다.')" style="background:none;outline: none;">신청하기</a>
+<?
+	}else{
+?>
+        <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()" style="background:none;outline: none;">신청하기</a>
+<?
+	}
+?>
       </div>
     </div>
   </div>

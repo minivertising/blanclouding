@@ -104,10 +104,9 @@
 		break;
 
 		case "insert_surl" :
-		{
 			$flag = "N";
 			//$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url=''";
-			$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_use='N' AND mb_s_url=''";
+			$query = "SELECT mb_serialnumber FROM ".$_gl['member_info_table']." WHERE mb_use='N' AND mb_s_url='' AND mb_regdate like '%2015-03-16 19:%'";
 			$result 		= mysqli_query($my_db, $query);
 			while ($data = mysqli_fetch_array($result))
 			{
@@ -119,9 +118,12 @@
 				//$short_url = get_bitly_short_url($longurl,'kimty87','R_9f0f2cd364744ed09914e370c4c069a0');
 				//$short_url = get_bitly_short_url($longurl,'kty04272','R_3cf206392a9d4846ba1701c2570167df');
 				//$short_url = get_bitly_short_url($longurl,'kty04271','R_62e59c001f4f4e24bac474da50cc3c54');
-				$short_url = get_bitly_short_url($longurl,'kty04273','R_08d232ecc56543be9918b3894f6f4188');
+				//$short_url = get_bitly_short_url($longurl,'kty04273','R_08d232ecc56543be9918b3894f6f4188');
 				//$short_url = get_bitly_short_url($longurl,'kty04274','R_c482cbbb34d647519278706200260098');
-
+				//$short_url = get_bitly_short_url($longurl,'kyhfan4','R_6e2b8aac3f514271a5901cf546f9540a');
+				//$short_url = get_bitly_short_url($longurl,'kyhfan5','R_089bb97a7ff8481da0e7b1600c6b6c0f');
+				//$short_url = get_bitly_short_url($longurl,'kty04275','R_8fa80ea354b74ce681f028394d803875');
+				//$short_url = get_bitly_short_url($longurl,'kty04276','R_e73daafc213d4d44b711ddfc45bde450');
 
 
 
@@ -138,7 +140,34 @@
 				echo $flag = "Y";
 			else
 				echo $flag = "N";
-		}
+		break;
+
+		case "sel_winner" :
+			$query = "SELECT * FROM ".$_gl['shop_info_table']."";
+			$result 		= mysqli_query($my_db, $query);
+			while ($data = mysqli_fetch_array($result))
+			{
+				unset($winner_data);
+				$query2 = "SELECT * FROM ".$_gl['member_info_table']." WHERE shop_idx='".$data['idx']."'";
+				$result2 		= mysqli_query($my_db, $query2);
+				while ($data2 = mysqli_fetch_array($result2))
+				{
+					$winner_data[]	= $data2['idx'];
+				}
+				shuffle($winner_data);
+				for ( $i = 0; $i < $data['req_cnt'];$i++)
+				{
+					$query3 = "UPDATE ".$_gl['member_info_table']." SET mb_winner='Y' WHERE idx='".$winner_data[$i]."'";
+					$result3 		= mysqli_query($my_db, $query3);
+					//print_r($query3);
+				}
+
+				if ($result3)
+					echo "Y";
+				else
+					echo "N";
+			}
+		break;
 	}
 
 	function sendRequest($httpMethod, $url, $parameters, $clientKey, $contentType, $phone, $s_url) {
@@ -167,7 +196,7 @@
 선물이 사라지기 전 더페이스샵 매장으로 방문해주세요!
 
 블란 클라우딩 10ML KIT쿠폰!
-쿠폰받기▼  16 34 37 44 37 45
+쿠폰받기▼
 ".$s_url."
 
 * 응모시 지정하신 더페이스샵 매장에서만 사용 가능합니다.

@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0,aximum-scale=3.0"/>
+    <title>THEFACESHOP</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link type="text/javascript" href="js/default.js"/>
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/main.js"></script>
+
+  </head>
+  <body onLoad="CalcRemaining(document.clock)">
+    <div class="wrap_page wrap_coupon">
+    
+      <div class="header coupon">
+        <div class="block_logo clearfix">
+          <a href="http://www.thefaceshop.com/m/" class="logo_tfs" target="_blank"><img src="img/logo_tfs.png" width="100" alt=""/></a>
+        </div><!--block_logo clearfix-->
+      </div><!--header coupon-->
+
+      <div class="content coupon">
+        <div class="block_title">
+          <img src="img/coupon_title.png" alt=""/>
+        </div><!--block_title-->
+
+        <div class="block_cloud_bg">
+
+          <div class="product">
+            <img src="img/img_product.png" alt=""/>
+          </div><!--product-->
+
+          <div class="inner">
+            <div class="block_time">
+              <div class="txt">
+                <img src="img/txt_time.png" width="140" alt=""/>
+              </div><!--txt-->
+              
+              <div class="time clearfix">
+                <div class="num"><!-- 시 -->
+                  <img src="./img/time_1.png" id="realtime_h1" alt="" />
+                  <img src="./img/time_2.png" id="realtime_h2" alt="" />
+                  </div>
+                  <div class="dash">
+                    <img src="img/time_dash.png" alt=""/>
+                  </div>
+                  <div class="num"><!-- 분 -->
+                    <img src="./img/time_3.png" id="realtime_m1" alt="" />
+                    <img src="./img/time_4.png" id="realtime_m2" alt="" />
+                  </div>
+                  <div class="dash">
+                    <img src="img/time_dash.png" alt=""/>
+                  </div>
+                  <div class="num"><!-- 초 -->
+                    <img src="./img/time_5.png" id="realtime_s1" alt="" />
+                    <img src="./img/time_6.png" id="realtime_s2" alt="" />
+                  </div>
+                </div><!--time clearfix-->
+                
+              </div><!--block_time-->
+
+              <div class="block_info">
+                <ul class="clearfix">
+                  <li class="txt_label">교환기간 |</li>
+                  <li class="txt_detail date">2015.03.19 ~ 03.22</li>
+                </ul>
+                <ul class="clearfix">
+                  <li class="txt_label">내가 선택한 매장 |</li>
+                  <li class="txt_detail">
+                  	<a href="#" class="clearfix">
+                    	<span><img src="img/icon_map.png" width="10" alt=""/></span>
+                        <span class="txt">강남매장</span>
+                    </a>
+                  </li>
+                </ul>
+              </div><!--block_info-->
+    		  </div><!--inner-->
+	        </div><!--block_cloud_bg-->
+	      
+	
+    
+              <div class="footer">
+                <img src="img/footer_coupon.png" alt=""/>
+              </div>
+
+			  <div class="block_check_in"> 
+                  <div class="txt" ><img src="img/txt_notice.png" class="txt" alt=""/></div><!--txt-->
+                  <div class="btn_block">
+
+	
+	<img src="img/btn_use_after.png" alt=""/>
+
+	<a href="#" onclick="button_event('<?=$serialnumber?>')" style="display:none;"><img src="img/btn_use_before.png" alt=""/></a>
+
+				  </div><!--btn_block-->
+                  </div><!--block_check_in-->
+                
+
+ 
+        
+      </div><!--content coupon-->
+    </div><!--wrap_page wrap_coupo-->
+  </body>
+</html>
