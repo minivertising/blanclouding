@@ -24,7 +24,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta property="og:site_name" content="thefaceshopclouding">
-    <meta property="og:url" content="https://youtu.be/XDpe5Trw-zs">
+    <meta property="og:url" content="http://youtu.be/XDpe5Trw-zs">
     <meta property="og:title" content="서장훈이 화장품 CF를?!">
     <meta property="og:type" content="video">
     <meta property="og:image" content="http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg">
@@ -63,6 +63,7 @@
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
     <script type="text/javascript" src="../lib/Magnific-Popup/jquery.magnific-popup.js"></script>
     <script type="text/javascript" src="../lib/DropKick/dropkick.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
     <style>
 	html,body { height: 100%; margin: 0; padding: 0; }
