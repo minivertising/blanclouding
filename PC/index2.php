@@ -482,7 +482,7 @@
 		{
 			//alert('111');
 			//$("#movie_div1").show();
-			$( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},0);
+			setTimeout($( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},0);,1000);
 			$.magnificPopup.open({
 				items: {
 					src: '#movie_div1'
@@ -491,7 +491,7 @@
 				showCloseBtn : false
 			}, 0);
 		}else if ($("#play_video").val() == "movie2"){
-			$( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},0);
+			setTimeout($( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},0);,1000);
 			$.magnificPopup.open({
 				items: {
 					src: '#movie_div2'
