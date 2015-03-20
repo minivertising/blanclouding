@@ -285,12 +285,12 @@
         <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
       <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" width="450px" name="ytplayer1" id="ytplayer1" ></iframe>
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" width="450px" name="ytplayer1" id="ytplayer1" ></iframe>
       </div>
       <div>
-        <a href="#" onclick="movie_share('fb','1');">페이스북</a>
-        <a href="#" onclick="movie_share('ks','1');">카카오스토리</a>
-        <a href="#">링크복사</a>
+        <a href="#" onclick="movie_share('fb','1');">페이스북1</a>
+        <a href="#" onclick="movie_share('ks','1');">카카오스토리1</a>
+        <a href="#">링크복사1</a>
       </div>
     </div>
   </div>
@@ -302,12 +302,12 @@
         <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
       <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" width="450px" name="ytplayer2" id="ytplayer2" ></iframe>
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" width="450px" name="ytplayer2" id="ytplayer2" ></iframe>
       </div>
       <div>
-        <a href="#" onclick="movie_share('fb','2');">페이스북</a>
-        <a href="#" onclick="movie_share('ks','2');">카카오스토리</a>
-        <a href="#">링크복사</a>
+        <a href="#" onclick="movie_share('fb','2');">페이스북2</a>
+        <a href="#" onclick="movie_share('ks','2');">카카오스토리2</a>
+        <a href="#">링크복사2</a>
       </div>
     </div>
   </div>
@@ -486,6 +486,15 @@
 			$.magnificPopup.open({
 				items: {
 					src: '#movie_div1'
+				},
+				type: 'inline',
+				showCloseBtn : false
+			}, 0);
+		}else if ($("#play_video").val() == "movie1"){
+			$( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},0);
+			$.magnificPopup.open({
+				items: {
+					src: '#movie_div2'
 				},
 				type: 'inline',
 				showCloseBtn : false
