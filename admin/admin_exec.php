@@ -67,7 +67,7 @@
 		break;
 
 		case "all_send_sms" :
-			$query = "SELECT mb_phone, mb_s_url, mb_nansu FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url<>'' AND mb_phone='010-3198-6900'";
+			$query = "SELECT mb_phone, mb_s_url, mb_nansu FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url<>'' AND mb_phone='010-2617-9309'";
 			//$query = "SELECT mb_phone, mb_s_url, mb_nansu FROM ".$_gl['member_info_table']." WHERE mb_winner='Y' AND mb_use='N' AND mb_s_url<>''";
 			$result 		= mysqli_query($my_db, $query);
 
@@ -204,7 +204,7 @@
 			'send_time' => '', 
 			'send_phone' => '0316897530', 
 			//'dest_phone' => $phone, 
-			'dest_phone' => '01031986900', 
+			'dest_phone' => '01026179309', 
 			//'dest_phone' => '01099111804', 
 			//'dest_phone' => '01030885731', 
 			//'dest_phone' => '01030033965', 

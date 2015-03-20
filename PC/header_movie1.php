@@ -20,7 +20,7 @@
 <meta property="og:description" content="< 아니 아니, 그게 아니고~ > 전격 공개! 건조한 피부에 봄비같은 하얀 수분 크림 출시! 지금 10ml Kit도 신청하세요!    더페이스샵 - 블란클라우딩">
 <meta property="og:video" content="https://youtu.be/XDpe5Trw-zs">
 <meta property="og:video:type" content="application/x-shockwave-flash">
-<meta property="og:video:width" content="480">
+<meta property="og:video:width" content="1200">
     <!-- <meta property="og:title" content="서장훈이 화장품 CF를?!" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.thefaceshopclouding.co.kr/PC/movie1.php" />
