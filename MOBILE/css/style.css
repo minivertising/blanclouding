@@ -148,6 +148,14 @@ body {
 .contents_wrap .bg_cloud .event{
 }
 
+.contents_wrap .bg_movie{
+	position:relative;
+	width:100%;
+	height:100%;
+	margin:5% 0 0;
+	
+}
+
 .contents_wrap .sns_area{
 	width:70%;
 	padding:10% 0 10%;

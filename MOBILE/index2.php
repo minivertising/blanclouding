@@ -61,6 +61,52 @@
       </div>
     <!--sns_area-->
 
+    <div class="bg_movie">
+      <!--event-->
+      <div class="movie_area">
+        <div class="movie_area1">
+          <div>
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer"></iframe>
+          </div>
+          <div>
+            <a href="#" onclick="movie_share('fb','1')">페이스북</a>
+            <a href="#">트위터</a>
+            <a href="#">카카오톡</a>
+          </div>
+        </div>
+        <div class="movie_area2">
+          <div>
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" id="ytplayer2" class="ytplayer"></iframe>
+          </div>
+          <div>
+            <a href="#" onclick="movie_share('fb','2')">페이스북</a>
+            <a href="#">트위터</a>
+            <a href="#">카카오톡</a>
+          </div>
+        </div>
+        <div class="movie_area3">
+          <div>
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer"></iframe>
+          </div>
+          <div>
+            <a href="#" onclick="movie_share('fb','3')">페이스북</a>
+            <a href="#">트위터</a>
+            <a href="#">카카오톡</a>
+          </div>
+        </div>
+        <div class="movie_area4">
+          <div>
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" id="ytplayer4" class="ytplayer"></iframe>
+          </div>
+          <div>
+            <a href="#" onclick="movie_share('fb','4')">페이스북</a>
+            <a href="#">트위터</a>
+            <a href="#">카카오톡</a>
+          </div>
+        </div>
+      </div>
+      <!--event-->
+    </div>
 
 
     <div class="bg_cloud">
@@ -153,6 +199,14 @@
 		var youtube_height = (width / 16) * 9;
 		$("#ytplayer").width(width);
 		$("#ytplayer").height(youtube_height);
+		$("#ytplayer1").width(width);
+		$("#ytplayer1").height(youtube_height);
+		$("#ytplayer2").width(width);
+		$("#ytplayer2").height(youtube_height);
+		$("#ytplayer3").width(width);
+		$("#ytplayer3").height(youtube_height);
+		$("#ytplayer4").width(width);
+		$("#ytplayer4").height(youtube_height);
 	});
 
 	$(document).ready(function() {
@@ -161,9 +215,17 @@
 		var height = $(window).height();
 		var youtube_width = width;
 		$("#ytplayer").width(width);
+		$("#ytplayer1").width(width);
+		$("#ytplayer2").width(width);
+		$("#ytplayer3").width(width);
+		$("#ytplayer4").width(width);
 		$(".cover_area").width($("#ytplayer").width());
 		var youtube_height = (width / 16) * 9;
 		$("#ytplayer").height(youtube_height);
+		$("#ytplayer1").height(youtube_height);
+		$("#ytplayer2").height(youtube_height);
+		$("#ytplayer3").height(youtube_height);
+		$("#ytplayer4").height(youtube_height);
 		$(".cover_area").height($("#ytplayer").height());
 
 		$("#video_control").click(function(){
