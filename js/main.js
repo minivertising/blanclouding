@@ -521,7 +521,7 @@ function close_look()
 
 function movie_share(media, num)
 {
-	if (media="fb")
+	if (media == "fb")
 	{
 		if (num == "1")
 		{
@@ -538,7 +538,6 @@ function movie_share(media, num)
 			});
 
 		}else{
-			//alert('fb2');
 			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/?media=FBmovie2&pg=movie2'),'sharer','toolbar=0,status=0,width=600,height=325');
 			$.ajax({
 				type   : "POST",
