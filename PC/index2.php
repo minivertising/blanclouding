@@ -298,7 +298,7 @@
       </div>
       <div>
         <a href="#" onclick="movie_share('fb','1');">페이스북1</a>
-        <a href="#" onclick="movie_share('ks','1');">카카오스토리1</a>
+        <a href="#" onclick="movie_share('tw','1');">트위터1</a>
       </div>
     </div>
   </div>
@@ -314,7 +314,7 @@
       </div>
       <div>
         <a href="#" onclick="movie_share('fb','2');">페이스북2</a>
-        <a href="#" onclick="movie_share('ks','2');">카카오스토리2</a>
+        <a href="#" onclick="movie_share('tw','2');">트위터2</a>
       </div>
     </div>
   </div>
@@ -330,7 +330,7 @@
       </div>
       <div>
         <a href="#" onclick="movie_share('fb','3');">페이스북3</a>
-        <a href="#" onclick="movie_share('ks','3');">카카오스토리3</a>
+        <a href="#" onclick="movie_share('tw','3');">트위터3</a>
       </div>
     </div>
   </div>
@@ -346,7 +346,7 @@
       </div>
       <div>
         <a href="#" onclick="movie_share('fb','4');">페이스북4</a>
-        <a href="#" onclick="movie_share('ks','4');">카카오스토리4</a>
+        <a href="#" onclick="movie_share('tw','4');">트위터4</a>
       </div>
     </div>
   </div>
