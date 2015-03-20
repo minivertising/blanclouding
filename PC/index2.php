@@ -1,7 +1,6 @@
 <?
 	include_once "./header.php";
 
-	$play_movie	= $_REQUEST['play_video'];
 ?>
 <!--contents_wrap-->
 <div class="contents_wrap">
