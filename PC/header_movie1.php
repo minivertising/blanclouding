@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
 
 <meta property="og:site_name" content="thefaceshopclouding">
-<meta property="og:url" content="http://www.thefaceshopclouding.co.kr/PC/movie1.php">
+<meta property="og:url" content="https://youtu.be/XDpe5Trw-zs">
 <meta property="og:title" content="서장훈이 화장품 CF를?!">
 <meta property="og:type" content="video">
 <meta property="og:image" content="http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg">
