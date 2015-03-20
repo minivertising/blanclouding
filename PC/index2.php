@@ -75,9 +75,18 @@
           <li style="float:left;margin:0;padding:0;word-wrap: break-word;word-break: break-all;">
             <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim" style="outline: none;" id="movie_link1"><img src="./images/tvcf_img1.png"></a>
           </li>
-          <li style="float:left;margin:0;padding:0;word-wrap: break-word;word-break: break-all;">
+          <li style="float:left;margin:0;padding:0;word-wrap: break-word;word-break: break-all;margin-bottom:60px">
             <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim" style="outline: none;" id="movie_link2"><img src="./images/tvcf_img2.png"></a>
           </li>
+        </ul>
+        <ul>
+          <li style="float:left;margin:0;padding:0;word-wrap: break-word;word-break: break-all;">
+            <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim" style="outline: none;" id="movie_link3"><img src="./images/tvcf_img1.png"></a>
+          </li>
+          <li style="float:left;margin:0;padding:0;word-wrap: break-word;word-break: break-all;">
+            <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim" style="outline: none;" id="movie_link4"><img src="./images/tvcf_img2.png"></a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -290,7 +299,6 @@
       <div>
         <a href="#" onclick="movie_share('fb','1');">페이스북1</a>
         <a href="#" onclick="movie_share('ks','1');">카카오스토리1</a>
-        <a href="#">링크복사1</a>
       </div>
     </div>
   </div>
@@ -307,11 +315,42 @@
       <div>
         <a href="#" onclick="movie_share('fb','2');">페이스북2</a>
         <a href="#" onclick="movie_share('ks','2');">카카오스토리2</a>
-        <a href="#">링크복사2</a>
       </div>
     </div>
   </div>
 <!-------------------------- 영상2 DIV -------------------------->
+<!-------------------------- 영상3 DIV -------------------------->
+  <div id="movie_div3" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" width="450px" name="ytplayer3" id="ytplayer3" ></iframe>
+      </div>
+      <div>
+        <a href="#" onclick="movie_share('fb','3');">페이스북3</a>
+        <a href="#" onclick="movie_share('ks','3');">카카오스토리3</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상3 DIV -------------------------->
+<!-------------------------- 영상4 DIV -------------------------->
+  <div id="movie_div4" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" width="450px" name="ytplayer4" id="ytplayer4" ></iframe>
+      </div>
+      <div>
+        <a href="#" onclick="movie_share('fb','4');">페이스북4</a>
+        <a href="#" onclick="movie_share('ks','4');">카카오스토리4</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상4 DIV -------------------------->
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
   <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
