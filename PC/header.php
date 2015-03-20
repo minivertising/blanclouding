@@ -9,7 +9,7 @@
 ?>
 <!doctype html>
 <html prefix="og: http://ogp.me/ns#">
-  <head>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# video: http://ogp.me/ns/video#">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,6 +18,11 @@
 	if ($play_movie)
 	{
 ?>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# video: http://ogp.me/ns/video#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta property="og:site_name" content="thefaceshopclouding">
     <meta property="og:url" content="http://www.thefaceshopclouding.co.kr/PC/movie1.php">
     <meta property="og:title" content="서장훈이 화장품 CF를?!">
@@ -30,6 +35,11 @@
 <?
 	}else{
 ?>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta property="og:title" content="서장훈이 화장품 CF를?!" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.thefaceshopclouding.co.kr/PC/index.php" />
