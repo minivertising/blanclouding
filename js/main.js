@@ -523,32 +523,17 @@ function movie_share(media, num)
 {
 	if (media == "fb")
 	{
-		if (num == "1")
-		{
-			//alert('fb1');
-			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/?media=FBmovie1&pg=movie1'),'sharer','toolbar=0,status=0,width=600,height=325');
-			$.ajax({
-				type   : "POST",
-				async  : false,
-				url    : "../main_exec.php",
-				data:{
-					"exec" : "insert_share_info",
-					"media" : "facebook"
-				}
-			});
-
-		}else{
-			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/?media=FBmovie2&pg=movie2'),'sharer','toolbar=0,status=0,width=600,height=325');
-			$.ajax({
-				type   : "POST",
-				async  : false,
-				url    : "../main_exec.php",
-				data:{
-					"exec" : "insert_share_info",
-					"media" : "facebook"
-				}
-			});
-		}
+		//alert('fb1');
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/?media=FBmovie' + num + '&pg=movie' + num + ''),'sharer','toolbar=0,status=0,width=600,height=325');
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"media" : "facebook"
+			}
+		});
 	}else{
 		Kakao.init('62027fc7fd5be42191c4c2e4787386ca');
 		if (num == "1")
@@ -587,7 +572,77 @@ function movie_share(media, num)
 					alert(JSON.stringify(err))
 				},
 			});
-		}else{
+		}else if (num == "2"){
+			// 로그인 창을 띄웁니다.
+			Kakao.Auth.login({
+				success: function() {
+
+					// 로그인 성공시, API를 호출합니다.
+					Kakao.API.request( {
+						url : '/v1/api/story/linkinfo',
+						data : {
+							url : 'https://youtu.be/jneCosoa4X0'
+						}
+					}).then(function(res) {
+						// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
+						return Kakao.API.request( {
+							url : '/v1/api/story/post/link',
+							data : {
+								link_info : res,
+								content:"서장훈이 화장품CF를?\n아니.. 그게 아니고...! \n인터뷰 영상 사전 선공개! \n서장훈도 촉촉함에 반한 구름을 닮은 하얀수분크림 3월 20일 출시! \n3월말 서장훈 영상풀버전과 수지의 새로운 CF도 놓치지 마세요!"
+							}
+						});
+					}).then(function(res) {
+						return Kakao.API.request( {
+							url : '/v1/api/story/mystory',
+							data : { id : res.id }
+						});
+					}).then(function(res) {
+						confirm('공유됐어요');
+					}, function (err) {
+						alert(JSON.stringify(err));
+					});
+				},
+				fail: function(err) {
+					alert(JSON.stringify(err))
+				},
+			});
+		}else if (num == "3"){
+			// 로그인 창을 띄웁니다.
+			Kakao.Auth.login({
+				success: function() {
+
+					// 로그인 성공시, API를 호출합니다.
+					Kakao.API.request( {
+						url : '/v1/api/story/linkinfo',
+						data : {
+							url : 'https://youtu.be/jneCosoa4X0'
+						}
+					}).then(function(res) {
+						// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
+						return Kakao.API.request( {
+							url : '/v1/api/story/post/link',
+							data : {
+								link_info : res,
+								content:"서장훈이 화장품CF를?\n아니.. 그게 아니고...! \n인터뷰 영상 사전 선공개! \n서장훈도 촉촉함에 반한 구름을 닮은 하얀수분크림 3월 20일 출시! \n3월말 서장훈 영상풀버전과 수지의 새로운 CF도 놓치지 마세요!"
+							}
+						});
+					}).then(function(res) {
+						return Kakao.API.request( {
+							url : '/v1/api/story/mystory',
+							data : { id : res.id }
+						});
+					}).then(function(res) {
+						confirm('공유됐어요');
+					}, function (err) {
+						alert(JSON.stringify(err));
+					});
+				},
+				fail: function(err) {
+					alert(JSON.stringify(err))
+				},
+			});
+		}else if (num == "4"){
 			// 로그인 창을 띄웁니다.
 			Kakao.Auth.login({
 				success: function() {
