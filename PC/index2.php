@@ -74,10 +74,10 @@
       <div class="product_area">
         <ul>
           <li style="float:left;margin:0;padding:0;word-wrap: break-word;word-break: break-all;">
-            <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim" style="outline: none;"><img src="./images/tvcf_img1.png"></a>
+            <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim" style="outline: none;" id="movie_link1"><img src="./images/tvcf_img1.png"></a>
           </li>
           <li style="float:left;margin:0;padding:0;word-wrap: break-word;word-break: break-all;">
-            <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim" style="outline: none;"><img src="./images/tvcf_img2.png"></a>
+            <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim" style="outline: none;" id="movie_link2"><img src="./images/tvcf_img2.png"></a>
           </li>
       </div>
     </div>
@@ -478,6 +478,19 @@
 	});
 
 	$(document).ready(function() {
+
+		if ($("#play_video").val() == "movie1")
+		{
+			//alert('111');
+			//$("#movie_div1").show();
+			$.magnificPopup.open({
+				items: {
+					src: '#movie_div1'
+				},
+				type: 'inline'
+			}, 0);
+		}
+
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
 		var width = $(window).width();
 		var youtube_width = width;
@@ -588,10 +601,6 @@
 		setTimeout("$('.cover_area').css('background','url(./images/movCover.png) repeat');",3000);
 		//$(".cover_area").css("background","url('./images/movCover.png') repeat");
 
-		if ($("#play_video").val() == "movie1")
-		{
-			$("#movie_div1").show();
-		}
 
 	});
 	</script>
