@@ -490,7 +490,7 @@
 				type: 'inline',
 				showCloseBtn : false
 			}, 0);
-		}else if ($("#play_video").val() == "movie1"){
+		}else if ($("#play_video").val() == "movie2"){
 			$( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},0);
 			$.magnificPopup.open({
 				items: {
