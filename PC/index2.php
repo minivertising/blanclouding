@@ -482,7 +482,8 @@
 		{
 			//alert('111');
 			//$("#movie_div1").show();
-			setTimeout($( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},0);,1000);
+			//$( 'html, body' ).animate({ scrollTop: $(window).height()},500);
+			
 			$.magnificPopup.open({
 				items: {
 					src: '#movie_div1'
@@ -490,8 +491,10 @@
 				type: 'inline',
 				showCloseBtn : false
 			}, 0);
+			
 		}else if ($("#play_video").val() == "movie2"){
-			setTimeout($( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},0);,1000);
+			//$( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},500);
+			
 			$.magnificPopup.open({
 				items: {
 					src: '#movie_div2'
@@ -499,6 +502,7 @@
 				type: 'inline',
 				showCloseBtn : false
 			}, 0);
+			
 		}
 
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
