@@ -588,7 +588,7 @@
 		setTimeout("$('.cover_area').css('background','url(./images/movCover.png) repeat');",3000);
 		//$(".cover_area").css("background","url('./images/movCover.png') repeat");
 
-		if ($("#$play_movie").val() == "movie1")
+		if ($("#play_video").val() == "movie1")
 		{
 			$("#movie_div1").show();
 		}
