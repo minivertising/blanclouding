@@ -483,11 +483,13 @@
 		{
 			//alert('111');
 			//$("#movie_div1").show();
+			$( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},0);
 			$.magnificPopup.open({
 				items: {
 					src: '#movie_div1'
 				},
-				type: 'inline'
+				type: 'inline',
+				showCloseBtn : false
 			}, 0);
 		}
 
