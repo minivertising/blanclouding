@@ -1,8 +1,10 @@
 <?
 	include_once "./header.php";
+
 ?>
 <!--contents_wrap-->
 <div class="contents_wrap">
+<input type="hidden" name="play_video" id="play_video" value="<?=$play_movie?>">
 <!--area1-->
   <div class="area1">
 <!--video_area-->
@@ -71,10 +73,10 @@
       <div class="product_area">
         <ul>
           <li style="float:left;margin:0;padding:0;word-wrap: break-word;word-break: break-all;">
-            <a href="#" style="vertical-align:top;"><img src="./images/tvcf_img1.png"></a>
+            <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim" style="outline: none;" id="movie_link1"><img src="./images/tvcf_img1.png"></a>
           </li>
           <li style="float:left;margin:0;padding:0;word-wrap: break-word;word-break: break-all;">
-            <a href="#" style="vertical-align:top;"><img src="./images/tvcf_img2.png"></a>
+            <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim" style="outline: none;" id="movie_link2"><img src="./images/tvcf_img2.png"></a>
           </li>
       </div>
     </div>
@@ -276,7 +278,40 @@
     </div>
   </div>
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
-
+<!-------------------------- 영상1 DIV -------------------------->
+  <div id="movie_div1" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" width="450px" name="ytplayer1" id="ytplayer1" ></iframe>
+      </div>
+      <div>
+        <a href="#" onclick="movie_share('fb','1');">페이스북</a>
+        <a href="#" onclick="movie_share('ks','1');">카카오스토리</a>
+        <a href="#">링크복사</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상1 DIV -------------------------->
+<!-------------------------- 영상2 DIV -------------------------->
+  <div id="movie_div2" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" width="450px" name="ytplayer2" id="ytplayer2" ></iframe>
+      </div>
+      <div>
+        <a href="#" onclick="movie_share('fb','2');">페이스북</a>
+        <a href="#" onclick="movie_share('ks','2');">카카오스토리</a>
+        <a href="#">링크복사</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상2 DIV -------------------------->
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
   <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
@@ -442,6 +477,21 @@
 	});
 
 	$(document).ready(function() {
+
+		if ($("#play_video").val() == "movie1")
+		{
+			//alert('111');
+			//$("#movie_div1").show();
+			$( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},0);
+			$.magnificPopup.open({
+				items: {
+					src: '#movie_div1'
+				},
+				type: 'inline',
+				showCloseBtn : false
+			}, 0);
+		}
+
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
 		var width = $(window).width();
 		var youtube_width = width;
@@ -551,6 +601,7 @@
 		$(".footer").show();
 		setTimeout("$('.cover_area').css('background','url(./images/movCover.png) repeat');",3000);
 		//$(".cover_area").css("background","url('./images/movCover.png') repeat");
+
 
 	});
 	</script>
