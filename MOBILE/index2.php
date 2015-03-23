@@ -84,9 +84,9 @@
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area2" style="width:100%">
-          <div class="block_play">
+          <div class="block_play" style="width:100%">
             <img src="img/img_comingsoon.png" alt=""/>
-            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" id="ytplayer2" class="ytplayer" style="display:none;"></iframe>
+            <!-- <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" id="ytplayer2" class="ytplayer" style="display:none;"></iframe> -->
           </div>
           <div class="block_more_movie clearfix">
             <span class="txt">
@@ -104,9 +104,9 @@
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area3">
-          <div class="block_play">
+          <div class="block_play" style="width:100%">
             <img src="img/img_comingsoon.png" alt=""/>
-            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer" style="display:none;"></iframe>
+            <!-- <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer" style="display:none;"></iframe> -->
           </div>
           <div class="block_more_movie clearfix">
             <span class="txt">
@@ -124,9 +124,9 @@
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area4">
-          <div class="block_play">
+          <div class="block_play" style="width:100%">
             <img src="img/img_comingsoon.png" alt=""/>
-            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" id="ytplayer4" class="ytplayer" style="display:none;"></iframe>
+            <!-- <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" id="ytplayer4" class="ytplayer" style="display:none;"></iframe> -->
           </div>
           <div class="block_more_movie clearfix">
             <span class="txt">
