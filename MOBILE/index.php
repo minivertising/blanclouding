@@ -49,7 +49,7 @@
         <span>
             <img src="img/bar.png" alt=""/>
         </span>
-        <a  id="kakao-link-btn" href="#" onclick="sns_share('kakao');return false;">
+        <a  id="kakao-link-btn" href="#" onclick="sns_share('kakao');">
             <img src="img/btn_kt.png" alt=""/>
         </a>
         <span>
