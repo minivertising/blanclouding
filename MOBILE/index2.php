@@ -37,7 +37,7 @@
       </div>
     <!--area1-->
   <div class="navi_btn_block clearfix">
-        <a href="#" class="view_event"><img src="img/btn_gift.png" alt=""/></a>
+        <a href="#" class="view_event"><img src="img/btn_movie.png" alt=""/></a>
         <a href="#" class="view_product"><img src="img/btn_product.png" alt=""/></a>
   </div>
 
@@ -68,76 +68,85 @@
           <div>
             <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer"></iframe>
           </div>
-          <div>
-            <a href="#" onclick="movie_share('fb','1')">페이스북</a>
-            <a href="#" onclick="movie_share('tw','1');">트위터</a>
-            <a href="#" onclick="movie_share('kt','1');">카카오톡</a>
-          </div>
+          <div class="block_more_movie clearfix">
+          	<span class="txt">
+           		<img src="img/txt_movie_01.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('fb','1')"><img src="img/btn_fb.png" alt=""/></a>
+            <span>
+                <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('tw','1');"><img src="img/btn_tw.png" alt=""/></a>
+            <span>
+                <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('kt','1');"><img src="img/btn_kt.png" alt=""/></a>
+          </div><!--block_more_movie-->
         </div>
         <div class="movie_area2">
-          <div>
-            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" id="ytplayer2" class="ytplayer"></iframe>
+          <div class="block_play">
+          	<img src="img/img_comingsoon.png" alt=""/>
+          	<iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" id="ytplayer2" class="ytplayer" style="display:none;"></iframe>
           </div>
-          <div>
-            <a href="#" onclick="movie_share('fb','2')">페이스북</a>
-            <a href="#" onclick="movie_share('tw','2');">트위터</a>
-            <a href="#" onclick="movie_share('kt','2');">카카오톡</a>
-          </div>
+          <div class="block_more_movie clearfix">
+          	<span class="txt">
+           		<img src="img/txt_movie_02.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('fb','2')"><img src="img/btn_fb.png" alt=""/></a>
+            <span>
+                <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('tw','2);"><img src="img/btn_tw.png" alt=""/></a>
+            <span>
+                <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('kt','2');"><img src="img/btn_kt.png" alt=""/></a>
+          </div><!--block_more_movie-->
         </div>
         <div class="movie_area3">
-          <div>
-            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer"></iframe>
+          <div class="block_play">
+          	<img src="img/img_comingsoon.png" alt=""/>
+          	<iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer" style="display:none;"></iframe>
           </div>
-          <div>
-            <a href="#" onclick="movie_share('fb','3')">페이스북</a>
-            <a href="#" onclick="movie_share('tw','3');">트위터</a>
-            <a href="#" onclick="movie_share('kt','3');">카카오톡</a>
-          </div>
+          <div class="block_more_movie clearfix">
+          	<span class="txt">
+           		<img src="img/txt_movie_03.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('fb','3')"><img src="img/btn_fb.png" alt=""/></a>
+            <span>
+                <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('tw','3');"><img src="img/btn_tw.png" alt=""/></a>
+            <span>
+                <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('kt','3');"><img src="img/btn_kt.png" alt=""/></a>
+          </div><!--block_more_movie-->
         </div>
         <div class="movie_area4">
-          <div>
-            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" id="ytplayer4" class="ytplayer"></iframe>
+          <div class="block_play">
+          	<img src="img/img_comingsoon.png" alt=""/>
+          	<iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" id="ytplayer4" class="ytplayer" style="display:none;"></iframe>
           </div>
-          <div>
-            <a href="#" onclick="movie_share('fb','4')">페이스북</a>
-            <a href="#" onclick="movie_share('tw','4');">트위터</a>
-            <a href="#" onclick="movie_share('kt','4');">카카오톡</a>
-          </div>
+          <div class="block_more_movie clearfix">
+          	<span class="txt">
+           		<img src="img/txt_movie_04.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('fb','4')"><img src="img/btn_fb.png" alt=""/></a>
+            <span>
+                <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('tw','4');"><img src="img/btn_tw.png" alt=""/></a>
+            <span>
+                <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('kt','4');"><img src="img/btn_kt.png" alt=""/></a>
+          </div><!--block_more_movie-->
         </div>
       </div>
       <!--event-->
     </div>
 
-
-    <div class="bg_cloud">
-        <!--event-->
-          <div class="event">
-            <div class="btn_gift">
-              <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a> -->
-<?
-	if (date("Y-m-d") < "2015-03-19")
-	{
-
-		if ($iPhoneYN == "Y")
-		{
-?>
-              <a href="popup_input.php"><img src="img/btn_gift_event.png" alt="1"/></a>
-<?
-		}else{
-?>
-              <a href="popup_input.php" target="_blank"><img src="img/btn_gift_event.png" alt="1"/></a>
-<?
-		}
-	}else{
-?>
-              <a href="#" onclick="javascript:alert('이벤트가 종료되었습니다. \n\n감사합니다.');"><img src="img/btn_gift_event.png" alt="1"/></a>
-<?
-	}
-?>
-            </div>
-          </div>
-        <!--event-->
-</div>
 
 <div class="bottom">
     <img src="img/bg_bottom.png" />
