@@ -38,7 +38,7 @@
         <div class="btn_group">
           <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="images/btn_gift.png" alt=""/></a> -->
           <!-- <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="images/btn_gift.png" alt="" onmouseover="change_image('over','gift')" onmouseout="change_image('out','gift')" id="btn_gift"/></a> -->
-		  <a href="#" class="view_event"><img src="images/btn_more_movie.png" alt="" onmouseover="change_image('over','more_movie')" onmouseout="change_image('out','more_movie')" id="btn_gift"/></a>
+		  <a href="#" class="view_event"><img src="images/btn_more_movie.png" alt="" onmouseover="change_image('over','movie')" onmouseout="change_image('out','movie')" id="btn_movie"/></a>
           <a href="#" class="view_product"><img src="images/btn_blan.png" alt="" onmouseover="change_image('over','blan')" onmouseout="change_image('out','blan')" id="btn_blan"/></a>
         </div>
       </div>
@@ -76,13 +76,16 @@
             <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim" style="outline: none;" id="movie_link1"><img src="./images/thumb_1_open.png"></a>
           </li>
           <li>
-            <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim" style="outline: none;" id="movie_link2"><img src="./images/thumb_2_close.png"></a>
+            <!-- <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim" style="outline: none;" id="movie_link2"><img src="./images/thumb_2_close.png"></a> -->
+            <img src="./images/thumb_2_close.png" style="cursor:pointer">
           </li>
           <li>
-            <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a>
+            <!-- <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a> -->
+            <img src="./images/thumb_3_close.png" style="cursor:pointer">
           </li>
           <li>
-            <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim" style="outline: none;" id="movie_link4"><img src="./images/thumb_4_close.png"></a>
+            <!-- <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim" style="outline: none;" id="movie_link4"><img src="./images/thumb_4_close.png"></a> -->
+            <img src="./images/thumb_4_close.png" style="cursor:pointer">
           </li>          
         </ul>
       </div>

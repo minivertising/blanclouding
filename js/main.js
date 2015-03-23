@@ -831,6 +831,8 @@ function change_image(param1, param2)
 		if (param2 == "gift")
 		{
 			$("#btn_gift").attr("src","../PC/images/btn_gift_on.png");
+		}else if (param2 == "movie"){
+			$("#btn_movie").attr("src","../PC/images/btn_more_movie_on.png");
 		}else{
 			$("#btn_blan").attr("src","../PC/images/btn_blan_on.png");
 		}
@@ -838,6 +840,8 @@ function change_image(param1, param2)
 		if (param2 == "gift")
 		{
 			$("#btn_gift").attr("src","../PC/images/btn_gift.png");
+		}else if (param2 == "movie"){
+			$("#btn_movie").attr("src","../PC/images/btn_more_movie.png");
 		}else{
 			$("#btn_blan").attr("src","../PC/images/btn_blan.png");
 		}
