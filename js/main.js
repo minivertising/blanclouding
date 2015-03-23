@@ -539,6 +539,7 @@ function movie_share(media, num)
 
 		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
 		Kakao.Link.createTalkLinkButton({
+		  container: '#kakao-link-btn',
 		  label: "서장훈이 화장품 CF를?! \n<아니 아니, 그게 아니고~> 전격 공개!\n 건조한 피부에 봄비같은 하얀 수분 크림 출시!\n 지금 10ml Kit도 신청하세요!",
 		  image: {
 			src: 'http://www.thefaceshopclouding.co.kr/PC/images/sns_kt.jpg',
@@ -654,7 +655,7 @@ function sns_share(media)
 
 		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
 		Kakao.Link.createTalkLinkButton({
-			container: '#kakao-link-btn',
+		  container: '#kakao-link-btn',
 		  label: "서장훈이 화장품 CF를?! \n<아니 아니, 그게 아니고~> 전격 공개!\n 건조한 피부에 봄비같은 하얀 수분 크림 출시!\n 지금 10ml Kit도 신청하세요!",
 		  image: {
 			src: 'http://www.thefaceshopclouding.co.kr/PC/images/sns_kt.jpg',
