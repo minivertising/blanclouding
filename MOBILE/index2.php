@@ -72,15 +72,15 @@
             <span class="txt">
               <img src="img/txt_movie_01.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('fb','1')"><img src="img/btn_fb.png" alt=""/></a>
+            <a href="#" onclick="movie_share('fb','1');return false;"><img src="img/btn_fb.png" alt=""/></a>
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('tw','1');"><img src="img/btn_tw.png" alt=""/></a>
+            <a href="#" onclick="movie_share('tw','1');return false;"><img src="img/btn_tw.png" alt=""/></a>
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('kt','1');"><img src="img/btn_kt.png" alt=""/></a>
+            <a href="#" onclick="movie_share('kt','1');return false;"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area2" style="width:100%">
@@ -92,15 +92,15 @@
             <span class="txt">
               <img src="img/txt_movie_02.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('fb','2')"><img src="img/btn_fb.png" alt=""/></a>
+            <a href="#" onclick="movie_share('fb','2');return false;"><img src="img/btn_fb.png" alt=""/></a>
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('tw','2);"><img src="img/btn_tw.png" alt=""/></a>
+            <a href="#" onclick="movie_share('tw','2);return false;"><img src="img/btn_tw.png" alt=""/></a>
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('kt','2');"><img src="img/btn_kt.png" alt=""/></a>
+            <a href="#" onclick="movie_share('kt','2');return false;"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area3">
@@ -112,15 +112,15 @@
             <span class="txt">
               <img src="img/txt_movie_03.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('fb','3')"><img src="img/btn_fb.png" alt=""/></a>
+            <a href="#" onclick="movie_share('fb','3');return false;"><img src="img/btn_fb.png" alt=""/></a>
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('tw','3');"><img src="img/btn_tw.png" alt=""/></a>
+            <a href="#" onclick="movie_share('tw','3');return false;"><img src="img/btn_tw.png" alt=""/></a>
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('kt','3');"><img src="img/btn_kt.png" alt=""/></a>
+            <a href="#" onclick="movie_share('kt','3');return false;"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area4">
@@ -132,15 +132,15 @@
             <span class="txt">
               <img src="img/txt_movie_04.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('fb','4')"><img src="img/btn_fb.png" alt=""/></a>
+            <a href="#" onclick="movie_share('fb','4');return false;"><img src="img/btn_fb.png" alt=""/></a>
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('tw','4');"><img src="img/btn_tw.png" alt=""/></a>
+            <a href="#" onclick="movie_share('tw','4');return false;"><img src="img/btn_tw.png" alt=""/></a>
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('kt','4');"><img src="img/btn_kt.png" alt=""/></a>
+            <a href="#" onclick="movie_share('kt','4');return false;"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
       </div>
