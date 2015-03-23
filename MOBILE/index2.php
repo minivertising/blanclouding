@@ -63,12 +63,12 @@
 
     <div class="bg_movie">
       <!--event-->
-      <div class="movie_area">
-        <div class="movie_area1" style="width:100%">
+      <div class="movie_area" style="width:100%">
+        <div class="movie_area1">
           <div>
             <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer"></iframe>
           </div>
-          <div class="block_more_movie clearfix" style="width:100%">
+          <div class="block_more_movie clearfix">
             <span class="txt">
               <img src="img/txt_movie_01.png" alt=""/>
             </span>

@@ -149,7 +149,7 @@ body {
 }
 
 .contents_wrap .bg_movie{
-	position:relative;
+	/*position:relative;*/
 	width:100%;
 	height:100%;
 	margin:5% 0 0;
