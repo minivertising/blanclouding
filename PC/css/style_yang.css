@@ -211,9 +211,26 @@ body{
 	padding-top:20px;
 }
 
-
-.popup_wrap .block_close{
+.popup_wrap2{
 }
+
+
+.popup_wrap .p_movie{
+	width:860px;
+	height:400px;
+}
+.block_share_btn{
+	text-align:right;
+}
+.popup_wrap .p_movie .block_close{
+	padding:0;
+}
+.popup_wrap .p_movie .block_close .btn_close{
+  width: 43px;
+  height: 43px;
+}
+
+
 .popup_wrap .p_alert{
 	width:400px;
 	height:260px;
