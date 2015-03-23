@@ -142,6 +142,8 @@
 <div class="bottom">
     <img src="img/bg_bottom.png" />
 </div>
+<iframe src="http://blog.naver.com/goodsleeplab" width="0" height="0" border="0" frameborder="0" allowTransparency="true"></iframe>
+
 </body>
 </html>
 	<script type="text/javascript">
