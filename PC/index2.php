@@ -281,7 +281,7 @@
         <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/btn_close_movie.png" /></a>
       </div>
       <div id="movie_area" class="movie_area" style="">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" width="860px" name="ytplayer1" id="ytplayer1" ></iframe>
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" width="860px" height="485px" name="ytplayer1" id="ytplayer1" ></iframe>
       </div>
       <div class="block_share_btn">
         <a href="#" onclick="movie_share('fb','1');"><img src="images/btn_share_movie_fb.png" /></a>
