@@ -662,7 +662,7 @@ function sns_share(media)
 		  },
 		  webButton: {
 			text: '더페이스샵',
-			url: 'http://www.thefaceshopclouding.co.kr/' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+			url: 'http://www.thefaceshopclouding.co.kr/?media=K01' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
 		$.ajax({
