@@ -80,7 +80,7 @@
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('kt','1');return false;"><img src="img/btn_kt.png" alt=""/></a>
+            <a href="#" class="kt_movie_share" onclick="movie_share('kt','1');return false;"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area2" style="width:100%">
@@ -100,7 +100,7 @@
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('kt','2');return false;"><img src="img/btn_kt.png" alt=""/></a>
+            <a href="#" class="kt_movie_share" onclick="movie_share('kt','2');return false;"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area3">
@@ -120,7 +120,7 @@
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('kt','3');return false;"><img src="img/btn_kt.png" alt=""/></a>
+            <a href="#" class="kt_movie_share" onclick="movie_share('kt','3');return false;"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area4">
@@ -140,7 +140,7 @@
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="#" onclick="movie_share('kt','4');return false;"><img src="img/btn_kt.png" alt=""/></a>
+            <a href="#" class="kt_movie_share" onclick="movie_share('kt','4');return false;"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
       </div>
