@@ -64,81 +64,81 @@
     <div class="bg_movie">
       <!--event-->
       <div class="movie_area">
-        <div class="movie_area1">
+        <div class="movie_area1" style="width:100%">
           <div>
             <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer"></iframe>
           </div>
-          <div class="block_more_movie clearfix">
-          	<span class="txt">
-           		<img src="img/txt_movie_01.png" alt=""/>
+          <div class="block_more_movie clearfix" style="width:100%">
+            <span class="txt">
+              <img src="img/txt_movie_01.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('fb','1')"><img src="img/btn_fb.png" alt=""/></a>
             <span>
-                <img src="img/bar.png" alt=""/>
+              <img src="img/bar.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('tw','1');"><img src="img/btn_tw.png" alt=""/></a>
             <span>
-                <img src="img/bar.png" alt=""/>
+              <img src="img/bar.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('kt','1');"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
-        <div class="movie_area2">
+        <div class="movie_area2" style="width:100%">
           <div class="block_play">
-          	<img src="img/img_comingsoon.png" alt=""/>
-          	<iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" id="ytplayer2" class="ytplayer" style="display:none;"></iframe>
+            <img src="img/img_comingsoon.png" alt=""/>
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" id="ytplayer2" class="ytplayer" style="display:none;"></iframe>
           </div>
           <div class="block_more_movie clearfix">
-          	<span class="txt">
-           		<img src="img/txt_movie_02.png" alt=""/>
+            <span class="txt">
+              <img src="img/txt_movie_02.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('fb','2')"><img src="img/btn_fb.png" alt=""/></a>
             <span>
-                <img src="img/bar.png" alt=""/>
+              <img src="img/bar.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('tw','2);"><img src="img/btn_tw.png" alt=""/></a>
             <span>
-                <img src="img/bar.png" alt=""/>
+              <img src="img/bar.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('kt','2');"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area3">
           <div class="block_play">
-          	<img src="img/img_comingsoon.png" alt=""/>
-          	<iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer" style="display:none;"></iframe>
+            <img src="img/img_comingsoon.png" alt=""/>
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer" style="display:none;"></iframe>
           </div>
           <div class="block_more_movie clearfix">
-          	<span class="txt">
-           		<img src="img/txt_movie_03.png" alt=""/>
+            <span class="txt">
+              <img src="img/txt_movie_03.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('fb','3')"><img src="img/btn_fb.png" alt=""/></a>
             <span>
-                <img src="img/bar.png" alt=""/>
+              <img src="img/bar.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('tw','3');"><img src="img/btn_tw.png" alt=""/></a>
             <span>
-                <img src="img/bar.png" alt=""/>
+              <img src="img/bar.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('kt','3');"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area4">
           <div class="block_play">
-          	<img src="img/img_comingsoon.png" alt=""/>
-          	<iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" id="ytplayer4" class="ytplayer" style="display:none;"></iframe>
+            <img src="img/img_comingsoon.png" alt=""/>
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" id="ytplayer4" class="ytplayer" style="display:none;"></iframe>
           </div>
           <div class="block_more_movie clearfix">
-          	<span class="txt">
-           		<img src="img/txt_movie_04.png" alt=""/>
+            <span class="txt">
+              <img src="img/txt_movie_04.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('fb','4')"><img src="img/btn_fb.png" alt=""/></a>
             <span>
-                <img src="img/bar.png" alt=""/>
+              <img src="img/bar.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('tw','4');"><img src="img/btn_tw.png" alt=""/></a>
             <span>
-                <img src="img/bar.png" alt=""/>
+              <img src="img/bar.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('kt','4');"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
@@ -146,7 +146,6 @@
       </div>
       <!--event-->
     </div>
-
 
 <div class="bottom">
     <img src="img/bg_bottom.png" />
