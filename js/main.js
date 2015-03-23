@@ -535,7 +535,7 @@ function movie_share(media, num)
 			}
 		});
 	}else if (media == "kt"){
-		Kakao.init('62027fc7fd5be42191c4c2e4787386ca');
+		//Kakao.init('62027fc7fd5be42191c4c2e4787386ca');
 
 		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
 		Kakao.Link.createTalkLinkButton({
