@@ -80,7 +80,7 @@
             <span>
               <img src="img/bar.png" alt=""/>
             </span>
-            <a href="javascript:movie_share('kt','1');return false;" class="kt_movie_share"><img src="img/btn_kt.png" alt=""/></a>
+            <a href="javascript:movie_share('kt','1')" class="kt_movie_share"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
         <div class="movie_area2" style="width:100%">
