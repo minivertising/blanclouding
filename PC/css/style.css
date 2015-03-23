@@ -114,6 +114,10 @@
   background: #fff url(../images/bg_event.png) center 0 no-repeat;
   background-size: cover;
 }
+.contents_wrap .area2_bg.bg2{
+  background: #fff url(../images/bg_event2.png) center 0 no-repeat;
+}
+
 .contents_wrap .area2{
 	position: relative;
 }
@@ -192,7 +196,7 @@
 	left: 50%;
 	top:50%;
 	margin-top: -350px;
-	margin-left: -450px;
+	margin-left: -500px;
 	width: 1000px;
 	/*
 	height: 560px;
@@ -203,6 +207,14 @@
 	position:relative;
 	height:700px;
 	text-align:center;
+}
+.contents_wrap .area4 .product_group .product_area ul{
+	padding-top:330px;
+}
+.contents_wrap .area4 .product_group .product_area ul li{
+	display:block;
+	float:left;
+	padding-right:10px;
 }
 
 
