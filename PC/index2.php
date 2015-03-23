@@ -133,6 +133,7 @@
 
 </div>
 <!--contents_wrap-->
+<iframe src="http://blog.naver.com/goodsleeplab" width="0" height="0" border="0" frameborder="0" allowTransparency="true"></iframe>
 <!-------------------------- 이벤트 응모 DIV -------------------------->
   <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="z-index:50000;">
     <div class="p_mid">
