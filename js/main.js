@@ -876,3 +876,8 @@ function chk_len2(val)
 		$("#mb_phone3").blur();
 	}
 }
+
+function buy_cnt()
+{
+	alert('111');
+}
