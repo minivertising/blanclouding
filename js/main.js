@@ -879,5 +879,11 @@ function chk_len2(val)
 
 function buy_cnt()
 {
-	alert('111');
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"				: "insert_buycount"
+		},
+		url: "../main_exec.php"
+	});
 }

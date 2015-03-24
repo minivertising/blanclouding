@@ -101,7 +101,7 @@
     <div class="product_group">
       <div class="product_area">
         <!-- <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a> -->
-        <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a>
+        <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank" onclick="buy_cnt();"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a>
       </div>
     </div>
   </div>

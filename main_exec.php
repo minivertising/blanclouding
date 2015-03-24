@@ -74,6 +74,10 @@ switch ($_REQUEST['exec'])
 		echo $flag;
 	break;
 
+	case "insert_buycount" :
+		$query = "INSERT INTO".$_gl['buyer_info_table']."(buy_ipaddr, buy_gubun, buy_date) values('".$_SERVER['REMOTE_ADDR']."','".$gubun."','".date("Y-m-d H:i:s")."')";
+		$result = mysqli_query($my_db, $query);
+	break;
 
 
 }
