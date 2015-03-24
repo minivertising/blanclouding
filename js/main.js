@@ -534,7 +534,7 @@ function movie_share(media, num)
 			url    : "../main_exec.php",
 			data:{
 				"exec" : "insert_share_info",
-				"media" : "facebook"
+				"media" : "facebook2"
 			}
 		});
 	}else if (media == "kt"){
@@ -553,17 +553,15 @@ function movie_share(media, num)
 			url: 'http://www.thefaceshopclouding.co.kr/?kt_link=kt_link' + num + '' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
-		/*
 		$.ajax({
 			type   : "POST",
 			async  : false,
 			url    : "../main_exec.php",
 			data:{
 				"exec" : "insert_share_info",
-				"media" : media
+				"media" : "kakao2"
 			}
 		});
-		*/
 
 
 	}else{
@@ -576,6 +574,16 @@ function movie_share(media, num)
 		}else if (num == "4"){
 			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("4. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물") + '&url='+ encodeURIComponent('https://youtu.be/XDpe5Trw-zs'),'sharer','toolbar=0,status=0,width=600,height=325');
 		}
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"media" : "twitter2"
+			}
+		});
+
 	}
 }
 
