@@ -100,7 +100,7 @@
   <div class="area3">
     <div class="product_group">
       <div class="product_area">
-        <img src="images/img_area_3.png" alt=""/>
+        <a href="#" target="_blank"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a>
       </div>
     </div>
   </div>

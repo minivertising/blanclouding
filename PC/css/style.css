@@ -177,8 +177,16 @@
 	overflow: hidden;
 }
 .contents_wrap .area3 .product_group .product_area{
+	background: url(../images/img_area_3.png) center 0 no-repeat;
+	height:729px;
+	position:relative;
 }
-
+.contents_wrap .area3 .product_group .product_area a{
+	position:absolute;
+	right:10px;
+	bottom:40px;
+	z-index:999999;
+}
 
 /* 메인 네번째 DIV */
 .contents_wrap .area4_bg{
