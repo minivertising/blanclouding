@@ -91,9 +91,7 @@
       <!--event-->
       <div class="movie_area" style="width:100%">
         <div class="movie_area1">
-          <div>
             <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer"></iframe>
-          </div>
           <div class="block_more_movie clearfix">
             <span class="txt">
               <img src="img/txt_movie_01.png" alt=""/>
@@ -186,7 +184,7 @@
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
 		var width = $(window).width();
 		var height = $(window).height();
-		var pop_width = width - 6;
+		var pop_width = $(window).width() - 12;
 		var youtube_width = width;
 		var pop_youtube_height = (pop_width / 16) * 9;
 		$("#ytplayer").width(width);
@@ -263,6 +261,12 @@
 					$("#addr1").val("");
 					$("#addr2").val("");
 					$("#post_div").hide();*/
+				},
+				open: function() {
+					var pop_width2 = $("#movie_div1").width();
+					var pop_youtube_height2 = (pop_width2 / 16) * 9;
+					$("#ytplayer1").width(pop_width2);
+					$("#ytplayer1").height(pop_youtube_height2);
 				}
 			}
 		});
