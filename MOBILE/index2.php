@@ -78,7 +78,7 @@
     <img src="img/bg_bottom.png" />
     </div>
     <div class="bottom" style="margin-top:-1%;">
-	    <a href="#"><img src="img/btn_buy.png" /></a>
+	    <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank" onclick="buy_cnt();"><img src="img/btn_buy.png" /></a>
     </div>      
     <div class="bottom" style="margin-top:-1%;">
     <img src="img/bottom.png" />
