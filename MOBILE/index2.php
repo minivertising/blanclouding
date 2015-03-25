@@ -67,11 +67,11 @@
         </div>
         <div class="first one_thumbs clearfix">
         	<div><a href="#" data-mfp-src="#movie_div1" class="left popup-with-zoom-anim" style="outline: none;"><img src="img/thumb_1_open.png" alt=""/></a></div>
-            <div><a href="#"><img src="img/thumb_2_close.png" alt=""/></a></div>
+            <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_2_close.png" alt=""/></a></div>
         </div>
         <div class="one_thumbs clearfix">
-        	<div><a href="#" class="left"><img src="img/thumb_3_close.png" alt=""/></a></div>
-            <div><a href="#"><img src="img/thumb_4_close.png" alt=""/></a></div>
+        	<div><a href="#" onclick="alert('곧 공개됩니다.');return false;" class="left"><img src="img/thumb_3_close.png" alt=""/></a></div>
+            <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_4_close.png" alt=""/></a></div>
         </div>
     </div>
     <div class="bottom">
@@ -89,7 +89,7 @@
         <a href="#" class="btn_close" onclick="javascript:$.magnificPopup.close();"><img src="img/popup/btn_close.png" width="29"/></a>
       </div>
       <!--event-->
-      <div class="movie_area" style="width:100%">
+      <div class="movie_area" style="width:98%">
         <div class="movie_area1">
           <div>
             <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer"></iframe>
