@@ -89,7 +89,7 @@
         <a href="#" class="btn_close" onclick="javascript:$.magnificPopup.close();"><img src="img/popup/btn_close.png" width="29"/></a>
       </div>
       <!--event-->
-      <div class="movie_area" style="width:98%">
+      <div class="movie_area" style="width:100%">
         <div class="movie_area1">
           <div>
             <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer"></iframe>
@@ -167,12 +167,13 @@
 	$(window).resize(function(){
 		var width = $(window).width();
 		//var height = $(window).height();
-
+		var pop_width = $("#movie_div1").width();
 		var youtube_height = (width / 16) * 9;
+		var pop_youtube_height = (pop_width / 16) * 9;
 		$("#ytplayer").width(width);
 		$("#ytplayer").height(youtube_height);
-		$("#ytplayer1").width(width);
-		$("#ytplayer1").height(youtube_height);
+		$("#ytplayer1").width(pop_width);
+		$("#ytplayer1").height(pop_youtube_height);
 		$("#ytplayer2").width(width);
 		$("#ytplayer2").height(youtube_height);
 		$("#ytplayer3").width(width);
@@ -185,16 +186,18 @@
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
 		var width = $(window).width();
 		var height = $(window).height();
+		var pop_width = width * 0.98;
 		var youtube_width = width;
+		var pop_youtube_height = (pop_width / 16) * 9;
 		$("#ytplayer").width(width);
-		$("#ytplayer1").width(width);
+		$("#ytplayer1").width(pop_width);
 		$("#ytplayer2").width(width);
 		$("#ytplayer3").width(width);
 		$("#ytplayer4").width(width);
 		$(".cover_area").width($("#ytplayer").width());
 		var youtube_height = (width / 16) * 9;
 		$("#ytplayer").height(youtube_height);
-		$("#ytplayer1").height(youtube_height);
+		$("#ytplayer1").height(pop_youtube_height);
 		$("#ytplayer2").height(youtube_height);
 		$("#ytplayer3").height(youtube_height);
 		$("#ytplayer4").height(youtube_height);
