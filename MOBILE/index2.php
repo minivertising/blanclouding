@@ -186,7 +186,7 @@
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
 		var width = $(window).width();
 		var height = $(window).height();
-		var pop_width = width * 0.98;
+		var pop_width = width - 6;
 		var youtube_width = width;
 		var pop_youtube_height = (pop_width / 16) * 9;
 		$("#ytplayer").width(width);
