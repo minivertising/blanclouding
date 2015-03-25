@@ -66,7 +66,7 @@
    	      <img src="img/bg_movie_title.png" alt=""/>
         </div>
         <div class="first one_thumbs clearfix">
-        	<div><a href="#" class="left"><img src="img/thumb_1_open.png" alt=""/></a></div>
+        	<div><a href="#" data-mfp-src="#movie_div1" class="left popup-with-zoom-anim" style="outline: none;"><img src="img/thumb_1_open.png" alt=""/></a></div>
             <div><a href="#"><img src="img/thumb_2_close.png" alt=""/></a></div>
         </div>
         <div class="one_thumbs clearfix">
@@ -84,7 +84,10 @@
     <img src="img/bottom.png" />
     </div>    
 
-    <div class="bg_movie">
+    <div class="bg_movie popup_wrap zoom-anim-dialog mfp-hide" id="movie_div1">
+      <div class="block_close clearfix" style="width:100%">
+        <a href="#" class="btn_close" onclick="javascript:$.magnificPopup.close();"><img src="img/popup/btn_close.png" width="29"/></a>
+      </div>
       <!--event-->
       <div class="movie_area" style="width:100%">
         <div class="movie_area1">
@@ -104,66 +107,6 @@
               <img src="img/bar.png" alt=""/>
             </span>
             <a href="javascript:movie_share('kt','1')" class="kt_movie_share"><img src="img/btn_kt.png" alt=""/></a>
-          </div><!--block_more_movie-->
-        </div>
-        <div class="movie_area2" style="width:100%">
-          <div class="block_play" style="width:100%">
-            <img src="img/img_comingsoon.png" alt=""/>
-            <!-- <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" id="ytplayer2" class="ytplayer" style="display:none;"></iframe> -->
-          </div>
-          <div class="block_more_movie clearfix">
-            <span class="txt">
-              <img src="img/txt_movie_02.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('fb','2');return false;"><img src="img/btn_fb.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('tw','2);return false;"><img src="img/btn_tw.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" class="kt_movie_share" onclick="movie_share('kt','2');return false;"><img src="img/btn_kt.png" alt=""/></a>
-          </div><!--block_more_movie-->
-        </div>
-        <div class="movie_area3">
-          <div class="block_play" style="width:100%">
-            <img src="img/img_comingsoon.png" alt=""/>
-            <!-- <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer" style="display:none;"></iframe> -->
-          </div>
-          <div class="block_more_movie clearfix">
-            <span class="txt">
-              <img src="img/txt_movie_03.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('fb','3');return false;"><img src="img/btn_fb.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('tw','3');return false;"><img src="img/btn_tw.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" class="kt_movie_share" onclick="movie_share('kt','3');return false;"><img src="img/btn_kt.png" alt=""/></a>
-          </div><!--block_more_movie-->
-        </div>
-        <div class="movie_area4">
-          <div class="block_play" style="width:100%">
-            <img src="img/img_comingsoon.png" alt=""/>
-            <!-- <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" id="ytplayer4" class="ytplayer" style="display:none;"></iframe> -->
-          </div>
-          <div class="block_more_movie clearfix">
-            <span class="txt">
-              <img src="img/txt_movie_04.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('fb','4');return false;"><img src="img/btn_fb.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('tw','4');return false;"><img src="img/btn_tw.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" class="kt_movie_share" onclick="movie_share('kt','4');return false;"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
       </div>
