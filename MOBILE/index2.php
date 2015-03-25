@@ -61,6 +61,29 @@
       </div>
     <!--sns_area-->
 
+	<div class="bg_thumbs">
+    	<div class="title">
+   	      <img src="img/bg_movie_title.png" alt=""/>
+        </div>
+        <div class="first one_thumbs clearfix">
+        	<div><a href="#" class="left"><img src="img/thumb_1_open.png" alt=""/></a></div>
+            <div><a href="#"><img src="img/thumb_2_close.png" alt=""/></a></div>
+        </div>
+        <div class="one_thumbs clearfix">
+        	<div><a href="#" class="left"><img src="img/thumb_3_close.png" alt=""/></a></div>
+            <div><a href="#"><img src="img/thumb_4_close.png" alt=""/></a></div>
+        </div>
+    </div>
+    <div class="bottom">
+    <img src="img/bg_bottom.png" />
+    </div>
+    <div class="bottom" style="margin-top:-1%;">
+	    <a href="#"><img src="img/btn_buy.png" /></a>
+    </div>      
+    <div class="bottom" style="margin-top:-1%;">
+    <img src="img/bottom.png" />
+    </div>    
+
     <div class="bg_movie">
       <!--event-->
       <div class="movie_area" style="width:100%">
@@ -147,9 +170,6 @@
       <!--event-->
     </div>
 
-<div class="bottom">
-    <img src="img/bg_bottom.png" />
-</div>
 
 </body>
 </html>

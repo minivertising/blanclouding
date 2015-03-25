@@ -209,6 +209,44 @@ body {
 	width:100%;
 }
 
+.contents_wrap .bg_thumbs{
+	width:100%;
+	background: url(../img/bg_movie.png) no-repeat 0 0 ;
+	background-size:cover;
+	padding-top:5%;
+	padding-bottom:5%;
+}
+.contents_wrap .bg_thumbs .title{
+	width:100%;
+	text-align:center;
+	padding:5% 0 5%;
+}
+.contents_wrap .bg_thumbs .title img{
+	width:90%;
+}
+.contents_wrap .bg_thumbs .one_thumbs{
+	width:100%;
+}
+.contents_wrap .bg_thumbs .one_thumbs.first{
+	padding-top:0;
+}
+.contents_wrap .bg_thumbs .one_thumbs div{
+	float:left;
+	width:50%;
+}
+.contents_wrap .bg_thumbs .one_thumbs div a{
+	display:block;
+	width:95%;
+	text-align:center;
+}
+.contents_wrap .bg_thumbs .one_thumbs div a.left{
+	padding-left:5%;
+}
+.contents_wrap .bg_thumbs .one_thumbs div a img{
+	width:90%; 
+}
+
+
 
 .wrap_page.wrap_coupon{
 	background: url(../img/bg_cloud_coupon.png) no-repeat 0 -160px;
