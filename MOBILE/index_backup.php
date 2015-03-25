@@ -37,7 +37,7 @@
       </div>
     <!--area1-->
   <div class="navi_btn_block clearfix">
-        <a href="#" class="view_event"><img src="img/btn_movie.png" alt=""/></a>
+        <a href="#" class="view_event"><img src="img/btn_gift.png" alt=""/></a>
         <a href="#" class="view_product"><img src="img/btn_product.png" alt=""/></a>
   </div>
 
@@ -61,57 +61,41 @@
       </div>
     <!--sns_area-->
 
-	<div class="bg_thumbs">
-    	<div class="title">
-   	      <img src="img/bg_movie_title.png" alt=""/>
-        </div>
-        <div class="first one_thumbs clearfix">
-        	<div><a href="#" data-mfp-src="#movie_div1" class="left popup-with-zoom-anim" style="outline: none;"><img src="img/thumb_1_open.png" alt=""/></a></div>
-            <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_2_close.png" alt=""/></a></div>
-        </div>
-        <div class="one_thumbs clearfix">
-        	<div><a href="#" onclick="alert('곧 공개됩니다.');return false;" class="left"><img src="img/thumb_3_close.png" alt=""/></a></div>
-            <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_4_close.png" alt=""/></a></div>
-        </div>
-    </div>
-    <div class="bottom">
+
+
+    <div class="bg_cloud">
+        <!--event-->
+          <div class="event">
+            <div class="btn_gift">
+              <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="img/btn_gift.png" alt=""/></a> -->
+<?
+	if (date("Y-m-d") < "2015-03-19")
+	{
+
+		if ($iPhoneYN == "Y")
+		{
+?>
+              <a href="popup_input.php"><img src="img/btn_gift_event.png" alt="1"/></a>
+<?
+		}else{
+?>
+              <a href="popup_input.php" target="_blank"><img src="img/btn_gift_event.png" alt="1"/></a>
+<?
+		}
+	}else{
+?>
+              <a href="#" onclick="javascript:alert('이벤트가 종료되었습니다. \n\n감사합니다.');"><img src="img/btn_gift_event.png" alt="1"/></a>
+<?
+	}
+?>
+            </div>
+          </div>
+        <!--event-->
+</div>
+
+<div class="bottom">
     <img src="img/bg_bottom.png" />
-    </div>
-    <div class="bottom" style="margin-top:-1%;">
-	    <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank" onclick="buy_cnt();"><img src="img/btn_buy.png" /></a>
-    </div>      
-    <div class="bottom" style="margin-top:-1%;">
-    <img src="img/bottom.png" />
-    </div>    
-
-    <div class="bg_movie popup_wrap zoom-anim-dialog mfp-hide" id="movie_div1">
-      <div class="block_close clearfix" style="width:100%">
-        <a href="#" class="btn_close" onclick="javascript:$.magnificPopup.close();"><img src="img/popup/btn_close.png" width="29"/></a>
-      </div>
-      <!--event-->
-      <div class="movie_area" style="width:100%">
-        <div class="movie_area1">
-            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer"></iframe>
-          <div class="block_more_movie clearfix">
-            <span class="txt">
-              <img src="img/txt_movie_01.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('fb','1');return false;"><img src="img/btn_fb.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('tw','1');return false;"><img src="img/btn_tw.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="javascript:movie_share('kt','1')" class="kt_movie_share"><img src="img/btn_kt.png" alt=""/></a>
-          </div><!--block_more_movie-->
-        </div>
-      </div>
-      <!--event-->
-    </div>
-
-
+</div>
 </body>
 </html>
 	<script type="text/javascript">
@@ -165,40 +149,21 @@
 	$(window).resize(function(){
 		var width = $(window).width();
 		//var height = $(window).height();
-		var pop_width = $("#movie_div1").width();
+
 		var youtube_height = (width / 16) * 9;
-		var pop_youtube_height = (pop_width / 16) * 9;
 		$("#ytplayer").width(width);
 		$("#ytplayer").height(youtube_height);
-		$("#ytplayer1").width(pop_width);
-		$("#ytplayer1").height(pop_youtube_height);
-		$("#ytplayer2").width(width);
-		$("#ytplayer2").height(youtube_height);
-		$("#ytplayer3").width(width);
-		$("#ytplayer3").height(youtube_height);
-		$("#ytplayer4").width(width);
-		$("#ytplayer4").height(youtube_height);
 	});
 
 	$(document).ready(function() {
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
 		var width = $(window).width();
 		var height = $(window).height();
-		var pop_width = $(window).width() - 12;
 		var youtube_width = width;
-		var pop_youtube_height = (pop_width / 16) * 9;
 		$("#ytplayer").width(width);
-		$("#ytplayer1").width(pop_width);
-		$("#ytplayer2").width(width);
-		$("#ytplayer3").width(width);
-		$("#ytplayer4").width(width);
 		$(".cover_area").width($("#ytplayer").width());
 		var youtube_height = (width / 16) * 9;
 		$("#ytplayer").height(youtube_height);
-		$("#ytplayer1").height(pop_youtube_height);
-		$("#ytplayer2").height(youtube_height);
-		$("#ytplayer3").height(youtube_height);
-		$("#ytplayer4").height(youtube_height);
 		$(".cover_area").height($("#ytplayer").height());
 
 		$("#video_control").click(function(){
@@ -261,12 +226,6 @@
 					$("#addr1").val("");
 					$("#addr2").val("");
 					$("#post_div").hide();*/
-				},
-				open: function() {
-					var pop_width2 = $("#movie_div1").width();
-					var pop_youtube_height2 = (pop_width2 / 16) * 9;
-					$("#ytplayer1").width(pop_width2);
-					$("#ytplayer1").height(pop_youtube_height2);
 				}
 			}
 		});
