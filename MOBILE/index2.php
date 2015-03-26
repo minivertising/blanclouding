@@ -61,13 +61,37 @@
       </div>
     <!--sns_area-->
 
-    <div class="bg_movie">
+	<div class="bg_thumbs">
+    	<div class="title">
+   	      <img src="img/bg_movie_title.png" alt=""/>
+        </div>
+        <div class="first one_thumbs clearfix">
+        	<div><a href="#" data-mfp-src="#movie_div1" class="left popup-with-zoom-anim" style="outline: none;"><img src="img/thumb_1_open.png" alt=""/></a></div>
+            <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_2_close.png" alt=""/></a></div>
+        </div>
+        <div class="one_thumbs clearfix">
+        	<div><a href="#" onclick="alert('곧 공개됩니다.');return false;" class="left"><img src="img/thumb_3_close.png" alt=""/></a></div>
+            <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_4_close.png" alt=""/></a></div>
+        </div>
+    </div>
+    <div class="bottom">
+    <img src="img/bg_bottom.png" />
+    </div>
+    <div class="bottom" style="margin-top:-1%;">
+	    <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank" onclick="buy_cnt();"><img src="img/btn_buy.png" /></a>
+    </div>      
+    <div class="bottom" style="margin-top:-1%;">
+    <img src="img/bottom.png" />
+    </div>    
+
+    <div class="bg_movie popup_wrap zoom-anim-dialog mfp-hide" id="movie_div1">
+      <div class="block_close clearfix" style="width:100%">
+        <a href="#" class="btn_close" onclick="javascript:$.magnificPopup.close();"><img src="img/popup/btn_close.png" width="29"/></a>
+      </div>
       <!--event-->
       <div class="movie_area" style="width:100%">
         <div class="movie_area1">
-          <div>
             <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer"></iframe>
-          </div>
           <div class="block_more_movie clearfix">
             <span class="txt">
               <img src="img/txt_movie_01.png" alt=""/>
@@ -83,73 +107,10 @@
             <a href="javascript:movie_share('kt','1')" class="kt_movie_share"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
-        <div class="movie_area2" style="width:100%">
-          <div class="block_play" style="width:100%">
-            <img src="img/img_comingsoon.png" alt=""/>
-            <!-- <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" id="ytplayer2" class="ytplayer" style="display:none;"></iframe> -->
-          </div>
-          <div class="block_more_movie clearfix">
-            <span class="txt">
-              <img src="img/txt_movie_02.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('fb','2');return false;"><img src="img/btn_fb.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('tw','2);return false;"><img src="img/btn_tw.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" class="kt_movie_share" onclick="movie_share('kt','2');return false;"><img src="img/btn_kt.png" alt=""/></a>
-          </div><!--block_more_movie-->
-        </div>
-        <div class="movie_area3">
-          <div class="block_play" style="width:100%">
-            <img src="img/img_comingsoon.png" alt=""/>
-            <!-- <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer" style="display:none;"></iframe> -->
-          </div>
-          <div class="block_more_movie clearfix">
-            <span class="txt">
-              <img src="img/txt_movie_03.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('fb','3');return false;"><img src="img/btn_fb.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('tw','3');return false;"><img src="img/btn_tw.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" class="kt_movie_share" onclick="movie_share('kt','3');return false;"><img src="img/btn_kt.png" alt=""/></a>
-          </div><!--block_more_movie-->
-        </div>
-        <div class="movie_area4">
-          <div class="block_play" style="width:100%">
-            <img src="img/img_comingsoon.png" alt=""/>
-            <!-- <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" id="ytplayer4" class="ytplayer" style="display:none;"></iframe> -->
-          </div>
-          <div class="block_more_movie clearfix">
-            <span class="txt">
-              <img src="img/txt_movie_04.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('fb','4');return false;"><img src="img/btn_fb.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" onclick="movie_share('tw','4');return false;"><img src="img/btn_tw.png" alt=""/></a>
-            <span>
-              <img src="img/bar.png" alt=""/>
-            </span>
-            <a href="#" class="kt_movie_share" onclick="movie_share('kt','4');return false;"><img src="img/btn_kt.png" alt=""/></a>
-          </div><!--block_more_movie-->
-        </div>
       </div>
       <!--event-->
     </div>
 
-<div class="bottom">
-    <img src="img/bg_bottom.png" />
-</div>
 
 </body>
 </html>
@@ -204,12 +165,13 @@
 	$(window).resize(function(){
 		var width = $(window).width();
 		//var height = $(window).height();
-
+		var pop_width = $("#movie_div1").width();
 		var youtube_height = (width / 16) * 9;
+		var pop_youtube_height = (pop_width / 16) * 9;
 		$("#ytplayer").width(width);
 		$("#ytplayer").height(youtube_height);
-		$("#ytplayer1").width(width);
-		$("#ytplayer1").height(youtube_height);
+		$("#ytplayer1").width(pop_width);
+		$("#ytplayer1").height(pop_youtube_height);
 		$("#ytplayer2").width(width);
 		$("#ytplayer2").height(youtube_height);
 		$("#ytplayer3").width(width);
@@ -222,16 +184,18 @@
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
 		var width = $(window).width();
 		var height = $(window).height();
+		var pop_width = $(window).width() - 12;
 		var youtube_width = width;
+		var pop_youtube_height = (pop_width / 16) * 9;
 		$("#ytplayer").width(width);
-		$("#ytplayer1").width(width);
+		$("#ytplayer1").width(pop_width);
 		$("#ytplayer2").width(width);
 		$("#ytplayer3").width(width);
 		$("#ytplayer4").width(width);
 		$(".cover_area").width($("#ytplayer").width());
 		var youtube_height = (width / 16) * 9;
 		$("#ytplayer").height(youtube_height);
-		$("#ytplayer1").height(youtube_height);
+		$("#ytplayer1").height(pop_youtube_height);
 		$("#ytplayer2").height(youtube_height);
 		$("#ytplayer3").height(youtube_height);
 		$("#ytplayer4").height(youtube_height);
@@ -297,6 +261,12 @@
 					$("#addr1").val("");
 					$("#addr2").val("");
 					$("#post_div").hide();*/
+				},
+				open: function() {
+					var pop_width2 = $("#movie_div1").width();
+					var pop_youtube_height2 = (pop_width2 / 16) * 9;
+					$("#ytplayer1").width(pop_width2);
+					$("#ytplayer1").height(pop_youtube_height2);
 				}
 			}
 		});

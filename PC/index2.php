@@ -100,7 +100,7 @@
   <div class="area3">
     <div class="product_group">
       <div class="product_area">
-        <img src="images/img_area_3.png" alt=""/>
+        <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a>
       </div>
     </div>
   </div>

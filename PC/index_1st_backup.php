@@ -1,10 +1,8 @@
 <?
 	include_once "./header.php";
-
 ?>
 <!--contents_wrap-->
 <div class="contents_wrap">
-<input type="hidden" name="play_video" id="play_video" value="<?=$play_movie?>">
 <!--area1-->
   <div class="area1">
 <!--video_area-->
@@ -38,7 +36,7 @@
         <div class="btn_group">
           <!-- <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()"><img src="images/btn_gift.png" alt=""/></a> -->
           <!-- <a href="#" data-mfp-src="#gift_div" class="popup-with-zoom-anim" onclick="open_gift()"><img src="images/btn_gift.png" alt="" onmouseover="change_image('over','gift')" onmouseout="change_image('out','gift')" id="btn_gift"/></a> -->
-		  <a href="#" class="view_event"><img src="images/btn_more_movie.png" alt="" onmouseover="change_image('over','movie')" onmouseout="change_image('out','movie')" id="btn_movie"/></a>
+		  <a href="#" class="view_event"><img src="images/btn_gift.png" alt="" onmouseover="change_image('over','gift')" onmouseout="change_image('out','gift')" id="btn_gift"/></a>
           <a href="#" class="view_product"><img src="images/btn_blan.png" alt="" onmouseover="change_image('over','blan')" onmouseout="change_image('out','blan')" id="btn_blan"/></a>
         </div>
       </div>
@@ -67,41 +65,34 @@
 
 
 <!--area2-->
-<div class="area2_bg bg2" style="display:none">
-  <div class="area4">
+<div class="area2_bg" style="display:none">
+  <div class="area2">
     <div class="product_group">
       <div class="product_area">
-        <ul class="thumb_list clearfix">
-          <li>
-            <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim" style="outline: none;" id="movie_link1"><img src="./images/thumb_1_open.png"></a>
-          </li>
-          <li>
-            <!-- <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim" style="outline: none;" id="movie_link2"><img src="./images/thumb_2_close.png"></a> -->
-            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_2_close.png" style="cursor:pointer"></a>
-          </li>
-          <li>
-            <!-- <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a> -->
-            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_3_close.png" style="cursor:pointer"></a>
-          </li>
-          <li>
-            <!-- <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim" style="outline: none;" id="movie_link4"><img src="./images/thumb_4_close.png"></a> -->
-            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_4_close.png" style="cursor:pointer"></a>
-          </li>          
-        </ul>
+<?
+	if (date("Y-m-d") >= "2015-03-19")
+	{
+?>
+        <a href="#" onclick="alert('이벤트가 종료되었습니다. \n\n감사합니다.')" style="background:none;outline: none;">신청하기</a>
+<?
+	}else{
+?>
+        <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" onclick="open_event()" style="background:none;outline: none;">신청하기</a>
+<?
+	}
+?>
       </div>
     </div>
   </div>
  </div>
 <!--area2-->
 
-
 <!--area3-->
 <div class="area3_bg" style="display:none">
   <div class="area3">
     <div class="product_group">
       <div class="product_area">
-        <!-- <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a> -->
-        <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank" onclick="buy_cnt();"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a>
+        <img src="images/img_area_3.png" alt=""/>
       </div>
     </div>
   </div>
@@ -278,70 +269,7 @@
     </div>
   </div>
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
-<!-------------------------- 영상1 DIV -------------------------->
-  <div id="movie_div1" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-450px">
-    <div class="p_movie">
-      <div class="block_close clearfix">
-        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/btn_close_movie.png" /></a>
-      </div>
-      <div id="movie_area" class="movie_area" style="">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" width="860px" height="485px" name="ytplayer1" id="ytplayer1" ></iframe>
-      </div>
-      <div class="block_share_btn">
-        <a href="#" onclick="movie_share('fb','1');"><img src="images/btn_share_movie_fb.png" /></a>
-        <a href="#" onclick="movie_share('tw','1');"><img src="images/btn_share_movie_tw.png" /></a>
-      </div>
-    </div>
-  </div>
-<!-------------------------- 영상1 DIV -------------------------->
-<!-------------------------- 영상2 DIV -------------------------->
-  <div id="movie_div2" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
-      <div class="block_close clearfix">
-        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" width="450px" name="ytplayer2" id="ytplayer2" ></iframe>
-      </div>
-      <div>
-        <a href="#" onclick="movie_share('fb','2');">페이스북2</a>
-        <a href="#" onclick="movie_share('tw','2');">트위터2</a>
-      </div>
-    </div>
-  </div>
-<!-------------------------- 영상2 DIV -------------------------->
-<!-------------------------- 영상3 DIV -------------------------->
-  <div id="movie_div3" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
-      <div class="block_close clearfix">
-        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" width="450px" name="ytplayer3" id="ytplayer3" ></iframe>
-      </div>
-      <div>
-        <a href="#" onclick="movie_share('fb','3');">페이스북3</a>
-        <a href="#" onclick="movie_share('tw','3');">트위터3</a>
-      </div>
-    </div>
-  </div>
-<!-------------------------- 영상3 DIV -------------------------->
-<!-------------------------- 영상4 DIV -------------------------->
-  <div id="movie_div4" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
-      <div class="block_close clearfix">
-        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
-      </div>
-      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" width="450px" name="ytplayer4" id="ytplayer4" ></iframe>
-      </div>
-      <div>
-        <a href="#" onclick="movie_share('fb','4');">페이스북4</a>
-        <a href="#" onclick="movie_share('tw','4');">트위터4</a>
-      </div>
-    </div>
-  </div>
-<!-------------------------- 영상4 DIV -------------------------->
+
 <!--------------------------  개인정보 입력을 해주세요 ALERT DIV ----------------------->
   <div id="input_alert" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-200px">
     <div class="p_alert">
@@ -499,7 +427,6 @@
 			wHeight = 1000;
 		}
 		$('.area2').height(995); // 제품
-		$('.area4').height(995); // 제품
 		$('.area3').height(wHeight); // 제품
 		//$('.product_group').width(width); // 제품
 		//$('.product_area').width(width); // 제품
@@ -507,34 +434,6 @@
 	});
 
 	$(document).ready(function() {
-
-		if ($("#play_video").val() == "movie1")
-		{
-			//alert('111');
-			//$("#movie_div1").show();
-			//$( 'html, body' ).animate({ scrollTop: $(window).height()},500);
-			
-			$.magnificPopup.open({
-				items: {
-					src: '#movie_div1'
-				},
-				type: 'inline',
-				showCloseBtn : false
-			}, 0);
-			
-		}else if ($("#play_video").val() == "movie2"){
-			//$( 'html, body' ).animate({ scrollTop: $("#ytplayer").height()},500);
-			
-			$.magnificPopup.open({
-				items: {
-					src: '#movie_div2'
-				},
-				type: 'inline',
-				showCloseBtn : false
-			}, 0);
-			
-		}
-
 		//처음 화면 크기에 따라 영상및 커버 크기 변경
 		var width = $(window).width();
 		var youtube_width = width;
@@ -552,7 +451,6 @@
 			wHeight = 1000;
 		}
 		$('.area2').height(995); // 제품
-		$('.area4').height(995); // 제품
 		$('.area3').height(wHeight); // 제품
 		//$('.product_group').width(width); // 제품
 		//$('.product_area').width(width); // 제품
@@ -640,11 +538,9 @@
 
 		$(".area2_bg").show();
 		$(".area3_bg").show();
-		$(".area4_bg").show();
 		$(".footer").show();
 		setTimeout("$('.cover_area').css('background','url(./images/movCover.png) repeat');",3000);
 		//$(".cover_area").css("background","url('./images/movCover.png') repeat");
-
 
 	});
 	</script>

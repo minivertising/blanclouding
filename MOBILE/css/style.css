@@ -148,12 +148,12 @@ body {
 .contents_wrap .bg_cloud .event{
 }
 
-.contents_wrap .bg_movie{
+.bg_movie{
 	/*position:relative;*/
 	width:100%;
 	height:100%;
 	margin:5% 0 0;
-	
+	background:white;
 }
 
 .contents_wrap .block_play img{
@@ -208,6 +208,44 @@ body {
 .contents_wrap .bottom img{
 	width:100%;
 }
+
+.contents_wrap .bg_thumbs{
+	width:100%;
+	background: url(../img/bg_movie.png) no-repeat 0 0 ;
+	background-size:cover;
+	padding-top:5%;
+	padding-bottom:5%;
+}
+.contents_wrap .bg_thumbs .title{
+	width:100%;
+	text-align:center;
+	padding:5% 0 5%;
+}
+.contents_wrap .bg_thumbs .title img{
+	width:90%;
+}
+.contents_wrap .bg_thumbs .one_thumbs{
+	width:100%;
+}
+.contents_wrap .bg_thumbs .one_thumbs.first{
+	padding-top:0;
+}
+.contents_wrap .bg_thumbs .one_thumbs div{
+	float:left;
+	width:50%;
+}
+.contents_wrap .bg_thumbs .one_thumbs div a{
+	display:block;
+	width:95%;
+	text-align:center;
+}
+.contents_wrap .bg_thumbs .one_thumbs div a.left{
+	padding-left:5%;
+}
+.contents_wrap .bg_thumbs .one_thumbs div a img{
+	width:90%; 
+}
+
 
 
 .wrap_page.wrap_coupon{
@@ -374,30 +412,42 @@ body {
 }
 
 
-.contents_wrap .block_more_movie{
+.block_more_movie{
 	width:96%;
 	padding:0 2%;
-	padding-bottom:10%;
+	padding-bottom:4%;
+	margin-top:5px
 }
 
-.contents_wrap .block_more_movie span,
-.contents_wrap .block_more_movie a{
+.block_more_movie span,
+.block_more_movie a{
 	display:block;
 	float:left;
 	width:7%;
 	text-align:right;
 }
-.contents_wrap .block_more_movie span img,
-.contents_wrap .block_more_movie a img{
+.block_more_movie span img,
+.block_more_movie a img{
 	width:100%;
 }
-.contents_wrap .block_more_movie span.txt{
+.block_more_movie span.txt{
 	width:65%;
 	text-align:left;
 	padding-top:7px;
 }
-.contents_wrap .block_more_movie span.txt img{
+.block_more_movie span.txt img{
 	width:95%;
+}
+
+.block_close{
+	display:block;
+	padding:10px 0 0;
+}
+.block_close a{
+	display:block;
+	float:right;
+	width:40px;
+	height:40px;
 }
 
 

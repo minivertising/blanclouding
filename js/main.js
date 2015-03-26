@@ -534,7 +534,7 @@ function movie_share(media, num)
 			url    : "../main_exec.php",
 			data:{
 				"exec" : "insert_share_info",
-				"media" : "facebook"
+				"media" : "facebook2"
 			}
 		});
 	}else if (media == "kt"){
@@ -542,7 +542,7 @@ function movie_share(media, num)
 		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
 		Kakao.Link.createTalkLinkButton({
 		  container: '.kt_movie_share',
-		  label: "서장훈이 화장품 CF를?! \n<아니 아니, 그게 아니고~> 전격 공개!\n 건조한 피부에 봄비같은 하얀 수분 크림 출시!\n 지금 10ml Kit도 신청하세요!",
+		  label: "수분이 필요해! 구름처럼 하얗고 촉촉하게! 클라우딩 효과의 하얀 수분크림",
 		  image: {
 			src: 'http://www.thefaceshopclouding.co.kr/PC/images/sns_kt.jpg',
 			width: '1200',
@@ -553,22 +553,20 @@ function movie_share(media, num)
 			url: 'http://www.thefaceshopclouding.co.kr/?kt_link=kt_link' + num + '' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
-		/*
 		$.ajax({
 			type   : "POST",
 			async  : false,
 			url    : "../main_exec.php",
 			data:{
 				"exec" : "insert_share_info",
-				"media" : media
+				"media" : "kakao2"
 			}
 		});
-		*/
 
 
 	}else{
 		if (num == "1"){
-			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물") + '&url='+ encodeURIComponent('https://youtu.be/XDpe5Trw-zs'),'sharer','toolbar=0,status=0,width=600,height=325');
+			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("수분이 필요해! 구름처럼 하얗고 촉촉하게! 클라우딩 효과의 하얀 수분크림") + '&url='+ encodeURIComponent('https://youtu.be/1kRP0yqnA9o'),'sharer','toolbar=0,status=0,width=600,height=325');
 		}else if (num == "2"){
 			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("2. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물") + '&url='+ encodeURIComponent('https://youtu.be/XDpe5Trw-zs'),'sharer','toolbar=0,status=0,width=600,height=325');
 		}else if (num == "3"){
@@ -576,6 +574,16 @@ function movie_share(media, num)
 		}else if (num == "4"){
 			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("4. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물") + '&url='+ encodeURIComponent('https://youtu.be/XDpe5Trw-zs'),'sharer','toolbar=0,status=0,width=600,height=325');
 		}
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"media" : "twitter2"
+			}
+		});
+
 	}
 }
 
@@ -867,4 +875,15 @@ function chk_len2(val)
 	{
 		$("#mb_phone3").blur();
 	}
+}
+
+function buy_cnt()
+{
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"				: "insert_buycount"
+		},
+		url: "../main_exec.php"
+	});
 }

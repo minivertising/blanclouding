@@ -36,9 +36,9 @@
 <!----------------------------------------쉐어 후 사은품 선택하기 DIV ---------------------------------->
   <div id="share_present" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
     <div>
-      <input type="radio" name="chk_present" value="swiss">
-      <input type="radio" name="chk_present" value="cream">
-      <input type="radio" name="chk_present" value="jeju">
+      스위스<input type="radio" name="chk_present" value="swiss">
+      크림<input type="radio" name="chk_present" value="cream">
+      제주도<input type="radio" name="chk_present" value="jeju">
     </div>
     <div>
        <a href="#" onclick="sns_share('twitter');">트윗</a>
@@ -46,7 +46,7 @@
        <a href="#" onclick="sns_share('story');return false;">카스</a>
     </div>
     <div>
-     <a href="#" data-mfp-src="#input_info" class="popup-with-zoom-anim" style="background:none;outline: none;">선택완료</a>
+     <a href="#" onclick="chk_radio()">선택완료</a>
     <div>
   </div>
 <!----------------------------------------쉐어 후 사은품 선택하기 DIV ---------------------------------->
@@ -93,7 +93,7 @@
             </ul>
           </div>
           <div>
-            <a href="#" data-mfp-src="#input_end" class="popup-with-zoom-anim" style="background:none;outline: none;">입력완료</a>
+            <a href="#" onclick="m_chk_input()"class="popup-with-zoom-anim" style="background:none;outline: none;">입력완료</a>
           </div>
         </div><!--inner-->
     </div>
@@ -138,7 +138,6 @@
     </div>
        <a href="./index3.php">확인</a>
   </div>
-
 <!-------------------------------------참여완료 DIV ------------------------------------------->
 </html>
 <script type="text/javascript">
@@ -158,11 +157,10 @@
 		}
 		else if (e.data === 5)
 		{
-
 		}
 	};
     function onYouTubeIframeAPIReady() {
-		controllable_player = new YT.Player('ytplayer', {events: {'getPlayerState': statechange}}); 
+		controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
     }
 	if(window.opera){
 		addEventListener('load', onYouTubeIframeAPIReady, false);
@@ -170,7 +168,6 @@
 	
 		
 		
-
 				// 팝업 jQuery 스타일
 		$('.popup-with-zoom-anim').magnificPopup({
 			type: 'inline',
@@ -180,7 +177,6 @@
 			closeBtnInside: true,
 			//preloader: false,
 			midClick: true,
-
 			removalDelay: 300,
 			mainClass: 'my-mfp-zoom-in',
 			showCloseBtn : false,
@@ -197,11 +193,9 @@
 				}
 			}
 		});
-
 		$('.first-popup-link').magnificPopup({
 			closeBtnInside:true
 		});
-
 		var magnificPopup = $.magnificPopup.instance;
  
  

@@ -296,3 +296,35 @@ function close_look()
 {
 	$("#look_div").hide();
 }
+
+function chk_radio(){
+	var frm = document.all;
+	var radio_temp = frm.chk_present.length;
+	var chk_i=0
+	for(var i=0; i<radio_temp; i++)
+	{
+		if(frm.chk_present[i].checked == true)
+		{
+			chk_i++;
+			setTimeout("inputinfo_data();",500);
+		} 
+	} 
+		if(chk_i<=0)
+		{ 
+			alert("하나를 선택하세요"); 
+			
+			return;
+		} 
+} 
+
+function inputinfo_data()
+{
+	$.magnificPopup.open({
+		items: {
+			src: '#input_info'
+		},
+		type: 'inline',
+		showCloseBtn : false
+	}, 0);
+
+}
