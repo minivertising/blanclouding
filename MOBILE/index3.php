@@ -19,7 +19,7 @@
 <!----------------------------------------영상시청하기 DIV------------------------------------------>
   <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
     <div style="width:100%;height:20px">
-      <a href="#" onclick="chk_share()" style="float:right">닫기</a>
+      <a href="#" onclick="$.magnificPopup.close();" style="float:right">닫기</a>
     </div>
     <div>
       <iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" id="ytplayer" class="ytplayer">
@@ -58,11 +58,10 @@
 
 
 <!---------------------------------------개인정보 입력 DIV ---------------------------------->
-  <div id="input_info" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
+    <div id="input_info" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
     <div style="width:100%;height:20px">
       <a href="#" onclick="$.magnificPopup.close();" style="float:right">닫기</a>
     </div>
-    <div>
       <ul>
         <li>이름 : 
           <input type="text" name="mb_name" id="mb_name">
@@ -87,29 +86,30 @@
           <input type="text" name="mb_addr" id="mb_addr">
         </li>
       </ul>
+          <div>
+            <ul>
+              <li><input type="checkbox" name="use_agree" id="use_agree"></li>
+              <li><a href="#use_div" class="popup-with-zoom-anim" onclick="open_use()">개인정보 수집 · 이용에 대한 동의</a></li>
+            </ul>
+            <ul>
+              <li><input type="checkbox" name="privacy_agree" id="privacy_agree"></li>
+              <li><a href="#privacy_div" class="popup-with-zoom-anim" onclick="open_privacy()">개인정보의 취급 위탁 동의</a></li>
+            </ul>
+            <ul>
+              <li><input type="checkbox" name="adver_agree" id="adver_agree"></li>
+              <li><a href="#adver_div" class="popup-with-zoom-anim" onclick="open_adver()">광고성 정보 전송 동의</a></li>
+            </ul>
+          </div>
+          <div>
+            <a href="#" style="background:none;outline: none;" onclick="chk_input()">입력완료</a>
+          </div>
+        </div><!--inner-->
     </div>
-    <div>
-      <ul>
-        <li><input type="checkbox" name="use_agree" id="use_agree"></li>
-        <li><a href="#use_div" class="popup-with-zoom-anim" onclick="open_use()">개인정보 수집 · 이용에 대한 동의</a></li>
-      </ul>
-      <ul>
-        <li><input type="checkbox" name="privacy_agree" id="privacy_agree"></li>
-        <li><a href="#privacy_div" class="popup-with-zoom-anim" onclick="open_privacy()">개인정보의 취급 위탁 동의</a></li>
-      </ul>
-      <ul>
-        <li><input type="checkbox" name="adver_agree" id="adver_agree"></li>
-        <li><a href="#adver_div" class="popup-with-zoom-anim" onclick="open_adver()">광고성 정보 전송 동의</a></li>
-      </ul>
-    </div>
-    <div>
-      <a href="#" style="background:none;outline: none;" onclick="chk_input()">입력완료</a>
-    </div>
-  </div><!--inner-->
+	</div>
 
 <!--------------------------  개인정보 활용 약관 DIV ----------------------->
   <div id="use_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
+        <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
 <?
 	include_once "./use_agree.php";
 ?>
@@ -117,7 +117,7 @@
 <!--------------------------  개인정보 활용 약관 DIV ----------------------->
 <!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
   <div id="privacy_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
+        <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
 <?
 	include_once "./privacy_agree.php";
 ?>
@@ -125,7 +125,7 @@
 <!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
   <div id="adver_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
+        <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
 <?
 	include_once "./adver_agree.php";
 ?>
@@ -153,7 +153,6 @@
     <a href="#" onclick="$.magnificPopup.close();">확인</a>
   </div>
 <!-------------------------------------참여완료 DIV ------------------------------------------->
-  </body>
 </html>
 <script type="text/javascript">
 	var shareYN		= "N";
@@ -218,7 +217,7 @@
 			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/?media=fb'),'sharer','toolbar=0,status=0,width=600,height=325');
 			$.ajax({
 				type   : "POST",
-				async : false,
+				async  : false,
 				url    : "../main_exec.php",
 				data:{
 					"exec" : "insert_share_info",
