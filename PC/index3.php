@@ -3,7 +3,6 @@
 ?>
 <!--contents_wrap-->
 <input type="hidden" name="chk_gift" id="chk_gift">
-<div>
 <!--area1-->
   <div>
     <div>
@@ -14,7 +13,6 @@
       <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" style="background:none;outline: none;" onclick="start_api();">영상시청하기</a>
     </div>
   </div>
-</div>
 
 <!----------------------------------------영상시청하기 DIV------------------------------------------>
   <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
@@ -25,10 +23,10 @@
       <iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" id="ytplayer" class="ytplayer">
        </iframe>
     </div>
-    <div id="btn_event" style="display:none;">
+    <div id="btn_event">
       <a href="#" data-mfp-src="#share_present" class="popup-with-zoom-anim" style="outline: none;">영상공유하고 구름선택하기</a>
     </div>
-    <div id="btn_event_wait">
+    <div id="btn_event_wait" style="display:none;">
       <a href="#" style="outline: none;">영상을 다 보시면 이벤트에 참여하실 수 있습니다.</a>
     </div>
   </div>
@@ -52,7 +50,7 @@
     </div>
     <div>
      <a href="#" onclick="chk_radio()">선택완료</a>
-    <div>
+    </div>
   </div>
 <!----------------------------------------쉐어 후 사은품 선택하기 DIV ---------------------------------->
 
@@ -84,7 +82,9 @@
       </ul>
       <ul>
         <li>주소 : 
-          <input type="text" name="mb_addr" id="mb_addr">
+          <input type="text" name="mb_zipcode1" id="mb_zipcode1"> - <input type="text" name="mb_zipcode2" id="mb_zipcode2"><input type="button" value="우편번호 찾기" onclick="search_zip();return false;">
+          <input type="text" name="mb_addr1" id="mb_addr1"><br />
+          <input type="text" name="mb_addr2" id="mb_addr2">
         </li>
       </ul>
     </div>
@@ -131,7 +131,6 @@
 ?>
   </div>
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
-<!----------------------------------------개인정보입력  DIV ---------------------------------->
 
 
 
@@ -153,8 +152,14 @@
     <a href="#" onclick="$.magnificPopup.close();">확인</a>
   </div>
 <!-------------------------------------참여완료 DIV ------------------------------------------->
+<!--  주소검색 DIV 시작  -->
+  <div id="post_div" style="display:none;border:5px solid;position:fixed;width:60%;height:600px;margin-left:20%;top:50%;margin-top:-300px;overflow:hidden;-webkit-overflow-scrolling:touch;z-index:999999">
+    <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:9999999" onclick="closeDaumPostcode()" alt="닫기 버튼">
+  </div>
+<!--  주소검색 DIV 끝  -->
   </body>
 </html>
+<script src="http://dmaps.daum.net/map_js_init/postcode.js"></script>
 <script type="text/javascript">
 	var shareYN		= "N";
 	function start_api()
@@ -164,11 +169,8 @@
 		statechange = function(e){
 			if (e.data === 0) // 종료됨
 			{
-				//$("#video_control").attr('src','images/btn_pause.png');
-				//controllable_player.seekTo(0); controllable_player.playVideo();
 				$("#btn_event_wait").hide();
 				$("#btn_event").show();
-				//alert('11');
 			}
 		};
 		function onYouTubeIframeAPIReady() {
@@ -209,111 +211,38 @@
 	});
 	var magnificPopup = $.magnificPopup.instance;
 
-	function sns_share(media)
-	{
-		Kakao.init('39953a9c7648132cdada52b314ba1c81');
-
-		if (media == "facebook")
-		{
-			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/PC/index3.php?media=fb'),'sharer','toolbar=0,status=0,width=600,height=325');
-			$.ajax({
-				type   : "POST",
-				async : false,
-				url    : "../main_exec.php",
-				data:{
-					"exec" : "insert_share_info",
-					"media" : media
-				}
-			});
-		}else if (media == "twitter")
-		{
-			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("1. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물") + '&url='+ encodeURIComponent('http://goo.gl/lO3xlN'),'sharer','toolbar=0,status=0,width=600,height=325');
-			$.ajax({
-				type   : "POST",
-				async  : false,
-				url    : "../main_exec.php",
-				data:{
-					"exec" : "insert_share_info",
-					"media" : media
-				}
-			});
-		}else if(media == "kakao") {
-
-			// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-			Kakao.Link.createTalkLinkButton({
-			  label: "서장훈이 화장품 CF를?! \n<아니 아니, 그게 아니고~> 전격 공개!\n 건조한 피부에 봄비같은 하얀 수분 크림 출시!\n 지금 10ml Kit도 신청하세요!",
-			  image: {
-				src: 'http://www.thefaceshopclouding.co.kr/PC/images/sns_kt.jpg',
-				width: '1200',
-				height: '630'
-			  },
-			  webButton: {
-				text: '더페이스샵',
-				url: 'http://www.thefaceshopclouding.co.kr/?media=K01' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
-			  }
-			});
-			$.ajax({
-				type   : "POST",
-				async  : false,
-				url    : "../main_exec.php",
-				data:{
-					"exec" : "insert_share_info",
-					"media" : media
-				}
-			});
-
-		}else if(media == "story"){
-			// 로그인 창을 띄웁니다.
-			Kakao.Auth.login({
-			  success: function() {
-
-				// 로그인 성공시, API를 호출합니다.
-				Kakao.API.request( {
-				  url : '/v1/api/story/linkinfo',
-				  data : {
-					url : 'https://youtu.be/1kRP0yqnA9o'
-				  }
-				}).then(function(res) {
-				  // 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
-				  return Kakao.API.request( {
-					url : '/v1/api/story/post/link',
-					data : {
-					  link_info : res,
-						  content:"여기에 작성하심됩니다."
-					}
-				  });
-				}).then(function(res) {
-				  return Kakao.API.request( {
-					url : '/v1/api/story/mystory',
-					data : { id : res.id }
-				  });
-				}).then(function(res) {
-					confirm('공유됐어요');
-				}, function (err) {
-				  alert(JSON.stringify(err));
-				});
-
-			  },
-			  fail: function(err) {
-				alert(JSON.stringify(err))
-		 
-				},
-			});
-		 
+		function closeDaumPostcode() {
+			// iframe을 넣은 element를 안보이게 한다.
+			element.style.display = 'none';
 		}
-		shareYN == "Y";
-	}
 
-	function chk_share()
-	{
-		if ( shareYN == "Y")
-		{
-			$.magnificPopup.close();
-		}else{
-			if (confirm('해당 창을 닫으면, 이벤트 응모가 중단됩니다.'))
-			{
-				$.magnificPopup.close();
+			// 우편번호 찾기 iframe을 넣을 element
+			var element = document.getElementById('post_div');
+
+			function showDaumPostcode() {
+				new daum.Postcode({
+					oncomplete: function(data) {
+						// 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+						// 우편번호와 주소 및 영문주소 정보를 해당 필드에 넣는다.
+						document.getElementById('mb_zipcode1').value = data.postcode1;
+						document.getElementById('mb_zipcode2').value = data.postcode2;
+						document.getElementById('mb_addr1').value = data.address;
+						document.getElementById('mb_addr2').focus();
+						// iframe을 넣은 element를 안보이게 한다.
+						element.style.display = 'none';
+					},
+					width : '100%',
+					height : '100%'
+				}).embed(element);
+
+				// iframe을 넣은 element를 보이게 한다.
+				//element.style.display = 'block';
 			}
-		}
+
+
+	function search_zip()
+	{
+		$("#post_div").show();
+		showDaumPostcode();
 	}
  </script>

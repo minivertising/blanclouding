@@ -86,6 +86,7 @@ switch ($_REQUEST['exec'])
 		$mb_phone2	= $_REQUEST['mb_phone2'];
 		$mb_phone3	= $_REQUEST['mb_phone3'];
 		$mb_addr		= $_REQUEST['mb_addr'];
+		$mb_zip			= $_REQUEST['mb_zip'];
 		$sel_gift			= $_REQUEST['sel_gift'];
 		$mb_phone = $mb_phone1."-".$mb_phone2."-".$mb_phone3;
 
@@ -93,7 +94,7 @@ switch ($_REQUEST['exec'])
 
 		if ($chk_member == 0)
 		{
-			$query 		= "INSERT INTO ".$_gl['member_info2_table']."(mb_ipaddr, mb_phone, mb_name, mb_addr, mb_gift, mb_regdate, mb_gubun) values('".$_SERVER['REMOTE_ADDR']."','".$mb_phone."','".$mb_name."','".$mb_addr."','".$sel_gift."','".date("Y-m-d H:i:s")."','".$gubun."')";
+			$query 		= "INSERT INTO ".$_gl['member_info2_table']."(mb_ipaddr, mb_phone, mb_name, mb_zipcode, mb_addr, mb_gift, mb_regdate, mb_gubun) values('".$_SERVER['REMOTE_ADDR']."','".$mb_phone."','".$mb_name."','".$mb_zip."','".$mb_addr."','".$sel_gift."','".date("Y-m-d H:i:s")."','".$gubun."')";
 			$result 	= mysqli_query($my_db, $query);
 
 			if ($result)
