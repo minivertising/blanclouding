@@ -19,9 +19,10 @@
     <meta property="og:url" content="http://www.thefaceshopclouding.co.kr/PC/index3.php" />
     <meta property="og:image" content="http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg" />
     <meta property="og:description" content="< 아니 아니, 그게 아니고~ > 전격 공개! 건조한 피부에 봄비같은 하얀 수분 크림 출시! 지금 10ml Kit도 신청하세요!    더페이스샵 - 블란클라우딩" />
-    <meta property="og:video" content="https://youtu.be/XDpe5Trw-zs">
+    <meta property="og:video" content="http://www.youtube.com/v/1kRP0yqnA9o?autohide=1&amp;version=3">
     <meta property="og:video:type" content="application/x-shockwave-flash">
     <meta property="og:video:width" content="1200">
+    <meta property="og:video:height" content="720" / >
     <link rel="shortcut icon" type="image/x-icon" href="./images/pavicon.ico" />
     <title>THEFACESHOP</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
