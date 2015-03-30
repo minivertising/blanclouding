@@ -23,10 +23,10 @@
       <iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" id="ytplayer" class="ytplayer">
        </iframe>
     </div>
-    <div id="btn_event">
+    <div id="btn_event" style="display:none;">
       <a href="#" data-mfp-src="#share_present" class="popup-with-zoom-anim" style="outline: none;">영상공유하고 구름선택하기</a>
     </div>
-    <div id="btn_event_wait" style="display:none;">
+    <div id="btn_event_wait">
       <a href="#" style="outline: none;">영상을 다 보시면 이벤트에 참여하실 수 있습니다.</a>
     </div>
   </div>
@@ -44,12 +44,12 @@
       <label for="sel3">제주도</label><input type="radio" name="sel_present" id="sel3" value="jeju" onclick="ins_selval(this.value)">
     </div>
     <div>
-       <a href="#" onclick="sns_share('twitter');">트윗</a>
-       <a href="#" onclick="sns_share('facebook');return false;">페북</a>
-       <a href="#" onclick="sns_share('story');return false;">카스</a>
+      <a href="#" onclick="sns_share('twitter');">트윗</a>
+      <a href="#" onclick="sns_share('facebook');return false;">페북</a>
+      <a href="#" onclick="sns_share('story');return false;">카스</a>
     </div>
     <div>
-     <a href="#" onclick="chk_radio()">선택완료</a>
+      <a href="#" onclick="chk_radio()">선택완료</a>
     </div>
   </div>
 <!----------------------------------------쉐어 후 사은품 선택하기 DIV ---------------------------------->
