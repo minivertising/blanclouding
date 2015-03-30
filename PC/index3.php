@@ -215,7 +215,7 @@
 
 		if (media == "facebook")
 		{
-			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/?media=fb'),'sharer','toolbar=0,status=0,width=600,height=325');
+			var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.thefaceshopclouding.co.kr/PC/index3.php?media=fb'),'sharer','toolbar=0,status=0,width=600,height=325');
 			$.ajax({
 				type   : "POST",
 				async : false,
