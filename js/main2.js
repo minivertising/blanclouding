@@ -1,7 +1,7 @@
 
 function sns_share(media)
 {
-	Kakao.init('0955d4d6b239e2a0f6159bc955bddd9b');
+	Kakao.init('39953a9c7648132cdada52b314ba1c81');
 
 	if (media == "facebook")
 	{
@@ -98,7 +98,7 @@ function chk_input()
 	var mb_phone1	= $('#mb_phone1').val();
 	var mb_phone2	= $('#mb_phone2').val();
 	var mb_phone3	= $('#mb_phone3').val();
-	var sel_gift			= $('#chk_gift').val();
+	var sel_gift			= $('#sel_present').val();
 	var mb_addr1		= $('#mb_addr1').val();
 	var mb_addr2		= $('#mb_addr2').val();
 	var mb_zip1		= $('#mb_zipcode1').val();
@@ -187,7 +187,7 @@ function chk_input()
 					},
 					url: "./ajax_gift.php",
 					success: function(response){
-						$(".ok_txt_area").html(response);
+						$("#change_result").html(response);
 					}
 				});
 
@@ -207,6 +207,7 @@ function chk_input()
 }
 
 function chk_radio(){
+/*
 	var frm = document.all;
 	var radio_temp = frm.sel_present.length;
 	var chk_i=0
@@ -224,6 +225,15 @@ function chk_radio(){
 			
 			return;
 		} 
+*/
+	var sel_present = $("#sel_present").val();
+
+	if (sel_present == "")
+	{
+		alert("만나고 싶은 구름중 하나를 선택해 주세요.");
+	}else{
+		setTimeout("inputinfo_data();",500);
+	}
 } 
 
 function inputinfo_data()

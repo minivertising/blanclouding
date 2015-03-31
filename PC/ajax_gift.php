@@ -10,11 +10,20 @@
 	$sel_cnt		= mysqli_num_rows($result);
 
 	if ($sel_gift == "swiss")
+	{
 		$sel_cloud = "스위스";
-	else if ($sel_gift == "cream")
-		$sel_cloud = "크림";
-	else
-		$sel_cloud = "제주도";
+		$img_num = "01";
+	}else if ($sel_gift == "cream"){
+		$sel_cloud = "하얗고 촉촉한";
+		$img_num = "02";
+	}else{
+		$sel_cloud = "서울 남산";
+		$img_num = "03";
+	}
 ?>
-      참여해주셔서 감사합니다.<br />
-      <?=$sel_cloud?>구름을 선택한 사람들 <?=number_format($sel_cnt)?>명
+          <div class="title"><img src="images/popup/title_thks.png" width="310" height="80" alt=""/></div>
+          <div class="gift"><img src="images/popup/gift_<?=$img_num?>.png" width="114" height="114" alt=""/></div>
+          <div class="m_cound"><?=$sel_cloud?> 구름을 선택한 사람 <span><?=$sel_cnt?>명</span></div>
+          <div class="btn_block">
+            <a href="#" onclick="$.magnificPopup.close();"><img src="images/popup/btn_ok.png" alt=""/></a>
+          </div>
