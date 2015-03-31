@@ -4,7 +4,6 @@
 <!--contents_wrap-->
 <div class="contents_wrap">
 <!--contents_wrap-->
-<input type="hidden" name="chk_gift" id="chk_gift">
 <!--area1-->
   <div class="area1">
     <div class="icon_area">
@@ -22,45 +21,45 @@
   </div>
 
 <!--area2-->
-<div class="area2_bg bg2" style="display:none">
-  <div class="area4">
-    <div class="product_group">
-      <div class="product_area">
-        <ul class="thumb_list clearfix">
-          <li>
-            <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link1"><img src="./images/thumb_1_open.png"></a>
-          </li>
-          <li>
-            <!-- <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link2"><img src="./images/thumb_2_close.png"></a> -->
-            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_2_close.png" style="cursor:pointer"></a>
-          </li>
-          <li>
-            <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a>
-            <!-- <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_3_close.png" style="cursor:pointer"></a> -->
-          </li>
-          <li>
-            <!-- <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link4"><img src="./images/thumb_4_close.png"></a> -->
-            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_4_close.png" style="cursor:pointer"></a>
-          </li>          
-        </ul>
+  <div class="area2_bg bg2" style="display:none">
+    <div class="area4">
+      <div class="product_group">
+        <div class="product_area">
+          <ul class="thumb_list clearfix">
+            <li>
+              <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link1"><img src="./images/thumb_1_open.png"></a>
+            </li>
+            <li>
+              <!-- <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link2"><img src="./images/thumb_2_close.png"></a> -->
+              <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_2_close.png" style="cursor:pointer"></a>
+            </li>
+            <li>
+              <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a>
+              <!-- <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_3_close.png" style="cursor:pointer"></a> -->
+            </li>
+            <li>
+              <!-- <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link4"><img src="./images/thumb_4_close.png"></a> -->
+              <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_4_close.png" style="cursor:pointer"></a>
+            </li>          
+          </ul>
+        </div>
       </div>
     </div>
   </div>
- </div>
 <!--area2-->
 
 
 <!--area3-->
-<div class="area3_bg" style="display:none">
-  <div class="area3">
-    <div class="product_group">
-      <div class="product_area">
-        <!-- <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a> -->
-        <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank" onclick="buy_cnt();"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a>
+  <div class="area3_bg" style="display:none">
+    <div class="area3">
+      <div class="product_group">
+        <div class="product_area">
+          <!-- <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a> -->
+          <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank" onclick="buy_cnt();"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a>
+        </div>
       </div>
     </div>
-  </div>
- </div>  
+  </div>  
 <!--area3-->
 
 <!--footer-->
@@ -72,28 +71,31 @@
 
 
 <!--quickmenu-->
-<div class="quickmenu">
-  <a href="#"><img src="images/btn_top.png" width="45" height="45" alt=""/></a>
-</div>
+  <div class="quickmenu">
+    <a href="#"><img src="images/btn_top.png" width="45" height="45" alt=""/></a>
+  </div>
 <!--quickmenu-->
 
 </div>
 <!--contents_wrap-->
 
 <!----------------------------------------영상시청하기 DIV------------------------------------------>
-  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:760px">
     <div class="p_big">
       <div class="block_close clearfix">
-        <a href="#" class="btn_close"><img src="images/popup/pop_btn_close.png" /></a>
+        <a href="#event_confirm" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
       <div class="block_content product">
         <div class="inner step_1">
           <div class="title"><img src="images/popup/title_event_01.png" alt=""/></div>
           <div class="movie">
             <div class="tag"><img src="images/popup/step_01.png" width="177" height="24" alt=""/></div>
-            <div class="player"><iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" id="ytplayer" class="ytplayer"></div>
+            <div class="player"><iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" width="617" height="340" id="ytplayer" class="ytplayer" ></iframe></div>
           </div>
-          <div class="btn_block">
+          <div class="btn_block" id="fake_btn">
+            <a href="#"><img src="images/popup/btn_select_cloud.png" alt=""/></a>
+          </div>
+          <div class="btn_block" id="real_btn" style="display:none">
             <a href="#" data-mfp-src="#share_present" class="popup-with-zoom-anim"><img src="images/popup/btn_select_cloud.png" alt=""/></a>
           </div>
           <div class="txt_block">
@@ -108,7 +110,7 @@
 
 
 <!----------------------------------------쉐어 후 사은품 선택하기 DIV ---------------------------------->
-  <div id="share_present" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
+  <!-- <div id="share_present" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
     <div style="width:100%;height:20px">
       <a href="#" onclick="chk_share()" style="float:right">닫기</a>
     </div>
@@ -125,84 +127,159 @@
     <div>
       <a href="#" onclick="chk_radio()">선택완료</a>
     </div>
-  </div>
+  </div> -->
+
+  <div id="share_present" class="popup_wrap zoom-anim-dialog mfp-hide">
+  <input type="hidden" name="sel_present" id="sel_present">
+    <div class="p_big">
+      <div class="block_close clearfix">
+        <a href="#event_confirm" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div class="block_content product">
+        <div class="inner step_2">
+          <div class="title"><img src="images/popup/title_event_02.png" alt=""/></div>
+          <div class="ss2 clearfix">
+            <div class="selec_01">
+              <a href="#" onclick="sel_present('swiss')"><img src="images/popup/sel_c_01.png" alt="" id="p1"/></a>
+            </div>
+            <div class="selec_02">
+              <a href="#" onclick="sel_present('cream')"><img src="images/popup/sel_c_02.png" alt="" id="p2"/></a>
+            </div>
+            <div class="selec_03">
+              <a href="#" onclick="sel_present('namsan')"><img src="images/popup/sel_c_03.png" alt="" id="p3"/></a>
+            </div>
+          </div>
+          <div class="ss3 clearfix">
+            <div class="shr_01">
+              <a href="#" onclick="sns_share('facebook');return false;"><img src="images/popup/ev_shr_fb.png" alt=""/></a>
+            </div>
+            <div class="shr_02">
+              <a href="#" onclick="sns_share('story');return false;"><img src="images/popup/ev_shr_kt.png" alt=""/></a>
+            </div>
+            <div class="shr_03">
+              <a href="#" onclick="sns_share('twitter');"><img src="images/popup/ev_shr_tw.png" alt=""/></a>
+            </div>
+          </div>                    
+          <div class="btn_block">
+            <a href="#" onclick="chk_radio()"><img src="images/popup/btn_cloud_comp.png" alt=""/></a>
+          </div>
+        </div><!--inner-->
+      </div>
+    </div><!--p_big-->
+  </div>   
+
 <!----------------------------------------쉐어 후 사은품 선택하기 DIV ---------------------------------->
 
-
 <!---------------------------------------개인정보 입력 DIV ---------------------------------->
-  <div id="input_info" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
-    <div style="width:100%;height:20px">
-      <a href="#" onclick="$.magnificPopup.close();" style="float:right">닫기</a>
+  <div id="input_info" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-top:-225px;margin-left:-275px;">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#event_confirm" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div class="block_content" style="background:white;">
+        <div class="inner">
+          <div class="title">
+            <img src="images/popup/pop_input_title.png" />
+          </div>
+          <div class="input_block">
+            <ul class="clearfix">
+              <li class="t_name"><img src="images/popup/txt_name.png" alt=""/></li>
+              <li class="input_txt"><input type="text" name="mb_name" id="mb_name"></li>
+            </ul>
+            <ul class="clearfix">
+              <li class="t_name"><img src="images/popup/txt_phone.png" alt=""/></li>
+              <li class="input_txt phone clearfix">
+                <div style="width:79px;magin-left:2px">
+                  <select id="mb_phone1" name="mb_phone1" style="width:78px;height:35px;">
+                    <option>010</option>
+                    <option>011</option>
+                    <option>016</option>
+                    <option>017</option>
+                    <option>018</option>
+                    <option>019</option>
+                  </select>
+                </div>
+                <div style="margin-left:4px;"><input type="tel" name="mb_phone2" id="mb_phone2" maxlength="4" onblur="only_num(this)" onkeyup="chk_len(this.value)"></div>
+                <div><input type="tel" name="mb_phone3" id="mb_phone3" maxlength="4" onblur="only_num(this)"></div>
+              </li>
+            </ul>
+            <ul class="clearfix">
+              <li class="t_name"><img src="images/popup/txt_store.png" alt=""/></li>
+              <li class="input_txt phone">
+                <input type="text" name="mb_zipcode1" id="mb_zipcode1" style="width:60px" readonly> - 
+                <input type="text" name="mb_zipcode2" id="mb_zipcode2" style="width:60px" readonly>
+                <input type="button" value="우편번호 찾기" onclick="search_zip();return false;">
+              </li>
+            </ul>
+            <ul class="clearfix">
+              <li class="t_name"></li>
+              <li class="input_txt">
+                <input type="text" name="mb_addr1" id="mb_addr1">
+              </li>
+            </ul>
+            <ul class="clearfix">
+              <li class="t_name"></li>
+              <li class="input_txt">
+                <input type="text" name="mb_addr2" id="mb_addr2">
+              </li>
+            </ul>
+          </div>
+          <div class="input_block input_check">
+            <ul class="clearfix">
+              <li class="in_check"><input type="checkbox" name="use_agree" id="use_agree"></li>
+              <li class="in_check_label"><a href="#use_div" class="btn_detail popup-with-zoom-anim" onclick="open_use()"><img src="images/popup/btn_detail_01.png" alt=""/></a></li>
+            </ul>
+            <ul class="clearfix">
+              <li class="in_check"><input type="checkbox" name="privacy_agree" id="privacy_agree"></li>
+              <li class="in_check_label"><a href="#privacy_div" class="btn_detail popup-with-zoom-anim" onclick="open_privacy()"><img src="images/popup/btn_detail_02.png" alt=""/></a></li>
+            </ul>
+            <ul class="clearfix">
+              <li class="in_check"><input type="checkbox" name="adver_agree" id="adver_agree"></li>
+              <li class="in_check_label"><a href="#adver_div" class="btn_detail popup-with-zoom-anim" onclick="open_adver()"><img src="images/popup/btn_detail_03.png" alt=""/></a></li>
+            </ul>
+          </div>
+          <div class="btn_block">
+            <a href="#" onclick="javascript:chk_input();return false;"><img src="images/popup/btn_input_ok.png" alt=""/></a>
+          </div>
+        </div><!--inner-->
+      </div>
     </div>
-    <div>
-      <ul>
-        <li>이름 : 
-          <input type="text" name="mb_name" id="mb_name">
-        </li>
-      </ul>
-      <ul>
-        <li>전화번호 : 
-          <select id="mb_phone1" name="mb_phone1" style="width:50px;height:20px;">
-            <option>010</option>
-            <option>011</option>
-            <option>016</option>
-            <option>017</option>
-            <option>018</option>
-            <option>019</option>
-          </select> -
-          <input type="text" size="6"name="mb_phone2" id="mb_phone2" maxlength="4" > -
-          <input type="text" size="6"name="mb_phone3" id="mb_phone3" maxlength="4" >
-        </li>
-      </ul>
-      <ul>
-        <li>주소 : 
-          <input type="text" name="mb_zipcode1" id="mb_zipcode1"> - <input type="text" name="mb_zipcode2" id="mb_zipcode2"><input type="button" value="우편번호 찾기" onclick="search_zip();return false;">
-          <input type="text" name="mb_addr1" id="mb_addr1"><br />
-          <input type="text" name="mb_addr2" id="mb_addr2">
-        </li>
-      </ul>
-    </div>
-    <div>
-      <ul>
-        <li><input type="checkbox" name="use_agree" id="use_agree"></li>
-        <li><a href="#use_div" class="popup-with-zoom-anim" onclick="open_use()">개인정보 수집 · 이용에 대한 동의</a></li>
-      </ul>
-      <ul>
-        <li><input type="checkbox" name="privacy_agree" id="privacy_agree"></li>
-        <li><a href="#privacy_div" class="popup-with-zoom-anim" onclick="open_privacy()">개인정보의 취급 위탁 동의</a></li>
-      </ul>
-      <ul>
-        <li><input type="checkbox" name="adver_agree" id="adver_agree"></li>
-        <li><a href="#adver_div" class="popup-with-zoom-anim" onclick="open_adver()">광고성 정보 전송 동의</a></li>
-      </ul>
-    </div>
-    <div>
-      <a href="#" style="background:none;outline: none;" onclick="chk_input()">입력완료</a>
-    </div>
-  </div><!--inner-->
+  </div>
 
 <!--------------------------  개인정보 활용 약관 DIV ----------------------->
-  <div id="use_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
+  <div id="use_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-top:-225px;margin-left:-275px;">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#input_info" class="btn_close first-popup-link"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
 <?
 	include_once "./use_agree.php";
 ?>
+    </div>
   </div>
 <!--------------------------  개인정보 활용 약관 DIV ----------------------->
 <!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
-  <div id="privacy_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
+  <div id="privacy_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-top:-225px;margin-left:-275px;">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#input_info" class="btn_close first-popup-link"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
 <?
 	include_once "./privacy_agree.php";
 ?>
+    </div>
   </div>
 <!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
-  <div id="adver_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
+  <div id="adver_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-top:-225px;margin-left:-275px;">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#input_info" class="btn_close first-popup-link"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
 <?
 	include_once "./adver_agree.php";
 ?>
+    </div>
   </div>
 <!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
 
@@ -210,7 +287,7 @@
 
 
 <!-------------------------------------참여완료 DIV ------------------------------------------->
-  <div id="input_end" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
+  <!-- <div id="input_end" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
     <div style="width:100%;height:20px">
       <a href="#" onclick="$.magnificPopup.close();" style="float:right">닫기</a>
     </div>
@@ -224,10 +301,29 @@
       <a href="#" onclick="sns_share('ks_share');return false;">카스</a>
     </div>
     <a href="#" onclick="$.magnificPopup.close();">확인</a>
+  </div> -->
+
+  <div id="input_end" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-top:-225px;margin-left:-275px;">
+    <div class="p_mid thnx">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close" onclick="close_layer();"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div class="block_content">
+        <div class="inner" id="change_result">
+          <div class="title"><img src="images/popup/title_thks.png" width="310" height="80" alt=""/></div>
+          <div class="gift"><img src="images/popup/gift_01.png" width="114" height="114" alt=""/></div>
+          <div class="m_cound">스위스 구름을 선택한 사람 <span>12345명</span></div>
+          <div class="btn_block">
+            <a href="#" onclick="close_layer();"><img src="images/popup/btn_ok.png" alt=""/></a>
+          </div>
+        </div><!--inner-->
+      </div>
+    </div>
   </div>
+
 <!-------------------------------------참여완료 DIV ------------------------------------------->
 <!--  주소검색 DIV 시작  -->
-  <div id="post_div" style="display:none;border:5px solid;position:fixed;width:60%;height:600px;margin-left:20%;top:50%;margin-top:-300px;overflow:hidden;-webkit-overflow-scrolling:touch;z-index:999999">
+  <div id="post_div" style="display:none;border:5px solid;position:fixed;width:650px;height:600px;margin-left:30%;top:50%;margin-top:-300px;overflow:hidden;-webkit-overflow-scrolling:touch;z-index:999999">
     <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:9999999" onclick="closeDaumPostcode()" alt="닫기 버튼">
   </div>
 <!--  주소검색 DIV 끝  -->
@@ -295,6 +391,24 @@
     </div>
   </div>
 <!-------------------------- 영상4 DIV -------------------------->
+  <div id="event_confirm" class="popup_confirm_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_alert">
+      <div class="inner">
+        <div class="block_close clearfix">
+          <a href="#input_div" class="btn_close first-popup-link"><img src="images/popup/pop_btn_close.png" /></a>
+        </div>
+        <div class="block_content">
+          <div class="title">
+            <img src="images/popup/title_close.png" alt=""/>
+          </div>
+          <div class="btn_block eventing clearfix">
+            <a href="#" class="first" onclick="close_layer()"><img src="images/popup/btn_out.png" alt=""/></a>
+            <a href="#input_div" class="btn_close first-popup-link"><img src="images/popup/btn_return.png" alt=""/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
 
   </body>
 </html>
@@ -312,13 +426,20 @@
 	var shareYN		= "N";
 	function start_api()
 	{
+		$("#fake_btn").show();
+		$("#real_btn").hide();
+
 		// 유튜브 반복 재생
 		var controllable_player,start, 
 		statechange = function(e){
 			if (e.data === 0) // 종료됨
 			{
-				$("#btn_event_wait").hide();
-				$("#btn_event").show();
+				$("#fake_btn").hide();
+				$("#real_btn").show();
+				//$("#btn_sel_cloud").attr("data-mfp-src","#share_present");
+				//$("#btn_sel_cloud").attr("class","popup-with-zoom-anim");
+				//$("#btn_event_wait").hide();
+				//$("#btn_event").show();
 			}
 		};
 		function onYouTubeIframeAPIReady() {
@@ -379,6 +500,23 @@
 				close: function() {
 					$("#btn_event").hide();
 					$("#btn_event_wait").show();
+				},
+				open: function() {
+					$("#sel_present").val("");
+					$("#mb_name").val("");
+					$("#mb_phone1").val("");
+					$("#mb_phone2").val("");
+					$("#mb_phone3").val("");
+					$("#mb_zipcode1").val("");
+					$("#mb_zipcode2").val("");
+					$("#mb_addr1").val("");
+					$("#mb_addr2").val("");
+					$("#use_agree").attr("checked", false);
+					$("#privacy_agree").attr("checked", false);
+					$("#adver_agree").attr("checked", false);
+					$("#p1").attr("src","images/popup/sel_c_01.png");
+					$("#p2").attr("src","images/popup/sel_c_02.png");
+					$("#p3").attr("src","images/popup/sel_c_03.png");
 				}
 			}
 		});
@@ -400,6 +538,23 @@
 				close: function() {
 					$("#btn_event").hide();
 					$("#btn_event_wait").show();
+				},
+				open: function() {
+					$("#sel_present").val("");
+					$("#mb_name").val("");
+					$("#mb_phone1").val("");
+					$("#mb_phone2").val("");
+					$("#mb_phone3").val("");
+					$("#mb_zipcode1").val("");
+					$("#mb_zipcode2").val("");
+					$("#mb_addr1").val("");
+					$("#mb_addr2").val("");
+					$("#use_agree").attr("checked", false);
+					$("#privacy_agree").attr("checked", false);
+					$("#adver_agree").attr("checked", false);
+					$("#p1").attr("src","images/popup/sel_c_01.png");
+					$("#p2").attr("src","images/popup/sel_c_02.png");
+					$("#p3").attr("src","images/popup/sel_c_03.png");
 				}
 			}
 		});
@@ -474,5 +629,30 @@
 	{
 		$("#post_div").show();
 		showDaumPostcode();
+	}
+
+	function sel_present(param)
+	{
+		if (param == "swiss")
+		{
+			$("#p1").attr("src","images/popup/sel_c_01_on.png");
+			$("#p2").attr("src","images/popup/sel_c_02.png");
+			$("#p3").attr("src","images/popup/sel_c_03.png");
+		}else if (param == "cream") {
+			$("#p1").attr("src","images/popup/sel_c_01.png");
+			$("#p2").attr("src","images/popup/sel_c_02_on.png");
+			$("#p3").attr("src","images/popup/sel_c_03.png");
+		}else {
+			$("#p1").attr("src","images/popup/sel_c_01.png");
+			$("#p2").attr("src","images/popup/sel_c_02.png");
+			$("#p3").attr("src","images/popup/sel_c_03_on.png");
+		}
+		$("#sel_present").val(param);
+
+	}
+
+	function close_layer()
+	{
+		$.magnificPopup.close();
 	}
  </script>
