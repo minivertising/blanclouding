@@ -568,9 +568,9 @@ function movie_share(media, num)
 		if (num == "1"){
 			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("수분이 필요해! 구름처럼 하얗고 촉촉하게! 클라우딩 효과의 하얀 수분크림") + '&url='+ encodeURIComponent('https://youtu.be/1kRP0yqnA9o'),'sharer','toolbar=0,status=0,width=600,height=325');
 		}else if (num == "2"){
-			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("2. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물") + '&url='+ encodeURIComponent('https://youtu.be/XDpe5Trw-zs'),'sharer','toolbar=0,status=0,width=600,height=325');
+			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("수분이 필요해! 구름처럼 하얗고 촉촉하게! 클라우딩 효과의 하얀 수분크림") + '&url='+ encodeURIComponent('https://youtu.be/uCWPxhaCRfI'),'sharer','toolbar=0,status=0,width=600,height=325');
 		}else if (num == "3"){
-			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("3. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물") + '&url='+ encodeURIComponent('https://youtu.be/XDpe5Trw-zs'),'sharer','toolbar=0,status=0,width=600,height=325');
+			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("수분이 필요해! 구름처럼 하얗고 촉촉하게! 클라우딩 효과의 하얀 수분크림") + '&url='+ encodeURIComponent('https://youtu.be/uCWPxhaCRfI'),'sharer','toolbar=0,status=0,width=600,height=325');
 		}else if (num == "4"){
 			var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("4. 서장훈, 촉촉하게 수지랑! 서장훈 구름탄 기분이랄까~촉촉한 선물 2. 서장훈 더페이스샵 CF모델? '아니아니 그게 아니고' 공개! 구름선물") + '&url='+ encodeURIComponent('https://youtu.be/XDpe5Trw-zs'),'sharer','toolbar=0,status=0,width=600,height=325');
 		}

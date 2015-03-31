@@ -70,7 +70,7 @@
             <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_2_close.png" alt=""/></a></div>
         </div>
         <div class="one_thumbs clearfix">
-        	<div><a href="#" onclick="alert('곧 공개됩니다.');return false;" class="left"><img src="img/thumb_3_close.png" alt=""/></a></div>
+        	<div><a href="#" data-mfp-src="#movie_div3" class="left popup-with-zoom-anim" style="outline: none;"><img src="img/thumb_3_open.png" alt=""/></a></div>
             <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_4_close.png" alt=""/></a></div>
         </div>
     </div>
@@ -105,6 +105,32 @@
               <img src="img/bar.png" alt=""/>
             </span>
             <a href="javascript:movie_share('kt','1')" class="kt_movie_share"><img src="img/btn_kt.png" alt=""/></a>
+          </div><!--block_more_movie-->
+        </div>
+      </div>
+      <!--event-->
+    </div>
+    <div class="bg_movie popup_wrap zoom-anim-dialog mfp-hide" id="movie_div3">
+      <div class="block_close clearfix" style="width:100%">
+        <a href="#" class="btn_close" onclick="javascript:$.magnificPopup.close();"><img src="img/popup/btn_close.png" width="29"/></a>
+      </div>
+      <!--event-->
+      <div class="movie_area" style="width:100%">
+        <div class="movie_area1">
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer"></iframe>
+          <div class="block_more_movie clearfix">
+            <span class="txt">
+              <img src="img/txt_movie_03.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('fb','3');return false;"><img src="img/btn_fb.png" alt=""/></a>
+            <span>
+              <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('tw','3');return false;"><img src="img/btn_tw.png" alt=""/></a>
+            <span>
+              <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="javascript:movie_share('kt','3')" class="kt_movie_share"><img src="img/btn_kt.png" alt=""/></a>
           </div><!--block_more_movie-->
         </div>
       </div>
@@ -166,16 +192,18 @@
 		var width = $(window).width();
 		//var height = $(window).height();
 		var pop_width = $("#movie_div1").width();
+		var pop_width3 = $("#movie_div3").width();
 		var youtube_height = (width / 16) * 9;
 		var pop_youtube_height = (pop_width / 16) * 9;
+		var pop_youtube_height3 = (pop_width3 / 16) * 9;
 		$("#ytplayer").width(width);
 		$("#ytplayer").height(youtube_height);
 		$("#ytplayer1").width(pop_width);
 		$("#ytplayer1").height(pop_youtube_height);
 		$("#ytplayer2").width(width);
 		$("#ytplayer2").height(youtube_height);
-		$("#ytplayer3").width(width);
-		$("#ytplayer3").height(youtube_height);
+		$("#ytplayer3").width(pop_width3);
+		$("#ytplayer3").height(pop_youtube_height3);
 		$("#ytplayer4").width(width);
 		$("#ytplayer4").height(youtube_height);
 	});
@@ -190,14 +218,14 @@
 		$("#ytplayer").width(width);
 		$("#ytplayer1").width(pop_width);
 		$("#ytplayer2").width(width);
-		$("#ytplayer3").width(width);
+		$("#ytplayer3").width(pop_width);
 		$("#ytplayer4").width(width);
 		$(".cover_area").width($("#ytplayer").width());
 		var youtube_height = (width / 16) * 9;
 		$("#ytplayer").height(youtube_height);
 		$("#ytplayer1").height(pop_youtube_height);
 		$("#ytplayer2").height(youtube_height);
-		$("#ytplayer3").height(youtube_height);
+		$("#ytplayer3").height(pop_youtube_height);
 		$("#ytplayer4").height(youtube_height);
 		$(".cover_area").height($("#ytplayer").height());
 
@@ -265,8 +293,12 @@
 				open: function() {
 					var pop_width2 = $("#movie_div1").width();
 					var pop_youtube_height2 = (pop_width2 / 16) * 9;
+					var pop_width3 = $("#movie_div3").width();
+					var pop_youtube_height3 = (pop_width3 / 16) * 9;
 					$("#ytplayer1").width(pop_width2);
 					$("#ytplayer1").height(pop_youtube_height2);
+					$("#ytplayer3").width(pop_width3);
+					$("#ytplayer3").height(pop_youtube_height3);
 				}
 			}
 		});

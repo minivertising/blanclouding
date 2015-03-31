@@ -2,34 +2,108 @@
 	include_once "./header2.php";
 ?>
 <!--contents_wrap-->
+<div class="contents_wrap">
+<!--contents_wrap-->
 <input type="hidden" name="chk_gift" id="chk_gift">
 <!--area1-->
-  <div>
-    <div>
-      <a href="#">로고 부분</a>
-      <a href="#">우측상단로고</a>
+  <div class="area1">
+    <div class="icon_area">
+      <a href="http://www.thefaceshopclouding.co.kr/PC/index.php" target="_blank"><img src="images/logo_blan.png" alt=""/></a>
     </div>
-    <div>
+  <!--icon_area-->
+  <!--icon_area-->
+    <div class="icon_area2">
+      <a href="http://www.thefaceshop.com/index.jsp" target="_blank"><img src="images/logo_tfs.png" alt=""/></a>
+    </div>
+  <!--icon_area-->
+    <div >
       <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" style="background:none;outline: none;" onclick="start_api();">영상시청하기</a>
     </div>
   </div>
 
-<!----------------------------------------영상시청하기 DIV------------------------------------------>
-  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
-    <div style="width:100%;height:20px">
-      <a href="#" onclick="chk_share()" style="float:right">닫기</a>
-    </div>
-    <div>
-      <iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" id="ytplayer" class="ytplayer">
-       </iframe>
-    </div>
-    <div id="btn_event" style="display:none;">
-      <a href="#" data-mfp-src="#share_present" class="popup-with-zoom-anim" style="outline: none;">영상공유하고 구름선택하기</a>
-    </div>
-    <div id="btn_event_wait">
-      <a href="#" style="outline: none;">영상을 다 보시면 이벤트에 참여하실 수 있습니다.</a>
+<!--area2-->
+<div class="area2_bg bg2" style="display:none">
+  <div class="area4">
+    <div class="product_group">
+      <div class="product_area">
+        <ul class="thumb_list clearfix">
+          <li>
+            <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link1"><img src="./images/thumb_1_open.png"></a>
+          </li>
+          <li>
+            <!-- <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link2"><img src="./images/thumb_2_close.png"></a> -->
+            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_2_close.png" style="cursor:pointer"></a>
+          </li>
+          <li>
+            <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a>
+            <!-- <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_3_close.png" style="cursor:pointer"></a> -->
+          </li>
+          <li>
+            <!-- <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link4"><img src="./images/thumb_4_close.png"></a> -->
+            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_4_close.png" style="cursor:pointer"></a>
+          </li>          
+        </ul>
+      </div>
     </div>
   </div>
+ </div>
+<!--area2-->
+
+
+<!--area3-->
+<div class="area3_bg" style="display:none">
+  <div class="area3">
+    <div class="product_group">
+      <div class="product_area">
+        <!-- <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a> -->
+        <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank" onclick="buy_cnt();"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a>
+      </div>
+    </div>
+  </div>
+ </div>  
+<!--area3-->
+
+<!--footer-->
+  <div class="footer" style="display:none">
+    <img src="images/footer.png" alt=""/>
+  </div>
+<!--footer-->
+
+
+
+<!--quickmenu-->
+<div class="quickmenu">
+  <a href="#"><img src="images/btn_top.png" width="45" height="45" alt=""/></a>
+</div>
+<!--quickmenu-->
+
+</div>
+<!--contents_wrap-->
+
+<!----------------------------------------영상시청하기 DIV------------------------------------------>
+  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_big">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div class="block_content product">
+        <div class="inner step_1">
+          <div class="title"><img src="images/popup/title_event_01.png" alt=""/></div>
+          <div class="movie">
+            <div class="tag"><img src="images/popup/step_01.png" width="177" height="24" alt=""/></div>
+            <div class="player"><iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" id="ytplayer" class="ytplayer"></div>
+          </div>
+          <div class="btn_block">
+            <a href="#" data-mfp-src="#share_present" class="popup-with-zoom-anim"><img src="images/popup/btn_select_cloud.png" alt=""/></a>
+          </div>
+          <div class="txt_block">
+            <img src="images/popup/txt_cloud_01.png" width="370" height="12" alt=""/>
+          </div>
+        </div><!--inner-->
+      </div>
+    </div><!--p_big-->
+  </div>
+
   <!----------------------------------------영상시청하기 DIV------------------------------------------>
 
 
@@ -157,10 +231,84 @@
     <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:9999999" onclick="closeDaumPostcode()" alt="닫기 버튼">
   </div>
 <!--  주소검색 DIV 끝  -->
+<!-------------------------- 영상1 DIV -------------------------->
+  <div id="movie_div1" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-450px">
+    <div class="p_movie">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/btn_close_movie.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" width="860px" height="485px" name="ytplayer1" id="ytplayer1" ></iframe>
+      </div>
+      <div class="block_share_btn">
+        <a href="#" onclick="movie_share('fb','1');"><img src="images/btn_share_movie_fb.png" /></a>
+        <a href="#" onclick="movie_share('tw','1');"><img src="images/btn_share_movie_tw.png" /></a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상1 DIV -------------------------->
+<!-------------------------- 영상2 DIV -------------------------->
+  <div id="movie_div2" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" width="450px" name="ytplayer2" id="ytplayer2" ></iframe>
+      </div>
+      <div>
+        <a href="#" onclick="movie_share('fb','2');">페이스북2</a>
+        <a href="#" onclick="movie_share('tw','2');">트위터2</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상2 DIV -------------------------->
+<!-------------------------- 영상3 DIV -------------------------->
+  <div id="movie_div3" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" width="450px" name="ytplayer3" id="ytplayer3" ></iframe>
+      </div>
+      <div>
+        <a href="#" onclick="movie_share('fb','3');">페이스북3</a>
+        <a href="#" onclick="movie_share('tw','3');">트위터3</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상3 DIV -------------------------->
+<!-------------------------- 영상4 DIV -------------------------->
+  <div id="movie_div4" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" width="450px" name="ytplayer4" id="ytplayer4" ></iframe>
+      </div>
+      <div>
+        <a href="#" onclick="movie_share('fb','4');">페이스북4</a>
+        <a href="#" onclick="movie_share('tw','4');">트위터4</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상4 DIV -------------------------->
+
   </body>
 </html>
 <script src="http://dmaps.daum.net/map_js_init/postcode.js"></script>
 <script type="text/javascript">
+
+	// quick menu
+	var quickTop;
+	$(window).scroll(function() {
+		quickTop = ($(window).height()-$('.quickmenu').height()) /2;
+		$('.quickmenu').stop().animate({top:$(window).scrollTop()+quickTop},400,'easeOutExpo');
+		
+	});
+
 	var shareYN		= "N";
 	function start_api()
 	{
@@ -186,6 +334,24 @@
 		}
 	}
 
+	$(window).resize(function(){
+		var width = $(window).width();
+
+		var wHeight =$(window).height();
+
+		if (wHeight <= 780){
+			wHeight = 780;
+		}else if(wHeight > 1000){
+			wHeight = 1000;
+		}
+		$('.area2').height(995); // 제품
+		$('.area4').height(995); // 제품
+		$('.area3').height(wHeight); // 제품
+		//$('.product_group').width(width); // 제품
+		//$('.product_area').width(width); // 제품
+
+	});
+
 	$(document).ready(function() {
 		// 체크박스 스타일 설정
 		$('.popup_wrap input').on('ifChecked ifUnchecked', function(event){
@@ -196,31 +362,81 @@
 			increaseArea: '0%'
 		});
 
-	// 팝업 jQuery 스타일
-	$('.popup-with-zoom-anim').magnificPopup({
-		type: 'inline',
-		fixedContentPos: true,
-		fixedBgPos: true,
-		overflowY: 'hidden',
-		closeBtnInside: true,
-		//preloader: false,
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in',
-		showCloseBtn : false,
-		closeOnBgClick: false,
-		callbacks: {
-			close: function() {
-				$("#btn_event").hide();
-				$("#btn_event_wait").show();
+		// 팝업 jQuery 스타일
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+			fixedContentPos: true,
+			fixedBgPos: true,
+			overflowY: 'hidden',
+			closeBtnInside: true,
+			//preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in',
+			showCloseBtn : false,
+			closeOnBgClick: false,
+			callbacks: {
+				close: function() {
+					$("#btn_event").hide();
+					$("#btn_event_wait").show();
+				}
 			}
-		}
-	});
-	$('.first-popup-link').magnificPopup({
-		closeBtnInside:true
-	});
+		});
 
-	var magnificPopup = $.magnificPopup.instance;
+		// 팝업 jQuery 스타일
+		$('.popup-with-zoom-anim2').magnificPopup({
+			type: 'inline',
+			fixedContentPos: true,
+			fixedBgPos: true,
+			overflowY: 'hidden',
+			closeBtnInside: true,
+			//preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in',
+			showCloseBtn : false,
+			closeOnBgClick: true,
+			callbacks: {
+				close: function() {
+					$("#btn_event").hide();
+					$("#btn_event_wait").show();
+				}
+			}
+		});
+
+		$('.first-popup-link').magnificPopup({
+			closeBtnInside:true
+		});
+
+		var magnificPopup = $.magnificPopup.instance;
+
+		$('.area1').height(995); // 제품
+
+		$(".area2_bg").show();
+		$(".area3_bg").show();
+		$(".area4_bg").show();
+		$(".footer").show();
+
+		//처음 화면 크기에 따라 영상및 커버 크기 변경
+		
+		var wHeight =$(window).height();
+
+		if (wHeight <= 780){
+			wHeight = 780;
+		}else if(wHeight > 1000){
+			wHeight = 1000;
+		}
+		$('.area2').height(995); // 제품
+		$('.area4').height(995); // 제품
+		$('.area3').height(wHeight); // 제품
+
+		$( '.quickmenu' ).click( function() {
+			$( 'html, body' ).animate( { scrollTop : 0 }, 800 );
+			  return false;
+		} );
+		// 퀵메뉴 기본 위치
+		var quick_height	= $(window).height()/2;
+		$('.quickmenu').css("top",quick_height);
 
 	});
 
