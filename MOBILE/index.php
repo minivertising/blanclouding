@@ -200,7 +200,7 @@
 		$("#ytplayer1").height(pop_youtube_height);
 		$("#ytplayer2").width(width);
 		$("#ytplayer2").height(youtube_height);
-		$("#ytplayer3").width(width);
+		$("#ytplayer3").width(pop_width);
 		$("#ytplayer3").height(youtube_height);
 		$("#ytplayer4").width(width);
 		$("#ytplayer4").height(youtube_height);
