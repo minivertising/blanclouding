@@ -186,6 +186,16 @@
 		}
 	}
 
+	$(document).ready(function() {
+		// 체크박스 스타일 설정
+		$('.popup_wrap input').on('ifChecked ifUnchecked', function(event){
+			//alert(this.id);
+		}).iCheck({
+			checkboxClass: 'icheckbox_flat-blue',
+			radioClass: 'iradio_square-blue',
+			increaseArea: '0%'
+		});
+
 	// 팝업 jQuery 스타일
 	$('.popup-with-zoom-anim').magnificPopup({
 		type: 'inline',
@@ -209,7 +219,11 @@
 	$('.first-popup-link').magnificPopup({
 		closeBtnInside:true
 	});
+
 	var magnificPopup = $.magnificPopup.instance;
+
+	});
+
 
 		function closeDaumPostcode() {
 			// iframe을 넣은 element를 안보이게 한다.
