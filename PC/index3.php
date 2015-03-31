@@ -28,18 +28,18 @@
       <div class="product_area">
         <ul class="thumb_list clearfix">
           <li>
-            <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim" style="outline: none;" id="movie_link1"><img src="./images/thumb_1_open.png"></a>
+            <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link1"><img src="./images/thumb_1_open.png"></a>
           </li>
           <li>
-            <!-- <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim" style="outline: none;" id="movie_link2"><img src="./images/thumb_2_close.png"></a> -->
+            <!-- <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link2"><img src="./images/thumb_2_close.png"></a> -->
             <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_2_close.png" style="cursor:pointer"></a>
           </li>
           <li>
-            <!-- <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a> -->
+            <!-- <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a> -->
             <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_3_close.png" style="cursor:pointer"></a>
           </li>
           <li>
-            <!-- <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim" style="outline: none;" id="movie_link4"><img src="./images/thumb_4_close.png"></a> -->
+            <!-- <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link4"><img src="./images/thumb_4_close.png"></a> -->
             <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_4_close.png" style="cursor:pointer"></a>
           </li>          
         </ul>
@@ -374,6 +374,28 @@
 				}
 			}
 		});
+
+		// 팝업 jQuery 스타일
+		$('.popup-with-zoom-anim2').magnificPopup({
+			type: 'inline',
+			fixedContentPos: true,
+			fixedBgPos: true,
+			overflowY: 'hidden',
+			closeBtnInside: true,
+			//preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in',
+			showCloseBtn : false,
+			closeOnBgClick: true,
+			callbacks: {
+				close: function() {
+					$("#btn_event").hide();
+					$("#btn_event_wait").show();
+				}
+			}
+		});
+
 		$('.first-popup-link').magnificPopup({
 			closeBtnInside:true
 		});
