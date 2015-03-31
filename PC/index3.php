@@ -227,6 +227,15 @@
 </html>
 <script src="http://dmaps.daum.net/map_js_init/postcode.js"></script>
 <script type="text/javascript">
+
+	// quick menu
+	var quickTop;
+	$(window).scroll(function() {
+		quickTop = ($(window).height()-$('.quickmenu').height()) /2;
+		$('.quickmenu').stop().animate({top:$(window).scrollTop()+quickTop},400,'easeOutExpo');
+		
+	});
+
 	var shareYN		= "N";
 	function start_api()
 	{
@@ -325,6 +334,14 @@
 		$('.area2').height(995); // 제품
 		$('.area4').height(995); // 제품
 		$('.area3').height(wHeight); // 제품
+
+		$( '.quickmenu' ).click( function() {
+			$( 'html, body' ).animate( { scrollTop : 0 }, 800 );
+			  return false;
+		} );
+		// 퀵메뉴 기본 위치
+		var quick_height	= $(window).height()/2;
+		$('.quickmenu').css("top",quick_height);
 
 	});
 

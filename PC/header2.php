@@ -25,8 +25,8 @@
     <meta property="og:video:height" content="720" / >
     <link rel="shortcut icon" type="image/x-icon" href="./images/pavicon.ico" />
     <title>THEFACESHOP</title>
-    <!-- <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <link href="css/style_yang.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/style.css" /> -->
+    <link href="css/style_yang.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
     <link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link rel="stylesheet" href="./css/style2.css"> 
