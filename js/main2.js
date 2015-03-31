@@ -53,6 +53,7 @@ function sns_share(media)
 		});
 
 	}else if(media == "story"){
+		Kakao.init('39953a9c7648132cdada52b314ba1c81');
 		// 로그인 창을 띄웁니다.
 		Kakao.Auth.login({
 		  success: function() {
