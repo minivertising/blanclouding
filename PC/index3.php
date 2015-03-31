@@ -223,6 +223,71 @@
     <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:9999999" onclick="closeDaumPostcode()" alt="닫기 버튼">
   </div>
 <!--  주소검색 DIV 끝  -->
+<!-------------------------- 영상1 DIV -------------------------->
+  <div id="movie_div1" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-450px">
+    <div class="p_movie">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/btn_close_movie.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" width="860px" height="485px" name="ytplayer1" id="ytplayer1" ></iframe>
+      </div>
+      <div class="block_share_btn">
+        <a href="#" onclick="movie_share('fb','1');"><img src="images/btn_share_movie_fb.png" /></a>
+        <a href="#" onclick="movie_share('tw','1');"><img src="images/btn_share_movie_tw.png" /></a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상1 DIV -------------------------->
+<!-------------------------- 영상2 DIV -------------------------->
+  <div id="movie_div2" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" width="450px" name="ytplayer2" id="ytplayer2" ></iframe>
+      </div>
+      <div>
+        <a href="#" onclick="movie_share('fb','2');">페이스북2</a>
+        <a href="#" onclick="movie_share('tw','2');">트위터2</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상2 DIV -------------------------->
+<!-------------------------- 영상3 DIV -------------------------->
+  <div id="movie_div3" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" width="450px" name="ytplayer3" id="ytplayer3" ></iframe>
+      </div>
+      <div>
+        <a href="#" onclick="movie_share('fb','3');">페이스북3</a>
+        <a href="#" onclick="movie_share('tw','3');">트위터3</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상3 DIV -------------------------->
+<!-------------------------- 영상4 DIV -------------------------->
+  <div id="movie_div4" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_mid">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" width="450px" name="ytplayer4" id="ytplayer4" ></iframe>
+      </div>
+      <div>
+        <a href="#" onclick="movie_share('fb','4');">페이스북4</a>
+        <a href="#" onclick="movie_share('tw','4');">트위터4</a>
+      </div>
+    </div>
+  </div>
+<!-------------------------- 영상4 DIV -------------------------->
+
   </body>
 </html>
 <script src="http://dmaps.daum.net/map_js_init/postcode.js"></script>

@@ -267,3 +267,8 @@ function chk_share()
 		}
 	}
 }
+
+function close_movie()
+{
+	$.magnificPopup.close();
+}
