@@ -2,17 +2,83 @@
 	include_once "./header2.php";
 ?>
 <!--contents_wrap-->
+<div class="contents_wrap">
+<!--contents_wrap-->
 <input type="hidden" name="chk_gift" id="chk_gift">
 <!--area1-->
-  <div>
-    <div>
-      <a href="#">로고 부분</a>
-      <a href="#">우측상단로고</a>
+  <div class="area1">
+    <div class="icon_area">
+      <a href="http://www.thefaceshopclouding.co.kr/PC/index.php" target="_blank"><img src="images/logo_blan.png" alt=""/></a>
     </div>
-    <div>
+  <!--icon_area-->
+  <!--icon_area-->
+    <div class="icon_area2">
+      <a href="http://www.thefaceshop.com/index.jsp" target="_blank"><img src="images/logo_tfs.png" alt=""/></a>
+    </div>
+  <!--icon_area-->
+    <div >
       <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" style="background:none;outline: none;" onclick="start_api();">영상시청하기</a>
     </div>
   </div>
+
+<!--area2-->
+<div class="area2_bg bg2" style="display:none">
+  <div class="area4">
+    <div class="product_group">
+      <div class="product_area">
+        <ul class="thumb_list clearfix">
+          <li>
+            <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim" style="outline: none;" id="movie_link1"><img src="./images/thumb_1_open.png"></a>
+          </li>
+          <li>
+            <!-- <a href="#" data-mfp-src="#movie_div2" class="popup-with-zoom-anim" style="outline: none;" id="movie_link2"><img src="./images/thumb_2_close.png"></a> -->
+            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_2_close.png" style="cursor:pointer"></a>
+          </li>
+          <li>
+            <!-- <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a> -->
+            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_3_close.png" style="cursor:pointer"></a>
+          </li>
+          <li>
+            <!-- <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim" style="outline: none;" id="movie_link4"><img src="./images/thumb_4_close.png"></a> -->
+            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_4_close.png" style="cursor:pointer"></a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </div>
+ </div>
+<!--area2-->
+
+
+<!--area3-->
+<div class="area3_bg" style="display:none">
+  <div class="area3">
+    <div class="product_group">
+      <div class="product_area">
+        <!-- <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a> -->
+        <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank" onclick="buy_cnt();"><img src="images/btn_buy.png" width="333" height="80" alt=""/></a>
+      </div>
+    </div>
+  </div>
+ </div>  
+<!--area3-->
+
+<!--footer-->
+  <div class="footer" style="display:none">
+    <img src="images/footer.png" alt=""/>
+  </div>
+<!--footer-->
+
+
+
+<!--quickmenu-->
+<div class="quickmenu">
+  <a href="#"><img src="images/btn_top.png" width="45" height="45" alt=""/></a>
+</div>
+<!--quickmenu-->
+
+</div>
+<!--contents_wrap-->
 
 <!----------------------------------------영상시청하기 DIV------------------------------------------>
   <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
@@ -186,6 +252,24 @@
 		}
 	}
 
+	$(window).resize(function(){
+		var width = $(window).width();
+
+		var wHeight =$(window).height();
+
+		if (wHeight <= 780){
+			wHeight = 780;
+		}else if(wHeight > 1000){
+			wHeight = 1000;
+		}
+		$('.area2').height(995); // 제품
+		$('.area4').height(995); // 제품
+		$('.area3').height(wHeight); // 제품
+		//$('.product_group').width(width); // 제품
+		//$('.product_area').width(width); // 제품
+
+	});
+
 	$(document).ready(function() {
 		// 체크박스 스타일 설정
 		$('.popup_wrap input').on('ifChecked ifUnchecked', function(event){
@@ -196,31 +280,51 @@
 			increaseArea: '0%'
 		});
 
-	// 팝업 jQuery 스타일
-	$('.popup-with-zoom-anim').magnificPopup({
-		type: 'inline',
-		fixedContentPos: true,
-		fixedBgPos: true,
-		overflowY: 'hidden',
-		closeBtnInside: true,
-		//preloader: false,
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in',
-		showCloseBtn : false,
-		closeOnBgClick: false,
-		callbacks: {
-			close: function() {
-				$("#btn_event").hide();
-				$("#btn_event_wait").show();
+		// 팝업 jQuery 스타일
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+			fixedContentPos: true,
+			fixedBgPos: true,
+			overflowY: 'hidden',
+			closeBtnInside: true,
+			//preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in',
+			showCloseBtn : false,
+			closeOnBgClick: false,
+			callbacks: {
+				close: function() {
+					$("#btn_event").hide();
+					$("#btn_event_wait").show();
+				}
 			}
-		}
-	});
-	$('.first-popup-link').magnificPopup({
-		closeBtnInside:true
-	});
+		});
+		$('.first-popup-link').magnificPopup({
+			closeBtnInside:true
+		});
 
-	var magnificPopup = $.magnificPopup.instance;
+		var magnificPopup = $.magnificPopup.instance;
+
+		$('.area1').height(995); // 제품
+
+		$(".area2_bg").show();
+		$(".area3_bg").show();
+		$(".area4_bg").show();
+		$(".footer").show();
+
+		//처음 화면 크기에 따라 영상및 커버 크기 변경
+		
+		var wHeight =$(window).height();
+
+		if (wHeight <= 780){
+			wHeight = 780;
+		}else if(wHeight > 1000){
+			wHeight = 1000;
+		}
+		$('.area2').height(995); // 제품
+		$('.area4').height(995); // 제품
+		$('.area3').height(wHeight); // 제품
 
 	});
 

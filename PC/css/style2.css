@@ -1,3 +1,360 @@
+	html,body { margin: 0; padding: 0; word-wrap: break-word; word-break: break-all;}
+
+.contents_wrap{
+	position:relative;
+	width:100%;
+}
+
+/* 메인 첫번째 DIV */
+.contents_wrap .area1{
+	position:relative;
+	width:100%;
+	height:100%
+	overflow:hidden;
+}
+
+.contents_wrap .area1 .block_logo{
+	background:rgba(255, 255, 255, 0.8);
+    position:absolute;
+	z-index:29;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:70px;	
+}
+.contents_wrap .area1 .icon_area{
+	position:absolute;
+	z-index:30;
+	top:20px;
+	left:30px;
+}
+.contents_wrap .area1 .icon_area2{
+	position:absolute;
+	z-index:30;
+	top:25px;
+	right:30px;
+}
+
+.contents_wrap .area1 .video_area .center_menu_area{
+	position:absolute;
+	bottom:32%;
+	right:1%;
+	width:490px;
+	height:100px;
+	z-index:40;
+}
+.contents_wrap .area1 .video_area .center_menu_area .title{
+	padding-bottom:15px;
+}
+.contents_wrap .area1 .video_area .center_menu_area .title img{
+	width:80%;
+}
+
+@media (max-width: 1000px) {
+	.contents_wrap .area1 .video_area .center_menu_area .title img{
+		width:70%;
+	}
+}
+
+
+.contents_wrap .area1 .video_area .sns_area{
+	position:absolute;
+	z-index:40;
+	bottom:15%;
+	right:12px;
+	overflow:hidden;
+}
+
+.contents_wrap .area1 .video_area .scroll_navi_area{
+	position:absolute;
+	z-index:40;
+	bottom:25%;
+	left:50%;
+}
+.contents_wrap .area1 .video_area .bg_cloud{
+	position:absolute;
+	z-index:39;
+	bottom:-50px;
+	left:0;
+	width:100%;
+}
+.contents_wrap .area1 .video_area .bg_cloud img{
+	width:100%;
+}
+
+/* 메인 두번째 DIV */
+.contents_wrap .area2_bg{
+  width: 100%;
+  height: 100%;
+  background: #fff url(../images/bg_event.png) center 0 no-repeat;
+  background-size: cover;
+}
+.contents_wrap .area2_bg.bg2{
+  background: #fff url(../images/bg_event2.png) center 0 no-repeat;
+}
+
+.contents_wrap .area2{
+	position: relative;
+}
+
+.contents_wrap .area2 .product_group{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	margin-top: -350px;
+	margin-left: -450px;
+	width: 900px;
+	/*
+	height: 560px;
+	text-align: center;*/
+	overflow: hidden;
+}
+.contents_wrap .area2 .product_group .product_area{
+	position:relative;
+	background:url(../images/event_txt.png) no-repeat left top;
+	height:700px;
+}
+.contents_wrap .area2 .product_group .product_area a{
+	display:block;
+	position:absolute;
+	left:0;
+	top:48%;
+	width:320px;
+	height:80px;
+	background:#eee;
+	text-indent:-999999px;
+	
+}
+@media(max-width:1000px){
+}
+
+
+/* 메인 세번째 DIV */
+.contents_wrap .area3_bg{
+  width: 100%;
+  height: 100%;
+  background: #fff url(../images/bg_product.png) center 0 no-repeat;
+  background-size: cover;
+}
+.contents_wrap .area3{
+	position: relative;
+}
+.contents_wrap .area3 .product_group{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	margin-top: -364px;
+	margin-left: -462px;
+	width: 924px;
+	/*
+	height: 560px;
+	text-align: center;*/
+	overflow: hidden;
+}
+.contents_wrap .area3 .product_group .product_area{
+	background: url(../images/img_area_3.png) center 0 no-repeat;
+	height:729px;
+	position:relative;
+}
+.contents_wrap .area3 .product_group .product_area a{
+	position:absolute;
+	right:10px;
+	bottom:40px;
+	z-index:999999;
+}
+
+/* 메인 네번째 DIV */
+.contents_wrap .area4_bg{
+  width: 100%;
+  height: 100%;
+  background: #fff ;
+  background-size: cover;
+}
+.contents_wrap .area4{
+	position: relative;
+}
+
+.contents_wrap .area4 .product_group{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	margin-top: -350px;
+	margin-left: -500px;
+	width: 1000px;
+	/*
+	height: 560px;
+	text-align: center;*/
+	overflow: hidden;
+}
+.contents_wrap .area4 .product_group .product_area{
+	position:relative;
+	height:700px;
+	text-align:center;
+}
+.contents_wrap .area4 .product_group .product_area ul{
+	padding-top:330px;
+}
+.contents_wrap .area4 .product_group .product_area ul li{
+	display:block;
+	float:left;
+	padding-right:10px;
+}
+
+
+
+
+.footer{
+	position: relative;
+	background:#fff;
+	padding:30px 0;
+	text-align:center;
+	border-top:1px solid #ddd;
+}
+
+
+/*퀵메뉴 DIV*/
+.contents_wrap .quickmenu{
+	position:absolute;
+	right:20px;
+	z-index:50;
+}
+
+.ytplayer{
+	overflow:hidden;
+}
+
+/* 이벤트 응모 팝업*/
+.popup_wrap{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-280px;
+	margin-left:-220px;
+	width:400px;
+	height:400px;
+	text-align:center;
+	z-index:40;
+}
+
+.popup_wrap .block_close {
+	width:100%;
+	padding:10px 0;
+}
+.popup_wrap .block_close .btn_close{
+	display:block;
+	float:right;
+	width:40px;
+	height:40px;
+}
+
+
+.popup_wrap .block_content .input_block{
+	padding-top:15px;
+}
+.popup_wrap .block_content .input_block ul{
+	width:100%;
+}
+.popup_wrap .block_content .input_block.input_check{
+	padding-left:90px;
+}
+.popup_wrap .block_content .input_block ul li{
+	display:block;
+	float:left;
+}
+
+.popup_wrap .block_content .input_block ul li.t_name{
+	width:84px;
+	text-align:right;
+	padding-right:10px;
+	padding-top:9px;
+}
+.popup_wrap .block_content .input_txt select input{
+	background:#d4e5ee;
+	height:31px;
+	padding:2px;
+	border:none;
+	width:241px;
+	font-size:13px;
+}
+
+
+.popup_wrap .block_content .input_block.input_check .in_check_label{
+	padding-left:5px;
+}
+
+.popup_wrap .block_content .btn_block{
+	text-align:center;
+	padding-top:10px;
+}
+
+
+
+/* 약관 동의 팝업*/
+.pop_agree{
+	position:absolute;
+	background:white;
+	border: 1px solid black;
+	width:700px;
+	height:500px;
+	margin-top:-300px;
+	left:30%;
+	display:none;
+}
+
+.pop_agree .header .btn_close{
+	padding:0;
+	text-align:right;
+}
+
+/* 메인 지도 팝업*/
+.pop_main_map{
+	position:absolute;
+	background:white;
+	border: 1px solid black;
+	width:1000px;
+	height:500px;
+	margin-top:-300px;
+	left:30%;
+	display:none;
+}
+
+.pop_main_map .contents{
+	width:100%;
+	height:500px;
+}
+
+.pop_main_map .contents .map_area{
+	width:100%;
+	height:90%;
+	margin-top:5%;
+}
+
+.pop_main_map .header .btn_close{
+	padding:0;
+	text-align:right;
+}
+
+/*clearfix*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+html[xmlns] .clearfix {
+	display: block;
+}
+* html .clearfix {
+	height: 1%;
+}
+
+
+
 /**
  * Fade-zoom animation for first dialog
  */
