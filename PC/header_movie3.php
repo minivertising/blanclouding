@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
 
     <meta property="og:site_name" content="thefaceshopclouding">
-    <meta property="og:url" content="http://youtu.be/1kRP0yqnA9o">
+    <meta property="og:url" content="http://youtu.be/uCWPxhaCRfI">
     <meta property="og:title" content="BLANCLOUDING 하얀수분크림 TV CF">
     <meta property="og:type" content="video">
     <meta property="og:image" content="http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg">
