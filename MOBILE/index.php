@@ -192,6 +192,7 @@
 		var width = $(window).width();
 		//var height = $(window).height();
 		var pop_width = $("#movie_div1").width();
+		var pop_width3 = $("#movie_div3").width();
 		var youtube_height = (width / 16) * 9;
 		var pop_youtube_height = (pop_width / 16) * 9;
 		$("#ytplayer").width(width);
@@ -200,7 +201,7 @@
 		$("#ytplayer1").height(pop_youtube_height);
 		$("#ytplayer2").width(width);
 		$("#ytplayer2").height(youtube_height);
-		$("#ytplayer3").width(pop_width);
+		$("#ytplayer3").width(pop_width3);
 		$("#ytplayer3").height(youtube_height);
 		$("#ytplayer4").width(width);
 		$("#ytplayer4").height(youtube_height);
