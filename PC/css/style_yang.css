@@ -197,13 +197,104 @@ body{
 .popup_wrap .p_big{
 	width:760px;
 	height:608px;
-	border:1px solid #ccc;
 	text-align:center;
 	background:#fff url(../images/popup/bg_popup.png) top left no-repeat;	
 }
 .popup_wrap .p_big .inner.detail{
 	padding-top:45px;
 }
+
+.popup_wrap .p_big .inner.step_1 .movie{
+	width:617px;
+	margin:0 auto;
+	padding-top:0;
+}
+.popup_wrap .p_big .inner.step_1 .movie .tag{
+	text-align:left;
+}
+.popup_wrap .p_big .inner.step_1 .movie .player{
+	height:340px;
+	background:#eee;
+	width:617px;
+}
+.popup_wrap .p_big .inner.step_1 .txt_block{
+	padding-top:5px;
+}
+.popup_wrap .p_big .inner.step_2 .ss2,
+.popup_wrap .p_big .inner.step_2 .ss3{
+	width:617px;
+	margin:0 auto;
+	padding-top:0;
+}
+.popup_wrap .p_big .inner.step_2 .ss2{
+    background:#fff url(../images/popup/step2_bg.png) top left no-repeat;
+	height:203px;
+}
+.popup_wrap .p_big .inner.step_2 .ss2 div,
+.popup_wrap .p_big .inner.step_2 .ss3 div{
+	float:left;
+}
+.popup_wrap .p_big .inner.step_2 .ss2 div a,
+.popup_wrap .p_big .inner.step_2 .ss3 div a{
+	display:block;
+}
+.popup_wrap .p_big .inner.step_2 .ss2 div{
+	padding-top:35px;
+	padding-left:11px;
+}
+.popup_wrap .p_big .inner.step_2 .ss3 div{
+    padding-top:37px;
+	padding-left:11px;	
+}
+.popup_wrap .p_big .inner.step_2 .ss3 div.shr_01{
+	padding-left:220px;
+}
+.popup_wrap .p_big .inner.step_2 .ss3{
+	margin-top:15px;
+    background:#fff url(../images/popup/step3_bg.png) top left no-repeat;
+	height:125px;
+}
+.popup_wrap .p_big .inner.step_2 .btn_block{
+	padding-top:20px;
+}
+
+
+
+.popup_wrap .p_mid.thnx .title{
+	padding-top:20px;
+}
+.popup_wrap .p_mid.thnx .gift{
+	text-align:center;
+	padding-top:25px;
+	padding-bottom:15px;
+}
+.popup_wrap .p_mid.thnx .m_cound{
+	background:url(../images/popup/bg_count.png) top center no-repeat;
+	text-align:center;
+	height:20px;
+	padding:20px 0;
+	color:#666;
+	letter-spacing:-1px;
+	font-size:14px;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+.popup_wrap .p_mid.thnx .m_cound span{
+	color:#486271;
+	font-weight:bold;
+}
+
+.popup_wrap .p_alert .block_content .btn_block.eventing{
+	padding-top:30px;
+}
+.popup_wrap .p_alert .btn_block.eventing a{
+	display:block;
+	float:left;
+}
+.popup_wrap .p_alert .btn_block.eventing a.first{
+	padding-left:55px;
+	padding-right:10px;
+}
+
 
 
 .popup_wrap .p_mid .block_content.agree .inner{
