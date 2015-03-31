@@ -216,7 +216,7 @@
 		$("#ytplayer").width(width);
 		$("#ytplayer1").width(pop_width);
 		$("#ytplayer2").width(width);
-		$("#ytplayer3").width(width);
+		$("#ytplayer3").width(pop_width);
 		$("#ytplayer4").width(width);
 		$(".cover_area").width($("#ytplayer").width());
 		var youtube_height = (width / 16) * 9;
