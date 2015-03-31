@@ -70,7 +70,7 @@
             <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_2_close.png" alt=""/></a></div>
         </div>
         <div class="one_thumbs clearfix">
-        	<div><a href="#" onclick="alert('곧 공개됩니다.');return false;" class="left"><img src="img/thumb_3_close.png" alt=""/></a></div>
+        	<div><a href="#" data-mfp-src="#movie_div3" class="left popup-with-zoom-anim" style="outline: none;"><img src="img/thumb_3_open.png" alt=""/></a></div>
             <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_4_close.png" alt=""/></a></div>
         </div>
     </div>
@@ -95,6 +95,32 @@
           <div class="block_more_movie clearfix">
             <span class="txt">
               <img src="img/txt_movie_01.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('fb','1');return false;"><img src="img/btn_fb.png" alt=""/></a>
+            <span>
+              <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('tw','1');return false;"><img src="img/btn_tw.png" alt=""/></a>
+            <span>
+              <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="javascript:movie_share('kt','1')" class="kt_movie_share"><img src="img/btn_kt.png" alt=""/></a>
+          </div><!--block_more_movie-->
+        </div>
+      </div>
+      <!--event-->
+    </div>
+    <div class="bg_movie popup_wrap zoom-anim-dialog mfp-hide" id="movie_div3">
+      <div class="block_close clearfix" style="width:100%">
+        <a href="#" class="btn_close" onclick="javascript:$.magnificPopup.close();"><img src="img/popup/btn_close.png" width="29"/></a>
+      </div>
+      <!--event-->
+      <div class="movie_area" style="width:100%">
+        <div class="movie_area1">
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer"></iframe>
+          <div class="block_more_movie clearfix">
+            <span class="txt">
+              <img src="img/txt_movie_03.png" alt=""/>
             </span>
             <a href="#" onclick="movie_share('fb','1');return false;"><img src="img/btn_fb.png" alt=""/></a>
             <span>
