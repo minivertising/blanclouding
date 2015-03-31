@@ -18,7 +18,7 @@
     <meta property="og:type" content="video">
     <meta property="og:image" content="http://www.thefaceshopclouding.co.kr/PC/images/sns_image.jpg">
     <meta property="og:description" content="수분이 필요해! 구름처럼 하얗고 촉촉하게! 클라우딩 효과의 하얀 수분크림">
-    <meta property="og:video" content="https://youtu.be/XDpe5Trw-zs">
+    <meta property="og:video" content="https://youtu.be/uCWPxhaCRfI">
     <meta property="og:video:type" content="application/x-shockwave-flash">
     <meta property="og:video:width" content="1200">
     <!-- <meta property="og:title" content="서장훈이 화장품 CF를?!" />

@@ -80,8 +80,8 @@
             <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_2_close.png" style="cursor:pointer"></a>
           </li>
           <li>
-            <!-- <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a> -->
-            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_3_close.png" style="cursor:pointer"></a>
+            <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_open.png"></a>
+            <!-- <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_3_close.png" style="cursor:pointer"></a> -->
           </li>
           <li>
             <!-- <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim" style="outline: none;" id="movie_link4"><img src="./images/thumb_4_close.png"></a> -->
@@ -311,17 +311,17 @@
   </div>
 <!-------------------------- 영상2 DIV -------------------------->
 <!-------------------------- 영상3 DIV -------------------------->
-  <div id="movie_div3" class="popup_wrap zoom-anim-dialog mfp-hide">
-    <div class="p_mid">
+  <div id="movie_div3" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-left:-450px">
+    <div class="p_movie">
       <div class="block_close clearfix">
-        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/popup/pop_btn_close.png" /></a>
+        <a href="#" class="btn_close first-popup-link" onclick="javascript:close_movie()"><img src="images/btn_close_movie.png" /></a>
       </div>
-      <div id="movie_area" class="movie_area" style="height:400px;border:1px solid skyblue">
-        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" width="450px" name="ytplayer3" id="ytplayer3" ></iframe>
+      <div id="movie_area" class="movie_area" style="">
+        <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" width="860px" height="485px" name="ytplayer3" id="ytplayer3" ></iframe>
       </div>
-      <div>
-        <a href="#" onclick="movie_share('fb','3');">페이스북3</a>
-        <a href="#" onclick="movie_share('tw','3');">트위터3</a>
+      <div class="block_share_btn">
+        <a href="#" onclick="movie_share('fb','3');"><img src="images/btn_share_movie_fb.png" /></a>
+        <a href="#" onclick="movie_share('tw','3');"><img src="images/btn_share_movie_tw.png" /></a>
       </div>
     </div>
   </div>

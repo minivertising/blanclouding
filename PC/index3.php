@@ -35,8 +35,8 @@
             <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_2_close.png" style="cursor:pointer"></a>
           </li>
           <li>
-            <!-- <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a> -->
-            <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_3_close.png" style="cursor:pointer"></a>
+            <a href="#" data-mfp-src="#movie_div3" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link3"><img src="./images/thumb_3_close.png"></a>
+            <!-- <a href="#" onclick="alert('곧 공개 됩니다.');return false;"><img src="./images/thumb_3_close.png" style="cursor:pointer"></a> -->
           </li>
           <li>
             <!-- <a href="#" data-mfp-src="#movie_div4" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link4"><img src="./images/thumb_4_close.png"></a> -->
@@ -81,21 +81,29 @@
 <!--contents_wrap-->
 
 <!----------------------------------------영상시청하기 DIV------------------------------------------>
-  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
-    <div style="width:100%;height:20px">
-      <a href="#" onclick="chk_share()" style="float:right">닫기</a>
-    </div>
-    <div>
-      <iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" id="ytplayer" class="ytplayer">
-       </iframe>
-    </div>
-    <div id="btn_event" style="display:none;">
-      <a href="#" data-mfp-src="#share_present" class="popup-with-zoom-anim" style="outline: none;">영상공유하고 구름선택하기</a>
-    </div>
-    <div id="btn_event_wait">
-      <a href="#" style="outline: none;">영상을 다 보시면 이벤트에 참여하실 수 있습니다.</a>
-    </div>
+  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_big">
+      <div class="block_close clearfix">
+        <a href="#" class="btn_close"><img src="images/popup/pop_btn_close.png" /></a>
+      </div>
+      <div class="block_content product">
+        <div class="inner step_1">
+          <div class="title"><img src="images/popup/title_event_01.png" alt=""/></div>
+          <div class="movie">
+            <div class="tag"><img src="images/popup/step_01.png" width="177" height="24" alt=""/></div>
+            <div class="player"><iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" id="ytplayer" class="ytplayer"></div>
+          </div>
+          <div class="btn_block">
+            <a href="#" data-mfp-src="#share_present" class="popup-with-zoom-anim"><img src="images/popup/btn_select_cloud.png" alt=""/></a>
+          </div>
+          <div class="txt_block">
+            <img src="images/popup/txt_cloud_01.png" width="370" height="12" alt=""/>
+          </div>
+        </div><!--inner-->
+      </div>
+    </div><!--p_big-->
   </div>
+
   <!----------------------------------------영상시청하기 DIV------------------------------------------>
 
 
