@@ -283,3 +283,48 @@ function close_movie()
 {
 	$.magnificPopup.close();
 }
+
+function only_num(obj)
+{
+	var inText = obj.value;
+	var outText = "";
+	var flag = true;
+	var ret;
+	for(var i = 0; i < inText.length; i++)
+	{
+		ret = inText.charCodeAt(i);
+		if((ret < 48) || (ret > 57))
+		{
+			flag = false;
+		}
+		else
+		{
+			outText += inText.charAt(i);
+		}
+	}
+ 
+	if(flag == false)
+	{
+		alert("전화번호란에 숫자입력만 가능합니다.");
+		obj.value = outText;
+		obj.focus();
+		return false;
+	} 
+	return true;
+}
+
+function chk_len(val)
+{
+	if (val.length == 4)
+	{
+		$("#mb_phone3").focus();
+	}
+}
+
+function chk_len2(val)
+{
+	if (val.length == 4)
+	{
+		$("#mb_phone3").blur();
+	}
+}
