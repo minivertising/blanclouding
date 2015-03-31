@@ -1,7 +1,7 @@
 
 function sns_share(media)
 {
-	Kakao.init('0955d4d6b239e2a0f6159bc955bddd9b');
+	Kakao.init('39953a9c7648132cdada52b314ba1c81');
 
 	if (media == "facebook")
 	{
