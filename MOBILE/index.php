@@ -195,6 +195,7 @@
 		var pop_width3 = $("#movie_div3").width();
 		var youtube_height = (width / 16) * 9;
 		var pop_youtube_height = (pop_width / 16) * 9;
+		var pop_youtube_height3 = (pop_width3 / 16) * 9;
 		$("#ytplayer").width(width);
 		$("#ytplayer").height(youtube_height);
 		$("#ytplayer1").width(pop_width);
@@ -202,7 +203,7 @@
 		$("#ytplayer2").width(width);
 		$("#ytplayer2").height(youtube_height);
 		$("#ytplayer3").width(pop_width3);
-		$("#ytplayer3").height(youtube_height);
+		$("#ytplayer3").height(pop_youtube_height3);
 		$("#ytplayer4").width(width);
 		$("#ytplayer4").height(youtube_height);
 	});
@@ -224,7 +225,7 @@
 		$("#ytplayer").height(youtube_height);
 		$("#ytplayer1").height(pop_youtube_height);
 		$("#ytplayer2").height(youtube_height);
-		$("#ytplayer3").height(youtube_height);
+		$("#ytplayer3").height(pop_youtube_height);
 		$("#ytplayer4").height(youtube_height);
 		$(".cover_area").height($("#ytplayer").height());
 
@@ -292,8 +293,12 @@
 				open: function() {
 					var pop_width2 = $("#movie_div1").width();
 					var pop_youtube_height2 = (pop_width2 / 16) * 9;
+					var pop_width3 = $("#movie_div3").width();
+					var pop_youtube_height3 = (pop_width3 / 16) * 9;
 					$("#ytplayer1").width(pop_width2);
 					$("#ytplayer1").height(pop_youtube_height2);
+					$("#ytplayer3").width(pop_width3);
+					$("#ytplayer3").height(pop_youtube_height3);
 				}
 			}
 		});
