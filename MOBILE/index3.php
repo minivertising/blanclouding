@@ -1,224 +1,349 @@
 <?
-	include_once "./header2.php";
+	include_once "./header.php";
 ?>
 <!--contents_wrap-->
-<input type="hidden" name="chk_gift" id="chk_gift">
-<div>
-<!--area1-->
-  <div>
-    <div>
-      <a href="#">로고 부분</a>
-      <a href="#">우측상단로고</a>
-    </div>
-    <div>
-      <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" style="background:none;outline: none;" onclick="start_api();">영상시청하기</a>
-    </div>
-  </div>
-</div>
+<div class="contents_wrap">
 
-<!----------------------------------------영상시청하기 DIV------------------------------------------>
-  <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
-    <div style="width:100%;height:20px">
-      <a href="#" onclick="$.magnificPopup.close();" style="float:right">닫기</a>
-    </div>
-    <div>
-      <iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" id="ytplayer" class="ytplayer">
-       </iframe>
-    </div>
-    <div id="btn_event" style="display:none;">
-      <a href="#" data-mfp-src="#share_present" class="popup-with-zoom-anim" style="outline: none;">영상공유하고 구름선택하기</a>
-    </div>
-    <div id="btn_event_wait">
-      <a href="#" style="outline: none;">영상을 다 보시면 이벤트에 참여하실 수 있습니다.</a>
-    </div>
-  </div>
-  <!----------------------------------------영상시청하기 DIV------------------------------------------>
-
-
-<!----------------------------------------쉐어 후 사은품 선택하기 DIV ---------------------------------->
-  <div id="share_present" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
-    <div style="width:100%;height:20px">
-      <a href="#" onclick="chk_share()" style="float:right">닫기</a>
-    </div>
-    <div>
-      <label for="sel1">스위스</label><input type="radio" name="sel_present" id="sel1"  value="swiss" onclick="ins_selval(this.value)">
-      <label for="sel2">크림</label><input type="radio" name="sel_present" id="sel2" value="cream" onclick="ins_selval(this.value)">
-      <label for="sel3">제주도</label><input type="radio" name="sel_present" id="sel3" value="jeju" onclick="ins_selval(this.value)">
-    </div>
-    <div>
-       <a href="#" onclick="sns_share('twitter');">트윗</a>
-       <a href="#" onclick="sns_share('facebook');return false;">페북</a>
-       <a href="#" onclick="sns_share('story');return false;">카스</a>
-    </div>
-    <div>
-     <a href="#" onclick="chk_radio()">선택완료</a>
-    <div>
-  </div>
-<!----------------------------------------쉐어 후 사은품 선택하기 DIV ---------------------------------->
-
-
-<!---------------------------------------개인정보 입력 DIV ---------------------------------->
-    <div id="input_info" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
-    <div style="width:100%;height:20px">
-      <a href="#" onclick="$.magnificPopup.close();" style="float:right">닫기</a>
-    </div>
-      <ul>
-        <li>이름 : 
-          <input type="text" name="mb_name" id="mb_name">
-        </li>
-      </ul>
-      <ul>
-        <li>전화번호 : 
-          <select id="mb_phone1" name="mb_phone1" style="width:50px;height:20px;">
-            <option>010</option>
-            <option>011</option>
-            <option>016</option>
-            <option>017</option>
-            <option>018</option>
-            <option>019</option>
-          </select> -
-          <input type="text" size="6"name="mb_phone2" id="mb_phone2" maxlength="4" > -
-          <input type="text" size="6"name="mb_phone3" id="mb_phone3" maxlength="4" >
-        </li>
-      </ul>
-      <ul>
-        <li>주소 : 
-          <input type="text" name="mb_addr" id="mb_addr">
-        </li>
-      </ul>
-          <div>
-            <ul>
-              <li><input type="checkbox" name="use_agree" id="use_agree"></li>
-              <li><a href="#use_div" class="popup-with-zoom-anim" onclick="open_use()">개인정보 수집 · 이용에 대한 동의</a></li>
-            </ul>
-            <ul>
-              <li><input type="checkbox" name="privacy_agree" id="privacy_agree"></li>
-              <li><a href="#privacy_div" class="popup-with-zoom-anim" onclick="open_privacy()">개인정보의 취급 위탁 동의</a></li>
-            </ul>
-            <ul>
-              <li><input type="checkbox" name="adver_agree" id="adver_agree"></li>
-              <li><a href="#adver_div" class="popup-with-zoom-anim" onclick="open_adver()">광고성 정보 전송 동의</a></li>
-            </ul>
-          </div>
-          <div>
-            <a href="#" style="background:none;outline: none;" onclick="chk_input()">입력완료</a>
-          </div>
-        </div><!--inner-->
-    </div>
-	</div>
-
-<!--------------------------  개인정보 활용 약관 DIV ----------------------->
-  <div id="use_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-        <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
+<div class="block_top">
+    <!--icon_area-->
+        <div class="icon_area clearfix">
+          <a href="http://www.thefaceshopclouding.co.kr/MOBILE/index.php" class="cl_logo" target="_blank">
+            <img src="img/logo_blan.png" alt=""/>
+          </a>
+          <a href="http://www.thefaceshop.com/m/" class="fb_logo" target="_blank">
+            <img src="img/logo_fs.png" alt=""/>
+          </a>
+        </div>
+    <!--icon_area-->
+    
+        <div class="main_title">
 <?
-	include_once "./use_agree.php";
+	if ($iPhoneYN == "Y")
+	{
 ?>
-  </div>
-<!--------------------------  개인정보 활용 약관 DIV ----------------------->
-<!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
-  <div id="privacy_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-        <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
+          <a href="popup_select_cloud1.php" >이벤트 참여</a>
 <?
-	include_once "./privacy_agree.php";
+	}else{
 ?>
-  </div>
-<!--------------------------  개인정보 취급위탁동의 약관 DIV ----------------------->
-<!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
-  <div id="adver_div" class="popup_wrap zoom-anim-dialog mfp-hide">
-        <a href="#input_info" class="btn_close first-popup-link" onclick="javascript:close_look()">닫기</a>
+          <a href="popup_select_cloud1.php" target="_blank">이벤트 참여</a>
 <?
-	include_once "./adver_agree.php";
+	}
 ?>
-  </div>
-<!--------------------------  광고성 정보 전송 동의 약관 DIV ----------------------->
-<!----------------------------------------개인정보입력  DIV ---------------------------------->
+        </div>
+</div>    
 
 
 
+    <!--sns_area-->
+      <div class="sns_area clearfix">
+        <a href="#" onclick="fb_share('facebook');return false;">
+            <img src="img/btn_fb.png" alt=""/>
+        </a>
+        <span>
+            <img src="img/bar.png" alt=""/>
+        </span>
+        <a  id="kakao-link-btn" href="#" onclick="sns_share('kakao');">
+            <img src="img/btn_kt.png" alt=""/>
+        </a>
+        <span>
+            <img src="img/bar.png" alt=""/>
+        </span>
+        <a href="#" onclick="sns_share('twitter');return false;">
+            <img src="img/btn_tw.png" alt=""/>
+        </a>
+      </div>
+    <!--sns_area-->
 
-<!-------------------------------------참여완료 DIV ------------------------------------------->
-  <div id="input_end" class="popup_wrap zoom-anim-dialog mfp-hide" style="background:white; width:400px">
-    <div style="width:100%;height:20px">
-      <a href="#" onclick="$.magnificPopup.close();" style="float:right">닫기</a>
+	<div class="bg_thumbs">
+    	<div class="title">
+   	      <img src="img/bg_movie_title.png" alt=""/>
+        </div>
+        <div class="first one_thumbs clearfix">
+        	<div><a href="#" data-mfp-src="#movie_div1" class="left popup-with-zoom-anim" style="outline: none;"><img src="img/thumb_1_open.png" alt=""/></a></div>
+            <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_2_close.png" alt=""/></a></div>
+        </div>
+        <div class="one_thumbs clearfix">
+        	<div><a href="#" data-mfp-src="#movie_div3" class="left popup-with-zoom-anim" style="outline: none;"><img src="img/thumb_3_open.png" alt=""/></a></div>
+            <div><a href="#" onclick="alert('곧 공개됩니다.');return false;"><img src="img/thumb_4_close.png" alt=""/></a></div>
+        </div>
     </div>
-    <div class="ok_txt_area">
-      참여해주셔서 감사합니다.<br />
-      스위스구름을 선택한 사람들 0000명
+    <div class="bottom">
+    <img src="img/bg_bottom.png" />
     </div>
-    <div>
-      <a href="#" onclick="sns_share('twitter');">트윗</a>
-      <a href="#" onclick="sns_share('facebook');return false;">페북</a>
-      <a href="#" onclick="sns_share('ks_share');return false;">카스</a>
+    <div class="bottom" style="margin-top:-1%;">
+	    <a href="http://www.thefaceshop.com/product/tfs_prod_detail.jsp?pid=34100216&sid=01" target="_blank" onclick="buy_cnt();"><img src="img/btn_buy.png" /></a>
+    </div>      
+    <div class="bottom" style="margin-top:-1%;">
+    <img src="img/bottom.png" />
+    </div>    
+
+    <div class="bg_movie popup_wrap zoom-anim-dialog mfp-hide" id="movie_div1">
+      <div class="block_close clearfix" style="width:100%">
+        <a href="#" class="btn_close" onclick="javascript:$.magnificPopup.close();"><img src="img/popup/btn_close.png" width="29"/></a>
+      </div>
+      <!--event-->
+      <div class="movie_area" style="width:100%">
+        <div class="movie_area1">
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer"></iframe>
+          <div class="block_more_movie clearfix">
+            <span class="txt">
+              <img src="img/txt_movie_01.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('fb','1');return false;"><img src="img/btn_fb.png" alt=""/></a>
+            <span>
+              <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('tw','1');return false;"><img src="img/btn_tw.png" alt=""/></a>
+            <span>
+              <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="javascript:movie_share('kt','1')" class="kt_movie_share"><img src="img/btn_kt.png" alt=""/></a>
+          </div><!--block_more_movie-->
+        </div>
+      </div>
+      <!--event-->
     </div>
-    <a href="#" onclick="$.magnificPopup.close();">확인</a>
-  </div>
-<!-------------------------------------참여완료 DIV ------------------------------------------->
+    <div class="bg_movie popup_wrap zoom-anim-dialog mfp-hide" id="movie_div3">
+      <div class="block_close clearfix" style="width:100%">
+        <a href="#" class="btn_close" onclick="javascript:$.magnificPopup.close();"><img src="img/popup/btn_close.png" width="29"/></a>
+      </div>
+      <!--event-->
+      <div class="movie_area" style="width:100%">
+        <div class="movie_area1">
+            <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer"></iframe>
+          <div class="block_more_movie clearfix">
+            <span class="txt">
+              <img src="img/txt_movie_03.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('fb','3');return false;"><img src="img/btn_fb.png" alt=""/></a>
+            <span>
+              <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="#" onclick="movie_share('tw','3');return false;"><img src="img/btn_tw.png" alt=""/></a>
+            <span>
+              <img src="img/bar.png" alt=""/>
+            </span>
+            <a href="javascript:movie_share('kt','3')" class="kt_movie_share"><img src="img/btn_kt.png" alt=""/></a>
+          </div><!--block_more_movie-->
+        </div>
+      </div>
+      <!--event-->
+    </div>
+
+
+</body>
 </html>
-<script type="text/javascript">
-	var shareYN		= "N";
-	function start_api()
-	{
-		// 유튜브 반복 재생
-		var controllable_player,start, 
-		statechange = function(e){
-			if (e.data === 0) // 종료됨
-			{
-				//$("#video_control").attr('src','images/btn_pause.png');
-				//controllable_player.seekTo(0); controllable_player.playVideo();
-				$("#btn_event_wait").hide();
-				$("#btn_event").show();
-				//alert('11');
-			}
-		};
-		function onYouTubeIframeAPIReady() {
-			controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
-		}
+	<script type="text/javascript">
 
-		if(window.opera){
-			addEventListener('load', onYouTubeIframeAPIReady, false);
-		}
-
-		if (typeof(controllable_player) == 'undefined'){
-			onYouTubeIframeAPIReady();
-		}
-	}
-
-	// 팝업 jQuery 스타일
-	$('.popup-with-zoom-anim').magnificPopup({
-		type: 'inline',
-		fixedContentPos: true,
-		fixedBgPos: true,
-		overflowY: 'hidden',
-		closeBtnInside: true,
-		//preloader: false,
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in',
-		showCloseBtn : false,
-		closeOnBgClick: false,
-		callbacks: {
-			close: function() {
-				$("#btn_event").hide();
-				$("#btn_event_wait").show();
-			}
-		}
+	// quick menu
+	var quickTop;
+	$(window).scroll(function() {
+		quickTop = ($(window).height()-$('.quickmenu').height()) /2;
+		$('.quickmenu').stop().animate({top:$(window).scrollTop()+quickTop},400,'easeOutExpo');
+		
 	});
-	$('.first-popup-link').magnificPopup({
-		closeBtnInside:true
-	});
-	var magnificPopup = $.magnificPopup.instance;
 
-
-	function chk_share()
-	{
-		if ( shareYN == "Y")
+    // 유튜브 반복 재생
+    var controllable_player,start, 
+    statechange = function(e){
+		if (e.data === 0)
 		{
-			$.magnificPopup.close();
-		}else{
-			if (confirm('해당 창을 닫으면, 이벤트 응모가 중단됩니다.'))
-			{
-				$.magnificPopup.close();
-			}
+			$("#video_control").text('일시정지');
+			controllable_player.seekTo(0); controllable_player.playVideo();
 		}
-	}
- </script>
+		else if (e.data === 1)
+		{
+			//controllable_player.pauseVideo();
+			$("#video_control").text('일시정지');
+		}
+		else if (e.data === 2)
+		{
+			//controllable_player.playVideo();
+			$("#video_control").text('재생');
+		}
+		else if (e.data === 3)
+		{
+			//alert('4444');
+		}
+    	//controllable_player.playVideo(); 
+    };
+    function onYouTubeIframeAPIReady() {
+		controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
+    }
+
+    if(window.opera){
+		addEventListener('load', onYouTubeIframeAPIReady, false);
+    }
+	setTimeout(function(){
+    	if (typeof(controllable_player) == 'undefined'){
+    		onYouTubeIframeAPIReady();
+    	}
+    }, 1000)
+
+
+	$(window).resize(function(){
+		var width = $(window).width();
+		//var height = $(window).height();
+		var pop_width = $("#movie_div1").width();
+		var pop_width3 = $("#movie_div3").width();
+		var youtube_height = (width / 16) * 9;
+		var pop_youtube_height = (pop_width / 16) * 9;
+		var pop_youtube_height3 = (pop_width3 / 16) * 9;
+		$("#ytplayer").width(width);
+		$("#ytplayer").height(youtube_height);
+		$("#ytplayer1").width(pop_width);
+		$("#ytplayer1").height(pop_youtube_height);
+		$("#ytplayer2").width(width);
+		$("#ytplayer2").height(youtube_height);
+		$("#ytplayer3").width(pop_width3);
+		$("#ytplayer3").height(pop_youtube_height3);
+		$("#ytplayer4").width(width);
+		$("#ytplayer4").height(youtube_height);
+	});
+
+	$(document).ready(function() {
+		//처음 화면 크기에 따라 영상및 커버 크기 변경
+		var width = $(window).width();
+		var height = $(window).height();
+		var pop_width = $(window).width() - 12;
+		var youtube_width = width;
+		var pop_youtube_height = (pop_width / 16) * 9;
+		$("#ytplayer").width(width);
+		$("#ytplayer1").width(pop_width);
+		$("#ytplayer2").width(width);
+		$("#ytplayer3").width(pop_width);
+		$("#ytplayer4").width(width);
+		$(".cover_area").width($("#ytplayer").width());
+		var youtube_height = (width / 16) * 9;
+		$("#ytplayer").height(youtube_height);
+		$("#ytplayer1").height(pop_youtube_height);
+		$("#ytplayer2").height(youtube_height);
+		$("#ytplayer3").height(pop_youtube_height);
+		$("#ytplayer4").height(youtube_height);
+		$(".cover_area").height($("#ytplayer").height());
+
+		$("#video_control").click(function(){
+			var control_txt	= $("#video_control").text();
+			if (control_txt == "일시정지"){
+				controllable_player.pauseVideo();
+				return false;
+			}else{
+				controllable_player.playVideo(); 
+				return false;
+			}
+		});
+
+		var move_gift = ($(".block_top").height() +$(".navi_btn_block").height() +$("#ytplayer").height() + $(".sns_area").height()) * 1.1;
+		var move_product = move_gift + $(".bg_cloud").height() * 1.1;
+		$( '.view_event' ).click( function() {
+			$( 'html, body' ).animate({ scrollTop: move_gift},500);
+			return false;
+		} );
+
+		$( '.view_product' ).click( function() {
+			$( 'html, body' ).animate({ scrollTop: move_product},500);
+			return false;
+		} );
+
+
+		// 퀵메뉴 기본 위치
+		var quick_height	= $(window).height()/2;
+		$('.quickmenu').css("top",quick_height);
+/*
+		setTimeout("auto_play();",2000);
+*/
+		// 체크박스 스타일 설정
+		$('.popup_wrap input').on('ifChecked ifUnchecked', function(event){
+			//alert(this.id);
+		}).iCheck({
+			checkboxClass: 'icheckbox_flat-blue',
+			increaseArea: '0%'
+		});
+
+		// 팝업 jQuery 스타일
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+			fixedContentPos: true,
+			fixedBgPos: true,
+			overflowY: 'hidden',
+			closeBtnInside: true,
+			//preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in',
+			showCloseBtn : false,
+			callbacks: {
+				close: function() {
+					/*$("#mb_name").val("");
+					$("#mb_phone").val("");
+					$('input').iCheck('uncheck');
+					$("#postcode1").val("");
+					$("#postcode2").val("");
+					$("#addr1").val("");
+					$("#addr2").val("");
+					$("#post_div").hide();*/
+				},
+				open: function() {
+					var pop_width2 = $("#movie_div1").width();
+					var pop_youtube_height2 = (pop_width2 / 16) * 9;
+					var pop_width3 = $("#movie_div3").width();
+					var pop_youtube_height3 = (pop_width3 / 16) * 9;
+					$("#ytplayer1").width(pop_width2);
+					$("#ytplayer1").height(pop_youtube_height2);
+					$("#ytplayer3").width(pop_width3);
+					$("#ytplayer3").height(pop_youtube_height3);
+				}
+			}
+		});
+
+		$('.first-popup-link').magnificPopup({
+			closeBtnInside:true
+		});
+
+		var magnificPopup = $.magnificPopup.instance;
+
+		// 셀렉트박스 스타일
+		/*
+		$( "#mb_phone1" ).dropkick({
+			mobile: true
+		});
+
+		$( "#addr1" ).dropkick({
+			mobile: true
+		});
+		
+		$( "#addr2" ).dropkick({
+			mobile: true
+		});
+
+
+		$( "#shop" ).dropkick({
+			mobile: true
+		});
+		
+		$("#dk0-combobox").css("width","79px");
+		$("ul[id*=dk0-]").css("width","79px");
+		$("li[id*=dk0-]").css("width","60px");
+		$("#dk1-combobox").css("width","120px");
+		$("ul[id*=dk1-]").css("width","120px");
+		$("li[id*=dk1-]").css("width","100px");
+		$("#dk2-combobox").css("width","120px");
+		$("ul[id*=dk2-]").css("width","120px");
+		$("li[id*=dk2-]").css("width","100px");
+		$("#dk3-combobox").css("width","120px");
+		$("ul[id*=dk3-]").css("width","120px");
+		$("li[id*=dk3-]").css("width","100px");
+		*/
+/*
+		$("#dk1-addr1").css("width","120px");
+		$("#dk1-addr1").css("font-size","14px");
+		$("#dk1-combobox").css("height","34px");
+		$("#dk2-addr2").css("width","120px");
+		$("#dk2-addr2").css("font-size","14px");
+		$("#dk2-combobox").css("height","34px");
+		$("#dk3-shop").css("width","120px");
+		$("#dk3-shop").css("font-size","14px");
+		$("#dk3-combobox").css("height","34px");
+*/
+	});
+	</script>

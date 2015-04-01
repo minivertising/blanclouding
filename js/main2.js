@@ -93,6 +93,102 @@ function sns_share(media)
 	shareYN == "Y";
 }
 
+function ins_data()
+{
+	$.magnificPopup.open({
+		items: {
+			src: '#input_alert'
+		},
+		type: 'inline',
+		showCloseBtn : false
+	}, 0);
+}
+
+function agree_data()
+{
+	$.magnificPopup.open({
+		items: {
+			src: '#agree_alert'
+		},
+		type: 'inline',
+		showCloseBtn : false
+	}, 0);
+}
+
+
+function m_chk_input()
+{
+	var mb_name	= $('#mb_name').val();
+	var mb_phone1	= $('#mb_phone1').val();
+	var mb_phone2	= $('#mb_phone2').val();
+	var mb_phone3	= $('#mb_phone3').val();
+	var sel_gift			= $('#sel_present').val();
+	var mb_addr1		= $('#mb_addr1').val();
+	var mb_addr2		= $('#mb_addr2').val();
+	var mb_zip1		= $('#mb_zipcode1').val();
+	var mb_zip2		= $('#mb_zipcode2').val();
+	var mb_addr		= mb_addr1 + " " + mb_addr2;
+	var mb_zip			= mb_zip1 + "-" + mb_zip2;
+
+	if (mb_name == "")
+	{
+
+		//alert('개인정보 입력을 안 하셨습니다');
+		setTimeout("ins_data();",500);
+
+		$("#mb_name").focus();
+		//$("#input_alert").show();
+		return false;
+	}
+
+	if (mb_phone2 == "" || mb_phone2.length <3)
+	{
+		//alert('개인정보 입력을 안 하셨습니다');
+		setTimeout("ins_data();",500);
+		$("#mb_phone2").focus();
+		return false;
+	}
+	
+
+	if (mb_phone3 == "" || mb_phone3.length<4)
+	{
+		//alert('개인정보 입력을 안 하셨습니다');
+		setTimeout("ins_data();",500);
+		$("#mb_phone3").focus();
+		return false;
+	}
+
+	if (mb_addr == "")
+	{
+		//alert('주소 입력을 안하셨습니다.');
+		setTimeout("ins_data();",500);
+		$("#mb_addr1").focus();
+		return false;
+	}
+
+	if ($('#use_agree').is(":checked") == false)
+	{
+		//alert("개인정보 활용 동의를 안 하셨습니다");
+		setTimeout("agree_data();",500);
+		return false;
+	}
+
+	if ($('#privacy_agree').is(":checked") == false)
+	{
+		//alert("개인정보 활용 동의를 안 하셨습니다");
+		setTimeout("agree_data();",500);
+		return false;
+	}
+
+	if ($('#adver_agree').is(":checked") == false)
+	{
+		//alert("개인정보 활용 동의를 안 하셨습니다");
+		setTimeout("agree_data();",500);
+		return false;
+	}
+
+}
+
 function chk_input()
 {
 	var mb_name	= $('#mb_name').val();

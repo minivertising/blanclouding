@@ -18,7 +18,7 @@
     <meta property="og:description" content="< 아니 아니, 그게 아니고~ > 전격 공개! 건조한 피부에 봄비같은 하얀 수분 크림 출시! 지금 10ml Kit도 신청하세요!    더페이스샵 - 블란클라우딩" />
     <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico" />
     <title>THEFACESHOP</title>
-    <link rel="stylesheet" type="text/css" href="./css/style2.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
     <link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <script type='text/javascript' src="../js/jquery-1.11.2.min.js"></script>
