@@ -149,6 +149,12 @@
 
 	function submit_frm()
 	{
-		document.frm.submit();
+		if ($("#sel_present").val() =="")
+		{
+			alert("원하시는 구름을 선택해 주세요.");
+			return false;
+		}else{
+			document.frm.submit();
+		}
 	}
 </script>
