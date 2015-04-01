@@ -1,5 +1,5 @@
 <?
-	include_once "./header.php";
+	include_once "./header2.php";
 ?>
 <div class="wrap_page popup select_cloud_2">
   <div class="block_close clearfix">
