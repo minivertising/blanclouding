@@ -83,7 +83,7 @@
   <div id="input_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:760px">
     <div class="p_big">
       <div class="block_close clearfix">
-        <a href="#event_confirm" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
+        <a href="#event_confirm1" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
       <div class="block_content product">
         <div class="inner step_1">
@@ -133,7 +133,7 @@
   <input type="hidden" name="sel_present" id="sel_present">
     <div class="p_big">
       <div class="block_close clearfix">
-        <a href="#event_confirm" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
+        <a href="#event_confirm2" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
       <div class="block_content product">
         <div class="inner step_2">
@@ -174,7 +174,7 @@
   <div id="input_info" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-top:-225px;margin-left:-275px;">
     <div class="p_mid">
       <div class="block_close clearfix">
-        <a href="#event_confirm" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
+        <a href="#event_confirm3" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
       </div>
       <div class="block_content" style="background:white;">
         <div class="inner">
@@ -206,9 +206,9 @@
             <ul class="clearfix">
               <li class="t_name"><img src="images/popup/txt_store.png" alt=""/></li>
               <li class="input_txt phone">
-                <input type="text" name="mb_zipcode1" id="mb_zipcode1" style="width:60px" readonly> - 
-                <input type="text" name="mb_zipcode2" id="mb_zipcode2" style="width:60px" readonly>
-                <input type="button" value="우편번호 찾기" onclick="search_zip();return false;">
+                <input type="text" name="mb_zipcode1" id="mb_zipcode1" style="width:60px"> - 
+                <input type="text" name="mb_zipcode2" id="mb_zipcode2" style="width:60px">
+                <input type="button" value="우편번호 찾기" onclick="search_zip();">
               </li>
             </ul>
             <ul class="clearfix">
@@ -391,7 +391,7 @@
     </div>
   </div>
 <!-------------------------- 영상4 DIV -------------------------->
-  <div id="event_confirm" class="popup_confirm_wrap zoom-anim-dialog mfp-hide">
+  <div id="event_confirm1" class="popup_confirm_wrap zoom-anim-dialog mfp-hide">
     <div class="p_alert">
       <div class="inner">
         <div class="block_close clearfix">
@@ -404,6 +404,44 @@
           <div class="btn_block eventing clearfix">
             <a href="#" class="first" onclick="close_layer()"><img src="images/popup/btn_out.png" alt=""/></a>
             <a href="#input_div" class="btn_close first-popup-link" onclick="start_api();"><img src="images/popup/btn_return.png" alt=""/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div id="event_confirm2" class="popup_confirm_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_alert">
+      <div class="inner">
+        <div class="block_close clearfix">
+          <a href="#share_present" class="btn_close first-popup-link"><img src="images/popup/pop_btn_close.png" /></a>
+        </div>
+        <div class="block_content">
+          <div class="title">
+            <img src="images/popup/title_close.png" alt=""/>
+          </div>
+          <div class="btn_block eventing clearfix">
+            <a href="#" class="first" onclick="close_layer()"><img src="images/popup/btn_out.png" alt=""/></a>
+            <a href="#share_present" class="btn_close first-popup-link" onclick="start_api();"><img src="images/popup/btn_return.png" alt=""/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div id="event_confirm3" class="popup_confirm_wrap zoom-anim-dialog mfp-hide">
+    <div class="p_alert">
+      <div class="inner">
+        <div class="block_close clearfix">
+          <a href="#input_info" class="btn_close first-popup-link"><img src="images/popup/pop_btn_close.png" /></a>
+        </div>
+        <div class="block_content">
+          <div class="title">
+            <img src="images/popup/title_close.png" alt=""/>
+          </div>
+          <div class="btn_block eventing clearfix">
+            <a href="#" class="first" onclick="close_layer()"><img src="images/popup/btn_out.png" alt=""/></a>
+            <a href="#input_info" class="btn_close first-popup-link" onclick="start_api();"><img src="images/popup/btn_return.png" alt=""/></a>
           </div>
         </div>
       </div>
@@ -641,7 +679,29 @@
 			},
 			width : '100%',
 			height : '100%'
+<?
+	preg_match('/MSIE (.*?);/', $_SERVER['HTTP_USER_AGENT'], $matches);
+	if(count($matches)<2){
+		preg_match('/Trident\/\d{1,2}.\d{1,2}; rv:([0-9]*)/', $_SERVER['HTTP_USER_AGENT'], $matches);
+	}
+	if (count($matches)>1)
+	{
+		$version = $matches[1];//$matches변수값이 있으면 IE브라우저
+		if($version<=8){ 
+?>
+		}).open();
+<?
+		}else{
+?>
 		}).embed(element);
+<?
+		}
+	}else{
+?>
+		}).embed(element);
+<?
+	}
+?>
 
 		// iframe을 넣은 element를 보이게 한다.
 		element.style.display = 'block';
