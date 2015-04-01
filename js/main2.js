@@ -79,7 +79,16 @@ function sns_share(media)
 				data : { id : res.id }
 			  });
 			}).then(function(res) {
-				confirm('공유됐어요');
+				$.ajax({
+					type   : "POST",
+					async  : false,
+					url    : "../main_exec.php",
+					data:{
+						"exec" : "insert_share_info",
+						"media" : "kakao2"
+					}
+				});
+				alert("카카오스토리에 공유 되었습니다.");
 			}, function (err) {
 			  alert(JSON.stringify(err));
 			});
@@ -262,7 +271,7 @@ function chk_input()
 		return false;
 	}
 
-	if (mb_addr == "")
+	if (mb_addr1 == "")
 	{
 		alert('주소 입력을 안하셨습니다.');
 		//setTimeout("ins_data();",500);

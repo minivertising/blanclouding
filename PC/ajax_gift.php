@@ -21,19 +21,9 @@
 		$img_num = "03";
 	}
 ?>
-  <div class="content">
-    <div class="inner">
-      <div class="title">
-        <img src="img/popup/title_thx.png" alt=""/>
-      </div>
-      <div class="block_gift">
-        <img src="img/popup/gift_<?=$img_num?>.png" alt=""/>
-      </div>
-      <div class="m_count">
-      <?=$sel_cloud?> 구름을 선택한 사람들 <?=number_format($sel_cnt)?>명
-      </div>
-      <div class="btn_block">
-        <a href="index.php"><img src="img/popup/btn_confirm.png" alt=""/></a>
-      </div>
-    </div><!--inner-->
-  </div>
+          <div class="title"><img src="images/popup/title_thks.png" width="310" height="80" alt=""/></div>
+          <div class="gift"><img src="images/popup/gift_<?=$img_num?>.png" width="114" height="114" alt=""/></div>
+          <div class="m_cound"><?=$sel_cloud?> 구름을 선택한 사람 <span><?=$sel_cnt?>명</span></div>
+          <div class="btn_block">
+            <a href="#" onclick="$.magnificPopup.close();"><img src="images/popup/btn_ok.png" alt=""/></a>
+          </div>
