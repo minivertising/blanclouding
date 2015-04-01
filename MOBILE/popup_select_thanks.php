@@ -1,8 +1,5 @@
 <?
-	include_once "../include/global.php"; 			//변수정보
-	include_once "../include/function.php"; 		//함수정보
-	include_once "../include/dbi.php"; 			//DB 연결정보
-	mysqli_query ($my_db,"set names utf8");
+	include_once "./header2.php";
 
 	$sel_gift		= $_REQUEST['sel_gift'];
 	$query		= "SELECT * FROM ".$_gl['member_info2_table']." WHERE mb_gift='".$sel_gift."'";
@@ -21,6 +18,11 @@
 		$img_num = "03";
 	}
 ?>
+
+<div class="wrap_page popup thx">
+  <div class="block_close clearfix">
+    <a href="index.php" class="btn_close"><img src="img/popup/btn_close.png" /></a>
+  </div>
   <div class="content">
     <div class="inner">
       <div class="title">
@@ -37,3 +39,6 @@
       </div>
     </div><!--inner-->
   </div>
+</div>
+</body>
+</html>

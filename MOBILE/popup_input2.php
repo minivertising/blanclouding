@@ -170,7 +170,7 @@
           </ul>
         </div>
         <div class="btn_block" style="background:white;">
-          <a href="#" class="popup-with-zoom-anim" onclick="javascript:m_chk_input();"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
+          <a href="#" onclick="javascript:m_chk_input();"><img src="img/popup/btn_ok.png" width="178" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
@@ -240,7 +240,7 @@
   </div><!--wrap_page popup-->   
 <!--------------------------  참여완료 ALERT DIV ----------------------->
 <!--  주소검색 DIV 시작  -->
-    <div id="post_div" style="display:none;position:fixed;width:100%;height:100%;top:0px;overflow:hidden;-webkit-overflow-scrolling:touch;z-index:99998">
+    <div id="post_div" style="display:none;position:fixed;width:100%;height:100%;top:0px;overflow:hidden;;z-index:99998">
       <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:0px;top:0px;z-index:99999" onclick="closeDaumPostcode()" alt="닫기 버튼">
     </div>
 <!--  주소검색 DIV 끝  -->

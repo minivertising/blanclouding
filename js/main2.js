@@ -187,6 +187,37 @@ function m_chk_input()
 		return false;
 	}
 
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"				: "insert_event2",
+			"mb_name"			: mb_name,
+			"mb_phone1"		    : mb_phone1,
+			"mb_phone2"		    : mb_phone2,
+			"mb_phone3"		    : mb_phone3,
+			"mb_addr"				: mb_addr,
+			"mb_zip"				: mb_zip,
+			"sel_gift"				: sel_gift
+		},
+		url: "../main_exec.php",
+		success: function(response){
+			if (response == "Y")
+			{
+				location.href="popup_select_thanks.php?sel_gift=" + sel_gift;
+			}
+			else if (response == "D")
+			{
+				alert("이미 이벤트에 응모하셨습니다.\n다음에 다시 참여해 주세요.");
+				$.magnificPopup.close();
+			}
+			else
+			{
+				alert("이벤트 참여자 수가 많아 참여가 지연되고 있습니다.\n다시 응모해 주시기 바랍니다.");
+				$.magnificPopup.close();
+			}
+		}
+	});
+
 }
 
 function chk_input()
