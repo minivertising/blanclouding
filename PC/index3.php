@@ -171,7 +171,7 @@
 <!----------------------------------------쉐어 후 사은품 선택하기 DIV ---------------------------------->
 
 <!---------------------------------------개인정보 입력 DIV ---------------------------------->
-  <div id="input_info" class="popup_wrap zoom-anim-dialog" style="margin-top:-225px;margin-left:-275px;">
+  <div id="input_info" class="popup_wrap zoom-anim-dialog mfp-hide" style="margin-top:-225px;margin-left:-275px;">
     <div class="p_mid">
       <div class="block_close clearfix">
         <a href="#event_confirm3" class="btn_close popup-with-zoom-anim"><img src="images/popup/pop_btn_close.png" /></a>
