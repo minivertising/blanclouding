@@ -4,7 +4,7 @@
 <!--contents_wrap-->
 <div class="contents_wrap">
 
-<div class="block_top">
+<div class="block_top bg2">
     <!--icon_area-->
         <div class="icon_area clearfix">
           <a href="http://www.thefaceshopclouding.co.kr/MOBILE/index.php" class="cl_logo" target="_blank">
@@ -17,19 +17,24 @@
     <!--icon_area-->
     
         <div class="main_title">
+        
+        <div class="btn_block_1">
 <?
 	if ($iPhoneYN == "Y")
 	{
 ?>
-          <a href="popup_select_cloud1.php" >이벤트 참여</a>
+          <a href="popup_select_cloud1.php" ><img src="img/btn_event2.png" alt=""/></a>
 <?
 	}else{
 ?>
-          <a href="popup_select_cloud1.php" target="_blank">이벤트 참여</a>
+          <a href="popup_select_cloud1.php" target="_blank"><img src="img/btn_event2.png" alt=""/></a>
 <?
 	}
 ?>
         </div>
+	    <div class="btn_block_2">
+        	<a href="#" ><img src="img/btn_event_detail.png" alt=""/></a>
+        </div>       
 </div>    
 
 
