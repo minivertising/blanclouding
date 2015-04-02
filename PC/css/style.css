@@ -9,9 +9,11 @@
 .contents_wrap .area1{
 	position:relative;
 	width:100%;
-	height:100%
+	height:100%;
 	overflow:hidden;
 }
+
+
 
 .contents_wrap .area1 .video_area{
 	position:relative;

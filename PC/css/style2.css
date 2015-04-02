@@ -9,9 +9,36 @@ html,body { margin: 0; padding: 0; word-wrap: break-word; word-break: break-all;
 .contents_wrap .area1{
 	position:relative;
 	width:100%;
-	height:100%
+	height:100%;
 	overflow:hidden;
 }
+.contents_wrap .area1.bg1{
+  width: 100%;
+  height: 100%;
+  background: #fff url(../images/bg_top_event2.jpg) center 0 no-repeat;
+  background-size: cover;
+}
+
+.contents_wrap .area1 .event_block{
+	width:973px;
+	height:473px;
+	margin:0 auto;
+	background:url(../images/txt_event2.png) center 0 no-repeat;
+	position:relative;
+	margin-top:150px;
+}
+.contents_wrap .area1 .event_block div{
+	position:absolute;
+}
+.contents_wrap .area1 .event_block div.btn_event2{
+	top:500px;
+	left:185px;
+}
+.contents_wrap .area1 .event_block div.btn_event_detail{
+	top:225px;
+	left:465px;
+}
+
 
 .contents_wrap .area1 .block_logo{
 	background:rgba(255, 255, 255, 0.8);

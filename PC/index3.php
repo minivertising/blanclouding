@@ -5,18 +5,25 @@
 <div class="contents_wrap">
 <!--contents_wrap-->
 <!--area1-->
-  <div class="area1">
-    <div class="icon_area">
-      <a href="http://www.thefaceshopclouding.co.kr/PC/index.php" target="_blank"><img src="images/logo_blan.png" alt=""/></a>
+  <div class="area1 bg1">
+  	<div class="logo_block">
+        <div class="icon_area">
+          <a href="http://www.thefaceshopclouding.co.kr/PC/index.php" target="_blank"><img src="images/logo_blan.png" alt=""/></a>
+        </div>
+      <!--icon_area-->
+      <!--icon_area-->
+        <div class="icon_area2">
+          <a href="http://www.thefaceshop.com/index.jsp" target="_blank"><img src="images/logo_tfs.png" alt=""/></a>
+        </div>
     </div>
   <!--icon_area-->
-  <!--icon_area-->
-    <div class="icon_area2">
-      <a href="http://www.thefaceshop.com/index.jsp" target="_blank"><img src="images/logo_tfs.png" alt=""/></a>
-    </div>
-  <!--icon_area-->
-    <div >
-      <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" style="background:none;outline: none;" onclick="start_api();">영상시청하기</a>
+  	<div class="event_block">
+        <div class="btn_event2">
+          <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" style="background:none;outline: none;" onclick="start_api();"><img src="images/btn_event02.png" width="268" height="65" alt=""/></a>
+        </div>
+      <div class="btn_event_detail">
+          <a href="#" data-mfp-src="#input_div" class="popup-with-zoom-anim" style="background:none;outline: none;" onclick="start_api();"><img src="images/btn_detail_event.png" alt=""/></a>
+        </div>        
     </div>
   </div>
 
