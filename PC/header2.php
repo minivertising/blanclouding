@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link rel="stylesheet" href="./css/style2.css"> 
 
+    <script type='text/javascript' src="../js/TweenMax.min.js"></script>
     <script type='text/javascript' src="../js/jquery-1.11.2.min.js"></script>
     <script type='text/javascript' src="../js/jquery.easing.1.3.js"></script>
     <script type='text/javascript' src="../js/main2.js"></script>
@@ -40,6 +41,7 @@
     <script type="text/javascript" src="../lib/Magnific-Popup/jquery.magnific-popup.js"></script>
     <script type="text/javascript" src="../lib/DropKick/dropkick.js"></script>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type="text/javascript" src="../js/ScrollMagic.js"></script>
 
     <style>
 	html,body { height: 100%; margin: 0; padding: 0; }

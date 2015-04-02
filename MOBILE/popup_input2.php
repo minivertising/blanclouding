@@ -1,6 +1,5 @@
 <?
 	include_once "./header2.php";
-	print_r($_REQUEST);
 ?>
   <style>
   </style>

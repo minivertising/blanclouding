@@ -24,7 +24,7 @@
   <div class="area2_bg bg2" style="display:none">
     <div class="area4">
       <div class="product_group">
-        <div class="product_area">
+        <div class="product_area" id="pa_product">
           <ul class="thumb_list clearfix">
             <li>
               <a href="#" data-mfp-src="#movie_div1" class="popup-with-zoom-anim2" style="outline: none;" id="movie_link1"><img src="./images/thumb_1_open.png"></a>
@@ -90,7 +90,7 @@
           <div class="title"><img src="images/popup/title_event_01.png" alt=""/></div>
           <div class="movie">
             <div class="tag"><img src="images/popup/step_01.png" width="177" height="24" alt=""/></div>
-            <div class="player"><iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" width="617" height="340" id="ytplayer" class="ytplayer" ></iframe></div>
+            <div class="player" style="height:347px"><iframe allowfullscreen="1" src="<?=$_gl['youtube_second']?>" frameborder="0" width="617" height="347" id="ytplayer" class="ytplayer" ></iframe></div>
           </div>
           <div class="btn_block" id="fake_btn">
             <a href="#"><img src="images/popup/btn_select_cloud.png" alt=""/></a>
@@ -208,7 +208,7 @@
               <li class="input_txt phone">
                 <input type="text" name="mb_zipcode1" id="mb_zipcode1" style="width:60px"> - 
                 <input type="text" name="mb_zipcode2" id="mb_zipcode2" style="width:60px">
-                <input type="button" value="우편번호 찾기" onclick="search_zip();">
+                <a href="#" onclick="search_zip();"><img src="./images/popup/btn_zipcode.png" style="width:94px;vertical-align:middle"></a>
               </li>
             </ul>
             <ul class="clearfix">

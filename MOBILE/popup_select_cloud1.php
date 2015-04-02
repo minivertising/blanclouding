@@ -12,18 +12,7 @@ location.href="popup_select_cloud1.php?reload=Y";
 ?>
 <div class="wrap_page popup select_cloud_1">
   <div class="block_close clearfix">
-<?
-	if ($iPhoneYN == "Y")
-	{
-?>
     <a href="#event_confirm" class="btn_close popup-with-zoom-anim"><img src="img/popup/btn_close.png" /></a>
-<?
-	}else{
-?>
-    <a href="#event_confirm" class="btn_close popup-with-zoom-anim"><img src="img/popup/btn_close.png" /></a>
-<?
-	}
-?>
   </div>
   <div class="content">
     <div class="inner">
